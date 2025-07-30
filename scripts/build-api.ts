@@ -3,7 +3,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { promisify } from 'util';
-import { 
+
+// Import data with proper path resolution
+const { 
   allResources, 
   resourceStats, 
   categories,
@@ -13,7 +15,7 @@ import {
   getFeaturedResources,
   getPopularResources,
   getTrendingResources
-} from '../data/resources';
+} = require('../data/resources');
 
 const writeFile = promisify(fs.writeFile);
 const mkdir = promisify(fs.mkdir);
@@ -173,14 +175,14 @@ class APIBuilder {
           tools: externalTools.length
         },
         by_difficulty: {
-          beginner: allResources.filter(r => r.difficulty === 'BEGINNER').length,
-          intermediate: allResources.filter(r => r.difficulty === 'INTERMEDIATE').length,
-          advanced: allResources.filter(r => r.difficulty === 'ADVANCED').length
+          beginner: allResources.filter((r: any) => r.difficulty === 'BEGINNER').length,
+          intermediate: allResources.filter((r: any) => r.difficulty === 'INTERMEDIATE').length,
+          advanced: allResources.filter((r: any) => r.difficulty === 'ADVANCED').length
         },
-        by_category: categories.map(cat => ({
+        by_category: categories.map((cat: any) => ({
           id: cat.id,
           name: cat.name,
-          count: allResources.filter(r => r.categoryId === cat.id).length
+          count: allResources.filter((r: any) => r.categoryId === cat.id).length
         })),
         featured_count: getFeaturedResources(100).length
       }
@@ -204,7 +206,7 @@ class APIBuilder {
 
     // Build search indexes for better client-side search
     const searchIndex = {
-      resources: allResources.map(resource => ({
+      resources: allResources.map((resource: any) => ({
         id: resource.id,
         title: resource.title,
         description: resource.description,
@@ -216,10 +218,10 @@ class APIBuilder {
         framework: resource.framework,
         slug: resource.slug
       })),
-      tags: Array.from(new Set(allResources.flatMap(r => r.tags))).sort(),
-      languages: Array.from(new Set(allResources.map(r => r.language).filter(Boolean))).sort(),
-      frameworks: Array.from(new Set(allResources.map(r => r.framework).filter(Boolean))).sort(),
-      authors: Array.from(new Set(allResources.map(r => r.author.name))).sort()
+      tags: Array.from(new Set(allResources.flatMap((r: any) => r.tags))).sort(),
+      languages: Array.from(new Set(allResources.map((r: any) => r.language).filter(Boolean))).sort(),
+      frameworks: Array.from(new Set(allResources.map((r: any) => r.framework).filter(Boolean))).sort(),
+      authors: Array.from(new Set(allResources.map((r: any) => r.author.name))).sort()
     };
 
     await this.writeJSONFile(

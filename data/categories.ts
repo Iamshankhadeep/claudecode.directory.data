@@ -1,6 +1,6 @@
-import { StaticCategory } from './types';
+const { StaticCategory } = require('./types');
 
-export const categories: StaticCategory[] = [
+const categories: StaticCategory[] = [
   {
     id: 'claude-configs',
     name: 'Claude.md Configurations',
@@ -184,20 +184,28 @@ export const categories: StaticCategory[] = [
 ];
 
 // Helper functions for working with categories
-export const getCategoryById = (id: string): StaticCategory | undefined => {
+const getCategoryById = (id: string): StaticCategory | undefined => {
   return categories.find(category => category.id === id);
 };
 
-export const getCategoryBySlug = (slug: string): StaticCategory | undefined => {
+const getCategoryBySlug = (slug: string): StaticCategory | undefined => {
   return categories.find(category => category.slug === slug);
 };
 
-export const getCategoriesByType = (hasResources: boolean = true): StaticCategory[] => {
+const getCategoriesByType = (hasResources: boolean = true): StaticCategory[] => {
   return hasResources 
     ? categories.filter(category => category.resourceCount > 0)
     : categories;
 };
 
-export const getTotalResourceCount = (): number => {
+const getTotalResourceCount = (): number => {
   return categories.reduce((total, category) => total + category.resourceCount, 0);
+};
+
+module.exports = {
+  categories,
+  getCategoryById,
+  getCategoryBySlug,
+  getCategoriesByType,
+  getTotalResourceCount
 };

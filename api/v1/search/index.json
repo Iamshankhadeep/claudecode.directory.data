@@ -1,0 +1,81 @@
+{
+  "index": {
+    "resources": [
+      {
+        "id": "nextjs-config",
+        "title": "Next.js Configuration",
+        "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
+        "tags": [
+          "nextjs",
+          "react",
+          "frontend",
+          "typescript"
+        ],
+        "categoryId": "claude-configs",
+        "type": "CONFIGURATION",
+        "difficulty": "INTERMEDIATE",
+        "language": "TypeScript",
+        "framework": "Next.js",
+        "slug": "nextjs-configuration"
+      },
+      {
+        "id": "api-design-prompt",
+        "title": "API Design Architect Prompt",
+        "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
+        "tags": [
+          "api-design",
+          "rest",
+          "architecture",
+          "backend"
+        ],
+        "categoryId": "prompt-templates",
+        "type": "PROMPT_TEMPLATE",
+        "difficulty": "ADVANCED",
+        "slug": "api-design-architect"
+      },
+      {
+        "id": "claude-cli",
+        "title": "Claude CLI Tool",
+        "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
+        "tags": [
+          "cli",
+          "terminal",
+          "automation",
+          "productivity"
+        ],
+        "categoryId": "tools-cli",
+        "type": "EXTERNAL",
+        "difficulty": "BEGINNER",
+        "slug": "claude-cli-tool"
+      }
+    ],
+    "tags": [
+      "api-design",
+      "architecture",
+      "automation",
+      "backend",
+      "cli",
+      "frontend",
+      "nextjs",
+      "productivity",
+      "react",
+      "rest",
+      "terminal",
+      "typescript"
+    ],
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Next.js"
+    ],
+    "authors": [
+      "Anthropic",
+      "Claude Code Community"
+    ]
+  },
+  "meta": {
+    "total_resources": 3,
+    "generated_at": "2025-07-30T20:13:21.405Z"
+  }
+}

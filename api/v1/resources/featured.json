@@ -1,0 +1,92 @@
+{
+  "resources": [
+    {
+      "id": "nextjs-config",
+      "title": "Next.js Configuration",
+      "slug": "nextjs-configuration",
+      "tagline": "Optimized Claude configuration for Next.js projects",
+      "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
+      "categoryId": "claude-configs",
+      "type": "CONFIGURATION",
+      "content": "# Claude Configuration for Next.js\\n\\nThis configuration optimizes Claude for Next.js development...",
+      "tags": [
+        "nextjs",
+        "react",
+        "frontend",
+        "typescript"
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://claudecode.directory"
+      },
+      "stats": {
+        "votes": 45,
+        "copies": 234
+      },
+      "difficulty": "INTERMEDIATE",
+      "language": "TypeScript",
+      "framework": "Next.js",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "api-design-prompt",
+      "title": "API Design Architect Prompt",
+      "slug": "api-design-architect",
+      "tagline": "Expert-level prompt for designing REST APIs",
+      "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
+      "categoryId": "prompt-templates",
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are an expert API architect...",
+      "tags": [
+        "api-design",
+        "rest",
+        "architecture",
+        "backend"
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://claudecode.directory"
+      },
+      "stats": {
+        "votes": 67,
+        "copies": 189
+      },
+      "difficulty": "ADVANCED",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "claude-cli",
+      "title": "Claude CLI Tool",
+      "slug": "claude-cli-tool",
+      "tagline": "Official command-line interface for Claude AI",
+      "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
+      "categoryId": "tools-cli",
+      "type": "EXTERNAL",
+      "url": "https://github.com/anthropics/claude-cli",
+      "tags": [
+        "cli",
+        "terminal",
+        "automation",
+        "productivity"
+      ],
+      "author": {
+        "name": "Anthropic",
+        "url": "https://anthropic.com"
+      },
+      "stats": {
+        "votes": 245,
+        "copies": 1820
+      },
+      "difficulty": "BEGINNER",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    }
+  ],
+  "meta": {
+    "total": 3,
+    "limit": 12,
+    "generated_at": "2025-07-30T20:13:21.403Z"
+  }
+}

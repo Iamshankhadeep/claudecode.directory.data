@@ -1,0 +1,245 @@
+name: 🏗️ Build and Deploy JSON API
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: 
+      - 'data/**'
+      - 'scripts/**'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  build-api:
+    name: 🚀 Generate JSON API from TypeScript Data
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write # Needed to push back to repo
+      
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # Full history for better commit messages
+          
+      - name: 📦 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+          
+      - name: 🔍 Install dependencies
+        run: |
+          # Install dependencies if needed
+          if [ -f "package.json" ]; then
+            bun install
+          fi
+          
+      - name: 🏗️ Build JSON API
+        run: |
+          echo "🏗️ Building API from data files..."
+          bun run scripts/build-api.js
+          
+      - name: 📊 Verify build output
+        run: |
+          echo "📁 Generated API structure:"
+          find api -type f -name "*.json" | head -20
+          echo ""
+          echo "📈 API Statistics:"
+          if [ -f api/manifest.json ]; then
+            echo "✅ Manifest created"
+            cat api/manifest.json | head -20
+          else
+            echo "❌ No manifest found"
+          fi
+          
+      - name: 🔍 Check for API changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain api/)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "📝 API files have changes"
+            git status --porcelain api/
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "✅ No API changes detected"
+          fi
+          
+      - name: 📝 Commit and push API changes
+        if: steps.changes.outputs.changes == 'true' && github.event_name == 'push'
+        run: |
+          # Configure git
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Get the commit that triggered this workflow
+          TRIGGER_COMMIT=$(git rev-parse HEAD)
+          TRIGGER_MESSAGE=$(git log -1 --pretty=format:"%s" $TRIGGER_COMMIT)
+          
+          # Add API changes
+          git add api/
+          
+          # Create descriptive commit message
+          cat > commit_message.txt << EOF
+          🤖 Auto-update JSON API from data changes
+          
+          Generated from commit: $TRIGGER_COMMIT
+          Original message: $TRIGGER_MESSAGE
+          
+          📊 Updated API endpoints:
+          $(git diff --cached --name-only api/ | sed 's/^/  - /')
+          
+          🕒 Generated at: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          EOF
+          
+          # Commit the changes
+          git commit -F commit_message.txt
+          
+          # Push changes
+          git push
+          
+          echo "✅ API changes committed and pushed successfully!"
+          
+      - name: 📋 Summary
+        if: always()
+        run: |
+          echo "## 🎉 Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f api/manifest.json ]; then
+            echo "✅ **Status:** API built successfully" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 📊 Generated Resources" >> $GITHUB_STEP_SUMMARY
+            echo '```json' >> $GITHUB_STEP_SUMMARY
+            cat api/manifest.json | jq -r '.stats' >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 🔗 Available Endpoints" >> $GITHUB_STEP_SUMMARY
+            echo "- 📚 Categories: \`/api/v1/categories.json\`" >> $GITHUB_STEP_SUMMARY
+            echo "- 🎯 All Resources: \`/api/v1/resources/index.json\`" >> $GITHUB_STEP_SUMMARY  
+            echo "- ⭐ Featured: \`/api/v1/resources/featured.json\`" >> $GITHUB_STEP_SUMMARY
+            echo "- 📈 Stats: \`/api/v1/stats.json\`" >> $GITHUB_STEP_SUMMARY
+            echo "- 🔍 Search Index: \`/api/v1/search/index.json\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Status:** API build failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: 💬 Comment on PR (if applicable)
+        if: github.event_name == 'pull_request' && steps.changes.outputs.changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            let manifestData = {};
+            try {
+              manifestData = JSON.parse(fs.readFileSync('api/manifest.json', 'utf8'));
+            } catch (e) {
+              console.log('Could not read manifest:', e.message);
+            }
+            
+            const comment = `## 🤖 API Build Results
+            
+            ✅ **JSON API successfully generated from your data changes!**
+            
+            ### 📊 Statistics
+            - **Total Resources:** ${manifestData.stats?.total_resources || 'N/A'}
+            - **Categories:** ${manifestData.stats?.total_categories || 'N/A'}
+            - **Contributors:** ${manifestData.stats?.total_contributors || 'N/A'}
+            - **Generated:** ${manifestData.generated_at || 'N/A'}
+            
+            ### 🔗 Preview URLs (after merge)
+            - [📚 Categories](https://raw.githubusercontent.com/${{ github.repository }}/main/api/v1/categories.json)
+            - [🎯 All Resources](https://raw.githubusercontent.com/${{ github.repository }}/main/api/v1/resources/index.json)
+            - [⭐ Featured Resources](https://raw.githubusercontent.com/${{ github.repository }}/main/api/v1/resources/featured.json)
+            
+            The API will be automatically updated when this PR is merged! 🚀`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+            
+  validate-api:
+    name: 🔍 Validate Generated API
+    needs: build-api  
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: 🔍 Validate JSON files
+        run: |
+          echo "🔍 Validating generated JSON files..."
+          
+          JSON_FILES=$(find api -name "*.json" -type f)
+          VALID_COUNT=0
+          TOTAL_COUNT=0
+          
+          for file in $JSON_FILES; do
+            echo "Checking $file..."
+            if jq empty "$file" 2>/dev/null; then
+              echo "  ✅ Valid JSON"
+              VALID_COUNT=$((VALID_COUNT + 1))
+            else
+              echo "  ❌ Invalid JSON"
+            fi
+            TOTAL_COUNT=$((TOTAL_COUNT + 1))
+          done
+          
+          echo ""
+          echo "📊 Validation Summary:"
+          echo "  Valid: $VALID_COUNT/$TOTAL_COUNT JSON files"
+          
+          if [ "$VALID_COUNT" -eq "$TOTAL_COUNT" ]; then
+            echo "✅ All JSON files are valid!"
+          else
+            echo "❌ Some JSON files are invalid!"
+            exit 1
+          fi
+          
+      - name: 🔗 Test API endpoints
+        run: |
+          echo "🔗 Testing key API endpoints..."
+          
+          # Test manifest
+          if [ -f api/manifest.json ]; then
+            echo "✅ Manifest exists"
+            jq -r '.endpoints | keys[]' api/manifest.json | head -5
+          else
+            echo "❌ Manifest missing"
+            exit 1
+          fi
+          
+          # Test categories
+          if [ -f api/v1/categories.json ]; then
+            CATEGORY_COUNT=$(jq '.categories | length' api/v1/categories.json)
+            echo "✅ Categories: $CATEGORY_COUNT items"
+          else
+            echo "❌ Categories missing"
+            exit 1
+          fi
+          
+          # Test resources
+          if [ -f api/v1/resources/index.json ]; then
+            RESOURCE_COUNT=$(jq '.resources | length' api/v1/resources/index.json)
+            echo "✅ Resources: $RESOURCE_COUNT items"
+          else
+            echo "❌ Resources missing"
+            exit 1
+          fi
+          
+          echo "🎉 API validation completed successfully!"

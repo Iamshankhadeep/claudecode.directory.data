@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "id": "claude-cli",
+      "title": "Claude CLI Tool",
+      "slug": "claude-cli-tool",
+      "tagline": "Official command-line interface for Claude AI",
+      "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
+      "categoryId": "tools-cli",
+      "type": "EXTERNAL",
+      "url": "https://github.com/anthropics/claude-cli",
+      "tags": [
+        "cli",
+        "terminal",
+        "automation",
+        "productivity"
+      ],
+      "author": {
+        "name": "Anthropic",
+        "url": "https://anthropic.com"
+      },
+      "stats": {
+        "votes": 245,
+        "copies": 1820
+      },
+      "difficulty": "BEGINNER",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "type": "EXTERNAL",
+    "generated_at": "2025-07-30T20:13:21.403Z"
+  }
+}

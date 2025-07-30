@@ -1,0 +1,43 @@
+{
+  "stats": {
+    "totalResources": 3,
+    "totalCategories": 3,
+    "totalContributors": 2,
+    "totalCopies": 2243,
+    "lastUpdated": "2025-07-30T20:13:21.400Z",
+    "breakdown": {
+      "by_type": {
+        "configurations": 1,
+        "prompts": 1,
+        "tools": 1
+      },
+      "by_difficulty": {
+        "beginner": 1,
+        "intermediate": 1,
+        "advanced": 1
+      },
+      "by_category": [
+        {
+          "id": "claude-configs",
+          "name": "Claude.md Configurations",
+          "count": 1
+        },
+        {
+          "id": "prompt-templates",
+          "name": "Prompt Templates",
+          "count": 1
+        },
+        {
+          "id": "tools-cli",
+          "name": "Tools & CLI",
+          "count": 1
+        }
+      ],
+      "featured_count": 3
+    }
+  },
+  "meta": {
+    "generated_at": "2025-07-30T20:13:21.405Z",
+    "version": "1.0.0"
+  }
+}

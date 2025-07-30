@@ -1,0 +1,52 @@
+{
+  "name": "claudecode-directory-data",
+  "version": "1.0.0",
+  "description": "Static data repository for Claude Code Directory with automated JSON API generation",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-api.js",
+    "build:ts": "ts-node scripts/build-api.ts",
+    "build:bun": "bun run scripts/build-api.js",
+    "build:watch": "nodemon --watch data --ext ts,js --exec \"npm run build\"",
+    "dev": "npm run build:watch",
+    "validate": "find api -name '*.json' -exec jq empty {} \\;",
+    "stats": "jq -r '.stats' api/manifest.json 2>/dev/null || echo 'No manifest found - run npm run build first'",
+    "endpoints": "jq -r '.endpoints | to_entries[] | \"\\(.key): \\(.value)\"' api/manifest.json 2>/dev/null || echo 'No manifest found'",
+    "setup-hooks": "bash scripts/setup-hooks.sh",
+    "clean": "rm -rf api/",
+    "test": "npm run build && npm run validate",
+    "precommit": "npm run build",
+    "prepush": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/claudecode-directory-data.git"
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "development",
+    "tools",
+    "prompts",
+    "configurations",
+    "static-data",
+    "json-api"
+  ],
+  "author": "Claude Code Community",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.9",
+    "nodemon": "^3.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "api/",
+    "data/",
+    "scripts/",
+    "README.md"
+  ]
+}

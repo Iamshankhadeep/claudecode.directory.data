@@ -1,0 +1,38 @@
+{
+  "resources": [
+    {
+      "id": "nextjs-config",
+      "title": "Next.js Configuration",
+      "slug": "nextjs-configuration",
+      "tagline": "Optimized Claude configuration for Next.js projects",
+      "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
+      "categoryId": "claude-configs",
+      "type": "CONFIGURATION",
+      "content": "# Claude Configuration for Next.js\\n\\nThis configuration optimizes Claude for Next.js development...",
+      "tags": [
+        "nextjs",
+        "react",
+        "frontend",
+        "typescript"
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://claudecode.directory"
+      },
+      "stats": {
+        "votes": 45,
+        "copies": 234
+      },
+      "difficulty": "INTERMEDIATE",
+      "language": "TypeScript",
+      "framework": "Next.js",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "type": "CONFIGURATION",
+    "generated_at": "2025-07-30T20:13:21.403Z"
+  }
+}

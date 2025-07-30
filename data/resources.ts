@@ -1,10 +1,10 @@
-import { StaticResource, StaticStats, SearchFilters, SearchResults } from './types';
-import { categories } from './categories';
-import { webDevConfigs } from './claude-configs/web-dev';
-import { backendConfigs } from './claude-configs/backend';
-import { dataScienceConfigs } from './claude-configs/data-science';
-import { promptTemplates } from './prompts';
-import { tools } from './tools';
+const { StaticResource, StaticStats, SearchFilters, SearchResults } = require('./types');
+const { categories } = require('./categories');
+const { webDevConfigs } = require('./claude-configs/web-dev');
+const { backendConfigs } = require('./claude-configs/backend');
+const { dataScienceConfigs } = require('./claude-configs/data-science');
+const { promptTemplates } = require('./prompts');
+const { tools } = require('./tools');
 
 // Convert configurations to resources
 const configurationResources: StaticResource[] = [
@@ -83,14 +83,14 @@ function getCategoryIdFromToolCategory(toolCategory: string): string {
 }
 
 // Combine all resources
-export const allResources: StaticResource[] = [
+const allResources: StaticResource[] = [
   ...configurationResources,
   ...promptResources,
   ...toolResources
 ];
 
 // Calculate statistics
-export const resourceStats: StaticStats = {
+const resourceStats: StaticStats = {
   totalResources: allResources.length,
   totalCategories: categories.length,
   totalContributors: Array.from(new Set(allResources.map(r => r.author.name))).length,
@@ -99,36 +99,36 @@ export const resourceStats: StaticStats = {
 };
 
 // Utility functions
-export function getResourceById(id: string): StaticResource | undefined {
+function getResourceById(id: string): StaticResource | undefined {
   return allResources.find(resource => resource.id === id);
 }
 
-export function getResourceBySlug(slug: string): StaticResource | undefined {
+function getResourceBySlug(slug: string): StaticResource | undefined {
   return allResources.find(resource => resource.slug === slug);
 }
 
-export function getResourcesByCategory(categoryId: string): StaticResource[] {
+function getResourcesByCategory(categoryId: string): StaticResource[] {
   return allResources.filter(resource => resource.categoryId === categoryId);
 }
 
-export function getResourcesByType(type: StaticResource['type']): StaticResource[] {
+function getResourcesByType(type: StaticResource['type']): StaticResource[] {
   return allResources.filter(resource => resource.type === type);
 }
 
-export function getFeaturedResources(limit: number = 6): StaticResource[] {
+function getFeaturedResources(limit: number = 6): StaticResource[] {
   return allResources
     .filter(resource => resource.featured)
     .sort((a, b) => b.stats.votes - a.stats.votes)
     .slice(0, limit);
 }
 
-export function getPopularResources(limit: number = 8): StaticResource[] {
+function getPopularResources(limit: number = 8): StaticResource[] {
   return allResources
     .sort((a, b) => b.stats.copies - a.stats.copies)
     .slice(0, limit);
 }
 
-export function searchResources(
+function searchResources(
   query: string, 
   filters: SearchFilters = {}
 ): SearchResults {
@@ -183,39 +183,39 @@ export function searchResources(
   };
 }
 
-export function getResourcesByTag(tag: string): StaticResource[] {
+function getResourcesByTag(tag: string): StaticResource[] {
   return allResources.filter(resource => resource.tags.includes(tag));
 }
 
-export function getAllTags(): string[] {
+function getAllTags(): string[] {
   const allTags = allResources.flatMap(resource => resource.tags);
   return Array.from(new Set(allTags)).sort();
 }
 
-export function getResourcesByAuthor(authorName: string): StaticResource[] {
+function getResourcesByAuthor(authorName: string): StaticResource[] {
   return allResources.filter(resource => resource.author.name === authorName);
 }
 
-export function getRandomResources(count: number): StaticResource[] {
+function getRandomResources(count: number): StaticResource[] {
   const shuffled = [...allResources].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 }
 
-// Export individual collections for specific use cases
-export const configurations = getResourcesByType('CONFIGURATION');
-export const prompts = getResourcesByType('PROMPT_TEMPLATE');
-export const externalTools = getResourcesByType('EXTERNAL');
-export const codeSnippets = getResourcesByType('CODE_SNIPPET');
+// Individual collections for specific use cases
+const configurations = getResourcesByType('CONFIGURATION');
+const prompts = getResourcesByType('PROMPT_TEMPLATE');
+const externalTools = getResourcesByType('EXTERNAL');
+const codeSnippets = getResourcesByType('CODE_SNIPPET');
 
-// Export featured content helpers
-export function getFeaturedByCategory(categoryId: string, limit: number = 3): StaticResource[] {
+// Featured content helpers
+function getFeaturedByCategory(categoryId: string, limit: number = 3): StaticResource[] {
   return getResourcesByCategory(categoryId)
     .filter(r => r.featured)
     .sort((a, b) => b.stats.votes - a.stats.votes)
     .slice(0, limit);
 }
 
-export function getTrendingResources(limit: number = 5): StaticResource[] {
+function getTrendingResources(limit: number = 5): StaticResource[] {
   // Simple trending algorithm based on votes and recent updates
   return allResources
     .map(resource => ({
@@ -227,11 +227,31 @@ export function getTrendingResources(limit: number = 5): StaticResource[] {
     .slice(0, limit);
 }
 
-// Export for easy access
-export { categories } from './categories';
-export { webDevConfigs } from './claude-configs/web-dev';
-export { backendConfigs } from './claude-configs/backend';
-export { dataScienceConfigs } from './claude-configs/data-science';
-export { promptTemplates } from './prompts';
-export { tools } from './tools';
-export * from './types';
+// Export everything
+module.exports = {
+  allResources,
+  resourceStats,
+  categories,
+  configurations,
+  prompts,
+  externalTools,
+  codeSnippets,
+  getResourceById,
+  getResourceBySlug,
+  getResourcesByCategory,
+  getResourcesByType,
+  getFeaturedResources,
+  getPopularResources,
+  searchResources,
+  getResourcesByTag,
+  getAllTags,
+  getResourcesByAuthor,
+  getRandomResources,
+  getFeaturedByCategory,
+  getTrendingResources,
+  webDevConfigs,
+  backendConfigs,
+  dataScienceConfigs,
+  promptTemplates,
+  tools
+};

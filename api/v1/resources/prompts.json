@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "id": "api-design-prompt",
+      "title": "API Design Architect Prompt",
+      "slug": "api-design-architect",
+      "tagline": "Expert-level prompt for designing REST APIs",
+      "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
+      "categoryId": "prompt-templates",
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are an expert API architect...",
+      "tags": [
+        "api-design",
+        "rest",
+        "architecture",
+        "backend"
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://claudecode.directory"
+      },
+      "stats": {
+        "votes": 67,
+        "copies": 189
+      },
+      "difficulty": "ADVANCED",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "type": "PROMPT_TEMPLATE",
+    "generated_at": "2025-07-30T20:13:21.403Z"
+  }
+}

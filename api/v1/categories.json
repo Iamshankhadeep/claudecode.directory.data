@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": "claude-configs",
+      "name": "Claude.md Configurations",
+      "slug": "claude-configs",
+      "description": "Ready-to-use Claude.md configuration files for different tech stacks.",
+      "icon": "📋",
+      "color": "#F59E0B",
+      "order": 1,
+      "resourceCount": 11
+    },
+    {
+      "id": "prompt-templates",
+      "name": "Prompt Templates",
+      "slug": "prompts",
+      "description": "Carefully crafted prompt templates for common development tasks.",
+      "icon": "💬",
+      "color": "#10B981",
+      "order": 2,
+      "resourceCount": 6
+    },
+    {
+      "id": "tools-cli",
+      "name": "Tools & CLI",
+      "slug": "tools",
+      "description": "Essential command-line tools and utilities for Claude development.",
+      "icon": "🛠️",
+      "color": "#3B82F6",
+      "order": 3,
+      "resourceCount": 12
+    }
+  ],
+  "meta": {
+    "total": 3,
+    "generated_at": "2025-07-30T20:13:21.401Z",
+    "version": "1.0.0"
+  }
+}
