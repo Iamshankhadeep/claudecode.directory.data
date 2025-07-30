@@ -4,7 +4,7 @@
   "description": "Static data repository for Claude Code Directory with automated JSON API generation",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-api.js",
+    "build": "ts-node scripts/build-api.ts",
     "build:ts": "ts-node scripts/build-api.ts",
     "build:bun": "bun run scripts/build-api.js",
     "build:watch": "nodemon --watch data --ext ts,js --exec \"npm run build\"",

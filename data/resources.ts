@@ -1,4 +1,4 @@
-const { StaticResource, StaticStats, SearchFilters, SearchResults } = require('./types');
+import type { StaticResource, StaticStats, SearchFilters, SearchResults } from './types';
 const { categories } = require('./categories');
 const { webDevConfigs } = require('./claude-configs/web-dev');
 const { backendConfigs } = require('./claude-configs/backend');
@@ -11,66 +11,130 @@ const configurationResources: StaticResource[] = [
   ...webDevConfigs,
   ...backendConfigs,
   ...dataScienceConfigs
-].map(config => ({
-  id: config.id,
-  title: config.title,
-  slug: config.slug,
-  tagline: `${config.framework} configuration for ${config.difficulty.toLowerCase()} developers`,
-  description: config.description,
-  categoryId: 'claude-configs',
-  type: 'CONFIGURATION' as const,
-  content: config.content,
-  tags: config.tags,
-  author: config.author,
-  stats: {
-    votes: Math.floor(Math.random() * 50) + 10,
-    copies: Math.floor(Math.random() * 200) + 50
-  },
-  difficulty: config.difficulty,
-  language: config.language,
-  framework: config.framework,
-  lastUpdated: config.lastUpdated,
-  featured: Math.random() > 0.7
-}));
+].map(config => {
+  const category = categories.find((c: any) => c.id === 'claude-configs');
+  return {
+    id: config.id,
+    title: config.title,
+    slug: config.slug,
+    tagline: `${config.framework} configuration for ${config.difficulty.toLowerCase()} developers`,
+    description: config.description,
+    categoryId: 'claude-configs',
+    category: category ? { 
+      id: category.id, 
+      name: category.name, 
+      slug: category.slug,
+      description: category.description,
+      icon: category.icon,
+      color: category.color
+    } : undefined,
+    type: 'CONFIGURATION' as const,
+    content: config.content,
+    tags: config.tags.map((tagName: string) => ({
+      tag: {
+        id: tagName.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+        name: tagName,
+        slug: tagName.toLowerCase().replace(/[^a-z0-9]/g, '-')
+      }
+    })),
+    author: config.author,
+    stats: {
+      votes: Math.floor(Math.random() * 50) + 10,
+      copies: Math.floor(Math.random() * 200) + 50
+    },
+    _count: {
+      votes: Math.floor(Math.random() * 50) + 10,
+      copies: Math.floor(Math.random() * 200) + 50
+    },
+    difficulty: config.difficulty,
+    language: config.language,
+    framework: config.framework,
+    lastUpdated: config.lastUpdated,
+    featured: Math.random() > 0.7
+  };
+});
 
 // Convert prompts to resources
-const promptResources: StaticResource[] = promptTemplates.map(prompt => ({
-  id: prompt.id,
-  title: prompt.title,
-  slug: prompt.slug,
-  tagline: `Expert ${prompt.category.toLowerCase()} prompt template`,
-  description: prompt.description,
-  categoryId: 'prompt-templates',
-  type: 'PROMPT_TEMPLATE' as const,
-  content: prompt.prompt,
-  tags: prompt.tags,
-  author: prompt.author,
-  stats: {
-    votes: Math.floor(Math.random() * 80) + 20,
-    copies: Math.floor(Math.random() * 300) + 100
-  },
-  difficulty: prompt.difficulty,
-  lastUpdated: prompt.lastUpdated,
-  featured: Math.random() > 0.6
-}));
+const promptResources: StaticResource[] = promptTemplates.map((prompt: any) => {
+  const category = categories.find((c: any) => c.id === 'prompt-templates');
+  return {
+    id: prompt.id,
+    title: prompt.title,
+    slug: prompt.slug,
+    tagline: `Expert ${prompt.category.toLowerCase()} prompt template`,
+    description: prompt.description,
+    categoryId: 'prompt-templates',
+    category: category ? {
+      id: category.id,
+      name: category.name,
+      slug: category.slug,
+      description: category.description,
+      icon: category.icon,
+      color: category.color
+    } : undefined,
+    type: 'PROMPT_TEMPLATE' as const,
+    content: prompt.prompt,
+    tags: prompt.tags.map((tagName: string) => ({
+      tag: {
+        id: tagName.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+        name: tagName,
+        slug: tagName.toLowerCase().replace(/[^a-z0-9]/g, '-')
+      }
+    })),
+    author: prompt.author,
+    stats: {
+      votes: Math.floor(Math.random() * 80) + 20,
+      copies: Math.floor(Math.random() * 300) + 100
+    },
+    _count: {
+      votes: Math.floor(Math.random() * 80) + 20,
+      copies: Math.floor(Math.random() * 300) + 100
+    },
+    difficulty: prompt.difficulty,
+    lastUpdated: prompt.lastUpdated,
+    featured: Math.random() > 0.6
+  };
+});
 
 // Convert tools to resources
-const toolResources: StaticResource[] = tools.map(tool => ({
-  id: tool.id,
-  title: tool.title,
-  slug: tool.slug,
-  tagline: tool.tagline,
-  description: tool.description,
-  categoryId: getCategoryIdFromToolCategory(tool.category),
-  type: 'EXTERNAL' as const,
-  url: tool.url,
-  tags: tool.tags,
-  author: tool.author,
-  stats: tool.stats,
-  difficulty: tool.difficulty,
-  lastUpdated: tool.lastUpdated,
-  featured: Math.random() > 0.8
-}));
+const toolResources: StaticResource[] = tools.map((tool: any) => {
+  const categoryId = getCategoryIdFromToolCategory(tool.category);
+  const category = categories.find((c: any) => c.id === categoryId);
+  return {
+    id: tool.id,
+    title: tool.title,
+    slug: tool.slug,
+    tagline: tool.tagline,
+    description: tool.description,
+    categoryId: categoryId,
+    category: category ? {
+      id: category.id,
+      name: category.name,
+      slug: category.slug,
+      description: category.description,
+      icon: category.icon,
+      color: category.color
+    } : undefined,
+    type: 'EXTERNAL' as const,
+    url: tool.url,
+    tags: tool.tags.map((tagName: string) => ({
+      tag: {
+        id: tagName.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+        name: tagName,
+        slug: tagName.toLowerCase().replace(/[^a-z0-9]/g, '-')
+      }
+    })),
+    author: tool.author,
+    stats: tool.stats,
+    _count: {
+      votes: tool.stats.votes,
+      copies: tool.stats.copies
+    },
+    difficulty: tool.difficulty,
+    lastUpdated: tool.lastUpdated,
+    featured: Math.random() > 0.8
+  };
+});
 
 // Helper function to map tool categories to category IDs
 function getCategoryIdFromToolCategory(toolCategory: string): string {
@@ -157,7 +221,7 @@ function searchResources(
   
   if (filters.tags && filters.tags.length > 0) {
     filteredResources = filteredResources.filter(r => 
-      filters.tags!.some(tag => r.tags.includes(tag))
+      filters.tags!.some(filterTag => r.tags.some(resourceTag => resourceTag.tag.name === filterTag))
     );
   }
   
@@ -167,14 +231,14 @@ function searchResources(
     filteredResources = filteredResources.filter(resource =>
       resource.title.toLowerCase().includes(lowerQuery) ||
       resource.description.toLowerCase().includes(lowerQuery) ||
-      resource.tags.some(tag => tag.toLowerCase().includes(lowerQuery)) ||
+      resource.tags.some(tag => tag.tag.name.toLowerCase().includes(lowerQuery)) ||
       (resource.content && resource.content.toLowerCase().includes(lowerQuery))
     );
   }
   
   // Get relevant categories
   const relevantCategoryIds = Array.from(new Set(filteredResources.map(r => r.categoryId)));
-  const relevantCategories = categories.filter(c => relevantCategoryIds.includes(c.id));
+  const relevantCategories = categories.filter((c: any) => relevantCategoryIds.includes(c.id));
   
   return {
     results: filteredResources,
@@ -184,11 +248,11 @@ function searchResources(
 }
 
 function getResourcesByTag(tag: string): StaticResource[] {
-  return allResources.filter(resource => resource.tags.includes(tag));
+  return allResources.filter(resource => resource.tags.some(resourceTag => resourceTag.tag.name === tag));
 }
 
 function getAllTags(): string[] {
-  const allTags = allResources.flatMap(resource => resource.tags);
+  const allTags = allResources.flatMap(resource => resource.tags.map(tag => tag.tag.name));
   return Array.from(new Set(allTags)).sort();
 }
 

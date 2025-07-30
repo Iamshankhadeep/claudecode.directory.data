@@ -18,15 +18,33 @@ export interface StaticResource {
   tagline: string;
   description: string;
   categoryId: string;
+  category?: {
+    id: string;
+    name: string;
+    slug: string;
+    description: string;
+    icon: string;
+    color: string;
+  };
   type: 'CONFIGURATION' | 'PROMPT_TEMPLATE' | 'CODE_SNIPPET' | 'EXTERNAL';
   url?: string;
   content?: string;
-  tags: string[];
+  tags: {
+    tag: {
+      id: string;
+      name: string;
+      slug: string;
+    };
+  }[];
   author: {
     name: string;
     url?: string;
   };
   stats: {
+    votes: number;
+    copies: number;
+  };
+  _count: {
     votes: number;
     copies: number;
   };

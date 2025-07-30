@@ -1,4 +1,4 @@
-const { StaticCategory } = require('./types');
+import type { StaticCategory } from './types';
 
 const categories: StaticCategory[] = [
   {

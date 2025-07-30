@@ -1,0 +1,971 @@
+{
+  "tags": [
+    {
+      "id": "actions",
+      "name": "actions",
+      "slug": "actions",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "activerecord",
+      "name": "activerecord",
+      "slug": "activerecord",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "analysis",
+      "name": "analysis",
+      "slug": "analysis",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "api",
+      "name": "api",
+      "slug": "api",
+      "resourceCount": 3,
+      "categories": [
+        "api-integrations",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "api-design",
+      "name": "api-design",
+      "slug": "api-design",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "app-router",
+      "name": "app-router",
+      "slug": "app-router",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "architecture",
+      "slug": "architecture",
+      "resourceCount": 2,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "astro",
+      "name": "astro",
+      "slug": "astro",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "async",
+      "name": "async",
+      "slug": "async",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "automation",
+      "name": "automation",
+      "slug": "automation",
+      "resourceCount": 4,
+      "categories": [
+        "api-integrations",
+        "tools-cli",
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "backend",
+      "slug": "backend",
+      "resourceCount": 2,
+      "categories": [
+        "claude-configs",
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "best-practices",
+      "name": "best-practices",
+      "slug": "best-practices",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "bot",
+      "name": "bot",
+      "slug": "bot",
+      "resourceCount": 2,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "chat",
+      "name": "chat",
+      "slug": "chat",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "cicd",
+      "name": "cicd",
+      "slug": "cicd",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "cli",
+      "name": "cli",
+      "slug": "cli",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "code-assistance",
+      "name": "code-assistance",
+      "slug": "code-assistance",
+      "resourceCount": 1,
+      "categories": [
+        "vscode-extensions"
+      ]
+    },
+    {
+      "id": "code-review",
+      "name": "code-review",
+      "slug": "code-review",
+      "resourceCount": 2,
+      "categories": [
+        "api-integrations",
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "collection",
+      "name": "collection",
+      "slug": "collection",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "community",
+      "name": "community",
+      "slug": "community",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "components",
+      "name": "components",
+      "slug": "components",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "composition-api",
+      "name": "composition-api",
+      "slug": "composition-api",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "containers",
+      "name": "containers",
+      "slug": "containers",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "content-collections",
+      "name": "content-collections",
+      "slug": "content-collections",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "data-science",
+      "name": "data-science",
+      "slug": "data-science",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "database",
+      "name": "database",
+      "slug": "database",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "debugging",
+      "name": "debugging",
+      "slug": "debugging",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "deep-learning",
+      "name": "deep-learning",
+      "slug": "deep-learning",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "deployment",
+      "name": "deployment",
+      "slug": "deployment",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "design-system",
+      "name": "design-system",
+      "slug": "design-system",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "devops",
+      "slug": "devops",
+      "resourceCount": 3,
+      "categories": [
+        "tools-cli",
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "discord",
+      "name": "discord",
+      "slug": "discord",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "docker",
+      "name": "docker",
+      "slug": "docker",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "documentation",
+      "name": "documentation",
+      "slug": "documentation",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "express",
+      "name": "express",
+      "slug": "express",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "extension",
+      "name": "extension",
+      "slug": "extension",
+      "resourceCount": 1,
+      "categories": [
+        "vscode-extensions"
+      ]
+    },
+    {
+      "id": "fastapi",
+      "name": "fastapi",
+      "slug": "fastapi",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "frontend",
+      "slug": "frontend",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "fullstack",
+      "name": "fullstack",
+      "slug": "fullstack",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "gin",
+      "name": "gin",
+      "slug": "gin",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "github",
+      "name": "github",
+      "slug": "github",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "go",
+      "name": "go",
+      "slug": "go",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "golang",
+      "name": "golang",
+      "slug": "golang",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "gorm",
+      "name": "gorm",
+      "slug": "gorm",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "gpu",
+      "name": "gpu",
+      "slug": "gpu",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "iac",
+      "name": "iac",
+      "slug": "iac",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "ide",
+      "name": "ide",
+      "slug": "ide",
+      "resourceCount": 1,
+      "categories": [
+        "vscode-extensions"
+      ]
+    },
+    {
+      "id": "incident-response",
+      "name": "incident-response",
+      "slug": "incident-response",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": "infrastructure",
+      "slug": "infrastructure",
+      "resourceCount": 2,
+      "categories": [
+        "tools-cli",
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "integration",
+      "name": "integration",
+      "slug": "integration",
+      "resourceCount": 2,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "jupyter",
+      "name": "jupyter",
+      "slug": "jupyter",
+      "resourceCount": 2,
+      "categories": [
+        "tools-cli",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "kernel",
+      "name": "kernel",
+      "slug": "kernel",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "knowledge-management",
+      "name": "knowledge-management",
+      "slug": "knowledge-management",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "name": "machine-learning",
+      "slug": "machine-learning",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "macos",
+      "name": "macos",
+      "slug": "macos",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "markdown",
+      "name": "markdown",
+      "slug": "markdown",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "monitoring",
+      "name": "monitoring",
+      "slug": "monitoring",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "multi-language",
+      "name": "multi-language",
+      "slug": "multi-language",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "neural-networks",
+      "name": "neural-networks",
+      "slug": "neural-networks",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "nextjs",
+      "name": "nextjs",
+      "slug": "nextjs",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "nodejs",
+      "name": "nodejs",
+      "slug": "nodejs",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "normalization",
+      "name": "normalization",
+      "slug": "normalization",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "notes",
+      "name": "notes",
+      "slug": "notes",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "obsidian",
+      "name": "obsidian",
+      "slug": "obsidian",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "optimization",
+      "name": "optimization",
+      "slug": "optimization",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "pandas",
+      "name": "pandas",
+      "slug": "pandas",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "performance",
+      "name": "performance",
+      "slug": "performance",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "pinia",
+      "name": "pinia",
+      "slug": "pinia",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "postman",
+      "name": "postman",
+      "slug": "postman",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "productivity",
+      "name": "productivity",
+      "slug": "productivity",
+      "resourceCount": 3,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "pydantic",
+      "name": "pydantic",
+      "slug": "pydantic",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "python",
+      "slug": "python",
+      "resourceCount": 3,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "pytorch",
+      "name": "pytorch",
+      "slug": "pytorch",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "quality",
+      "name": "quality",
+      "slug": "quality",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "quick-access",
+      "name": "quick-access",
+      "slug": "quick-access",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "rails",
+      "name": "rails",
+      "slug": "rails",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "raycast",
+      "name": "raycast",
+      "slug": "raycast",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "react",
+      "name": "react",
+      "slug": "react",
+      "resourceCount": 2,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "refactoring",
+      "name": "refactoring",
+      "slug": "refactoring",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "rest",
+      "name": "rest",
+      "slug": "rest",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "rest-api",
+      "name": "rest-api",
+      "slug": "rest-api",
+      "resourceCount": 2,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "ruby",
+      "name": "ruby",
+      "slug": "ruby",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "ruby-on-rails",
+      "name": "ruby-on-rails",
+      "slug": "ruby-on-rails",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "schema",
+      "name": "schema",
+      "slug": "schema",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "scikit-learn",
+      "name": "scikit-learn",
+      "slug": "scikit-learn",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "sdk",
+      "name": "sdk",
+      "slug": "sdk",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "security",
+      "slug": "security",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "slack",
+      "name": "slack",
+      "slug": "slack",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "spa",
+      "name": "spa",
+      "slug": "spa",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "sql",
+      "name": "sql",
+      "slug": "sql",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "sqlalchemy",
+      "name": "sqlalchemy",
+      "slug": "sqlalchemy",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "ssg",
+      "name": "ssg",
+      "slug": "ssg",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "state-management",
+      "name": "state-management",
+      "slug": "state-management",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "svelte",
+      "name": "svelte",
+      "slug": "svelte",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "sveltekit",
+      "name": "sveltekit",
+      "slug": "sveltekit",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "tailwind",
+      "name": "tailwind",
+      "slug": "tailwind",
+      "resourceCount": 3,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "team-collaboration",
+      "name": "team-collaboration",
+      "slug": "team-collaboration",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "terminal",
+      "name": "terminal",
+      "slug": "terminal",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "terraform",
+      "name": "terraform",
+      "slug": "terraform",
+      "resourceCount": 1,
+      "categories": [
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "testing",
+      "name": "testing",
+      "slug": "testing",
+      "resourceCount": 1,
+      "categories": [
+        "api-integrations"
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "name": "troubleshooting",
+      "slug": "troubleshooting",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "typescript",
+      "name": "typescript",
+      "slug": "typescript",
+      "resourceCount": 6,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "vite",
+      "name": "vite",
+      "slug": "vite",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "vscode",
+      "name": "vscode",
+      "slug": "vscode",
+      "resourceCount": 1,
+      "categories": [
+        "vscode-extensions"
+      ]
+    },
+    {
+      "id": "vue",
+      "name": "vue",
+      "slug": "vue",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "vue3",
+      "name": "vue3",
+      "slug": "vue3",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    }
+  ],
+  "meta": {
+    "total": 106,
+    "generated_at": "2025-07-30T20:50:57.036Z",
+    "version": "1.0.0"
+  }
+}

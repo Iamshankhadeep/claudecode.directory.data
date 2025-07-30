@@ -200,6 +200,37 @@ class APIBuilder {
     );
   }
 
+  async buildTagsAPI(): Promise<void> {
+    const apiPath = path.join(this.config.outputDir, 'v1');
+    await this.ensureDirectory(apiPath);
+
+    // Extract all unique tags and create tag objects with metadata
+    const allTags = Array.from(new Set(allResources.flatMap((r: any) => r.tags.map((tagObj: any) => tagObj.tag.name)))) as string[];
+    allTags.sort();
+    const tagsWithMetadata = allTags.map((tag: string) => {
+      const resourcesWithTag = allResources.filter((r: any) => r.tags.some((tagObj: any) => tagObj.tag.name === tag));
+      return {
+        id: (tag as string).toLowerCase().replace(/[^a-z0-9]/g, '-'),
+        name: tag as string,
+        slug: (tag as string).toLowerCase().replace(/[^a-z0-9]/g, '-'),
+        resourceCount: resourcesWithTag.length,
+        categories: Array.from(new Set(resourcesWithTag.map((r: any) => r.categoryId)))
+      };
+    });
+
+    await this.writeJSONFile(
+      path.join(apiPath, 'tags.json'),
+      {
+        tags: tagsWithMetadata,
+        meta: {
+          total: tagsWithMetadata.length,
+          generated_at: new Date().toISOString(),
+          version: '1.0.0'
+        }
+      }
+    );
+  }
+
   async buildSearchIndexes(): Promise<void> {
     const searchPath = path.join(this.config.outputDir, 'v1', 'search');
     await this.ensureDirectory(searchPath);
@@ -245,6 +276,7 @@ class APIBuilder {
       api_version: 'v1',
       endpoints: {
         categories: '/api/v1/categories.json',
+        tags: '/api/v1/tags.json',
         resources: {
           all: '/api/v1/resources/index.json',
           configurations: '/api/v1/resources/configurations.json',
@@ -282,6 +314,7 @@ class APIBuilder {
       // Build all API endpoints
       await this.buildCategoriesAPI();
       await this.buildResourcesAPI();
+      await this.buildTagsAPI();
       await this.buildStatsAPI();
       await this.buildSearchIndexes();
       await this.buildManifest();
