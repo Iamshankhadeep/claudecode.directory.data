@@ -1,65 +1,58 @@
 {
   "resources": [
     {
-      "id": "claude-raycast-extension",
-      "title": "Claude for Raycast",
-      "slug": "claude-raycast-extension",
-      "tagline": "Quick Claude AI access on macOS",
-      "description": "Raycast extension that brings Claude AI to your fingertips on macOS. Quick queries, code explanations, and AI assistance without leaving your workflow.",
-      "categoryId": "tools-cli",
-      "category": {
-        "id": "tools-cli",
-        "name": "Tools & CLI",
-        "slug": "tools",
-        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
-        "icon": "🛠️",
-        "color": "#8B5CF6"
-      },
-      "type": "EXTERNAL",
-      "url": "https://www.raycast.com/extensions/claude-ai",
+      "id": "nextjs-config",
+      "title": "Next.js Configuration",
+      "slug": "nextjs-configuration",
+      "tagline": "Optimized Claude configuration for Next.js projects",
+      "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
+      "categoryId": "claude-configs",
+      "type": "CONFIGURATION",
+      "content": "# Claude Configuration for Next.js\\n\\nThis configuration optimizes Claude for Next.js development...",
       "tags": [
-        {
-          "tag": {
-            "id": "raycast",
-            "name": "raycast",
-            "slug": "raycast"
-          }
-        },
-        {
-          "tag": {
-            "id": "macos",
-            "name": "macos",
-            "slug": "macos"
-          }
-        },
-        {
-          "tag": {
-            "id": "productivity",
-            "name": "productivity",
-            "slug": "productivity"
-          }
-        },
-        {
-          "tag": {
-            "id": "quick-access",
-            "name": "quick-access",
-            "slug": "quick-access"
-          }
-        }
+        "nextjs",
+        "react",
+        "frontend",
+        "typescript"
       ],
       "author": {
-        "name": "Raycast Community",
-        "url": "https://raycast.com"
+        "name": "Claude Code Community",
+        "url": "https://claudecode.directory"
       },
       "stats": {
-        "votes": 421,
-        "copies": 1893
+        "votes": 45,
+        "copies": 234
       },
-      "_count": {
-        "votes": 421,
-        "copies": 1893
+      "difficulty": "INTERMEDIATE",
+      "language": "TypeScript",
+      "framework": "Next.js",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "api-design-prompt",
+      "title": "API Design Architect Prompt",
+      "slug": "api-design-architect",
+      "tagline": "Expert-level prompt for designing REST APIs",
+      "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
+      "categoryId": "prompt-templates",
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are an expert API architect...",
+      "tags": [
+        "api-design",
+        "rest",
+        "architecture",
+        "backend"
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://claudecode.directory"
       },
-      "difficulty": "BEGINNER",
+      "stats": {
+        "votes": 67,
+        "copies": 189
+      },
+      "difficulty": "ADVANCED",
       "lastUpdated": "2024-12-01",
       "featured": true
     },
@@ -68,47 +61,15 @@
       "title": "Claude CLI Tool",
       "slug": "claude-cli-tool",
       "tagline": "Official command-line interface for Claude AI",
-      "description": "Powerful CLI tool that brings Claude AI directly to your terminal. Execute queries, process files, and integrate Claude into your development workflow with simple commands.",
+      "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
       "categoryId": "tools-cli",
-      "category": {
-        "id": "tools-cli",
-        "name": "Tools & CLI",
-        "slug": "tools",
-        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
-        "icon": "🛠️",
-        "color": "#8B5CF6"
-      },
       "type": "EXTERNAL",
       "url": "https://github.com/anthropics/claude-cli",
       "tags": [
-        {
-          "tag": {
-            "id": "cli",
-            "name": "cli",
-            "slug": "cli"
-          }
-        },
-        {
-          "tag": {
-            "id": "terminal",
-            "name": "terminal",
-            "slug": "terminal"
-          }
-        },
-        {
-          "tag": {
-            "id": "automation",
-            "name": "automation",
-            "slug": "automation"
-          }
-        },
-        {
-          "tag": {
-            "id": "productivity",
-            "name": "productivity",
-            "slug": "productivity"
-          }
-        }
+        "cli",
+        "terminal",
+        "automation",
+        "productivity"
       ],
       "author": {
         "name": "Anthropic",
@@ -118,563 +79,14 @@
         "votes": 245,
         "copies": 1820
       },
-      "_count": {
-        "votes": 245,
-        "copies": 1820
-      },
       "difficulty": "BEGINNER",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "claude-terraform-provider",
-      "title": "Claude Terraform Provider",
-      "slug": "claude-terraform-provider",
-      "tagline": "Infrastructure as Code with Claude AI assistance",
-      "description": "Terraform provider that uses Claude AI to generate, validate, and optimize infrastructure code. Automatically create secure and efficient Terraform configurations.",
-      "categoryId": "tools-cli",
-      "category": {
-        "id": "tools-cli",
-        "name": "Tools & CLI",
-        "slug": "tools",
-        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
-        "icon": "🛠️",
-        "color": "#8B5CF6"
-      },
-      "type": "EXTERNAL",
-      "url": "https://registry.terraform.io/providers/anthropic/claude",
-      "tags": [
-        {
-          "tag": {
-            "id": "terraform",
-            "name": "terraform",
-            "slug": "terraform"
-          }
-        },
-        {
-          "tag": {
-            "id": "infrastructure",
-            "name": "infrastructure",
-            "slug": "infrastructure"
-          }
-        },
-        {
-          "tag": {
-            "id": "iac",
-            "name": "iac",
-            "slug": "iac"
-          }
-        },
-        {
-          "tag": {
-            "id": "devops",
-            "name": "devops",
-            "slug": "devops"
-          }
-        }
-      ],
-      "author": {
-        "name": "Terraform Community",
-        "url": "https://github.com/terraform-community"
-      },
-      "stats": {
-        "votes": 198,
-        "copies": 654
-      },
-      "_count": {
-        "votes": 198,
-        "copies": 654
-      },
-      "difficulty": "ADVANCED",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "claude-slack-bot",
-      "title": "Claude Slack Bot",
-      "slug": "claude-slack-bot",
-      "tagline": "Bring Claude AI to your Slack workspace",
-      "description": "Integrate Claude AI into your team's Slack workspace. Ask questions, get code reviews, and collaborate with AI assistance directly in your chat channels.",
-      "categoryId": "api-integrations",
-      "category": {
-        "id": "api-integrations",
-        "name": "API Integrations",
-        "slug": "integrations",
-        "description": "Examples and libraries for integrating Claude API into various platforms.",
-        "icon": "🔗",
-        "color": "#EF4444"
-      },
-      "type": "EXTERNAL",
-      "url": "https://slack.com/apps/claude-ai-bot",
-      "tags": [
-        {
-          "tag": {
-            "id": "slack",
-            "name": "slack",
-            "slug": "slack"
-          }
-        },
-        {
-          "tag": {
-            "id": "bot",
-            "name": "bot",
-            "slug": "bot"
-          }
-        },
-        {
-          "tag": {
-            "id": "team-collaboration",
-            "name": "team-collaboration",
-            "slug": "team-collaboration"
-          }
-        },
-        {
-          "tag": {
-            "id": "integration",
-            "name": "integration",
-            "slug": "integration"
-          }
-        }
-      ],
-      "author": {
-        "name": "Claude Community",
-        "url": "https://github.com/claude-community/slack-bot"
-      },
-      "stats": {
-        "votes": 156,
-        "copies": 789
-      },
-      "_count": {
-        "votes": 156,
-        "copies": 789
-      },
-      "difficulty": "INTERMEDIATE",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "claude-postman-collection",
-      "title": "Claude API Postman Collection",
-      "slug": "claude-api-postman-collection",
-      "tagline": "Complete Postman collection for Claude API",
-      "description": "Comprehensive Postman collection with all Claude API endpoints, example requests, and automated tests. Perfect for API testing and integration development.",
-      "categoryId": "api-integrations",
-      "category": {
-        "id": "api-integrations",
-        "name": "API Integrations",
-        "slug": "integrations",
-        "description": "Examples and libraries for integrating Claude API into various platforms.",
-        "icon": "🔗",
-        "color": "#EF4444"
-      },
-      "type": "EXTERNAL",
-      "url": "https://www.postman.com/anthropic/workspace/claude-api",
-      "tags": [
-        {
-          "tag": {
-            "id": "postman",
-            "name": "postman",
-            "slug": "postman"
-          }
-        },
-        {
-          "tag": {
-            "id": "api",
-            "name": "api",
-            "slug": "api"
-          }
-        },
-        {
-          "tag": {
-            "id": "testing",
-            "name": "testing",
-            "slug": "testing"
-          }
-        },
-        {
-          "tag": {
-            "id": "collection",
-            "name": "collection",
-            "slug": "collection"
-          }
-        }
-      ],
-      "author": {
-        "name": "Anthropic",
-        "url": "https://anthropic.com"
-      },
-      "stats": {
-        "votes": 145,
-        "copies": 892
-      },
-      "_count": {
-        "votes": 145,
-        "copies": 892
-      },
-      "difficulty": "BEGINNER",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "system-troubleshooter",
-      "title": "System Debugging & Troubleshooting Expert",
-      "slug": "system-troubleshooter",
-      "tagline": "Expert debugging & troubleshooting prompt template",
-      "description": "Advanced prompt for systematic debugging, performance analysis, and issue resolution across the full stack.",
-      "categoryId": "prompt-templates",
-      "category": {
-        "id": "prompt-templates",
-        "name": "Prompt Templates",
-        "slug": "prompts",
-        "description": "Carefully crafted prompt templates for common development tasks and workflows.",
-        "icon": "💬",
-        "color": "#10B981"
-      },
-      "type": "PROMPT_TEMPLATE",
-      "content": "You are a senior systems engineer and debugging expert with extensive experience in troubleshooting complex distributed systems, performance issues, and production incidents.\n\n## Issue Context\n**System Type:** {{SYSTEM_TYPE}}\n**Environment:** {{ENVIRONMENT}}\n**Urgency Level:** {{URGENCY_LEVEL}}\n**Impact Scope:** {{IMPACT_SCOPE}}\n**Available Resources:** {{AVAILABLE_RESOURCES}}\n\n## Problem Description\n{{PROBLEM_DESCRIPTION}}\n\n## Symptoms & Observations\n{{SYMPTOMS}}\n\n## Recent Changes\n{{RECENT_CHANGES}}\n\n## Conduct systematic troubleshooting with the following approach:\n\n### 1. Problem Analysis & Hypothesis Formation\n- Analyze the symptoms and error patterns\n- Form initial hypotheses about root causes\n- Prioritize hypotheses by likelihood and impact\n- Identify critical information gaps\n- Define success criteria for resolution\n\n### 2. Information Gathering Strategy\n- Identify key logs, metrics, and monitoring data to examine\n- Plan diagnostic commands and tools to use\n- Determine if additional monitoring is needed\n- Identify stakeholders and subject matter experts\n- Plan for data collection without service disruption\n\n### 3. Systematic Investigation Plan\n- Design step-by-step investigation procedure\n- Plan hypothesis testing methodology\n- Identify potential investigation tools and techniques\n- Plan for safe testing and validation\n- Design rollback procedures if needed\n\n### 4. Root Cause Analysis\n- Apply systematic debugging methodologies\n- Use divide-and-conquer approach for complex systems\n- Analyze timing, dependencies, and system interactions\n- Consider infrastructure, application, and data layers\n- Document findings and evidence\n\n### 5. Solution Development\n- Design multiple solution approaches\n- Assess solution risks and trade-offs\n- Plan implementation steps and validation\n- Design monitoring for solution effectiveness\n- Plan for prevention of recurrence\n\n### 6. Performance Analysis (if applicable)\n- Analyze system performance metrics\n- Identify bottlenecks and resource constraints\n- Review scalability and capacity issues\n- Analyze user experience impact\n- Recommend performance optimizations\n\n### 7. Security Considerations\n- Check for security-related causes\n- Analyze potential security implications\n- Review access logs and authentication issues\n- Check for data breach or compromise indicators\n- Recommend security improvements\n\n### 8. Communication & Documentation\n- Plan stakeholder communication strategy\n- Document investigation findings\n- Create incident timeline and impact assessment\n- Plan for post-incident review\n- Document lessons learned and improvements\n\n## Output Format:\nProvide a comprehensive troubleshooting plan with:\n\n**Immediate Actions** (First 15 minutes):\n1. Critical checks to perform immediately\n2. Data to collect for triage\n3. Immediate mitigation steps if available\n\n**Investigation Plan:**\n\n**Phase 1: Information Gathering**\n```bash\n# Example diagnostic commands\ntail -f /var/log/application.log\ntop -p $(pgrep app_process)\nnetstat -tulpn | grep :8080\n```\n\n**Phase 2: Hypothesis Testing**\n- Hypothesis 1: [Description]\n  - Test: [How to validate]\n  - Expected result: [What indicates this cause]\n- Hypothesis 2: [Description]\n  - Test: [How to validate]\n  - Expected result: [What indicates this cause]\n\n**Phase 3: Root Cause Analysis**\n- Analysis methodology\n- Key areas to investigate\n- Tools and techniques to use\n\n**Diagnostic Checklist:**\n- [ ] Application logs reviewed\n- [ ] System resources checked (CPU, memory, disk)\n- [ ] Network connectivity verified\n- [ ] Database performance analyzed\n- [ ] Recent deployments reviewed\n- [ ] External dependencies checked\n\n**Solution Recommendations:**\n1. **Short-term fixes** (immediate relief)\n2. **Medium-term solutions** (address root cause)\n3. **Long-term improvements** (prevent recurrence)\n\n**Risk Assessment:**\n- Impact of each solution approach\n- Potential side effects or complications\n- Rollback procedures and safety measures\n\n**Monitoring & Validation:**\n- Metrics to monitor solution effectiveness\n- Success criteria and key indicators\n- Timeline for improvement validation\n\n**Prevention Measures:**\n- Process improvements\n- Monitoring enhancements\n- Code or infrastructure changes\n- Training and documentation needs\n\nInclude specific commands, queries, and procedures tailored to the system type and issue.",
-      "tags": [
-        {
-          "tag": {
-            "id": "debugging",
-            "name": "debugging",
-            "slug": "debugging"
-          }
-        },
-        {
-          "tag": {
-            "id": "troubleshooting",
-            "name": "troubleshooting",
-            "slug": "troubleshooting"
-          }
-        },
-        {
-          "tag": {
-            "id": "performance",
-            "name": "performance",
-            "slug": "performance"
-          }
-        },
-        {
-          "tag": {
-            "id": "monitoring",
-            "name": "monitoring",
-            "slug": "monitoring"
-          }
-        },
-        {
-          "tag": {
-            "id": "incident-response",
-            "name": "incident-response",
-            "slug": "incident-response"
-          }
-        }
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://github.com/claudecode-community"
-      },
-      "stats": {
-        "votes": 89,
-        "copies": 294
-      },
-      "_count": {
-        "votes": 59,
-        "copies": 362
-      },
-      "difficulty": "ADVANCED",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "astro-content-collections",
-      "title": "Astro + Content Collections + TypeScript",
-      "slug": "astro-content-collections-typescript",
-      "tagline": "Astro configuration for intermediate developers",
-      "description": "Static site generation with Astro, content collections, and TypeScript for fast, SEO-friendly websites.",
-      "categoryId": "claude-configs",
-      "category": {
-        "id": "claude-configs",
-        "name": "Claude.md Configurations",
-        "slug": "claude-configs",
-        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types.",
-        "icon": "📋",
-        "color": "#F59E0B"
-      },
-      "type": "CONFIGURATION",
-      "content": "# Claude.md - Astro + Content Collections + TypeScript Project\n\n## Project Overview\n\nThis is an Astro project utilizing content collections, TypeScript, and static site generation for optimal performance and SEO.\n\n## Technology Stack\n\n- **Framework**: Astro\n- **Language**: TypeScript\n- **Content**: Content Collections (Markdown/MDX)\n- **Styling**: Tailwind CSS, CSS Modules\n- **Integrations**: React, Vue, or Svelte (as needed)\n- **Deployment**: Static hosting (Netlify, Vercel)\n\n## Project Structure\n\n```\nsrc/\n├── components/          # Astro/Framework components\n├── content/            # Content collections\n│   ├── blog/          # Blog posts\n│   ├── docs/          # Documentation\n│   └── config.ts      # Content config\n├── layouts/           # Page layouts\n├── pages/             # Routes and pages\n├── styles/            # Global styles\n└── utils/             # Utility functions\n```\n\n## Development Guidelines\n\n### Content Strategy\n- Use Content Collections for structured content\n- Write content in Markdown/MDX\n- Implement proper frontmatter schemas\n- Organize content logically\n\n### Component Architecture\n- Create reusable Astro components\n- Use framework components sparingly\n- Implement proper TypeScript typing\n- Optimize for static generation\n\n### Performance\n- Minimize JavaScript bundle size\n- Use Astro's partial hydration\n- Optimize images with Astro's image service\n- Implement proper caching strategies\n\n## Key Commands\n\n- `npm run dev` - Start development server\n- `npm run build` - Build static site\n- `npm run preview` - Preview built site\n- `npm run astro` - Run Astro CLI commands\n\n## Content Collections Configuration\n\n```ts\n// src/content/config.ts\nimport { defineCollection, z } from 'astro:content';\n\nconst blogCollection = defineCollection({\n  type: 'content',\n  schema: z.object({\n    title: z.string(),\n    description: z.string(),\n    pubDate: z.date(),\n    author: z.string(),\n    tags: z.array(z.string()),\n    image: z.string().optional(),\n  })\n});\n\nconst docsCollection = defineCollection({\n  type: 'content',\n  schema: z.object({\n    title: z.string(),\n    description: z.string(),\n    order: z.number(),\n    category: z.string(),\n  })\n});\n\nexport const collections = {\n  'blog': blogCollection,\n  'docs': docsCollection,\n};\n```\n\n## Common Patterns\n\n### Astro Component\n```astro\n---\n// src/components/BlogCard.astro\nexport interface Props {\n  title: string;\n  description: string;\n  pubDate: Date;\n  href: string;\n}\n\nconst { title, description, pubDate, href } = Astro.props;\n---\n\n<article class=\"blog-card\">\n  <h3><a href={href}>{title}</a></h3>\n  <p>{description}</p>\n  <time datetime={pubDate.toISOString()}>\n    {pubDate.toLocaleDateString()}\n  </time>\n</article>\n\n<style>\n.blog-card {\n  border: 1px solid #e2e8f0;\n  border-radius: 8px;\n  padding: 1.5rem;\n  transition: transform 0.2s;\n}\n\n.blog-card:hover {\n  transform: translateY(-2px);\n}\n</style>\n```\n\n### Page with Content Collection\n```astro\n---\n// src/pages/blog/index.astro\nimport { getCollection } from 'astro:content';\nimport BlogCard from '../../components/BlogCard.astro';\nimport Layout from '../../layouts/Layout.astro';\n\nconst blogPosts = await getCollection('blog');\nconst sortedPosts = blogPosts.sort(\n  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()\n);\n---\n\n<Layout title=\"Blog\">\n  <main>\n    <h1>Blog Posts</h1>\n    <section class=\"posts-grid\">\n      {sortedPosts.map((post) => (\n        <BlogCard\n          title={post.data.title}\n          description={post.data.description}\n          pubDate={post.data.pubDate}\n          href={`/blog/${post.slug}`}\n        />\n      ))}\n    </section>\n  </main>\n</Layout>\n```\n\n### Dynamic Page Generation\n```astro\n---\n// src/pages/blog/[...slug].astro\nimport { getCollection } from 'astro:content';\nimport BlogLayout from '../../layouts/BlogLayout.astro';\n\nexport async function getStaticPaths() {\n  const blogEntries = await getCollection('blog');\n  return blogEntries.map(entry => ({\n    params: { slug: entry.slug },\n    props: { entry },\n  }));\n}\n\nconst { entry } = Astro.props;\nconst { Content } = await entry.render();\n---\n\n<BlogLayout frontmatter={entry.data}>\n  <Content />\n</BlogLayout>\n```\n\n### Integration with React Component\n```tsx\n// src/components/SearchBox.tsx\nimport { useState } from 'react';\n\ninterface SearchBoxProps {\n  placeholder?: string;\n  onSearch: (query: string) => void;\n}\n\nexport default function SearchBox({ \n  placeholder = \"Search...\", \n  onSearch \n}: SearchBoxProps) {\n  const [query, setQuery] = useState('');\n\n  const handleSubmit = (e: React.FormEvent) => {\n    e.preventDefault();\n    onSearch(query);\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input\n        type=\"text\"\n        value={query}\n        onChange={(e) => setQuery(e.target.value)}\n        placeholder={placeholder}\n      />\n      <button type=\"submit\">Search</button>\n    </form>\n  );\n}\n```\n\n### Using React Component in Astro\n```astro\n---\nimport SearchBox from '../components/SearchBox.tsx';\n---\n\n<SearchBox \n  client:load \n  placeholder=\"Search posts...\"\n  onSearch={(query) => console.log(query)}\n/>\n```\n\n## SEO and Performance\n\n- Use proper meta tags in layouts\n- Implement structured data\n- Optimize Core Web Vitals\n- Use Astro's built-in image optimization\n- Implement proper sitemap generation\n\n## Content Management\n\n- Use frontmatter for metadata\n- Organize content in logical collections\n- Implement content validation with Zod\n- Use MDX for interactive content\n\n## Deployment\n\n- Build static site with `npm run build`\n- Deploy to any static hosting provider\n- Configure build environment variables\n- Set up continuous deployment from Git",
-      "tags": [
-        {
-          "tag": {
-            "id": "astro",
-            "name": "astro",
-            "slug": "astro"
-          }
-        },
-        {
-          "tag": {
-            "id": "typescript",
-            "name": "typescript",
-            "slug": "typescript"
-          }
-        },
-        {
-          "tag": {
-            "id": "ssg",
-            "name": "ssg",
-            "slug": "ssg"
-          }
-        },
-        {
-          "tag": {
-            "id": "content-collections",
-            "name": "content-collections",
-            "slug": "content-collections"
-          }
-        },
-        {
-          "tag": {
-            "id": "markdown",
-            "name": "markdown",
-            "slug": "markdown"
-          }
-        }
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://github.com/claudecode-community"
-      },
-      "stats": {
-        "votes": 56,
-        "copies": 239
-      },
-      "_count": {
-        "votes": 28,
-        "copies": 111
-      },
-      "difficulty": "INTERMEDIATE",
-      "language": "TypeScript",
-      "framework": "Astro",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "devops-pipeline-designer",
-      "title": "DevOps Pipeline & Infrastructure Design",
-      "slug": "devops-pipeline-designer",
-      "tagline": "Expert devops & infrastructure prompt template",
-      "description": "Expert prompt for designing CI/CD pipelines, infrastructure as code, and deployment strategies.",
-      "categoryId": "prompt-templates",
-      "category": {
-        "id": "prompt-templates",
-        "name": "Prompt Templates",
-        "slug": "prompts",
-        "description": "Carefully crafted prompt templates for common development tasks and workflows.",
-        "icon": "💬",
-        "color": "#10B981"
-      },
-      "type": "PROMPT_TEMPLATE",
-      "content": "You are a senior DevOps engineer and infrastructure architect with expertise in CI/CD pipelines, cloud infrastructure, and deployment automation.\n\n## Project Context\n**Application Stack:** {{APPLICATION_STACK}}\n**Cloud Provider:** {{CLOUD_PROVIDER}}\n**Scale:** {{SCALE_REQUIREMENTS}}\n**Compliance:** {{COMPLIANCE_REQUIREMENTS}}\n**Budget:** {{BUDGET_CONSTRAINTS}}\n\n## Requirements\n{{REQUIREMENTS}}\n\n## Design a comprehensive DevOps infrastructure with the following considerations:\n\n### 1. Infrastructure Architecture\n- Design cloud infrastructure topology\n- Plan for high availability and disaster recovery\n- Choose appropriate compute, storage, and networking services\n- Design for cost optimization and resource efficiency\n- Plan for security and compliance requirements\n\n### 2. CI/CD Pipeline Design\n- Design multi-stage pipeline (build, test, deploy)\n- Plan for automated testing integration\n- Design deployment strategies (blue-green, canary, rolling)\n- Plan for rollback and recovery procedures\n- Design for multiple environments (dev, staging, prod)\n\n### 3. Infrastructure as Code (IaC)\n- Choose IaC tools (Terraform, CloudFormation, Pulumi)\n- Design modular and reusable infrastructure components\n- Plan for state management and remote backends\n- Design for infrastructure versioning and drift detection\n- Plan for infrastructure testing and validation\n\n### 4. Container Strategy\n- Design containerization strategy (Docker)\n- Plan for container orchestration (Kubernetes, ECS)\n- Design service mesh and networking\n- Plan for container security and image management\n- Design for auto-scaling and resource management\n\n### 5. Monitoring & Observability\n- Design monitoring and alerting strategy\n- Plan for application and infrastructure metrics\n- Design logging aggregation and analysis\n- Plan for distributed tracing\n- Design for performance monitoring and APM\n\n### 6. Security & Compliance\n- Design security controls and access management\n- Plan for secrets management and encryption\n- Design for vulnerability scanning and patching\n- Plan for audit logging and compliance reporting\n- Design for network security and isolation\n\n### 7. Backup & Disaster Recovery\n- Design backup strategies for data and configurations\n- Plan for disaster recovery procedures\n- Design for business continuity\n- Plan for data retention and archival\n- Design for testing and validation of recovery procedures\n\n### 8. Cost Management\n- Design for cost optimization and resource tagging\n- Plan for auto-scaling and right-sizing\n- Design for budget alerts and cost monitoring\n- Plan for reserved instances and savings plans\n- Design for resource lifecycle management\n\n## Output Format:\nProvide a comprehensive DevOps design including:\n\n**1. Infrastructure Diagram:**\n```\n┌─ Load Balancer ─┐\n│                 │\n├─ Web Tier ──────┤\n│ App Servers     │\n├─ Database ──────┤\n│ RDS/Cluster     │\n└─────────────────┘\n```\n\n**2. CI/CD Pipeline:**\n```yaml\n# Example GitHub Actions workflow\nname: CI/CD Pipeline\non:\n  push:\n    branches: [main]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      # Build and test steps\n```\n\n**3. Infrastructure Code:**\n```hcl\n# Example Terraform configuration\nresource \"aws_instance\" \"web\" {\n  ami           = var.ami_id\n  instance_type = \"t3.micro\"\n  \n  tags = {\n    Name = \"web-server\"\n  }\n}\n```\n\n**4. Monitoring Setup:**\n- Metrics and alerting configuration\n- Dashboard definitions\n- Log aggregation setup\n\n**5. Security Configuration:**\n- IAM policies and roles\n- Network security groups\n- Encryption configuration\n\n**6. Deployment Scripts:**\n- Application deployment procedures\n- Database migration scripts\n- Environment setup automation\n\n**7. Implementation Timeline:**\n- Phase-by-phase implementation plan\n- Dependencies and prerequisites\n- Testing and validation procedures\n\nInclude specific examples, best practices, and consideration for the given requirements.",
-      "tags": [
-        {
-          "tag": {
-            "id": "devops",
-            "name": "devops",
-            "slug": "devops"
-          }
-        },
-        {
-          "tag": {
-            "id": "cicd",
-            "name": "cicd",
-            "slug": "cicd"
-          }
-        },
-        {
-          "tag": {
-            "id": "infrastructure",
-            "name": "infrastructure",
-            "slug": "infrastructure"
-          }
-        },
-        {
-          "tag": {
-            "id": "deployment",
-            "name": "deployment",
-            "slug": "deployment"
-          }
-        },
-        {
-          "tag": {
-            "id": "automation",
-            "name": "automation",
-            "slug": "automation"
-          }
-        }
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://github.com/claudecode-community"
-      },
-      "stats": {
-        "votes": 47,
-        "copies": 154
-      },
-      "_count": {
-        "votes": 45,
-        "copies": 338
-      },
-      "difficulty": "ADVANCED",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "react-vite-typescript",
-      "title": "React + Vite + TypeScript",
-      "slug": "react-vite-typescript",
-      "tagline": "React configuration for beginner developers",
-      "description": "Modern React development setup with Vite, TypeScript, and essential tooling for fast development.",
-      "categoryId": "claude-configs",
-      "category": {
-        "id": "claude-configs",
-        "name": "Claude.md Configurations",
-        "slug": "claude-configs",
-        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types.",
-        "icon": "📋",
-        "color": "#F59E0B"
-      },
-      "type": "CONFIGURATION",
-      "content": "# Claude.md - React + Vite + TypeScript Project\n\n## Project Overview\n\nThis is a modern React application built with Vite for fast development, TypeScript for type safety, and Tailwind CSS for styling.\n\n## Technology Stack\n\n- **Framework**: React 18\n- **Build Tool**: Vite\n- **Language**: TypeScript\n- **Styling**: Tailwind CSS\n- **State Management**: React hooks, Zustand/Redux Toolkit\n- **Routing**: React Router DOM\n- **Testing**: Vitest, React Testing Library\n\n## Project Structure\n\n```\nsrc/\n├── components/           # React components\n│   ├── ui/              # Reusable UI components\n│   ├── forms/           # Form components\n│   └── layout/          # Layout components\n├── pages/               # Page components\n├── hooks/               # Custom React hooks\n├── store/               # State management\n├── utils/               # Utility functions\n├── types/               # TypeScript types\n├── styles/              # CSS and Tailwind styles\n└── main.tsx            # Application entry point\n```\n\n## Development Guidelines\n\n### Code Style\n- Use functional components with hooks\n- Implement TypeScript strict mode\n- Use Tailwind CSS for styling\n- Follow React best practices\n- Use ESLint and Prettier\n\n### Component Architecture\n- Create small, focused components\n- Use custom hooks for business logic\n- Implement proper prop typing\n- Use React.memo for performance optimization\n\n### State Management\n- Use React hooks for local state\n- Use Zustand or Redux Toolkit for global state\n- Implement proper data fetching patterns\n- Use React Query for server state\n\n## Key Commands\n\n- `npm run dev` - Start development server\n- `npm run build` - Build for production\n- `npm run preview` - Preview production build\n- `npm run test` - Run tests\n- `npm run lint` - Run linter\n\n## Environment Variables\n\nCreate a `.env` file:\n```\nVITE_API_URL=http://localhost:8000/api\nVITE_APP_TITLE=My React App\n```\n\n## Common Patterns\n\n### Component with TypeScript\n```tsx\ninterface ButtonProps {\n  variant?: 'primary' | 'secondary';\n  children: React.ReactNode;\n  onClick?: () => void;\n}\n\nexport const Button: React.FC<ButtonProps> = ({ \n  variant = 'primary', \n  children, \n  onClick \n}) => {\n  return (\n    <button\n      className={`btn btn-${variant}`}\n      onClick={onClick}\n    >\n      {children}\n    </button>\n  );\n};\n```\n\n### Custom Hook\n```tsx\nimport { useState, useEffect } from 'react';\n\nexport function useApi<T>(url: string) {\n  const [data, setData] = useState<T | null>(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState<string | null>(null);\n\n  useEffect(() => {\n    fetch(url)\n      .then(res => res.json())\n      .then(setData)\n      .catch(err => setError(err.message))\n      .finally(() => setLoading(false));\n  }, [url]);\n\n  return { data, loading, error };\n}\n```\n\n### Route Configuration\n```tsx\nimport { createBrowserRouter } from 'react-router-dom';\nimport { HomePage, AboutPage, ContactPage } from './pages';\n\nexport const router = createBrowserRouter([\n  {\n    path: '/',\n    element: <HomePage />\n  },\n  {\n    path: '/about',\n    element: <AboutPage />\n  },\n  {\n    path: '/contact',\n    element: <ContactPage />\n  }\n]);\n```\n\n## Performance Tips\n\n- Use React.lazy for code splitting\n- Implement virtual scrolling for large lists\n- Optimize bundle size with tree shaking\n- Use React DevTools for debugging\n\n## Testing\n\n- Write unit tests for components\n- Test custom hooks\n- Use MSW for API mocking\n- Implement integration tests\n\n## Deployment\n\n- Build optimized bundle with `npm run build`\n- Deploy to Netlify, Vercel, or similar\n- Configure environment variables\n- Set up CI/CD pipeline",
-      "tags": [
-        {
-          "tag": {
-            "id": "react",
-            "name": "react",
-            "slug": "react"
-          }
-        },
-        {
-          "tag": {
-            "id": "vite",
-            "name": "vite",
-            "slug": "vite"
-          }
-        },
-        {
-          "tag": {
-            "id": "typescript",
-            "name": "typescript",
-            "slug": "typescript"
-          }
-        },
-        {
-          "tag": {
-            "id": "tailwind",
-            "name": "tailwind",
-            "slug": "tailwind"
-          }
-        },
-        {
-          "tag": {
-            "id": "spa",
-            "name": "spa",
-            "slug": "spa"
-          }
-        }
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://github.com/claudecode-community"
-      },
-      "stats": {
-        "votes": 19,
-        "copies": 205
-      },
-      "_count": {
-        "votes": 32,
-        "copies": 114
-      },
-      "difficulty": "BEGINNER",
-      "language": "TypeScript",
-      "framework": "React",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "go-gin-api",
-      "title": "Go + Gin Framework + GORM",
-      "slug": "go-gin-framework-gorm",
-      "tagline": "Gin configuration for intermediate developers",
-      "description": "Efficient Go REST API with Gin framework, GORM ORM, and Go best practices for high-performance backends.",
-      "categoryId": "claude-configs",
-      "category": {
-        "id": "claude-configs",
-        "name": "Claude.md Configurations",
-        "slug": "claude-configs",
-        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types.",
-        "icon": "📋",
-        "color": "#F59E0B"
-      },
-      "type": "CONFIGURATION",
-      "content": "# Claude.md - Go + Gin Framework + GORM API\n\n## Project Overview\n\nThis is a high-performance REST API built with Go, Gin framework, and GORM ORM, following Go best practices for scalable backend development.\n\n## Technology Stack\n\n- **Language**: Go 1.21+\n- **Framework**: Gin Web Framework\n- **ORM**: GORM\n- **Database**: PostgreSQL\n- **Authentication**: JWT\n- **Validation**: go-playground/validator\n- **Testing**: Go built-in testing + testify\n- **Documentation**: Swagger with gin-swagger\n\n## Project Structure\n\n```\n├── cmd/\n│   └── server/\n│       └── main.go      # Application entry point\n├── internal/\n│   ├── config/          # Configuration\n│   ├── controllers/     # HTTP handlers\n│   ├── middleware/      # HTTP middleware\n│   ├── models/          # Database models\n│   ├── repositories/    # Data access layer\n│   ├── services/        # Business logic\n│   └── utils/           # Utility functions\n├── pkg/\n│   ├── database/        # Database connection\n│   ├── logger/          # Logging utilities\n│   └── validator/       # Custom validators\n└── docs/               # Swagger documentation\n```\n\n## Development Guidelines\n\n### Code Style\n- Follow Go conventions and gofmt\n- Use meaningful package names\n- Implement proper error handling\n- Use interfaces for abstraction\n- Follow the single responsibility principle\n\n### API Design\n- Use RESTful endpoints\n- Implement proper HTTP status codes\n- Use middleware for cross-cutting concerns\n- Implement request validation\n- Use structured logging\n\n### Performance\n- Use connection pooling\n- Implement proper caching\n- Use goroutines for concurrent operations\n- Optimize database queries\n- Use profiling for optimization\n\n## Key Commands\n\n- `go run cmd/server/main.go` - Start development server\n- `go build -o bin/server cmd/server/main.go` - Build binary\n- `go test ./...` - Run tests\n- `go mod tidy` - Clean up dependencies\n- `swag init` - Generate Swagger docs\n\n## Environment Variables\n\nCreate a `.env` file:\n```\nPORT=8080\nDB_HOST=localhost\nDB_PORT=5432\nDB_USER=user\nDB_PASSWORD=password\nDB_NAME=dbname\nJWT_SECRET=your-jwt-secret\nGIN_MODE=debug\nLOG_LEVEL=info\n```\n\n## Common Patterns\n\n### Main Application Setup\n```go\n// cmd/server/main.go\npackage main\n\nimport (\n    \"log\"\n    \"os\"\n\n    \"github.com/joho/godotenv\"\n    \"your-app/internal/config\"\n    \"your-app/internal/controllers\"\n    \"your-app/internal/middleware\"\n    \"your-app/pkg/database\"\n    \"your-app/pkg/logger\"\n    \n    \"github.com/gin-gonic/gin\"\n    swaggerFiles \"github.com/swaggo/files\"\n    ginSwagger \"github.com/swaggo/gin-swagger\"\n)\n\nfunc main() {\n    // Load environment variables\n    if err := godotenv.Load(); err != nil {\n        log.Println(\"No .env file found\")\n    }\n\n    // Initialize config\n    cfg := config.Load()\n\n    // Initialize logger\n    logger.Init(cfg.LogLevel)\n\n    // Initialize database\n    db, err := database.Connect(cfg.DatabaseURL)\n    if err != nil {\n        log.Fatal(\"Failed to connect to database:\", err)\n    }\n\n    // Auto-migrate models\n    database.Migrate(db)\n\n    // Initialize Gin router\n    if cfg.Environment == \"production\" {\n        gin.SetMode(gin.ReleaseMode)\n    }\n\n    router := gin.New()\n    router.Use(gin.Logger())\n    router.Use(gin.Recovery())\n    router.Use(middleware.CORS())\n\n    // Initialize controllers\n    userController := controllers.NewUserController(db)\n    authController := controllers.NewAuthController(db)\n\n    // Routes\n    v1 := router.Group(\"/api/v1\")\n    {\n        auth := v1.Group(\"/auth\")\n        {\n            auth.POST(\"/login\", authController.Login)\n            auth.POST(\"/register\", authController.Register)\n        }\n\n        users := v1.Group(\"/users\")\n        users.Use(middleware.AuthRequired())\n        {\n            users.GET(\"\", userController.GetUsers)\n            users.GET(\"/:id\", userController.GetUser)\n            users.PUT(\"/:id\", userController.UpdateUser)\n            users.DELETE(\"/:id\", userController.DeleteUser)\n        }\n    }\n\n    // Swagger documentation\n    router.GET(\"/swagger/*any\", ginSwagger.WrapHandler(swaggerFiles.Handler))\n\n    // Health check\n    router.GET(\"/health\", func(c *gin.Context) {\n        c.JSON(200, gin.H{\"status\": \"healthy\"})\n    })\n\n    // Start server\n    port := os.Getenv(\"PORT\")\n    if port == \"\" {\n        port = \"8080\"\n    }\n\n    log.Printf(\"Server starting on port %s\", port)\n    if err := router.Run(\":\" + port); err != nil {\n        log.Fatal(\"Failed to start server:\", err)\n    }\n}\n```\n\n### Database Models\n```go\n// internal/models/user.go\npackage models\n\nimport (\n    \"time\"\n    \"gorm.io/gorm\"\n)\n\ntype User struct {\n    ID        uint           `json:\"id\" gorm:\"primaryKey\"`\n    Name      string         `json:\"name\" gorm:\"not null\" validate:\"required,min=1,max=100\"`\n    Email     string         `json:\"email\" gorm:\"uniqueIndex;not null\" validate:\"required,email\"`\n    Password  string         `json:\"-\" gorm:\"not null\" validate:\"required,min=8\"`\n    IsActive  bool           `json:\"is_active\" gorm:\"default:true\"`\n    CreatedAt time.Time      `json:\"created_at\"`\n    UpdatedAt time.Time      `json:\"updated_at\"`\n    DeletedAt gorm.DeletedAt `json:\"-\" gorm:\"index\"`\n}\n\ntype CreateUserRequest struct {\n    Name     string `json:\"name\" validate:\"required,min=1,max=100\"`\n    Email    string `json:\"email\" validate:\"required,email\"`\n    Password string `json:\"password\" validate:\"required,min=8\"`\n}\n\ntype UpdateUserRequest struct {\n    Name     *string `json:\"name,omitempty\" validate:\"omitempty,min=1,max=100\"`\n    Email    *string `json:\"email,omitempty\" validate:\"omitempty,email\"`\n    IsActive *bool   `json:\"is_active,omitempty\"`\n}\n\ntype UserResponse struct {\n    ID        uint      `json:\"id\"`\n    Name      string    `json:\"name\"`\n    Email     string    `json:\"email\"`\n    IsActive  bool      `json:\"is_active\"`\n    CreatedAt time.Time `json:\"created_at\"`\n    UpdatedAt time.Time `json:\"updated_at\"`\n}\n\nfunc (u *User) ToResponse() UserResponse {\n    return UserResponse{\n        ID:        u.ID,\n        Name:      u.Name,\n        Email:     u.Email,\n        IsActive:  u.IsActive,\n        CreatedAt: u.CreatedAt,\n        UpdatedAt: u.UpdatedAt,\n    }\n}\n```\n\n### Repository Pattern\n```go\n// internal/repositories/user_repository.go\npackage repositories\n\nimport (\n    \"your-app/internal/models\"\n    \"gorm.io/gorm\"\n)\n\ntype UserRepository interface {\n    Create(user *models.User) error\n    GetByID(id uint) (*models.User, error)\n    GetByEmail(email string) (*models.User, error)\n    GetAll(offset, limit int) ([]models.User, error)\n    Update(user *models.User) error\n    Delete(id uint) error\n    Count() (int64, error)\n}\n\ntype userRepository struct {\n    db *gorm.DB\n}\n\nfunc NewUserRepository(db *gorm.DB) UserRepository {\n    return &userRepository{db: db}\n}\n\nfunc (r *userRepository) Create(user *models.User) error {\n    return r.db.Create(user).Error\n}\n\nfunc (r *userRepository) GetByID(id uint) (*models.User, error) {\n    var user models.User\n    err := r.db.First(&user, id).Error\n    if err != nil {\n        return nil, err\n    }\n    return &user, nil\n}\n\nfunc (r *userRepository) GetByEmail(email string) (*models.User, error) {\n    var user models.User\n    err := r.db.Where(\"email = ?\", email).First(&user).Error\n    if err != nil {\n        return nil, err\n    }\n    return &user, nil\n}\n\nfunc (r *userRepository) GetAll(offset, limit int) ([]models.User, error) {\n    var users []models.User\n    err := r.db.Offset(offset).Limit(limit).Find(&users).Error\n    return users, err\n}\n\nfunc (r *userRepository) Update(user *models.User) error {\n    return r.db.Save(user).Error\n}\n\nfunc (r *userRepository) Delete(id uint) error {\n    return r.db.Delete(&models.User{}, id).Error\n}\n\nfunc (r *userRepository) Count() (int64, error) {\n    var count int64\n    err := r.db.Model(&models.User{}).Count(&count).Error\n    return count, err\n}\n```\n\n### Service Layer\n```go\n// internal/services/user_service.go\npackage services\n\nimport (\n    \"errors\"\n    \"your-app/internal/models\"\n    \"your-app/internal/repositories\"\n    \"your-app/pkg/utils\"\n    \n    \"golang.org/x/crypto/bcrypt\"\n    \"gorm.io/gorm\"\n)\n\ntype UserService interface {\n    CreateUser(req *models.CreateUserRequest) (*models.User, error)\n    GetUser(id uint) (*models.User, error)\n    GetUsers(page, limit int) ([]models.User, int64, error)\n    UpdateUser(id uint, req *models.UpdateUserRequest) (*models.User, error)\n    DeleteUser(id uint) error\n    AuthenticateUser(email, password string) (*models.User, error)\n}\n\ntype userService struct {\n    userRepo repositories.UserRepository\n}\n\nfunc NewUserService(userRepo repositories.UserRepository) UserService {\n    return &userService{\n        userRepo: userRepo,\n    }\n}\n\nfunc (s *userService) CreateUser(req *models.CreateUserRequest) (*models.User, error) {\n    // Check if user already exists\n    existingUser, err := s.userRepo.GetByEmail(req.Email)\n    if err == nil && existingUser != nil {\n        return nil, errors.New(\"user with this email already exists\")\n    }\n\n    // Hash password\n    hashedPassword, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)\n    if err != nil {\n        return nil, err\n    }\n\n    user := &models.User{\n        Name:     req.Name,\n        Email:    req.Email,\n        Password: string(hashedPassword),\n        IsActive: true,\n    }\n\n    err = s.userRepo.Create(user)\n    if err != nil {\n        return nil, err\n    }\n\n    return user, nil\n}\n\nfunc (s *userService) GetUser(id uint) (*models.User, error) {\n    return s.userRepo.GetByID(id)\n}\n\nfunc (s *userService) GetUsers(page, limit int) ([]models.User, int64, error) {\n    offset := (page - 1) * limit\n    users, err := s.userRepo.GetAll(offset, limit)\n    if err != nil {\n        return nil, 0, err\n    }\n\n    total, err := s.userRepo.Count()\n    if err != nil {\n        return nil, 0, err\n    }\n\n    return users, total, nil\n}\n\nfunc (s *userService) AuthenticateUser(email, password string) (*models.User, error) {\n    user, err := s.userRepo.GetByEmail(email)\n    if err != nil {\n        if errors.Is(err, gorm.ErrRecordNotFound) {\n            return nil, errors.New(\"invalid credentials\")\n        }\n        return nil, err\n    }\n\n    err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password))\n    if err != nil {\n        return nil, errors.New(\"invalid credentials\")\n    }\n\n    if !user.IsActive {\n        return nil, errors.New(\"account is deactivated\")\n    }\n\n    return user, nil\n}\n```\n\n### HTTP Controllers\n```go\n// internal/controllers/user_controller.go\npackage controllers\n\nimport (\n    \"net/http\"\n    \"strconv\"\n\n    \"your-app/internal/models\"\n    \"your-app/internal/services\"\n    \"your-app/pkg/utils\"\n\n    \"github.com/gin-gonic/gin\"\n    \"github.com/go-playground/validator/v10\"\n)\n\ntype UserController struct {\n    userService services.UserService\n    validator   *validator.Validate\n}\n\nfunc NewUserController(userService services.UserService) *UserController {\n    return &UserController{\n        userService: userService,\n        validator:   validator.New(),\n    }\n}\n\n// GetUsers godoc\n// @Summary Get users\n// @Description Get list of users with pagination\n// @Tags users\n// @Accept json\n// @Produce json\n// @Param page query int false \"Page number\" default(1)\n// @Param limit query int false \"Items per page\" default(10)\n// @Success 200 {object} utils.PaginatedResponse\n// @Failure 400 {object} utils.ErrorResponse\n// @Router /users [get]\nfunc (c *UserController) GetUsers(ctx *gin.Context) {\n    page, _ := strconv.Atoi(ctx.DefaultQuery(\"page\", \"1\"))\n    limit, _ := strconv.Atoi(ctx.DefaultQuery(\"limit\", \"10\"))\n\n    if page < 1 {\n        page = 1\n    }\n    if limit < 1 || limit > 100 {\n        limit = 10\n    }\n\n    users, total, err := c.userService.GetUsers(page, limit)\n    if err != nil {\n        utils.ErrorResponse(ctx, http.StatusInternalServerError, \"Failed to get users\", err)\n        return\n    }\n\n    var userResponses []models.UserResponse\n    for _, user := range users {\n        userResponses = append(userResponses, user.ToResponse())\n    }\n\n    utils.PaginatedResponse(ctx, userResponses, page, limit, total)\n}\n\n// CreateUser godoc\n// @Summary Create user\n// @Description Create a new user\n// @Tags users\n// @Accept json\n// @Produce json\n// @Param user body models.CreateUserRequest true \"User data\"\n// @Success 201 {object} models.UserResponse\n// @Failure 400 {object} utils.ErrorResponse\n// @Router /users [post]\nfunc (c *UserController) CreateUser(ctx *gin.Context) {\n    var req models.CreateUserRequest\n    if err := ctx.ShouldBindJSON(&req); err != nil {\n        utils.ValidationErrorResponse(ctx, err)\n        return\n    }\n\n    if err := c.validator.Struct(&req); err != nil {\n        utils.ValidationErrorResponse(ctx, err)\n        return\n    }\n\n    user, err := c.userService.CreateUser(&req)\n    if err != nil {\n        utils.ErrorResponse(ctx, http.StatusBadRequest, \"Failed to create user\", err)\n        return\n    }\n\n    ctx.JSON(http.StatusCreated, user.ToResponse())\n}\n```\n\n### Authentication Middleware\n```go\n// internal/middleware/auth.go\npackage middleware\n\nimport (\n    \"net/http\"\n    \"strings\"\n\n    \"your-app/pkg/utils\"\n\n    \"github.com/gin-gonic/gin\"\n    \"github.com/golang-jwt/jwt/v4\"\n)\n\nfunc AuthRequired() gin.HandlerFunc {\n    return func(c *gin.Context) {\n        tokenString := c.GetHeader(\"Authorization\")\n        if tokenString == \"\" {\n            utils.ErrorResponse(c, http.StatusUnauthorized, \"Authorization header required\", nil)\n            c.Abort()\n            return\n        }\n\n        // Remove \"Bearer \" prefix\n        tokenString = strings.TrimPrefix(tokenString, \"Bearer \")\n\n        token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {\n            return []byte(utils.GetEnv(\"JWT_SECRET\", \"secret\")), nil\n        })\n\n        if err != nil || !token.Valid {\n            utils.ErrorResponse(c, http.StatusUnauthorized, \"Invalid token\", err)\n            c.Abort()\n            return\n        }\n\n        if claims, ok := token.Claims.(jwt.MapClaims); ok {\n            c.Set(\"user_id\", claims[\"user_id\"])\n            c.Set(\"email\", claims[\"email\"])\n        }\n\n        c.Next()\n    }\n}\n```\n\n## Testing\n\n- Use Go's built-in testing package\n- Write unit tests for services and repositories\n- Use testify for assertions\n- Mock dependencies with interfaces\n- Write integration tests for controllers\n\n## Database\n\n- Use GORM for ORM operations\n- Implement database migrations\n- Use connection pooling\n- Implement proper indexing\n- Handle transactions properly\n\n## Deployment\n\n- Build static binary with Go\n- Use Docker for containerization\n- Deploy with proper environment configuration\n- Set up health checks and monitoring\n- Use graceful shutdown",
-      "tags": [
-        {
-          "tag": {
-            "id": "go",
-            "name": "go",
-            "slug": "go"
-          }
-        },
-        {
-          "tag": {
-            "id": "gin",
-            "name": "gin",
-            "slug": "gin"
-          }
-        },
-        {
-          "tag": {
-            "id": "gorm",
-            "name": "gorm",
-            "slug": "gorm"
-          }
-        },
-        {
-          "tag": {
-            "id": "rest-api",
-            "name": "rest-api",
-            "slug": "rest-api"
-          }
-        },
-        {
-          "tag": {
-            "id": "golang",
-            "name": "golang",
-            "slug": "golang"
-          }
-        }
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://github.com/claudecode-community"
-      },
-      "stats": {
-        "votes": 15,
-        "copies": 194
-      },
-      "_count": {
-        "votes": 21,
-        "copies": 83
-      },
-      "difficulty": "INTERMEDIATE",
-      "language": "Go",
-      "framework": "Gin",
       "lastUpdated": "2024-12-01",
       "featured": true
     }
   ],
   "meta": {
-    "total": 10,
+    "total": 3,
     "limit": 12,
-    "generated_at": "2025-07-30T20:50:57.034Z"
+    "generated_at": "2025-07-30T21:08:20.791Z"
   }
 }
