@@ -1,92 +1,552 @@
 {
   "resources": [
     {
-      "id": "nextjs-config",
-      "title": "Next.js Configuration",
-      "slug": "nextjs-configuration",
-      "tagline": "Optimized Claude configuration for Next.js projects",
-      "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
-      "categoryId": "claude-configs",
-      "type": "CONFIGURATION",
-      "content": "# Claude Configuration for Next.js\\n\\nThis configuration optimizes Claude for Next.js development...",
+      "id": "claude-docker-assistant",
+      "title": "Claude Docker Assistant",
+      "slug": "claude-docker-assistant",
+      "tagline": "Docker containerization made easy with Claude",
+      "description": "Intelligent Docker assistant that helps you create, optimize, and troubleshoot Docker containers. Generate Dockerfiles, docker-compose configurations, and best practices.",
+      "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://github.com/docker-community/claude-docker-assistant",
       "tags": [
-        "nextjs",
-        "react",
-        "frontend",
-        "typescript"
+        {
+          "tag": {
+            "id": "docker",
+            "name": "docker",
+            "slug": "docker"
+          }
+        },
+        {
+          "tag": {
+            "id": "containers",
+            "name": "containers",
+            "slug": "containers"
+          }
+        },
+        {
+          "tag": {
+            "id": "devops",
+            "name": "devops",
+            "slug": "devops"
+          }
+        },
+        {
+          "tag": {
+            "id": "automation",
+            "name": "automation",
+            "slug": "automation"
+          }
+        }
       ],
       "author": {
-        "name": "Claude Code Community",
-        "url": "https://claudecode.directory"
+        "name": "Docker Community",
+        "url": "https://github.com/docker-community"
       },
       "stats": {
-        "votes": 45,
-        "copies": 234
+        "votes": 324,
+        "copies": 1245
+      },
+      "_count": {
+        "votes": 324,
+        "copies": 1245
       },
       "difficulty": "INTERMEDIATE",
-      "language": "TypeScript",
-      "framework": "Next.js",
       "lastUpdated": "2024-12-01",
       "featured": true
     },
     {
-      "id": "api-design-prompt",
-      "title": "API Design Architect Prompt",
-      "slug": "api-design-architect",
-      "tagline": "Expert-level prompt for designing REST APIs",
-      "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
-      "categoryId": "prompt-templates",
-      "type": "PROMPT_TEMPLATE",
-      "content": "You are an expert API architect...",
+      "id": "claude-terraform-provider",
+      "title": "Claude Terraform Provider",
+      "slug": "claude-terraform-provider",
+      "tagline": "Infrastructure as Code with Claude AI assistance",
+      "description": "Terraform provider that uses Claude AI to generate, validate, and optimize infrastructure code. Automatically create secure and efficient Terraform configurations.",
+      "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://registry.terraform.io/providers/anthropic/claude",
       "tags": [
-        "api-design",
-        "rest",
-        "architecture",
-        "backend"
+        {
+          "tag": {
+            "id": "terraform",
+            "name": "terraform",
+            "slug": "terraform"
+          }
+        },
+        {
+          "tag": {
+            "id": "infrastructure",
+            "name": "infrastructure",
+            "slug": "infrastructure"
+          }
+        },
+        {
+          "tag": {
+            "id": "iac",
+            "name": "iac",
+            "slug": "iac"
+          }
+        },
+        {
+          "tag": {
+            "id": "devops",
+            "name": "devops",
+            "slug": "devops"
+          }
+        }
       ],
       "author": {
-        "name": "Claude Code Community",
-        "url": "https://claudecode.directory"
+        "name": "Terraform Community",
+        "url": "https://github.com/terraform-community"
       },
       "stats": {
-        "votes": 67,
-        "copies": 189
+        "votes": 198,
+        "copies": 654
+      },
+      "_count": {
+        "votes": 198,
+        "copies": 654
       },
       "difficulty": "ADVANCED",
       "lastUpdated": "2024-12-01",
       "featured": true
     },
     {
-      "id": "claude-cli",
-      "title": "Claude CLI Tool",
-      "slug": "claude-cli-tool",
-      "tagline": "Official command-line interface for Claude AI",
-      "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
-      "categoryId": "tools-cli",
+      "id": "claude-postman-collection",
+      "title": "Claude API Postman Collection",
+      "slug": "claude-api-postman-collection",
+      "tagline": "Complete Postman collection for Claude API",
+      "description": "Comprehensive Postman collection with all Claude API endpoints, example requests, and automated tests. Perfect for API testing and integration development.",
+      "categoryId": "api-integrations",
+      "category": {
+        "id": "api-integrations",
+        "name": "API Integrations",
+        "slug": "integrations",
+        "description": "Examples and libraries for integrating Claude API into various platforms.",
+        "icon": "🔗",
+        "color": "#EF4444"
+      },
       "type": "EXTERNAL",
-      "url": "https://github.com/anthropics/claude-cli",
+      "url": "https://www.postman.com/anthropic/workspace/claude-api",
       "tags": [
-        "cli",
-        "terminal",
-        "automation",
-        "productivity"
+        {
+          "tag": {
+            "id": "postman",
+            "name": "postman",
+            "slug": "postman"
+          }
+        },
+        {
+          "tag": {
+            "id": "api",
+            "name": "api",
+            "slug": "api"
+          }
+        },
+        {
+          "tag": {
+            "id": "testing",
+            "name": "testing",
+            "slug": "testing"
+          }
+        },
+        {
+          "tag": {
+            "id": "collection",
+            "name": "collection",
+            "slug": "collection"
+          }
+        }
       ],
       "author": {
         "name": "Anthropic",
         "url": "https://anthropic.com"
       },
       "stats": {
-        "votes": 245,
-        "copies": 1820
+        "votes": 145,
+        "copies": 892
+      },
+      "_count": {
+        "votes": 145,
+        "copies": 892
       },
       "difficulty": "BEGINNER",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "database-schema-designer",
+      "title": "Database Schema Design Prompt",
+      "slug": "database-schema-designer",
+      "tagline": "Expert database design prompt template",
+      "description": "Expert-level prompt for designing optimized database schemas with proper relationships, indexing, and normalization.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior database architect with expertise in relational database design, normalization, and performance optimization.\n\n## Context\n**Application:** {{APPLICATION_TYPE}}\n**Database:** {{DATABASE_TYPE}}\n**Expected Data Volume:** {{DATA_VOLUME}}\n**Query Patterns:** {{QUERY_PATTERNS}}\n**Performance Requirements:** {{PERFORMANCE_REQUIREMENTS}}\n\n## Business Requirements\n{{BUSINESS_REQUIREMENTS}}\n\n## Design a comprehensive database schema with the following considerations:\n\n### 1. Entity Identification & Modeling\n- Identify all entities from business requirements\n- Define entity attributes and data types\n- Establish entity relationships (1:1, 1:M, M:M)\n- Apply appropriate normalization (up to 3NF typically)\n\n### 2. Schema Design\n- Create detailed table structures\n- Define primary keys and foreign keys\n- Implement appropriate constraints (NOT NULL, UNIQUE, CHECK)\n- Design lookup tables and reference data\n- Plan for data integrity and referential constraints\n\n### 3. Relationship Design\n- Design junction tables for many-to-many relationships\n- Implement proper cascading rules (CASCADE, SET NULL, RESTRICT)\n- Handle hierarchical data (adjacency list, nested sets, etc.)\n- Design for soft deletes where appropriate\n\n### 4. Indexing Strategy\n- Identify query patterns and access paths\n- Design primary and secondary indexes\n- Plan composite indexes for multi-column queries\n- Consider partial indexes for filtered queries\n- Balance query performance vs. write performance\n\n### 5. Performance Optimization\n- Design for expected query patterns\n- Plan partitioning strategy for large tables\n- Consider denormalization for read-heavy scenarios\n- Design materialized views for complex aggregations\n- Plan for archival and data lifecycle management\n\n### 6. Data Types & Constraints\n- Choose optimal data types for storage efficiency\n- Implement business rule constraints at database level\n- Design for internationalization (UTF-8, collations)\n- Handle temporal data (timestamps, time zones)\n- Plan for JSON/document storage if needed\n\n### 7. Security & Compliance\n- Design role-based access control\n- Plan for data encryption (at rest/in transit)\n- Implement audit trails and change tracking\n- Consider data privacy and GDPR compliance\n- Design for secure backup and recovery\n\n## Output Format:\nProvide a complete database design including:\n\n**Entity Relationship Diagram (textual):**\n```\n[Entity1] --< [Junction] >-- [Entity2]\n[Parent] ||--o{ [Child]\n```\n\n**Schema Definition:**\n```sql\nCREATE TABLE users (\n    id SERIAL PRIMARY KEY,\n    email VARCHAR(255) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n```\n\n**Index Strategy:**\n```sql\nCREATE INDEX idx_users_email ON users(email);\nCREATE INDEX idx_orders_user_date ON orders(user_id, created_at);\n```\n\nInclude migration scripts, sample queries, and performance considerations.",
+      "tags": [
+        {
+          "tag": {
+            "id": "database",
+            "name": "database",
+            "slug": "database"
+          }
+        },
+        {
+          "tag": {
+            "id": "schema",
+            "name": "schema",
+            "slug": "schema"
+          }
+        },
+        {
+          "tag": {
+            "id": "sql",
+            "name": "sql",
+            "slug": "sql"
+          }
+        },
+        {
+          "tag": {
+            "id": "normalization",
+            "name": "normalization",
+            "slug": "normalization"
+          }
+        },
+        {
+          "tag": {
+            "id": "optimization",
+            "name": "optimization",
+            "slug": "optimization"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 93,
+        "copies": 182
+      },
+      "_count": {
+        "votes": 91,
+        "copies": 285
+      },
+      "difficulty": "ADVANCED",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "frontend-architecture-planner",
+      "title": "Frontend Architecture & Component Design",
+      "slug": "frontend-architecture-planner",
+      "tagline": "Expert frontend development prompt template",
+      "description": "Comprehensive prompt for designing scalable frontend architectures with component systems and state management.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior frontend architect specializing in modern web applications, component systems, and scalable frontend architectures.\n\n## Project Context\n**Application Type:** {{APPLICATION_TYPE}}\n**Framework:** {{FRAMEWORK}}\n**Complexity:** {{COMPLEXITY_LEVEL}}\n**Team Size:** {{TEAM_SIZE}}\n**Timeline:** {{TIMELINE}}\n\n## Requirements\n{{REQUIREMENTS}}\n\n## Design a comprehensive frontend architecture with the following considerations:\n\n### 1. Architecture Overview\n- Define overall application structure and layers\n- Choose appropriate architectural patterns (MVC, Component-based, Micro-frontends)\n- Plan for scalability and maintainability\n- Consider development team structure and workflow\n\n### 2. Component System Design\n- Design reusable component hierarchy\n- Create component categorization (Atoms, Molecules, Organisms)\n- Plan for component composition and prop interfaces\n- Design consistent component API patterns\n- Plan for component testing strategies\n\n### 3. State Management Strategy\n- Choose appropriate state management solution\n- Design global state structure\n- Plan for local component state\n- Design data flow patterns (unidirectional/bidirectional)\n- Handle asynchronous state (loading, error states)\n\n### 4. Routing & Navigation\n- Design application routing structure\n- Plan for nested routes and route parameters\n- Implement navigation guards and access control\n- Handle deep linking and browser history\n- Design for SEO and social sharing\n\n### 5. Data Layer & API Integration\n- Design API service layer and data fetching patterns\n- Plan for caching and data synchronization\n- Handle optimistic updates and conflict resolution\n- Design error handling and retry mechanisms\n- Plan for offline capabilities\n\n### 6. Performance Optimization\n- Plan for code splitting and lazy loading\n- Design bundle optimization strategy\n- Implement performance monitoring\n- Plan for image and asset optimization\n- Consider server-side rendering (SSR) needs\n\n### 7. Development Experience\n- Set up development tooling and build process\n- Plan for hot reloading and development server\n- Design component documentation system\n- Set up testing infrastructure (unit, integration, e2e)\n- Plan for code quality tools (linting, formatting)\n\n### 8. Accessibility & UX\n- Design for accessibility standards (WCAG)\n- Plan for responsive design and mobile experience\n- Design loading states and error boundaries\n- Plan for internationalization (i18n)\n- Consider user preferences and theming\n\n## Output Format:\nProvide a detailed frontend architecture including:\n\n**1. Architecture Diagram (textual):**\n```\n┌─ Presentation Layer ─┐\n│ Components & Views   │\n├─ Business Logic ─────┤\n│ Services & Stores    │\n├─ Data Layer ─────────┤\n│ API & Persistence    │\n└──────────────────────┘\n```\n\n**2. Component Structure:**\n```\nsrc/\n├── components/\n│   ├── ui/           # Base components\n│   ├── forms/        # Form components\n│   └── layout/       # Layout components\n├── pages/            # Route components\n├── services/         # API services\n├── stores/           # State management\n└── utils/            # Utilities\n```\n\n**3. State Management Design:**\n- Global state schema\n- State update patterns\n- Side effects handling\n\n**4. Component Examples:**\n- Base component interfaces\n- Composition examples\n- State integration patterns\n\n**5. Implementation Roadmap:**\n- Phase-by-phase development plan\n- Critical path identification\n- Risk mitigation strategies\n\nInclude specific code examples and consider modern best practices.",
+      "tags": [
+        {
+          "tag": {
+            "id": "frontend",
+            "name": "frontend",
+            "slug": "frontend"
+          }
+        },
+        {
+          "tag": {
+            "id": "architecture",
+            "name": "architecture",
+            "slug": "architecture"
+          }
+        },
+        {
+          "tag": {
+            "id": "components",
+            "name": "components",
+            "slug": "components"
+          }
+        },
+        {
+          "tag": {
+            "id": "state-management",
+            "name": "state-management",
+            "slug": "state-management"
+          }
+        },
+        {
+          "tag": {
+            "id": "design-system",
+            "name": "design-system",
+            "slug": "design-system"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 81,
+        "copies": 375
+      },
+      "_count": {
+        "votes": 82,
+        "copies": 209
+      },
+      "difficulty": "INTERMEDIATE",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "code-review-expert",
+      "title": "Comprehensive Code Review & Analysis",
+      "slug": "code-review-expert",
+      "tagline": "Expert code quality prompt template",
+      "description": "Expert-level prompt for conducting thorough code reviews with focus on quality, security, and best practices.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior software engineer and code review expert with deep knowledge of software engineering best practices, security, and code quality.\n\n## Review Context\n**Language/Framework:** {{LANGUAGE_FRAMEWORK}}\n**Code Type:** {{CODE_TYPE}}\n**Review Scope:** {{REVIEW_SCOPE}}\n**Team Experience:** {{TEAM_EXPERIENCE}}\n**Critical Level:** {{CRITICAL_LEVEL}}\n\n## Code to Review\n```{{LANGUAGE}}\n{{CODE_CONTENT}}\n```\n\n## Conduct a comprehensive code review covering the following areas:\n\n### 1. Code Quality & Readability\n- Assess code clarity and readability\n- Review naming conventions and consistency\n- Evaluate code organization and structure\n- Check for proper commenting and documentation\n- Review function/method size and complexity\n\n### 2. Architecture & Design Patterns\n- Evaluate adherence to SOLID principles\n- Review design pattern usage and appropriateness\n- Assess separation of concerns\n- Check for proper abstraction levels\n- Review dependency management and coupling\n\n### 3. Performance & Efficiency\n- Identify potential performance bottlenecks\n- Review algorithm complexity and efficiency\n- Check for memory leaks and resource management\n- Evaluate database query optimization\n- Assess caching strategies and implementation\n\n### 4. Security Analysis\n- Check for common security vulnerabilities (OWASP Top 10)\n- Review input validation and sanitization\n- Assess authentication and authorization implementation\n- Check for SQL injection and XSS vulnerabilities\n- Review sensitive data handling and encryption\n\n### 5. Error Handling & Resilience\n- Review exception handling patterns\n- Check for proper error propagation\n- Assess logging and monitoring implementation\n- Review timeout and retry mechanisms\n- Check for graceful failure handling\n\n### 6. Testing & Testability\n- Assess testability of the code\n- Review test coverage and quality\n- Check for proper mocking and stubbing\n- Evaluate test organization and structure\n- Review integration and end-to-end test coverage\n\n### 7. Maintainability & Technical Debt\n- Identify code smells and anti-patterns\n- Assess code duplication and DRY principle adherence\n- Review configuration management\n- Check for proper versioning and backward compatibility\n- Evaluate refactoring opportunities\n\n### 8. Language/Framework Specific\n- Review language-specific best practices\n- Check for proper framework usage\n- Assess library and dependency choices\n- Review configuration and setup\n- Check for platform-specific considerations\n\n## Output Format:\nProvide a detailed code review with:\n\n**Overall Assessment:**\n- High-level summary of code quality\n- Key strengths and areas for improvement\n- Risk level assessment\n\n**Detailed Findings:**\n\n**🔴 Critical Issues** (Must fix before merge):\n- Security vulnerabilities\n- Performance blockers\n- Architectural violations\n\n**🟡 Major Issues** (Should fix soon):\n- Code quality issues\n- Maintainability concerns\n- Best practice violations\n\n**🟢 Minor Issues** (Nice to have):\n- Style improvements\n- Optimization opportunities\n- Documentation enhancements\n\n**Specific Recommendations:**\n```{{LANGUAGE}}\n// Example: Instead of this\nfunction badExample() {\n  // problematic code\n}\n\n// Consider this approach\nfunction betterExample() {\n  // improved code\n}\n```\n\n**Action Items:**\n1. Priority fixes with explanations\n2. Refactoring suggestions\n3. Additional testing recommendations\n4. Documentation updates needed\n\n**Learning Opportunities:**\n- Educational notes for team growth\n- Links to relevant resources\n- Pattern recommendations\n\nProvide constructive feedback focused on improvement and learning.",
+      "tags": [
+        {
+          "tag": {
+            "id": "code-review",
+            "name": "code-review",
+            "slug": "code-review"
+          }
+        },
+        {
+          "tag": {
+            "id": "quality",
+            "name": "quality",
+            "slug": "quality"
+          }
+        },
+        {
+          "tag": {
+            "id": "security",
+            "name": "security",
+            "slug": "security"
+          }
+        },
+        {
+          "tag": {
+            "id": "best-practices",
+            "name": "best-practices",
+            "slug": "best-practices"
+          }
+        },
+        {
+          "tag": {
+            "id": "refactoring",
+            "name": "refactoring",
+            "slug": "refactoring"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 79,
+        "copies": 220
+      },
+      "_count": {
+        "votes": 99,
+        "copies": 279
+      },
+      "difficulty": "ADVANCED",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "jupyter-ml-project",
+      "title": "Jupyter ML Project + Python",
+      "slug": "jupyter-ml-project-python",
+      "tagline": "Jupyter configuration for intermediate developers",
+      "description": "Complete machine learning project setup with Jupyter notebooks, data analysis, and model development workflows.",
+      "categoryId": "claude-configs",
+      "category": {
+        "id": "claude-configs",
+        "name": "Claude.md Configurations",
+        "slug": "claude-configs",
+        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types.",
+        "icon": "📋",
+        "color": "#F59E0B"
+      },
+      "type": "CONFIGURATION",
+      "content": "# Claude.md - Jupyter ML Project + Python\n\n## Project Overview\n\nThis is a comprehensive machine learning project setup using Jupyter notebooks, pandas for data manipulation, scikit-learn for modeling, and modern Python data science practices.\n\n## Technology Stack\n\n- **Language**: Python 3.9+\n- **Environment**: Jupyter Lab/Notebook\n- **Data Processing**: Pandas, NumPy\n- **Visualization**: Matplotlib, Seaborn, Plotly\n- **ML Library**: Scikit-learn, XGBoost\n- **Model Deployment**: MLflow, FastAPI\n- **Version Control**: DVC (Data Version Control)\n\n## Project Structure\n\n```\n├── data/\n│   ├── raw/             # Original, immutable data\n│   ├── interim/         # Intermediate data (cleaned)\n│   ├── processed/       # Final datasets for modeling\n│   └── external/        # External data sources\n├── notebooks/\n│   ├── exploratory/     # EDA notebooks\n│   ├── modeling/        # Model development\n│   └── reporting/       # Final analysis\n├── src/\n│   ├── data/           # Data processing scripts\n│   ├── features/       # Feature engineering\n│   ├── models/         # Model training/prediction\n│   └── visualization/ # Plotting utilities\n├── models/             # Trained model artifacts\n├── reports/            # Analysis reports\n└── requirements.txt    # Python dependencies\n```\n\n## Development Guidelines\n\n### Code Style\n- Follow PEP 8 style guidelines\n- Use type hints for functions\n- Document functions with docstrings\n- Keep notebooks clean and well-documented\n- Use meaningful variable names\n\n### Data Science Workflow\n- Start with exploratory data analysis (EDA)\n- Follow the CRISP-DM methodology\n- Version control data with DVC\n- Validate data quality at each step\n- Document assumptions and decisions\n\n### Reproducibility\n- Set random seeds for reproducible results\n- Use environment.yml for dependencies\n- Document data sources and preprocessing steps\n- Create automated pipelines where possible\n- Track experiments with MLflow\n\n## Key Commands\n\n- `jupyter lab` - Start Jupyter Lab\n- `jupyter notebook` - Start Jupyter Notebook\n- `python -m pip install -r requirements.txt` - Install dependencies\n- `python src/data/make_dataset.py` - Process raw data\n- `python src/models/train_model.py` - Train model\n- `mlflow ui` - View experiment tracking\n\n## Environment Setup\n\nCreate a `requirements.txt` file:\n```\n# Core data science stack\npandas==2.1.4\nnumpy==1.24.3\nmatplotlib==3.7.2\nseaborn==0.12.2\nplotly==5.17.0\n\n# Machine learning\nscikit-learn==1.3.2\nxgboost==2.0.2\nlightgbm==4.1.0\n\n# Jupyter environment\njupyter==1.0.0\njupyterlab==4.0.9\nipykernel==6.27.1\nipywidgets==8.1.1\n\n# Model tracking and deployment\nmlflow==2.8.1\nfastapi==0.104.1\nuvicorn==0.24.0\n\n# Data version control\ndvc==3.30.1\n\n# Utilities\npython-dotenv==1.0.0\nrequests==2.31.0\ntqdm==4.66.1\n```\n\n## Common Patterns\n\n### Data Loading and Exploration\n```python\n# notebooks/exploratory/01_data_exploration.ipynb\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom pathlib import Path\nimport warnings\nwarnings.filterwarnings('ignore')\n\n# Set up plotting\nplt.style.use('seaborn-v0_8')\nsns.set_palette(\"husl\")\n\n# Load data\ndef load_data(filepath: str) -> pd.DataFrame:\n    \"\"\"Load dataset from CSV file.\"\"\"\n    data_path = Path(filepath)\n    if not data_path.exists():\n        raise FileNotFoundError(f\"Data file not found: {filepath}\")\n    \n    df = pd.read_csv(data_path)\n    print(f\"Data loaded: {df.shape[0]} rows, {df.shape[1]} columns\")\n    return df\n\n# Basic data exploration\ndef explore_data(df: pd.DataFrame) -> None:\n    \"\"\"Perform basic data exploration.\"\"\"\n    print(\"=== Dataset Overview ===\")\n    print(f\"Shape: {df.shape}\")\n    print(f\"Memory usage: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB\")\n    \n    print(\"\\n=== Data Types ===\")\n    print(df.dtypes.value_counts())\n    \n    print(\"\\n=== Missing Values ===\")\n    missing = df.isnull().sum()\n    missing_pct = (missing / len(df)) * 100\n    missing_df = pd.DataFrame({\n        'Missing Count': missing,\n        'Missing %': missing_pct\n    })\n    print(missing_df[missing_df['Missing Count'] > 0])\n    \n    print(\"\\n=== Numerical Summary ===\")\n    print(df.describe())\n\n# Load and explore data\ndf = load_data('../data/raw/dataset.csv')\nexplore_data(df)\n\n# Visualize distributions\ndef plot_distributions(df: pd.DataFrame, columns: list, figsize: tuple = (15, 10)):\n    \"\"\"Plot distributions for numerical columns.\"\"\"\n    n_cols = len(columns)\n    n_rows = (n_cols + 2) // 3\n    \n    fig, axes = plt.subplots(n_rows, 3, figsize=figsize)\n    axes = axes.flatten() if n_rows > 1 else [axes]\n    \n    for i, col in enumerate(columns):\n        if i < len(axes):\n            df[col].hist(bins=30, ax=axes[i], alpha=0.7)\n            axes[i].set_title(f'Distribution of {col}')\n            axes[i].set_xlabel(col)\n            axes[i].set_ylabel('Frequency')\n    \n    # Hide empty subplots\n    for i in range(len(columns), len(axes)):\n        axes[i].hide()\n    \n    plt.tight_layout()\n    plt.show()\n\n# Plot numerical distributions\nnumerical_cols = df.select_dtypes(include=[np.number]).columns.tolist()\nplot_distributions(df, numerical_cols[:9])  # Plot first 9 numerical columns\n```\n\n### Feature Engineering\n```python\n# src/features/build_features.py\nimport pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import (\n    StandardScaler, \n    MinMaxScaler, \n    LabelEncoder, \n    OneHotEncoder\n)\nfrom sklearn.feature_selection import SelectKBest, f_classif\nfrom typing import List, Tuple, Dict, Any\n\nclass FeatureEngineer:\n    \"\"\"Feature engineering pipeline for ML projects.\"\"\"\n    \n    def __init__(self):\n        self.scalers = {}\n        self.encoders = {}\n        self.feature_selectors = {}\n    \n    def create_datetime_features(self, df: pd.DataFrame, date_col: str) -> pd.DataFrame:\n        \"\"\"Extract datetime features from date column.\"\"\"\n        df = df.copy()\n        df[date_col] = pd.to_datetime(df[date_col])\n        \n        # Extract datetime components\n        df[f'{date_col}_year'] = df[date_col].dt.year\n        df[f'{date_col}_month'] = df[date_col].dt.month\n        df[f'{date_col}_day'] = df[date_col].dt.day\n        df[f'{date_col}_dayofweek'] = df[date_col].dt.dayofweek\n        df[f'{date_col}_quarter'] = df[date_col].dt.quarter\n        df[f'{date_col}_is_weekend'] = df[date_col].dt.dayofweek.isin([5, 6]).astype(int)\n        \n        return df\n    \n    def create_interaction_features(self, df: pd.DataFrame, col_pairs: List[Tuple[str, str]]) -> pd.DataFrame:\n        \"\"\"Create interaction features between column pairs.\"\"\"\n        df = df.copy()\n        \n        for col1, col2 in col_pairs:\n            if col1 in df.columns and col2 in df.columns:\n                # Multiplication interaction\n                df[f'{col1}_{col2}_mult'] = df[col1] * df[col2]\n                \n                # Division interaction (avoid division by zero)\n                df[f'{col1}_{col2}_div'] = df[col1] / (df[col2] + 1e-8)\n                \n                # Difference\n                df[f'{col1}_{col2}_diff'] = df[col1] - df[col2]\n        \n        return df\n    \n    def encode_categorical_features(self, df: pd.DataFrame, categorical_cols: List[str], \n                                  method: str = 'onehot') -> pd.DataFrame:\n        \"\"\"Encode categorical features.\"\"\"\n        df = df.copy()\n        \n        for col in categorical_cols:\n            if col not in df.columns:\n                continue\n                \n            if method == 'onehot':\n                encoder = OneHotEncoder(sparse_output=False, handle_unknown='ignore')\n                encoded = encoder.fit_transform(df[[col]])\n                \n                # Create column names\n                feature_names = [f'{col}_{val}' for val in encoder.categories_[0]]\n                encoded_df = pd.DataFrame(encoded, columns=feature_names, index=df.index)\n                \n                # Store encoder and merge\n                self.encoders[col] = encoder\n                df = pd.concat([df.drop(col, axis=1), encoded_df], axis=1)\n                \n            elif method == 'label':\n                encoder = LabelEncoder()\n                df[col] = encoder.fit_transform(df[col].astype(str))\n                self.encoders[col] = encoder\n        \n        return df\n    \n    def scale_numerical_features(self, df: pd.DataFrame, numerical_cols: List[str], \n                                method: str = 'standard') -> pd.DataFrame:\n        \"\"\"Scale numerical features.\"\"\"\n        df = df.copy()\n        \n        if method == 'standard':\n            scaler = StandardScaler()\n        elif method == 'minmax':\n            scaler = MinMaxScaler()\n        else:\n            raise ValueError(\"Method must be 'standard' or 'minmax'\")\n        \n        df[numerical_cols] = scaler.fit_transform(df[numerical_cols])\n        self.scalers['numerical'] = scaler\n        \n        return df\n    \n    def select_features(self, X: pd.DataFrame, y: pd.Series, k: int = 10) -> pd.DataFrame:\n        \"\"\"Select top k features using univariate selection.\"\"\"\n        selector = SelectKBest(score_func=f_classif, k=k)\n        X_selected = selector.fit_transform(X, y)\n        \n        # Get selected feature names\n        selected_features = X.columns[selector.get_support()].tolist()\n        self.feature_selectors['univariate'] = selector\n        \n        return pd.DataFrame(X_selected, columns=selected_features, index=X.index)\n\n# Usage example\ndef create_features(df: pd.DataFrame) -> pd.DataFrame:\n    \"\"\"Complete feature engineering pipeline.\"\"\"\n    engineer = FeatureEngineer()\n    \n    # Create datetime features if date column exists\n    if 'date' in df.columns:\n        df = engineer.create_datetime_features(df, 'date')\n    \n    # Create interaction features\n    numerical_cols = df.select_dtypes(include=[np.number]).columns.tolist()\n    if len(numerical_cols) >= 2:\n        interactions = [(numerical_cols[i], numerical_cols[i+1]) \n                       for i in range(min(3, len(numerical_cols)-1))]\n        df = engineer.create_interaction_features(df, interactions)\n    \n    # Encode categorical features\n    categorical_cols = df.select_dtypes(include=['object']).columns.tolist()\n    if categorical_cols:\n        df = engineer.encode_categorical_features(df, categorical_cols, method='onehot')\n    \n    return df, engineer\n```\n\n### Model Training and Evaluation\n```python\n# src/models/train_model.py\nimport pandas as pd\nimport numpy as np\nfrom sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV\nfrom sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import classification_report, confusion_matrix, roc_auc_score\nimport xgboost as xgb\nimport mlflow\nimport mlflow.sklearn\nfrom typing import Dict, Any, Tuple\nimport joblib\nfrom pathlib import Path\n\nclass ModelTrainer:\n    \"\"\"ML model training and evaluation pipeline.\"\"\"\n    \n    def __init__(self, experiment_name: str = \"ml_experiment\"):\n        self.models = {}\n        self.best_model = None\n        self.experiment_name = experiment_name\n        mlflow.set_experiment(experiment_name)\n    \n    def prepare_models(self) -> Dict[str, Any]:\n        \"\"\"Initialize different models for comparison.\"\"\"\n        models = {\n            'logistic_regression': LogisticRegression(random_state=42),\n            'random_forest': RandomForestClassifier(n_estimators=100, random_state=42),\n            'gradient_boosting': GradientBoostingClassifier(random_state=42),\n            'xgboost': xgb.XGBClassifier(random_state=42)\n        }\n        return models\n    \n    def train_evaluate_model(self, model, X_train: pd.DataFrame, X_test: pd.DataFrame,\n                           y_train: pd.Series, y_test: pd.Series, model_name: str) -> Dict[str, float]:\n        \"\"\"Train and evaluate a single model.\"\"\"\n        with mlflow.start_run(run_name=model_name):\n            # Train model\n            model.fit(X_train, y_train)\n            \n            # Predictions\n            y_pred = model.predict(X_test)\n            y_pred_proba = model.predict_proba(X_test)[:, 1] if hasattr(model, 'predict_proba') else None\n            \n            # Calculate metrics\n            accuracy = model.score(X_test, y_test)\n            auc_score = roc_auc_score(y_test, y_pred_proba) if y_pred_proba is not None else 0\n            \n            # Cross-validation\n            cv_scores = cross_val_score(model, X_train, y_train, cv=5)\n            cv_mean = cv_scores.mean()\n            cv_std = cv_scores.std()\n            \n            # Log metrics\n            mlflow.log_metric(\"accuracy\", accuracy)\n            mlflow.log_metric(\"auc_score\", auc_score)\n            mlflow.log_metric(\"cv_mean\", cv_mean)\n            mlflow.log_metric(\"cv_std\", cv_std)\n            \n            # Log model\n            mlflow.sklearn.log_model(model, model_name)\n            \n            # Print results\n            print(f\"\\n{model_name.upper()} Results:\")\n            print(f\"Accuracy: {accuracy:.4f}\")\n            print(f\"AUC Score: {auc_score:.4f}\")\n            print(f\"CV Mean: {cv_mean:.4f} (+/- {cv_std * 2:.4f})\")\n            print(\"\\nClassification Report:\")\n            print(classification_report(y_test, y_pred))\n            \n            return {\n                'model': model,\n                'accuracy': accuracy,\n                'auc_score': auc_score,\n                'cv_mean': cv_mean,\n                'cv_std': cv_std\n            }\n    \n    def hyperparameter_tuning(self, model, param_grid: Dict[str, list], \n                            X_train: pd.DataFrame, y_train: pd.Series) -> Any:\n        \"\"\"Perform hyperparameter tuning using GridSearchCV.\"\"\"\n        grid_search = GridSearchCV(\n            model, param_grid, cv=5, scoring='accuracy', n_jobs=-1, verbose=1\n        )\n        grid_search.fit(X_train, y_train)\n        \n        print(f\"Best parameters: {grid_search.best_params_}\")\n        print(f\"Best CV score: {grid_search.best_score_:.4f}\")\n        \n        return grid_search.best_estimator_\n    \n    def train_all_models(self, X_train: pd.DataFrame, X_test: pd.DataFrame,\n                        y_train: pd.Series, y_test: pd.Series) -> Dict[str, Dict[str, Any]]:\n        \"\"\"Train and compare multiple models.\"\"\"\n        models = self.prepare_models()\n        results = {}\n        \n        for name, model in models.items():\n            print(f\"\\nTraining {name}...\")\n            result = self.train_evaluate_model(model, X_train, X_test, y_train, y_test, name)\n            results[name] = result\n        \n        # Find best model\n        best_model_name = max(results.keys(), key=lambda x: results[x]['accuracy'])\n        self.best_model = results[best_model_name]['model']\n        \n        print(f\"\\nBest model: {best_model_name} with accuracy: {results[best_model_name]['accuracy']:.4f}\")\n        \n        return results\n    \n    def save_model(self, model, filepath: str) -> None:\n        \"\"\"Save trained model to disk.\"\"\"\n        Path(filepath).parent.mkdir(parents=True, exist_ok=True)\n        joblib.dump(model, filepath)\n        print(f\"Model saved to {filepath}\")\n\n# Usage example\ndef main():\n    \"\"\"Main training pipeline.\"\"\"\n    # Load processed data\n    df = pd.read_csv('../data/processed/features.csv')\n    \n    # Separate features and target\n    X = df.drop('target', axis=1)\n    y = df['target']\n    \n    # Split data\n    X_train, X_test, y_train, y_test = train_test_split(\n        X, y, test_size=0.2, random_state=42, stratify=y\n    )\n    \n    print(f\"Training set size: {X_train.shape}\")\n    print(f\"Test set size: {X_test.shape}\")\n    \n    # Train models\n    trainer = ModelTrainer(\"house_price_prediction\")\n    results = trainer.train_all_models(X_train, X_test, y_train, y_test)\n    \n    # Save best model\n    trainer.save_model(trainer.best_model, '../models/best_model.joblib')\n    \n    return results\n\nif __name__ == \"__main__\":\n    results = main()\n```\n\n### Model Deployment\n```python\n# src/models/predict_model.py\nimport joblib\nimport pandas as pd\nimport numpy as np\nfrom fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel\nfrom typing import List\nimport logging\n\n# Set up logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\n\n# Load trained model\nmodel = joblib.load('../models/best_model.joblib')\n\n# FastAPI app\napp = FastAPI(title=\"ML Model API\", version=\"1.0.0\")\n\nclass PredictionInput(BaseModel):\n    features: List[float]\n\nclass PredictionOutput(BaseModel):\n    prediction: float\n    probability: List[float]\n\n@app.post(\"/predict\", response_model=PredictionOutput)\nasync def predict(input_data: PredictionInput):\n    \"\"\"Make prediction using trained model.\"\"\"\n    try:\n        # Convert input to numpy array\n        features = np.array(input_data.features).reshape(1, -1)\n        \n        # Make prediction\n        prediction = model.predict(features)[0]\n        probability = model.predict_proba(features)[0].tolist()\n        \n        logger.info(f\"Prediction made: {prediction}\")\n        \n        return PredictionOutput(\n            prediction=float(prediction),\n            probability=probability\n        )\n    \n    except Exception as e:\n        logger.error(f\"Prediction error: {str(e)}\")\n        raise HTTPException(status_code=400, detail=str(e))\n\n@app.get(\"/health\")\nasync def health_check():\n    \"\"\"Health check endpoint.\"\"\"\n    return {\"status\": \"healthy\"}\n\n# Run with: uvicorn predict_model:app --reload\n```\n\n## Data Version Control\n\n- Use DVC for data versioning\n- Track large datasets and model artifacts\n- Create reproducible data pipelines\n- Share data across team members\n- Maintain data lineage\n\n## Model Tracking\n\n- Use MLflow for experiment tracking\n- Log hyperparameters and metrics\n- Compare model performance\n- Store model artifacts\n- Enable model deployment\n\n## Best Practices\n\n- Always validate data quality\n- Use cross-validation for model evaluation\n- Document data sources and transformations\n- Create automated testing for data pipelines\n- Monitor model performance in production",
+      "tags": [
+        {
+          "tag": {
+            "id": "python",
+            "name": "python",
+            "slug": "python"
+          }
+        },
+        {
+          "tag": {
+            "id": "jupyter",
+            "name": "jupyter",
+            "slug": "jupyter"
+          }
+        },
+        {
+          "tag": {
+            "id": "machine-learning",
+            "name": "machine-learning",
+            "slug": "machine-learning"
+          }
+        },
+        {
+          "tag": {
+            "id": "pandas",
+            "name": "pandas",
+            "slug": "pandas"
+          }
+        },
+        {
+          "tag": {
+            "id": "scikit-learn",
+            "name": "scikit-learn",
+            "slug": "scikit-learn"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 49,
+        "copies": 223
+      },
+      "_count": {
+        "votes": 14,
+        "copies": 203
+      },
+      "difficulty": "INTERMEDIATE",
+      "language": "Python",
+      "framework": "Jupyter",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "pytorch-deep-learning",
+      "title": "PyTorch Deep Learning + GPU",
+      "slug": "pytorch-deep-learning-gpu",
+      "tagline": "PyTorch configuration for advanced developers",
+      "description": "Deep learning project setup with PyTorch, GPU acceleration, and modern ML practices for neural network development.",
+      "categoryId": "claude-configs",
+      "category": {
+        "id": "claude-configs",
+        "name": "Claude.md Configurations",
+        "slug": "claude-configs",
+        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types.",
+        "icon": "📋",
+        "color": "#F59E0B"
+      },
+      "type": "CONFIGURATION",
+      "content": "# Claude.md - PyTorch Deep Learning + GPU\n\n## Project Overview\n\nThis is a comprehensive deep learning project setup using PyTorch with GPU acceleration, modern neural network architectures, and MLOps practices for scalable deep learning development.\n\n## Technology Stack\n\n- **Deep Learning**: PyTorch 2.0+\n- **Language**: Python 3.9+\n- **GPU**: CUDA 11.8+ / ROCm (AMD)\n- **Data Processing**: torchvision, albumentations\n- **Visualization**: TensorBoard, wandb\n- **Model Serving**: TorchServe, ONNX\n- **Containers**: Docker with CUDA support\n\n## Project Structure\n\n```\n├── data/\n│   ├── raw/             # Original datasets\n│   ├── processed/       # Preprocessed datasets\n│   └── splits/          # Train/val/test splits\n├── src/\n│   ├── data/           # Data loading and preprocessing\n│   ├── models/         # Model architectures\n│   ├── training/       # Training loops and utilities\n│   ├── evaluation/     # Evaluation and metrics\n│   └── utils/          # Utility functions\n├── configs/            # Configuration files\n├── notebooks/          # Jupyter notebooks\n├── experiments/        # Experiment logs and outputs\n├── checkpoints/        # Model checkpoints\n└── docker/            # Docker configurations\n```\n\n## Development Guidelines\n\n### Code Style\n- Follow PyTorch Lightning patterns\n- Use type hints and docstrings\n- Implement proper error handling\n- Use configuration files for hyperparameters\n- Follow modular design principles\n\n### Deep Learning Best Practices\n- Use proper data augmentation\n- Implement learning rate scheduling\n- Use gradient clipping when needed\n- Monitor training with visualizations\n- Implement early stopping\n\n### GPU Optimization\n- Use mixed precision training\n- Optimize data loading with multiple workers\n- Use compiled models when possible\n- Monitor GPU utilization\n- Implement distributed training for large models\n\n## Key Commands\n\n- `python train.py --config configs/config.yaml` - Start training\n- `python evaluate.py --checkpoint path/to/model.pth` - Evaluate model\n- `tensorboard --logdir experiments/` - View training logs\n- `python -m torch.distributed.launch --nproc_per_node=2 train.py` - Multi-GPU training\n\n## Environment Setup\n\nCreate a `requirements.txt` file:\n```\n# Core PyTorch stack\ntorch==2.1.1\ntorchvision==0.16.1\ntorchaudio==2.1.1\npytorch-lightning==2.1.2\n\n# Data processing\nalbumentations==1.3.1\nopencv-python==4.8.1.78\npillow==10.1.0\nnumpy==1.24.3\npandas==2.1.4\n\n# Visualization and logging\ntensorboard==2.15.1\nwandb==0.16.0\nmatplotlib==3.7.2\nseaborn==0.12.2\n\n# Model optimization\ntorchmetrics==1.2.0\ntimm==0.9.12\ntransformers==4.36.0\n\n# Deployment\nonnx==1.15.0\nonnxruntime-gpu==1.16.3\ntorchserve==0.8.2\n\n# Development\njupyter==1.0.0\nblack==23.11.0\npytest==7.4.3\n```\n\n## Common Patterns\n\n### Data Loading and Preprocessing\n```python\n# src/data/dataset.py\nimport torch\nfrom torch.utils.data import Dataset, DataLoader\nimport torchvision.transforms as transforms\nimport albumentations as A\nfrom albumentations.pytorch import ToTensorV2\nimport cv2\nimport pandas as pd\nfrom pathlib import Path\nfrom typing import Tuple, Optional, Callable\n\nclass CustomDataset(Dataset):\n    \"\"\"Custom dataset class for image classification.\"\"\"\n    \n    def __init__(self, \n                 data_dir: str,\n                 csv_file: str,\n                 transform: Optional[Callable] = None,\n                 mode: str = 'train'):\n        self.data_dir = Path(data_dir)\n        self.df = pd.read_csv(csv_file)\n        self.transform = transform\n        self.mode = mode\n        \n    def __len__(self) -> int:\n        return len(self.df)\n    \n    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:\n        row = self.df.iloc[idx]\n        \n        # Load image\n        img_path = self.data_dir / row['image_path']\n        image = cv2.imread(str(img_path))\n        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)\n        \n        # Load label\n        label = torch.tensor(row['label'], dtype=torch.long)\n        \n        # Apply transforms\n        if self.transform:\n            if isinstance(self.transform, A.Compose):\n                transformed = self.transform(image=image)\n                image = transformed['image']\n            else:\n                image = self.transform(image)\n        \n        return image, label\n\ndef get_transforms(image_size: int = 224, mode: str = 'train') -> A.Compose:\n    \"\"\"Get image transforms for training or validation.\"\"\"\n    if mode == 'train':\n        transform = A.Compose([\n            A.Resize(image_size, image_size),\n            A.HorizontalFlip(p=0.5),\n            A.VerticalFlip(p=0.2),\n            A.Rotate(limit=30, p=0.5),\n            A.RandomBrightnessContrast(p=0.5),\n            A.HueSaturationValue(p=0.3),\n            A.GaussNoise(p=0.2),\n            A.Normalize(\n                mean=[0.485, 0.456, 0.406],\n                std=[0.229, 0.224, 0.225]\n            ),\n            ToTensorV2()\n        ])\n    else:\n        transform = A.Compose([\n            A.Resize(image_size, image_size),\n            A.Normalize(\n                mean=[0.485, 0.456, 0.406],\n                std=[0.229, 0.224, 0.225]\n            ),\n            ToTensorV2()\n        ])\n    \n    return transform\n\ndef create_data_loaders(train_dataset: Dataset, \n                       val_dataset: Dataset,\n                       batch_size: int = 32,\n                       num_workers: int = 4) -> Tuple[DataLoader, DataLoader]:\n    \"\"\"Create training and validation data loaders.\"\"\"\n    train_loader = DataLoader(\n        train_dataset,\n        batch_size=batch_size,\n        shuffle=True,\n        num_workers=num_workers,\n        pin_memory=True,\n        persistent_workers=True\n    )\n    \n    val_loader = DataLoader(\n        val_dataset,\n        batch_size=batch_size,\n        shuffle=False,\n        num_workers=num_workers,\n        pin_memory=True,\n        persistent_workers=True\n    )\n    \n    return train_loader, val_loader\n```\n\n### Model Architecture\n```python\n# src/models/cnn_model.py\nimport torch\nimport torch.nn as nn\nimport torch.nn.functional as F\nimport timm\nfrom typing import Optional\n\nclass CNNModel(nn.Module):\n    \"\"\"Custom CNN model with pretrained backbone.\"\"\"\n    \n    def __init__(self, \n                 model_name: str = 'resnet50',\n                 num_classes: int = 10,\n                 pretrained: bool = True,\n                 dropout: float = 0.2):\n        super(CNNModel, self).__init__()\n        \n        # Load pretrained backbone\n        self.backbone = timm.create_model(\n            model_name,\n            pretrained=pretrained,\n            num_classes=0,  # Remove classification head\n            global_pool=''  # Remove global pooling\n        )\n        \n        # Get feature size\n        with torch.no_grad():\n            dummy_input = torch.randn(1, 3, 224, 224)\n            features = self.backbone(dummy_input)\n            feature_size = features.view(features.size(0), -1).size(1)\n        \n        # Custom classification head\n        self.classifier = nn.Sequential(\n            nn.AdaptiveAvgPool2d((1, 1)),\n            nn.Flatten(),\n            nn.Dropout(dropout),\n            nn.Linear(feature_size, 512),\n            nn.ReLU(inplace=True),\n            nn.Dropout(dropout),\n            nn.Linear(512, num_classes)\n        )\n        \n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n        features = self.backbone(x)\n        output = self.classifier(features)\n        return output\n\nclass AttentionBlock(nn.Module):\n    \"\"\"Self-attention block for improved feature representation.\"\"\"\n    \n    def __init__(self, in_channels: int):\n        super(AttentionBlock, self).__init__()\n        self.query_conv = nn.Conv2d(in_channels, in_channels // 8, 1)\n        self.key_conv = nn.Conv2d(in_channels, in_channels // 8, 1)\n        self.value_conv = nn.Conv2d(in_channels, in_channels, 1)\n        self.softmax = nn.Softmax(dim=-2)\n        self.gamma = nn.Parameter(torch.zeros(1))\n        \n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n        batch_size, channels, height, width = x.size()\n        \n        # Generate query, key, value\n        query = self.query_conv(x).view(batch_size, -1, height * width)\n        key = self.key_conv(x).view(batch_size, -1, height * width)\n        value = self.value_conv(x).view(batch_size, -1, height * width)\n        \n        # Compute attention\n        attention = torch.bmm(query.permute(0, 2, 1), key)\n        attention = self.softmax(attention)\n        \n        # Apply attention to values\n        out = torch.bmm(value, attention.permute(0, 2, 1))\n        out = out.view(batch_size, channels, height, width)\n        \n        # Add residual connection\n        out = self.gamma * out + x\n        return out\n\nclass ResidualBlock(nn.Module):\n    \"\"\"Residual block with batch normalization.\"\"\"\n    \n    def __init__(self, in_channels: int, out_channels: int, stride: int = 1):\n        super(ResidualBlock, self).__init__()\n        \n        self.conv1 = nn.Conv2d(in_channels, out_channels, 3, stride, 1, bias=False)\n        self.bn1 = nn.BatchNorm2d(out_channels)\n        self.conv2 = nn.Conv2d(out_channels, out_channels, 3, 1, 1, bias=False)\n        self.bn2 = nn.BatchNorm2d(out_channels)\n        \n        self.shortcut = nn.Sequential()\n        if stride != 1 or in_channels != out_channels:\n            self.shortcut = nn.Sequential(\n                nn.Conv2d(in_channels, out_channels, 1, stride, bias=False),\n                nn.BatchNorm2d(out_channels)\n            )\n    \n    def forward(self, x: torch.Tensor) -> torch.Tensor:\n        residual = self.shortcut(x)\n        \n        out = F.relu(self.bn1(self.conv1(x)))\n        out = self.bn2(self.conv2(out))\n        out += residual\n        out = F.relu(out)\n        \n        return out\n```\n\n### Training Loop\n```python\n# src/training/trainer.py\nimport torch\nimport torch.nn as nn\nimport torch.optim as optim\nfrom torch.utils.data import DataLoader\nfrom torch.cuda.amp import GradScaler, autocast\nfrom torch.utils.tensorboard import SummaryWriter\nimport numpy as np\nfrom tqdm import tqdm\nfrom typing import Dict, List, Optional, Tuple\nimport wandb\nfrom pathlib import Path\n\nclass Trainer:\n    \"\"\"Training class with modern PyTorch features.\"\"\"\n    \n    def __init__(self,\n                 model: nn.Module,\n                 train_loader: DataLoader,\n                 val_loader: DataLoader,\n                 criterion: nn.Module,\n                 optimizer: optim.Optimizer,\n                 scheduler: Optional[optim.lr_scheduler._LRScheduler] = None,\n                 device: str = 'cuda',\n                 mixed_precision: bool = True,\n                 gradient_clip: float = 1.0,\n                 experiment_name: str = 'experiment'):\n        \n        self.model = model.to(device)\n        self.train_loader = train_loader\n        self.val_loader = val_loader\n        self.criterion = criterion\n        self.optimizer = optimizer\n        self.scheduler = scheduler\n        self.device = device\n        self.mixed_precision = mixed_precision\n        self.gradient_clip = gradient_clip\n        \n        # Initialize scaler for mixed precision\n        self.scaler = GradScaler() if mixed_precision else None\n        \n        # Initialize logging\n        self.writer = SummaryWriter(f'experiments/{experiment_name}')\n        self.best_val_acc = 0.0\n        self.train_losses = []\n        self.val_losses = []\n        self.val_accuracies = []\n        \n        # Compile model for better performance (PyTorch 2.0+)\n        if hasattr(torch, 'compile'):\n            self.model = torch.compile(self.model)\n    \n    def train_epoch(self) -> float:\n        \"\"\"Train for one epoch.\"\"\"\n        self.model.train()\n        running_loss = 0.0\n        num_batches = len(self.train_loader)\n        \n        progress_bar = tqdm(self.train_loader, desc='Training')\n        \n        for batch_idx, (data, targets) in enumerate(progress_bar):\n            data, targets = data.to(self.device), targets.to(self.device)\n            \n            self.optimizer.zero_grad()\n            \n            if self.mixed_precision:\n                with autocast():\n                    outputs = self.model(data)\n                    loss = self.criterion(outputs, targets)\n                \n                self.scaler.scale(loss).backward()\n                \n                # Gradient clipping\n                if self.gradient_clip > 0:\n                    self.scaler.unscale_(self.optimizer)\n                    torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.gradient_clip)\n                \n                self.scaler.step(self.optimizer)\n                self.scaler.update()\n            else:\n                outputs = self.model(data)\n                loss = self.criterion(outputs, targets)\n                loss.backward()\n                \n                # Gradient clipping\n                if self.gradient_clip > 0:\n                    torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.gradient_clip)\n                \n                self.optimizer.step()\n            \n            running_loss += loss.item()\n            \n            # Update progress bar\n            progress_bar.set_postfix({\n                'Loss': f'{loss.item():.4f}',\n                'LR': f'{self.optimizer.param_groups[0][\"lr\"]:.6f}'\n            })\n        \n        return running_loss / num_batches\n    \n    def validate_epoch(self) -> Tuple[float, float]:\n        \"\"\"Validate for one epoch.\"\"\"\n        self.model.eval()\n        running_loss = 0.0\n        correct = 0\n        total = 0\n        \n        with torch.no_grad():\n            for data, targets in tqdm(self.val_loader, desc='Validation'):\n                data, targets = data.to(self.device), targets.to(self.device)\n                \n                if self.mixed_precision:\n                    with autocast():\n                        outputs = self.model(data)\n                        loss = self.criterion(outputs, targets)\n                else:\n                    outputs = self.model(data)\n                    loss = self.criterion(outputs, targets)\n                \n                running_loss += loss.item()\n                \n                # Calculate accuracy\n                _, predicted = torch.max(outputs, 1)\n                total += targets.size(0)\n                correct += (predicted == targets).sum().item()\n        \n        val_loss = running_loss / len(self.val_loader)\n        val_acc = 100 * correct / total\n        \n        return val_loss, val_acc\n    \n    def train(self, epochs: int, save_dir: str = 'checkpoints') -> Dict[str, List[float]]:\n        \"\"\"Complete training loop.\"\"\"\n        Path(save_dir).mkdir(exist_ok=True)\n        \n        for epoch in range(epochs):\n            print(f'\\nEpoch {epoch+1}/{epochs}')\n            print('-' * 50)\n            \n            # Training phase\n            train_loss = self.train_epoch()\n            \n            # Validation phase\n            val_loss, val_acc = self.validate_epoch()\n            \n            # Update learning rate\n            if self.scheduler:\n                if isinstance(self.scheduler, optim.lr_scheduler.ReduceLROnPlateau):\n                    self.scheduler.step(val_loss)\n                else:\n                    self.scheduler.step()\n            \n            # Log metrics\n            self.writer.add_scalar('Loss/Train', train_loss, epoch)\n            self.writer.add_scalar('Loss/Validation', val_loss, epoch)\n            self.writer.add_scalar('Accuracy/Validation', val_acc, epoch)\n            self.writer.add_scalar('Learning_Rate', self.optimizer.param_groups[0]['lr'], epoch)\n            \n            # Log to wandb if available\n            if wandb.run:\n                wandb.log({\n                    'epoch': epoch,\n                    'train_loss': train_loss,\n                    'val_loss': val_loss,\n                    'val_acc': val_acc,\n                    'lr': self.optimizer.param_groups[0]['lr']\n                })\n            \n            # Save best model\n            if val_acc > self.best_val_acc:\n                self.best_val_acc = val_acc\n                torch.save({\n                    'epoch': epoch,\n                    'model_state_dict': self.model.state_dict(),\n                    'optimizer_state_dict': self.optimizer.state_dict(),\n                    'val_acc': val_acc,\n                    'val_loss': val_loss\n                }, f'{save_dir}/best_model.pth')\n                print(f'New best model saved with validation accuracy: {val_acc:.2f}%')\n            \n            # Store metrics\n            self.train_losses.append(train_loss)\n            self.val_losses.append(val_loss)\n            self.val_accuracies.append(val_acc)\n            \n            print(f'Train Loss: {train_loss:.4f}')\n            print(f'Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.2f}%')\n        \n        self.writer.close()\n        \n        return {\n            'train_losses': self.train_losses,\n            'val_losses': self.val_losses,\n            'val_accuracies': self.val_accuracies\n        }\n\n# Usage example\ndef create_trainer(model, train_loader, val_loader, num_classes, device):\n    \"\"\"Create trainer with optimized settings.\"\"\"\n    criterion = nn.CrossEntropyLoss(label_smoothing=0.1)\n    \n    optimizer = optim.AdamW(\n        model.parameters(),\n        lr=1e-3,\n        weight_decay=1e-4,\n        betas=(0.9, 0.999)\n    )\n    \n    scheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(\n        optimizer,\n        T_0=10,\n        T_mult=2,\n        eta_min=1e-6\n    )\n    \n    trainer = Trainer(\n        model=model,\n        train_loader=train_loader,\n        val_loader=val_loader,\n        criterion=criterion,\n        optimizer=optimizer,\n        scheduler=scheduler,\n        device=device,\n        mixed_precision=True,\n        gradient_clip=1.0\n    )\n    \n    return trainer\n```\n\n### Model Deployment\n```python\n# src/deployment/inference.py\nimport torch\nimport torch.nn as nn\nimport torchvision.transforms as transforms\nimport onnx\nimport onnxruntime as ort\nimport numpy as np\nfrom PIL import Image\nfrom typing import List, Dict, Any\nimport json\n\nclass ModelInference:\n    \"\"\"Model inference class supporting PyTorch and ONNX.\"\"\"\n    \n    def __init__(self, model_path: str, model_type: str = 'pytorch'):\n        self.model_type = model_type\n        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\n        \n        if model_type == 'pytorch':\n            self.load_pytorch_model(model_path)\n        elif model_type == 'onnx':\n            self.load_onnx_model(model_path)\n        else:\n            raise ValueError(\"Model type must be 'pytorch' or 'onnx'\")\n    \n    def load_pytorch_model(self, model_path: str):\n        \"\"\"Load PyTorch model.\"\"\"\n        checkpoint = torch.load(model_path, map_location=self.device)\n        \n        # Assuming model architecture is saved or can be reconstructed\n        from src.models.cnn_model import CNNModel\n        self.model = CNNModel(num_classes=10)  # Adjust based on your model\n        self.model.load_state_dict(checkpoint['model_state_dict'])\n        self.model.to(self.device)\n        self.model.eval()\n    \n    def load_onnx_model(self, model_path: str):\n        \"\"\"Load ONNX model.\"\"\"\n        providers = ['CUDAExecutionProvider', 'CPUExecutionProvider']\n        self.ort_session = ort.InferenceSession(model_path, providers=providers)\n        self.input_name = self.ort_session.get_inputs()[0].name\n        self.output_name = self.ort_session.get_outputs()[0].name\n    \n    def preprocess(self, image: Image.Image) -> torch.Tensor:\n        \"\"\"Preprocess image for inference.\"\"\"\n        transform = transforms.Compose([\n            transforms.Resize((224, 224)),\n            transforms.ToTensor(),\n            transforms.Normalize(\n                mean=[0.485, 0.456, 0.406],\n                std=[0.229, 0.224, 0.225]\n            )\n        ])\n        \n        return transform(image).unsqueeze(0)\n    \n    def predict(self, image: Image.Image) -> Dict[str, Any]:\n        \"\"\"Make prediction on single image.\"\"\"\n        input_tensor = self.preprocess(image)\n        \n        if self.model_type == 'pytorch':\n            with torch.no_grad():\n                input_tensor = input_tensor.to(self.device)\n                outputs = self.model(input_tensor)\n                probabilities = torch.softmax(outputs, dim=1)\n                predicted_class = torch.argmax(probabilities, dim=1).item()\n                confidence = probabilities[0][predicted_class].item()\n        \n        elif self.model_type == 'onnx':\n            input_array = input_tensor.numpy()\n            outputs = self.ort_session.run([self.output_name], {self.input_name: input_array})\n            probabilities = torch.softmax(torch.tensor(outputs[0]), dim=1)\n            predicted_class = torch.argmax(probabilities, dim=1).item()\n            confidence = probabilities[0][predicted_class].item()\n        \n        return {\n            'predicted_class': predicted_class,\n            'confidence': confidence,\n            'probabilities': probabilities[0].tolist()\n        }\n    \n    def batch_predict(self, images: List[Image.Image]) -> List[Dict[str, Any]]:\n        \"\"\"Make predictions on batch of images.\"\"\"\n        results = []\n        for image in images:\n            result = self.predict(image)\n            results.append(result)\n        return results\n\ndef export_to_onnx(model: nn.Module, input_shape: tuple, output_path: str):\n    \"\"\"Export PyTorch model to ONNX format.\"\"\"\n    model.eval()\n    dummy_input = torch.randn(1, *input_shape)\n    \n    torch.onnx.export(\n        model,\n        dummy_input,\n        output_path,\n        export_params=True,\n        opset_version=11,\n        do_constant_folding=True,\n        input_names=['input'],\n        output_names=['output'],\n        dynamic_axes={\n            'input': {0: 'batch_size'},\n            'output': {0: 'batch_size'}\n        }\n    )\n    \n    print(f\"Model exported to {output_path}\")\n```\n\n## GPU Optimization\n\n- Use CUDA for GPU acceleration\n- Implement mixed precision training\n- Optimize data loading with pin_memory\n- Use multiple GPUs with DataParallel/DistributedDataParallel\n- Monitor GPU memory usage\n\n## Experiment Tracking\n\n- Use TensorBoard for training visualization\n- Integrate with Weights & Biases\n- Log hyperparameters and metrics\n- Track model checkpoints\n- Compare experiment results\n\n## Model Deployment\n\n- Export models to ONNX format\n- Use TorchServe for production serving\n- Implement proper model versioning\n- Add monitoring and logging\n- Use containerization with Docker",
+      "tags": [
+        {
+          "tag": {
+            "id": "python",
+            "name": "python",
+            "slug": "python"
+          }
+        },
+        {
+          "tag": {
+            "id": "pytorch",
+            "name": "pytorch",
+            "slug": "pytorch"
+          }
+        },
+        {
+          "tag": {
+            "id": "deep-learning",
+            "name": "deep-learning",
+            "slug": "deep-learning"
+          }
+        },
+        {
+          "tag": {
+            "id": "neural-networks",
+            "name": "neural-networks",
+            "slug": "neural-networks"
+          }
+        },
+        {
+          "tag": {
+            "id": "gpu",
+            "name": "gpu",
+            "slug": "gpu"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 29,
+        "copies": 74
+      },
+      "_count": {
+        "votes": 15,
+        "copies": 59
+      },
+      "difficulty": "ADVANCED",
+      "language": "Python",
+      "framework": "PyTorch",
       "lastUpdated": "2024-12-01",
       "featured": true
     }
   ],
   "meta": {
-    "total": 3,
+    "total": 8,
     "limit": 12,
-    "generated_at": "2025-07-30T21:08:49.671Z"
+    "generated_at": "2025-07-31T10:20:52.214Z"
   }
 }

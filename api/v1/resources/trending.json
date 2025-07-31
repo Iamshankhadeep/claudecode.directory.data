@@ -1,19 +1,307 @@
 {
   "resources": [
     {
+      "id": "claude-code-vscode",
+      "title": "Claude Code for VS Code",
+      "slug": "claude-code-vscode-extension",
+      "tagline": "VS Code extension for seamless Claude integration",
+      "description": "Transform your VS Code experience with Claude AI. Get intelligent code suggestions, explanations, and assistance directly in your editor with this powerful extension.",
+      "categoryId": "vscode-extensions",
+      "category": {
+        "id": "vscode-extensions",
+        "name": "VS Code Extensions",
+        "slug": "vscode",
+        "description": "Extensions and configurations to integrate Claude seamlessly into VS Code.",
+        "icon": "🔧",
+        "color": "#3B82F6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code",
+      "tags": [
+        {
+          "tag": {
+            "id": "vscode",
+            "name": "vscode",
+            "slug": "vscode"
+          }
+        },
+        {
+          "tag": {
+            "id": "extension",
+            "name": "extension",
+            "slug": "extension"
+          }
+        },
+        {
+          "tag": {
+            "id": "ide",
+            "name": "ide",
+            "slug": "ide"
+          }
+        },
+        {
+          "tag": {
+            "id": "code-assistance",
+            "name": "code-assistance",
+            "slug": "code-assistance"
+          }
+        }
+      ],
+      "author": {
+        "name": "Anthropic",
+        "url": "https://anthropic.com"
+      },
+      "stats": {
+        "votes": 892,
+        "copies": 4521
+      },
+      "_count": {
+        "votes": 892,
+        "copies": 4521
+      },
+      "difficulty": "BEGINNER",
+      "lastUpdated": "2024-12-01",
+      "featured": false,
+      "trendingScore": 3152.5
+    },
+    {
+      "id": "claude-api-wrapper",
+      "title": "Claude API SDK",
+      "slug": "claude-api-sdk",
+      "tagline": "Multi-language SDK for Claude API integration",
+      "description": "Comprehensive SDK supporting Python, JavaScript, Go, and Ruby for easy Claude API integration. Includes rate limiting, error handling, and streaming support.",
+      "categoryId": "api-integrations",
+      "category": {
+        "id": "api-integrations",
+        "name": "API Integrations",
+        "slug": "integrations",
+        "description": "Examples and libraries for integrating Claude API into various platforms.",
+        "icon": "🔗",
+        "color": "#EF4444"
+      },
+      "type": "EXTERNAL",
+      "url": "https://github.com/anthropics/claude-sdk-multi",
+      "tags": [
+        {
+          "tag": {
+            "id": "api",
+            "name": "api",
+            "slug": "api"
+          }
+        },
+        {
+          "tag": {
+            "id": "sdk",
+            "name": "sdk",
+            "slug": "sdk"
+          }
+        },
+        {
+          "tag": {
+            "id": "integration",
+            "name": "integration",
+            "slug": "integration"
+          }
+        },
+        {
+          "tag": {
+            "id": "multi-language",
+            "name": "multi-language",
+            "slug": "multi-language"
+          }
+        }
+      ],
+      "author": {
+        "name": "Anthropic",
+        "url": "https://anthropic.com"
+      },
+      "stats": {
+        "votes": 567,
+        "copies": 3421
+      },
+      "_count": {
+        "votes": 567,
+        "copies": 3421
+      },
+      "difficulty": "INTERMEDIATE",
+      "lastUpdated": "2024-12-01",
+      "featured": false,
+      "trendingScore": 2277.5
+    },
+    {
+      "id": "claude-github-action",
+      "title": "Claude GitHub Action",
+      "slug": "claude-github-action",
+      "tagline": "Automated code reviews with Claude AI",
+      "description": "GitHub Action that automatically reviews pull requests using Claude AI. Get intelligent feedback on code quality, security issues, and improvement suggestions.",
+      "categoryId": "api-integrations",
+      "category": {
+        "id": "api-integrations",
+        "name": "API Integrations",
+        "slug": "integrations",
+        "description": "Examples and libraries for integrating Claude API into various platforms.",
+        "icon": "🔗",
+        "color": "#EF4444"
+      },
+      "type": "EXTERNAL",
+      "url": "https://github.com/marketplace/actions/claude-code-review",
+      "tags": [
+        {
+          "tag": {
+            "id": "github",
+            "name": "github",
+            "slug": "github"
+          }
+        },
+        {
+          "tag": {
+            "id": "actions",
+            "name": "actions",
+            "slug": "actions"
+          }
+        },
+        {
+          "tag": {
+            "id": "code-review",
+            "name": "code-review",
+            "slug": "code-review"
+          }
+        },
+        {
+          "tag": {
+            "id": "automation",
+            "name": "automation",
+            "slug": "automation"
+          }
+        }
+      ],
+      "author": {
+        "name": "GitHub Community",
+        "url": "https://github.com/github-community"
+      },
+      "stats": {
+        "votes": 478,
+        "copies": 2134
+      },
+      "_count": {
+        "votes": 478,
+        "copies": 2134
+      },
+      "difficulty": "INTERMEDIATE",
+      "lastUpdated": "2024-12-01",
+      "featured": false,
+      "trendingScore": 1545
+    },
+    {
+      "id": "claude-raycast-extension",
+      "title": "Claude for Raycast",
+      "slug": "claude-raycast-extension",
+      "tagline": "Quick Claude AI access on macOS",
+      "description": "Raycast extension that brings Claude AI to your fingertips on macOS. Quick queries, code explanations, and AI assistance without leaving your workflow.",
+      "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://www.raycast.com/extensions/claude-ai",
+      "tags": [
+        {
+          "tag": {
+            "id": "raycast",
+            "name": "raycast",
+            "slug": "raycast"
+          }
+        },
+        {
+          "tag": {
+            "id": "macos",
+            "name": "macos",
+            "slug": "macos"
+          }
+        },
+        {
+          "tag": {
+            "id": "productivity",
+            "name": "productivity",
+            "slug": "productivity"
+          }
+        },
+        {
+          "tag": {
+            "id": "quick-access",
+            "name": "quick-access",
+            "slug": "quick-access"
+          }
+        }
+      ],
+      "author": {
+        "name": "Raycast Community",
+        "url": "https://raycast.com"
+      },
+      "stats": {
+        "votes": 421,
+        "copies": 1893
+      },
+      "_count": {
+        "votes": 421,
+        "copies": 1893
+      },
+      "difficulty": "BEGINNER",
+      "lastUpdated": "2024-12-01",
+      "featured": false,
+      "trendingScore": 1367.5
+    },
+    {
       "id": "claude-cli",
       "title": "Claude CLI Tool",
       "slug": "claude-cli-tool",
       "tagline": "Official command-line interface for Claude AI",
-      "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
+      "description": "Powerful CLI tool that brings Claude AI directly to your terminal. Execute queries, process files, and integrate Claude into your development workflow with simple commands.",
       "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
       "type": "EXTERNAL",
       "url": "https://github.com/anthropics/claude-cli",
       "tags": [
-        "cli",
-        "terminal",
-        "automation",
-        "productivity"
+        {
+          "tag": {
+            "id": "cli",
+            "name": "cli",
+            "slug": "cli"
+          }
+        },
+        {
+          "tag": {
+            "id": "terminal",
+            "name": "terminal",
+            "slug": "terminal"
+          }
+        },
+        {
+          "tag": {
+            "id": "automation",
+            "name": "automation",
+            "slug": "automation"
+          }
+        },
+        {
+          "tag": {
+            "id": "productivity",
+            "name": "productivity",
+            "slug": "productivity"
+          }
+        }
       ],
       "author": {
         "name": "Anthropic",
@@ -23,70 +311,339 @@
         "votes": 245,
         "copies": 1820
       },
+      "_count": {
+        "votes": 245,
+        "copies": 1820
+      },
       "difficulty": "BEGINNER",
       "lastUpdated": "2024-12-01",
-      "featured": true
+      "featured": false,
+      "trendingScore": 1155
     },
     {
-      "id": "api-design-prompt",
-      "title": "API Design Architect Prompt",
-      "slug": "api-design-architect",
-      "tagline": "Expert-level prompt for designing REST APIs",
-      "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
-      "categoryId": "prompt-templates",
-      "type": "PROMPT_TEMPLATE",
-      "content": "You are an expert API architect...",
+      "id": "claude-discord-bot",
+      "title": "Claude Discord Bot",
+      "slug": "claude-discord-bot",
+      "tagline": "AI-powered Discord community assistant",
+      "description": "Smart Discord bot powered by Claude AI. Help community members with coding questions, provide explanations, and facilitate technical discussions in your server.",
+      "categoryId": "api-integrations",
+      "category": {
+        "id": "api-integrations",
+        "name": "API Integrations",
+        "slug": "integrations",
+        "description": "Examples and libraries for integrating Claude API into various platforms.",
+        "icon": "🔗",
+        "color": "#EF4444"
+      },
+      "type": "EXTERNAL",
+      "url": "https://github.com/discord-community/claude-bot",
       "tags": [
-        "api-design",
-        "rest",
-        "architecture",
-        "backend"
+        {
+          "tag": {
+            "id": "discord",
+            "name": "discord",
+            "slug": "discord"
+          }
+        },
+        {
+          "tag": {
+            "id": "bot",
+            "name": "bot",
+            "slug": "bot"
+          }
+        },
+        {
+          "tag": {
+            "id": "community",
+            "name": "community",
+            "slug": "community"
+          }
+        },
+        {
+          "tag": {
+            "id": "chat",
+            "name": "chat",
+            "slug": "chat"
+          }
+        }
       ],
       "author": {
-        "name": "Claude Code Community",
-        "url": "https://claudecode.directory"
+        "name": "Discord Community",
+        "url": "https://github.com/discord-community"
       },
       "stats": {
-        "votes": 67,
-        "copies": 189
+        "votes": 367,
+        "copies": 1567
+      },
+      "_count": {
+        "votes": 367,
+        "copies": 1567
+      },
+      "difficulty": "INTERMEDIATE",
+      "lastUpdated": "2024-12-01",
+      "featured": false,
+      "trendingScore": 1150.5
+    },
+    {
+      "id": "claude-docker-assistant",
+      "title": "Claude Docker Assistant",
+      "slug": "claude-docker-assistant",
+      "tagline": "Docker containerization made easy with Claude",
+      "description": "Intelligent Docker assistant that helps you create, optimize, and troubleshoot Docker containers. Generate Dockerfiles, docker-compose configurations, and best practices.",
+      "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://github.com/docker-community/claude-docker-assistant",
+      "tags": [
+        {
+          "tag": {
+            "id": "docker",
+            "name": "docker",
+            "slug": "docker"
+          }
+        },
+        {
+          "tag": {
+            "id": "containers",
+            "name": "containers",
+            "slug": "containers"
+          }
+        },
+        {
+          "tag": {
+            "id": "devops",
+            "name": "devops",
+            "slug": "devops"
+          }
+        },
+        {
+          "tag": {
+            "id": "automation",
+            "name": "automation",
+            "slug": "automation"
+          }
+        }
+      ],
+      "author": {
+        "name": "Docker Community",
+        "url": "https://github.com/docker-community"
+      },
+      "stats": {
+        "votes": 324,
+        "copies": 1245
+      },
+      "_count": {
+        "votes": 324,
+        "copies": 1245
+      },
+      "difficulty": "INTERMEDIATE",
+      "lastUpdated": "2024-12-01",
+      "featured": true,
+      "trendingScore": 946.5
+    },
+    {
+      "id": "claude-obsidian-plugin",
+      "title": "Claude Obsidian Plugin",
+      "slug": "claude-obsidian-plugin",
+      "tagline": "AI-enhanced note-taking and knowledge management",
+      "description": "Obsidian plugin that integrates Claude AI for intelligent note-taking. Generate summaries, create connections between notes, and enhance your knowledge management workflow.",
+      "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://obsidian.md/plugins/claude-ai-assistant",
+      "tags": [
+        {
+          "tag": {
+            "id": "obsidian",
+            "name": "obsidian",
+            "slug": "obsidian"
+          }
+        },
+        {
+          "tag": {
+            "id": "notes",
+            "name": "notes",
+            "slug": "notes"
+          }
+        },
+        {
+          "tag": {
+            "id": "knowledge-management",
+            "name": "knowledge-management",
+            "slug": "knowledge-management"
+          }
+        },
+        {
+          "tag": {
+            "id": "productivity",
+            "name": "productivity",
+            "slug": "productivity"
+          }
+        }
+      ],
+      "author": {
+        "name": "Obsidian Community",
+        "url": "https://obsidian.md"
+      },
+      "stats": {
+        "votes": 298,
+        "copies": 1124
+      },
+      "_count": {
+        "votes": 298,
+        "copies": 1124
+      },
+      "difficulty": "BEGINNER",
+      "lastUpdated": "2024-12-01",
+      "featured": false,
+      "trendingScore": 860
+    },
+    {
+      "id": "claude-jupyter-kernel",
+      "title": "Claude Jupyter Kernel",
+      "slug": "claude-jupyter-kernel",
+      "tagline": "AI-powered Jupyter notebook experience",
+      "description": "Custom Jupyter kernel that integrates Claude AI for data science and research. Get intelligent code suggestions, data analysis insights, and explanation of complex algorithms.",
+      "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
+      "type": "EXTERNAL",
+      "url": "https://github.com/jupyter-community/claude-kernel",
+      "tags": [
+        {
+          "tag": {
+            "id": "jupyter",
+            "name": "jupyter",
+            "slug": "jupyter"
+          }
+        },
+        {
+          "tag": {
+            "id": "data-science",
+            "name": "data-science",
+            "slug": "data-science"
+          }
+        },
+        {
+          "tag": {
+            "id": "kernel",
+            "name": "kernel",
+            "slug": "kernel"
+          }
+        },
+        {
+          "tag": {
+            "id": "analysis",
+            "name": "analysis",
+            "slug": "analysis"
+          }
+        }
+      ],
+      "author": {
+        "name": "Jupyter Community",
+        "url": "https://github.com/jupyter-community"
+      },
+      "stats": {
+        "votes": 289,
+        "copies": 1056
+      },
+      "_count": {
+        "votes": 289,
+        "copies": 1056
       },
       "difficulty": "ADVANCED",
       "lastUpdated": "2024-12-01",
-      "featured": true
+      "featured": false,
+      "trendingScore": 817
     },
     {
-      "id": "nextjs-config",
-      "title": "Next.js Configuration",
-      "slug": "nextjs-configuration",
-      "tagline": "Optimized Claude configuration for Next.js projects",
-      "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
-      "categoryId": "claude-configs",
-      "type": "CONFIGURATION",
-      "content": "# Claude Configuration for Next.js\\n\\nThis configuration optimizes Claude for Next.js development...",
+      "id": "claude-postman-collection",
+      "title": "Claude API Postman Collection",
+      "slug": "claude-api-postman-collection",
+      "tagline": "Complete Postman collection for Claude API",
+      "description": "Comprehensive Postman collection with all Claude API endpoints, example requests, and automated tests. Perfect for API testing and integration development.",
+      "categoryId": "api-integrations",
+      "category": {
+        "id": "api-integrations",
+        "name": "API Integrations",
+        "slug": "integrations",
+        "description": "Examples and libraries for integrating Claude API into various platforms.",
+        "icon": "🔗",
+        "color": "#EF4444"
+      },
+      "type": "EXTERNAL",
+      "url": "https://www.postman.com/anthropic/workspace/claude-api",
       "tags": [
-        "nextjs",
-        "react",
-        "frontend",
-        "typescript"
+        {
+          "tag": {
+            "id": "postman",
+            "name": "postman",
+            "slug": "postman"
+          }
+        },
+        {
+          "tag": {
+            "id": "api",
+            "name": "api",
+            "slug": "api"
+          }
+        },
+        {
+          "tag": {
+            "id": "testing",
+            "name": "testing",
+            "slug": "testing"
+          }
+        },
+        {
+          "tag": {
+            "id": "collection",
+            "name": "collection",
+            "slug": "collection"
+          }
+        }
       ],
       "author": {
-        "name": "Claude Code Community",
-        "url": "https://claudecode.directory"
+        "name": "Anthropic",
+        "url": "https://anthropic.com"
       },
       "stats": {
-        "votes": 45,
-        "copies": 234
+        "votes": 145,
+        "copies": 892
       },
-      "difficulty": "INTERMEDIATE",
-      "language": "TypeScript",
-      "framework": "Next.js",
+      "_count": {
+        "votes": 145,
+        "copies": 892
+      },
+      "difficulty": "BEGINNER",
       "lastUpdated": "2024-12-01",
-      "featured": true
+      "featured": true,
+      "trendingScore": 591
     }
   ],
   "meta": {
-    "total": 3,
+    "total": 29,
     "limit": 10,
-    "generated_at": "2025-07-30T21:08:49.672Z"
+    "generated_at": "2025-07-31T10:20:52.217Z"
   }
 }
