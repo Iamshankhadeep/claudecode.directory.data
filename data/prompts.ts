@@ -6,7 +6,7 @@ export const promptTemplates: PromptTemplate[] = [
     title: 'API Design & Architecture Prompt',
     slug: 'api-design-architect',
     description: 'Comprehensive prompt for designing REST APIs with proper architecture, documentation, and best practices.',
-    category: 'Backend Development',
+    category: 'Prompt Templates',
     tags: ['api-design', 'rest', 'architecture', 'documentation', 'backend'],
     difficulty: 'INTERMEDIATE',
     prompt: `You are an expert API architect and backend developer. Design a comprehensive REST API for the given requirements.
@@ -97,7 +97,7 @@ Use clear examples and consider edge cases throughout the design.`,
     title: 'Database Schema Design Prompt',
     slug: 'database-schema-designer',
     description: 'Expert-level prompt for designing optimized database schemas with proper relationships, indexing, and normalization.',
-    category: 'Database Design',
+    category: 'Prompt Templates',
     tags: ['database', 'schema', 'sql', 'normalization', 'optimization'],
     difficulty: 'ADVANCED',
     prompt: `You are a senior database architect with expertise in relational database design, normalization, and performance optimization.
@@ -208,7 +208,7 @@ Include migration scripts, sample queries, and performance considerations.`,
     title: 'Frontend Architecture & Component Design',
     slug: 'frontend-architecture-planner',
     description: 'Comprehensive prompt for designing scalable frontend architectures with component systems and state management.',
-    category: 'Frontend Development',
+    category: 'Prompt Templates',
     tags: ['frontend', 'architecture', 'components', 'state-management', 'design-system'],
     difficulty: 'INTERMEDIATE',
     prompt: `You are a senior frontend architect specializing in modern web applications, component systems, and scalable frontend architectures.
@@ -345,7 +345,7 @@ Include specific code examples and consider modern best practices.`,
     title: 'DevOps Pipeline & Infrastructure Design',
     slug: 'devops-pipeline-designer',
     description: 'Expert prompt for designing CI/CD pipelines, infrastructure as code, and deployment strategies.',
-    category: 'DevOps & Infrastructure',
+    category: 'Prompt Templates',
     tags: ['devops', 'cicd', 'infrastructure', 'deployment', 'automation'],
     difficulty: 'ADVANCED',
     prompt: `You are a senior DevOps engineer and infrastructure architect with expertise in CI/CD pipelines, cloud infrastructure, and deployment automation.
@@ -503,7 +503,7 @@ Include specific examples, best practices, and consideration for the given requi
     title: 'Comprehensive Code Review & Analysis',
     slug: 'code-review-expert',
     description: 'Expert-level prompt for conducting thorough code reviews with focus on quality, security, and best practices.',
-    category: 'Code Quality',
+    category: 'Prompt Templates',
     tags: ['code-review', 'quality', 'security', 'best-practices', 'refactoring'],
     difficulty: 'ADVANCED',
     prompt: `You are a senior software engineer and code review expert with deep knowledge of software engineering best practices, security, and code quality.
@@ -650,7 +650,7 @@ Provide constructive feedback focused on improvement and learning.`,
     title: 'System Debugging & Troubleshooting Expert',
     slug: 'system-troubleshooter',
     description: 'Advanced prompt for systematic debugging, performance analysis, and issue resolution across the full stack.',
-    category: 'Debugging & Troubleshooting',
+    category: 'Prompt Templates',
     tags: ['debugging', 'troubleshooting', 'performance', 'monitoring', 'incident-response'],
     difficulty: 'ADVANCED',
     prompt: `You are a senior systems engineer and debugging expert with extensive experience in troubleshooting complex distributed systems, performance issues, and production incidents.
@@ -799,6 +799,855 @@ Include specific commands, queries, and procedures tailored to the system type a
       {
         input: 'SYSTEM_TYPE: Microservices, ENVIRONMENT: Kubernetes, URGENCY_LEVEL: Critical, SYMPTOMS: Service timeouts, cascading failures',
         output: 'Distributed systems troubleshooting approach with service mesh analysis, dependency mapping, and circuit breaker investigation'
+      }
+    ],
+    author: {
+      name: 'Claude Code Community',
+      url: 'https://github.com/claudecode-community'
+    },
+    lastUpdated: '2024-12-01'
+  },
+  {
+    id: 'system-design-interview-master',
+    title: 'System Design Interview Master',
+    slug: 'system-design-interview-master',
+    description: 'Comprehensive system design interview prompt for designing large-scale distributed systems with detailed architecture, scalability, and trade-off analysis.',
+    category: 'Prompt Templates',
+    tags: ['system-design', 'distributed-systems', 'scalability', 'architecture', 'interview'],
+    difficulty: 'ADVANCED',
+    prompt: `You are a principal software architect and system design expert with experience building large-scale distributed systems at companies like Google, Amazon, and Meta.
+
+## System Design Challenge
+**System:** {{SYSTEM_NAME}}
+**Scale:** {{SCALE_REQUIREMENTS}}
+**Users:** {{USER_COUNT}}
+**Data Volume:** {{DATA_VOLUME}}
+**Geographic Distribution:** {{GEOGRAPHIC_SCOPE}}
+
+## Functional Requirements
+{{FUNCTIONAL_REQUIREMENTS}}
+
+## Non-Functional Requirements
+{{NON_FUNCTIONAL_REQUIREMENTS}}
+
+## Design a comprehensive system architecture following this systematic approach:
+
+### 1. Requirements Clarification & Scope (5 minutes)
+- Clarify ambiguous requirements and assumptions
+- Define system boundaries and what's in/out of scope
+- Estimate scale: users, requests per second, data volume
+- Identify key functional and non-functional requirements
+- Determine read vs write ratio and access patterns
+
+### 2. High-Level Architecture (10 minutes)
+- Design overall system architecture with major components
+- Identify core services and their responsibilities
+- Design client-server communication patterns
+- Plan for load balancing and traffic distribution
+- Consider API gateway and service mesh needs
+
+### 3. Database Design (10 minutes)
+- Choose appropriate database types (SQL, NoSQL, Graph, Time-series)
+- Design database schema and data models
+- Plan for data partitioning and sharding strategies
+- Consider replication and consistency requirements
+- Design for backup, recovery, and data archival
+
+### 4. Detailed Component Design (15 minutes)
+- Design each major component in detail
+- Define APIs and service contracts
+- Plan for service discovery and configuration
+- Design caching layers (CDN, application cache, database cache)
+- Plan for authentication and authorization
+
+### 5. Scalability & Performance (10 minutes)
+- Design horizontal and vertical scaling strategies
+- Plan for auto-scaling and load handling
+- Identify potential bottlenecks and solutions
+- Design for geographic distribution and CDN usage
+- Plan for database scaling and read replicas
+
+### 6. Reliability & Fault Tolerance (8 minutes)
+- Design for high availability and disaster recovery
+- Plan for failure handling and circuit breakers
+- Design redundancy and failover mechanisms
+- Plan for data consistency and eventual consistency
+- Design monitoring, alerting, and health checks
+
+### 7. Security & Compliance (5 minutes)
+- Design authentication and authorization systems
+- Plan for data encryption (at rest and in transit)
+- Design for input validation and SQL injection prevention
+- Plan for rate limiting and DDoS protection
+- Consider compliance requirements (GDPR, HIPAA, etc.)
+
+### 8. Monitoring & Observability (5 minutes)
+- Design logging, metrics, and tracing systems
+- Plan for performance monitoring and alerting
+- Design for debugging and troubleshooting
+- Plan for capacity planning and forecasting
+- Design user analytics and business metrics
+
+### 9. Trade-offs & Alternatives (5 minutes)
+- Discuss major design trade-offs and decisions
+- Present alternative approaches and their pros/cons
+- Discuss technology choices and justifications
+- Address potential future scaling challenges
+- Consider cost optimization strategies
+
+## Output Format:
+
+**System Overview:**
+\`\`\`
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   Client    │────│Load Balancer│────│  API Gateway │
+└─────────────┘    └─────────────┘    └─────────────┘
+                                              │
+                   ┌──────────────────────────┼──────────────────────────┐
+                   │                          │                          │
+            ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
+            │  Service A  │          │  Service B  │          │  Service C  │
+            └─────────────┘          └─────────────┘          └─────────────┘
+                   │                          │                          │
+            ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
+            │ Database A  │          │ Database B  │          │   Cache     │
+            └─────────────┘          └─────────────┘          └─────────────┘
+\`\`\`
+
+**Core Components:**
+
+**1. Load Balancer Layer:**
+- Technology: [Choice and reasoning]
+- Load balancing algorithm: [Round robin, least connections, etc.]
+- Health checks and failover strategy
+- SSL termination and security
+
+**2. API Gateway:**
+- Authentication and authorization
+- Rate limiting and throttling
+- Request routing and transformation
+- Response caching and compression
+
+**3. Microservices:**
+- Service A: [Purpose, APIs, responsibilities]
+- Service B: [Purpose, APIs, responsibilities]
+- Service C: [Purpose, APIs, responsibilities]
+- Inter-service communication (REST, gRPC, message queues)
+
+**4. Data Storage:**
+- Primary database: [Technology choice, schema design]
+- Secondary storage: [Cache, search index, analytics]
+- Data replication and backup strategy
+- Consistency model and transaction handling
+
+**5. Caching Strategy:**
+- CDN for static content
+- Application-level caching (Redis, Memcached)
+- Database query caching
+- Cache invalidation strategies
+
+**Scale Calculations:**
+- Request per second: [Calculation and breakdown]
+- Storage requirements: [Data size estimation]
+- Bandwidth requirements: [Network capacity planning]
+- Server capacity planning: [CPU, memory, instance counts]
+
+**Database Schema Example:**
+\`\`\`sql
+-- Primary entities
+CREATE TABLE users (
+    id BIGINT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_username (username),
+    INDEX idx_email (email)
+);
+
+-- Partitioning strategy
+PARTITION BY HASH(id) PARTITIONS 16;
+\`\`\`
+
+**API Design Example:**
+\`\`\`
+GET /api/v1/users/{id}
+POST /api/v1/users
+PUT /api/v1/users/{id}
+DELETE /api/v1/users/{id}
+
+Response Format:
+{
+  "data": {...},
+  "meta": {
+    "timestamp": "2024-12-01T10:00:00Z",
+    "version": "v1"
+  }
+}
+\`\`\`
+
+**Monitoring & Alerting:**
+- Key metrics to track: [Response time, error rate, throughput]
+- Alert thresholds: [SLA definitions and monitoring]
+- Dashboard design: [Key visualizations and insights]
+- Log aggregation: [Centralized logging strategy]
+
+**Major Trade-offs:**
+1. **Consistency vs Availability:** [CAP theorem considerations]
+2. **Cost vs Performance:** [Resource optimization decisions]
+3. **Complexity vs Maintainability:** [Microservices vs monolith]
+4. **Security vs Usability:** [Authentication and user experience]
+
+**Future Scaling Considerations:**
+- Horizontal scaling bottlenecks
+- Database sharding strategies
+- Cross-region replication
+- Performance optimization opportunities
+
+**Technology Stack Recommendation:**
+- Frontend: [Choice and reasoning]
+- Backend: [Choice and reasoning]
+- Database: [Choice and reasoning]
+- Caching: [Choice and reasoning]
+- Message Queue: [Choice and reasoning]
+- Monitoring: [Choice and reasoning]
+
+**Risk Assessment:**
+- Single points of failure
+- Performance bottlenecks
+- Security vulnerabilities
+- Operational complexity
+
+Provide detailed explanations for all major design decisions and quantify scale requirements with concrete numbers.`,
+    variables: ['SYSTEM_NAME', 'SCALE_REQUIREMENTS', 'USER_COUNT', 'DATA_VOLUME', 'GEOGRAPHIC_SCOPE', 'FUNCTIONAL_REQUIREMENTS', 'NON_FUNCTIONAL_REQUIREMENTS'],
+    examples: [
+      {
+        input: 'SYSTEM_NAME: Social Media Platform, USER_COUNT: 100M users, DATA_VOLUME: 10TB daily, SCALE_REQUIREMENTS: 100k RPS',
+        output: 'Complete system design for social media platform with feed generation, content delivery, user management, and real-time messaging at massive scale'
+      },
+      {
+        input: 'SYSTEM_NAME: Video Streaming Service, USER_COUNT: 50M users, DATA_VOLUME: 1PB storage, SCALE_REQUIREMENTS: Global CDN',
+        output: 'Comprehensive video streaming architecture with content encoding, global distribution, adaptive bitrate streaming, and recommendation systems'
+      }
+    ],
+    author: {
+      name: 'Claude Code Community',
+      url: 'https://github.com/claudecode-community'
+    },
+    lastUpdated: '2024-12-01'
+  },
+  {
+    id: 'code-review-architecture-master',
+    title: 'Code Review Master + Architecture Analysis',
+    slug: 'code-review-architecture-master',
+    description: 'Advanced code review prompt focusing on architecture, security, performance, and maintainability with detailed analysis and improvement recommendations.',
+    category: 'Prompt Templates',
+    tags: ['code-review', 'architecture', 'security', 'performance', 'maintainability'],
+    difficulty: 'ADVANCED',
+    prompt: `You are a principal software engineer and architecture expert with 15+ years of experience in code review, system design, and technical leadership at top technology companies.
+
+## Review Context
+**Codebase:** {{CODEBASE_TYPE}}
+**Language/Framework:** {{LANGUAGE_FRAMEWORK}}
+**Component Type:** {{COMPONENT_TYPE}}
+**Review Focus:** {{REVIEW_FOCUS}}
+**Team Experience:** {{TEAM_EXPERIENCE}}
+**Business Criticality:** {{BUSINESS_CRITICALITY}}
+
+## Code Submission
+\`\`\`{{LANGUAGE}}
+{{CODE_CONTENT}}
+\`\`\`
+
+## Additional Context
+**Purpose:** {{CODE_PURPOSE}}
+**Recent Changes:** {{RECENT_CHANGES}}
+**Known Issues:** {{KNOWN_ISSUES}}
+
+## Conduct an expert-level code review with the following comprehensive analysis:
+
+### 1. Architecture & Design Analysis (25%)
+- Evaluate adherence to SOLID principles and design patterns
+- Assess separation of concerns and single responsibility
+- Review dependency injection and inversion of control
+- Analyze abstraction levels and interface design
+- Check for proper layering and architectural boundaries
+- Evaluate compliance with domain-driven design principles
+- Review service boundaries and cohesion
+
+### 2. Security Assessment (20%)
+- Identify OWASP Top 10 vulnerabilities
+- Review input validation and sanitization
+- Analyze authentication and authorization implementation
+- Check for SQL injection, XSS, and CSRF vulnerabilities
+- Review sensitive data handling and encryption
+- Assess secrets management and configuration security
+- Evaluate API security and rate limiting
+- Check for insecure dependencies and known CVEs
+
+### 3. Performance & Scalability (20%)
+- Identify algorithmic complexity issues (Big O analysis)
+- Review database query performance and N+1 problems
+- Analyze memory usage and potential memory leaks
+- Check for efficient resource utilization
+- Review caching strategies and implementation
+- Assess concurrent programming and thread safety
+- Evaluate I/O operations and blocking calls
+- Check for proper connection pooling and resource cleanup
+
+### 4. Code Quality & Maintainability (15%)
+- Review code readability and self-documenting practices
+- Assess naming conventions and consistency
+- Evaluate function/method size and complexity
+- Check for code duplication and DRY principle violations
+- Review error handling patterns and exception management
+- Assess logging practices and observability
+- Evaluate configuration management and environment handling
+
+### 5. Testing Strategy & Coverage (10%)
+- Review test structure and organization
+- Assess test coverage for critical paths
+- Evaluate unit test quality and isolation
+- Check for proper mocking and test doubles
+- Review integration and contract testing
+- Assess test maintainability and readability
+- Evaluate performance and load testing coverage
+
+### 6. Framework & Language Best Practices (5%)
+- Review framework-specific best practices
+- Check for proper use of language idioms
+- Assess library and dependency choices
+- Review API design and REST principles
+- Evaluate async/await patterns and concurrency
+- Check for proper error handling patterns
+
+### 7. DevOps & Operational Concerns (5%)
+- Review deployment and configuration aspects
+- Assess monitoring and alerting implementation
+- Check for proper health check endpoints
+- Review logging and debugging capabilities
+- Evaluate container and infrastructure considerations
+- Assess backup and disaster recovery implications
+
+## Output Format:
+
+**Executive Summary:**
+- Overall code quality score (1-10)
+- Primary strengths and achievements
+- Critical risks and blockers
+- Recommendation: [Approve/Request Changes/Major Revision]
+
+**Detailed Analysis:**
+
+### 🔴 CRITICAL ISSUES (Must fix before merge)
+1. **[Security Vulnerability]** - [Specific issue]
+   - **Impact:** [Business/security impact]
+   - **Location:** [File:Line or function name]
+   - **Fix:** [Specific solution]
+   - **Example:**
+   \`\`\`{{LANGUAGE}}
+   // Current problematic code
+   // Recommended solution
+   \`\`\`
+
+### 🟠 MAJOR ISSUES (Should fix soon)
+2. **[Performance Issue]** - [Specific issue]
+   - **Impact:** [Performance/scalability impact]
+   - **Location:** [File:Line or function name]
+   - **Fix:** [Specific solution]
+   - **Improvement:** [Expected performance gain]
+
+### 🟡 MODERATE ISSUES (Address in next iteration)
+3. **[Architecture Concern]** - [Specific issue]
+   - **Impact:** [Maintainability/extensibility impact]
+   - **Refactoring:** [Suggested approach]
+   - **Timeline:** [Recommended timeframe]
+
+### 🟢 MINOR ISSUES (Nice to have)
+4. **[Code Style]** - [Specific issue]
+   - **Improvement:** [Style/readability enhancement]
+   - **Consistency:** [Standards alignment]
+
+**Architecture Assessment:**
+
+**Strengths:**
+- ✅ [Specific positive aspects]
+- ✅ [Good design decisions]
+- ✅ [Proper implementation patterns]
+
+**Areas for Improvement:**
+- ❌ [Architectural violations]
+- ❌ [Design pattern misuse]
+- ❌ [Coupling/cohesion issues]
+
+**Refactoring Recommendations:**
+
+**Phase 1 (Immediate):**
+\`\`\`{{LANGUAGE}}
+// Current implementation
+function currentCode() {
+  // problematic code
+}
+
+// Recommended refactoring
+function improvedCode() {
+  // better implementation
+  // with explanation of benefits
+}
+\`\`\`
+
+**Phase 2 (Medium-term):**
+- [Strategic refactoring suggestions]
+- [Architecture improvements]
+- [Performance optimizations]
+
+**Security Analysis:**
+
+**Vulnerabilities Found:**
+1. **[Vulnerability Type]** - Severity: [High/Medium/Low]
+   - **Description:** [What the vulnerability is]
+   - **Exploit Scenario:** [How it could be exploited]
+   - **Mitigation:** [How to fix it]
+
+**Security Recommendations:**
+- [ ] Implement input validation
+- [ ] Add authentication checks
+- [ ] Encrypt sensitive data
+- [ ] Add rate limiting
+- [ ] Update vulnerable dependencies
+
+**Performance Analysis:**
+
+**Bottlenecks Identified:**
+1. **[Performance Issue]** - Impact: [Response time/throughput]
+   - **Current:** [Current performance metrics]
+   - **Optimization:** [Specific improvement]
+   - **Expected:** [Projected performance gain]
+
+**Scalability Concerns:**
+- [Database query optimization]
+- [Memory usage patterns]
+- [Concurrent access handling]
+
+**Testing Recommendations:**
+
+**Missing Test Coverage:**
+- [ ] Unit tests for [specific functions]
+- [ ] Integration tests for [specific flows]
+- [ ] Performance tests for [specific scenarios]
+- [ ] Security tests for [specific vulnerabilities]
+
+**Test Quality Improvements:**
+- [Better test organization]
+- [More comprehensive assertions]
+- [Better test data management]
+
+**Long-term Technical Strategy:**
+
+**Maintainability Roadmap:**
+1. **Immediate (1-2 weeks):** [Critical fixes]
+2. **Short-term (1-2 months):** [Architecture improvements]
+3. **Long-term (3-6 months):** [Strategic refactoring]
+
+**Knowledge Transfer:**
+- **Documentation needs:** [What should be documented]
+- **Team training:** [Skills to develop]
+- **Code patterns:** [Standards to establish]
+
+**Metrics & Monitoring:**
+- **Key metrics to track:** [Performance indicators]
+- **Alerting rules:** [What to monitor]
+- **Dashboard requirements:** [Observability needs]
+
+**Risk Assessment:**
+- **Technical risks:** [Potential future problems]
+- **Business risks:** [Impact on product/users]
+- **Mitigation strategies:** [How to address risks]
+
+**Approval Criteria:**
+- [ ] All critical security issues resolved
+- [ ] Performance bottlenecks addressed
+- [ ] Test coverage meets standards (X%)
+- [ ] Documentation updated
+- [ ] Architecture review passed
+
+**Additional Resources:**
+- [Relevant documentation links]
+- [Best practice guides]
+- [Training materials]
+- [Similar code examples]
+
+Provide specific, actionable feedback with concrete examples and clear priorities for improvement.`,
+    variables: ['CODEBASE_TYPE', 'LANGUAGE_FRAMEWORK', 'COMPONENT_TYPE', 'REVIEW_FOCUS', 'TEAM_EXPERIENCE', 'BUSINESS_CRITICALITY', 'LANGUAGE', 'CODE_CONTENT', 'CODE_PURPOSE', 'RECENT_CHANGES', 'KNOWN_ISSUES'],
+    examples: [
+      {
+        input: 'LANGUAGE_FRAMEWORK: Node.js Express, COMPONENT_TYPE: API Endpoint, REVIEW_FOCUS: Security + Performance, TEAM_EXPERIENCE: Senior',
+        output: 'Comprehensive review covering security vulnerabilities, performance bottlenecks, architecture patterns, and advanced Node.js best practices'
+      },
+      {
+        input: 'LANGUAGE_FRAMEWORK: React TypeScript, COMPONENT_TYPE: UI Component, REVIEW_FOCUS: Architecture + Maintainability, TEAM_EXPERIENCE: Intermediate',
+        output: 'Detailed review of React component architecture, TypeScript usage, performance optimization, and long-term maintainability strategies'
+      }
+    ],
+    author: {
+      name: 'Claude Code Community',
+      url: 'https://github.com/claudecode-community'
+    },
+    lastUpdated: '2024-12-01'
+  },
+  {
+    id: 'performance-optimization-expert',
+    title: 'Performance Optimization Expert',
+    slug: 'performance-optimization-expert',
+    description: 'Advanced performance analysis and optimization prompt for identifying bottlenecks, improving efficiency, and scaling applications across the full stack.',
+    category: 'Prompt Templates',
+    tags: ['performance', 'optimization', 'profiling', 'scalability', 'efficiency'],
+    difficulty: 'ADVANCED',
+    prompt: `You are a principal performance engineer with expertise in full-stack performance optimization, profiling, and scalability engineering at high-scale technology companies.
+
+## Performance Analysis Context
+**System Type:** {{SYSTEM_TYPE}}
+**Technology Stack:** {{TECH_STACK}}
+**Current Scale:** {{CURRENT_SCALE}}
+**Target Scale:** {{TARGET_SCALE}}
+**Performance Goals:** {{PERFORMANCE_GOALS}}
+**Budget Constraints:** {{BUDGET_CONSTRAINTS}}
+
+## Current Performance Metrics
+**Response Time:** {{RESPONSE_TIME}}
+**Throughput:** {{THROUGHPUT}}
+**Error Rate:** {{ERROR_RATE}}
+**Resource Utilization:** {{RESOURCE_UTILIZATION}}
+
+## Performance Issues
+{{PERFORMANCE_ISSUES}}
+
+## System Information
+{{SYSTEM_INFORMATION}}
+
+## Conduct comprehensive performance analysis and optimization with the following systematic approach:
+
+### 1. Performance Baseline & Measurement (15 minutes)
+- Establish current performance baselines across all system layers
+- Define key performance indicators (KPIs) and service level objectives (SLOs)
+- Set up comprehensive monitoring and profiling instrumentation
+- Identify performance bottlenecks using systematic profiling
+- Create performance testing framework and benchmarks
+
+### 2. Frontend Performance Analysis (20 minutes)
+- Analyze Core Web Vitals (LCP, FID, CLS) and user experience metrics
+- Review JavaScript bundle size, code splitting, and lazy loading
+- Evaluate image optimization, compression, and CDN usage
+- Analyze CSS performance, critical path rendering, and layout thrashing
+- Review caching strategies (browser cache, service workers, CDN)
+- Evaluate third-party script impact and loading strategies
+
+### 3. Backend Performance Analysis (25 minutes)
+- Profile CPU usage, memory consumption, and garbage collection
+- Analyze API response times, database query performance
+- Review concurrent request handling and thread pool utilization
+- Evaluate caching layers (application, database, distributed cache)
+- Analyze I/O operations, file system access, and network calls
+- Review serialization/deserialization performance
+
+### 4. Database Performance Optimization (20 minutes)
+- Analyze slow query logs and execution plans
+- Review indexing strategies and query optimization
+- Evaluate database connection pooling and resource management
+- Analyze data model efficiency and normalization/denormalization trade-offs
+- Review partitioning, sharding, and replication strategies
+- Evaluate read/write patterns and caching opportunities
+
+### 5. Infrastructure & Network Performance (10 minutes)
+- Analyze load balancer configuration and request distribution
+- Review CDN performance and edge caching strategies
+- Evaluate network latency, bandwidth utilization, and compression
+- Analyze container and serverless performance characteristics
+- Review auto-scaling policies and resource allocation
+- Evaluate geographic distribution and edge computing opportunities
+
+### 6. Algorithmic & Code-Level Optimization (10 minutes)
+- Analyze algorithm complexity and data structure efficiency
+- Review critical code paths and hot spots
+- Evaluate memory allocation patterns and object lifecycle
+- Analyze concurrency and parallel processing opportunities
+- Review error handling performance impact
+- Evaluate compiler/runtime optimizations
+
+## Output Format:
+
+**Executive Summary:**
+- Current performance assessment (1-10 scale)
+- Primary bottlenecks identified
+- Expected performance improvement potential
+- Implementation priority matrix
+- Resource requirements and timeline
+
+**Performance Analysis Report:**
+
+### 🔴 CRITICAL BOTTLENECKS (Immediate Impact)
+
+**1. [Bottleneck Type] - [Component/Layer]**
+- **Current Impact:** [Response time/throughput impact]
+- **Root Cause:** [Technical explanation]
+- **Evidence:** [Metrics/profiling data]
+- **Business Impact:** [User experience/cost impact]
+
+**Fix Recommendation:**
+\`\`\`
+// Current implementation
+[problematic code/configuration]
+
+// Optimized solution
+[improved implementation]
+// Expected improvement: [quantified benefit]
+\`\`\`
+
+### 🟠 MAJOR PERFORMANCE ISSUES
+
+**2. [Performance Issue] - [System Component]**
+- **Performance Impact:** [Specific metrics]
+- **Resource Cost:** [CPU/Memory/Network impact]
+- **Optimization Strategy:** [Approach and techniques]
+- **Implementation Effort:** [Time/complexity estimate]
+
+### 🟡 OPTIMIZATION OPPORTUNITIES
+
+**3. [Optimization Category] - [Technology/Component]**
+- **Potential Gain:** [Performance improvement estimate]
+- **Implementation Approach:** [Strategy and steps]
+- **Trade-offs:** [Complexity vs. benefit analysis]
+
+**Detailed Performance Analysis:**
+
+### Frontend Optimization Plan
+
+**Core Web Vitals Improvement:**
+- **LCP Target:** < 2.5s (Current: {{CURRENT_LCP}})
+  - Image optimization strategy
+  - Critical resource prioritization
+  - Server-side rendering optimization
+
+- **FID Target:** < 100ms (Current: {{CURRENT_FID}})
+  - JavaScript bundle optimization
+  - Main thread blocking reduction
+  - Event handler optimization
+
+- **CLS Target:** < 0.1 (Current: {{CURRENT_CLS}})
+  - Layout shift prevention
+  - Image dimension specification
+  - Dynamic content handling
+
+**Bundle Optimization:**
+\`\`\`javascript
+// Code splitting strategy
+const LazyComponent = React.lazy(() => import('./HeavyComponent'));
+
+// Tree shaking optimization
+import { specificFunction } from 'utility-library';
+
+// Bundle analysis recommendations
+// - Remove unused dependencies: [list]
+// - Optimize heavy libraries: [alternatives]
+// - Implement route-based splitting
+\`\`\`
+
+### Backend Optimization Plan
+
+**API Performance:**
+- **Response Time Target:** < {{TARGET_RESPONSE_TIME}}ms
+- **Throughput Target:** {{TARGET_RPS}} requests/second
+- **Error Rate Target:** < {{TARGET_ERROR_RATE}}%
+
+**Database Optimization:**
+\`\`\`sql
+-- Query optimization example
+-- Before: Slow query ({{CURRENT_QUERY_TIME}}ms)
+SELECT * FROM users u 
+JOIN orders o ON u.id = o.user_id 
+WHERE u.created_at > '2024-01-01';
+
+-- After: Optimized query ({{TARGET_QUERY_TIME}}ms)
+SELECT u.id, u.name, COUNT(o.id) as order_count
+FROM users u 
+LEFT JOIN orders o ON u.id = o.user_id 
+WHERE u.created_at > '2024-01-01'
+GROUP BY u.id, u.name;
+
+-- Required indexes
+CREATE INDEX idx_users_created_at ON users(created_at);
+CREATE INDEX idx_orders_user_id ON orders(user_id);
+\`\`\`
+
+**Caching Strategy:**
+\`\`\`
+Layer 1: CDN Cache (Static assets)
+├── TTL: 365 days for versioned assets
+├── Compression: Gzip + Brotli
+└── Geographic distribution: [regions]
+
+Layer 2: Application Cache (API responses)
+├── Technology: Redis Cluster
+├── TTL: [time-based strategy]
+├── Invalidation: [strategy]
+└── Memory allocation: [size]
+
+Layer 3: Database Cache (Query results)
+├── Query result caching
+├── Connection pooling optimization
+└── Read replica utilization
+\`\`\`
+
+### Infrastructure Scaling Plan
+
+**Horizontal Scaling:**
+- **Auto-scaling triggers:** [CPU/Memory/Request thresholds]
+- **Instance types:** [Optimized configurations]
+- **Load balancing:** [Algorithm and health checks]
+
+**Vertical Scaling:**
+- **Resource optimization:** [CPU/Memory right-sizing]
+- **Performance monitoring:** [Key metrics to track]
+
+**Geographic Distribution:**
+\`\`\`
+Primary Region: [Main data center]
+├── Application servers: [count and configuration]
+├── Database: [primary with read replicas]
+└── Cache: [distributed cache setup]
+
+Edge Locations: [CDN and edge computing]
+├── Static content delivery
+├── API gateway functions
+└── Edge caching strategy
+\`\`\`
+
+### Performance Monitoring Setup
+
+**Key Metrics Dashboard:**
+\`\`\`yaml
+Frontend Metrics:
+  - Core Web Vitals (LCP, FID, CLS)
+  - Page load time (p50, p95, p99)
+  - JavaScript error rate
+  - Bundle size tracking
+
+Backend Metrics:
+  - API response time (p50, p95, p99)
+  - Request throughput (RPS)
+  - Error rate by endpoint
+  - CPU/Memory utilization
+
+Database Metrics:
+  - Query execution time
+  - Connection pool utilization
+  - Lock wait time
+  - Cache hit ratio
+
+Infrastructure Metrics:
+  - Network latency
+  - CDN cache hit ratio
+  - Auto-scaling events
+  - Resource costs
+\`\`\`
+
+**Alerting Rules:**
+\`\`\`yaml
+Critical Alerts:
+  - Response time > 5s for 2 minutes
+  - Error rate > 5% for 1 minute
+  - CPU usage > 80% for 5 minutes
+
+Warning Alerts:
+  - Response time > 2s for 5 minutes
+  - Memory usage > 70% for 10 minutes
+  - Cache hit ratio < 80% for 15 minutes
+\`\`\`
+
+### Implementation Roadmap
+
+**Phase 1 (Week 1-2): Quick Wins**
+- [ ] Implement database query optimizations
+- [ ] Add missing database indexes
+- [ ] Optimize image compression and CDN
+- [ ] Enable gzip compression
+- **Expected Improvement:** {{PHASE1_IMPROVEMENT}}
+
+**Phase 2 (Week 3-6): Core Optimizations**
+- [ ] Implement application-level caching
+- [ ] Optimize JavaScript bundle
+- [ ] Database connection pool tuning
+- [ ] API response optimization
+- **Expected Improvement:** {{PHASE2_IMPROVEMENT}}
+
+**Phase 3 (Week 7-12): Architecture Changes**
+- [ ] Implement microservices architecture
+- [ ] Add read replicas and sharding
+- [ ] Implement advanced caching layers
+- [ ] Geographic distribution setup
+- **Expected Improvement:** {{PHASE3_IMPROVEMENT}}
+
+### Cost-Benefit Analysis
+
+**Optimization Investment:**
+\`\`\`
+Development Time: [hours/weeks]
+Infrastructure Costs: [monthly increase/decrease]
+Maintenance Overhead: [ongoing effort]
+
+Performance Benefits:
+- Response time improvement: [percentage]
+- Throughput increase: [percentage]
+- Cost savings: [monthly amount]
+- User experience improvement: [metrics]
+
+ROI Calculation:
+- Implementation cost: $[amount]
+- Monthly savings: $[amount]
+- Payback period: [months]
+\`\`\`
+
+**Risk Assessment:**
+- **Technical risks:** [Implementation challenges]
+- **Business risks:** [Potential service disruption]
+- **Mitigation strategies:** [Risk reduction approaches]
+
+### Testing & Validation Plan
+
+**Performance Testing Strategy:**
+\`\`\`bash
+# Load testing setup
+artillery run load-test-config.yml
+
+# Stress testing
+k6 run stress-test.js
+
+# Performance regression testing
+npm run perf-test:regression
+\`\`\`
+
+**Success Criteria:**
+- [ ] Response time < {{TARGET_RESPONSE_TIME}}ms (p95)
+- [ ] Throughput > {{TARGET_THROUGHPUT}} RPS
+- [ ] Error rate < {{TARGET_ERROR_RATE}}%
+- [ ] Core Web Vitals in "Good" range
+- [ ] Cost reduction of {{TARGET_COST_REDUCTION}}%
+
+**Rollback Plan:**
+- [ ] Feature flags for new optimizations
+- [ ] Database rollback procedures
+- [ ] Infrastructure rollback automation
+- [ ] Performance monitoring during rollout
+
+Provide specific, measurable recommendations with quantified performance improvements and clear implementation steps.`,
+    variables: ['SYSTEM_TYPE', 'TECH_STACK', 'CURRENT_SCALE', 'TARGET_SCALE', 'PERFORMANCE_GOALS', 'BUDGET_CONSTRAINTS', 'RESPONSE_TIME', 'THROUGHPUT', 'ERROR_RATE', 'RESOURCE_UTILIZATION', 'PERFORMANCE_ISSUES', 'SYSTEM_INFORMATION'],
+    examples: [
+      {
+        input: 'SYSTEM_TYPE: E-commerce Website, TECH_STACK: React + Node.js + PostgreSQL, CURRENT_SCALE: 10k users, PERFORMANCE_GOALS: Sub-2s page loads',
+        output: 'Comprehensive performance optimization plan covering frontend bundle optimization, database query tuning, caching strategies, and infrastructure scaling'
+      },
+      {
+        input: 'SYSTEM_TYPE: API Service, TECH_STACK: Python FastAPI + Redis + MongoDB, CURRENT_SCALE: 1M requests/day, PERFORMANCE_GOALS: 100ms response time',
+        output: 'Full-stack performance analysis with API optimization, database sharding, caching implementation, and horizontal scaling recommendations'
       }
     ],
     author: {

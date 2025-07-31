@@ -1,0 +1,218 @@
+{
+  "data": [
+    {
+      "id": "claude-configs",
+      "name": "Claude.md Configurations",
+      "slug": "claude-configs",
+      "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types, including advanced enterprise-grade configurations.",
+      "icon": "📋",
+      "color": "#F59E0B",
+      "order": 1,
+      "resourceCount": 17,
+      "featured": false
+    },
+    {
+      "id": "prompt-templates",
+      "name": "Prompt Templates",
+      "slug": "prompts",
+      "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+      "icon": "💬",
+      "color": "#10B981",
+      "order": 2,
+      "resourceCount": 14,
+      "featured": false
+    },
+    {
+      "id": "tools-cli",
+      "name": "Tools & CLI",
+      "slug": "tools",
+      "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow, including enterprise-grade automation platforms.",
+      "icon": "🛠️",
+      "color": "#8B5CF6",
+      "order": 3,
+      "resourceCount": 19,
+      "featured": false
+    },
+    {
+      "id": "expert-resources",
+      "name": "Expert Resources",
+      "slug": "expert",
+      "description": "Advanced configurations, tools, and prompts for experienced developers and enterprise teams. Includes architectural patterns, performance optimization, and complex system design.",
+      "icon": "🎯",
+      "color": "#7C3AED",
+      "order": 4,
+      "resourceCount": 27,
+      "featured": false
+    },
+    {
+      "id": "vscode-extensions",
+      "name": "VS Code Extensions",
+      "slug": "vscode",
+      "description": "Extensions and configurations to integrate Claude seamlessly into VS Code.",
+      "icon": "🔧",
+      "color": "#3B82F6",
+      "order": 5,
+      "resourceCount": 2,
+      "featured": false
+    },
+    {
+      "id": "api-integrations",
+      "name": "API Integrations",
+      "slug": "integrations",
+      "description": "Examples and libraries for integrating Claude API into various platforms.",
+      "icon": "🔗",
+      "color": "#EF4444",
+      "order": 6,
+      "resourceCount": 3,
+      "featured": false
+    },
+    {
+      "id": "claude-code-projects",
+      "name": "Claude Code Projects",
+      "slug": "projects",
+      "description": "Complete projects and examples built with Claude Code CLI.",
+      "icon": "🚀",
+      "color": "#F97316",
+      "order": 7,
+      "resourceCount": 2,
+      "featured": false
+    },
+    {
+      "id": "documentation-guides",
+      "name": "Documentation & Guides",
+      "slug": "docs",
+      "description": "Comprehensive guides, tutorials, and best practices for Claude development.",
+      "icon": "📚",
+      "color": "#06B6D4",
+      "order": 8,
+      "resourceCount": 0,
+      "featured": false
+    },
+    {
+      "id": "templates-starters",
+      "name": "Templates & Starters",
+      "slug": "templates",
+      "description": "Project templates and starter kits preconfigured for Claude development.",
+      "icon": "📦",
+      "color": "#84CC16",
+      "order": 9,
+      "resourceCount": 0,
+      "featured": false
+    },
+    {
+      "id": "productivity-scripts",
+      "name": "Productivity Scripts",
+      "slug": "scripts",
+      "description": "Automation scripts and workflows to boost your development productivity.",
+      "icon": "⚡",
+      "color": "#F59E0B",
+      "order": 10,
+      "resourceCount": 1,
+      "featured": false
+    },
+    {
+      "id": "development-workflows",
+      "name": "Development Workflows",
+      "slug": "workflows",
+      "description": "GitHub Actions, CI/CD pipelines, and other workflow automations.",
+      "icon": "🔄",
+      "color": "#8B5CF6",
+      "order": 11,
+      "resourceCount": 0,
+      "featured": false
+    },
+    {
+      "id": "testing-quality",
+      "name": "Testing & Quality",
+      "slug": "testing",
+      "description": "Testing frameworks, quality assurance tools, and code review helpers.",
+      "icon": "🧪",
+      "color": "#10B981",
+      "order": 12,
+      "resourceCount": 1,
+      "featured": false
+    },
+    {
+      "id": "deployment-devops",
+      "name": "Deployment & DevOps",
+      "slug": "devops",
+      "description": "Deployment scripts, Docker configurations, and DevOps best practices.",
+      "icon": "📡",
+      "color": "#3B82F6",
+      "order": 13,
+      "resourceCount": 3,
+      "featured": false
+    },
+    {
+      "id": "database-storage",
+      "name": "Database & Storage",
+      "slug": "database",
+      "description": "Database integrations, storage solutions, and data management tools.",
+      "icon": "🗄️",
+      "color": "#EF4444",
+      "order": 14,
+      "resourceCount": 2,
+      "featured": false
+    },
+    {
+      "id": "auth-security",
+      "name": "Authentication & Security",
+      "slug": "security",
+      "description": "Authentication systems, security tools, and privacy-focused solutions.",
+      "icon": "🔐",
+      "color": "#F97316",
+      "order": 15,
+      "resourceCount": 2,
+      "featured": false
+    },
+    {
+      "id": "ui-ux-resources",
+      "name": "UI/UX Resources",
+      "slug": "design",
+      "description": "Design systems, UI components, and user experience resources.",
+      "icon": "🎨",
+      "color": "#EC4899",
+      "order": 16,
+      "resourceCount": 0,
+      "featured": false
+    },
+    {
+      "id": "mobile-development",
+      "name": "Mobile Development",
+      "slug": "mobile",
+      "description": "React Native, Flutter, and other mobile development resources.",
+      "icon": "📱",
+      "color": "#06B6D4",
+      "order": 17,
+      "resourceCount": 0,
+      "featured": false
+    },
+    {
+      "id": "data-science-ml",
+      "name": "Data Science & ML",
+      "slug": "datascience",
+      "description": "Machine learning models, data analysis tools, and AI integrations.",
+      "icon": "🤖",
+      "color": "#84CC16",
+      "order": 18,
+      "resourceCount": 0,
+      "featured": false
+    },
+    {
+      "id": "community-resources",
+      "name": "Community Resources",
+      "slug": "community",
+      "description": "Community-contributed resources, examples, and collaborative projects.",
+      "icon": "👥",
+      "color": "#8B5CF6",
+      "order": 19,
+      "resourceCount": 0,
+      "featured": false
+    }
+  ],
+  "meta": {
+    "total": 19,
+    "generated_at": "2025-07-31T20:55:17.847Z",
+    "version": "1.0.0"
+  }
+}

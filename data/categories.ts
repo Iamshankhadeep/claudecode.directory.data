@@ -5,31 +5,41 @@ const categories: StaticCategory[] = [
     id: 'claude-configs',
     name: 'Claude.md Configurations',
     slug: 'claude-configs',
-    description: 'Ready-to-use Claude.md configuration files for different tech stacks and project types.',
+    description: 'Ready-to-use Claude.md configuration files for different tech stacks and project types, including advanced enterprise-grade configurations.',
     icon: '📋',
     color: '#F59E0B',
     order: 1,
-    resourceCount: 11
+    resourceCount: 17  // Updated: Actual count of config files
   },
   {
     id: 'prompt-templates',
     name: 'Prompt Templates',
     slug: 'prompts',
-    description: 'Carefully crafted prompt templates for common development tasks and workflows.',
+    description: 'Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.',
     icon: '💬',
     color: '#10B981',
     order: 2,
-    resourceCount: 6
+    resourceCount: 14  // Updated: 9 in prompts.ts + 5 individual files
   },
   {
     id: 'tools-cli',
     name: 'Tools & CLI',
     slug: 'tools',
-    description: 'Command-line tools, utilities, and scripts to enhance your Claude development workflow.',
+    description: 'Command-line tools, utilities, and scripts to enhance your Claude development workflow, including enterprise-grade automation platforms.',
     icon: '🛠️',
     color: '#8B5CF6',
     order: 3,
-    resourceCount: 4
+    resourceCount: 19  // Updated: 12 in tools.ts + 7 individual files
+  },
+  {
+    id: 'expert-resources',
+    name: 'Expert Resources',
+    slug: 'expert',
+    description: 'Advanced configurations, tools, and prompts for experienced developers and enterprise teams. Includes architectural patterns, performance optimization, and complex system design.',
+    icon: '🎯',
+    color: '#7C3AED',
+    order: 4,
+    resourceCount: 27  // 15 advanced configs + 5 advanced prompts + 7 advanced tools
   },
   {
     id: 'vscode-extensions',
@@ -38,7 +48,7 @@ const categories: StaticCategory[] = [
     description: 'Extensions and configurations to integrate Claude seamlessly into VS Code.',
     icon: '🔧',
     color: '#3B82F6',
-    order: 4,
+    order: 5,
     resourceCount: 2
   },
   {
@@ -48,7 +58,7 @@ const categories: StaticCategory[] = [
     description: 'Examples and libraries for integrating Claude API into various platforms.',
     icon: '🔗',
     color: '#EF4444',
-    order: 5,
+    order: 6,
     resourceCount: 3
   },
   {
@@ -58,7 +68,7 @@ const categories: StaticCategory[] = [
     description: 'Complete projects and examples built with Claude Code CLI.',
     icon: '🚀',
     color: '#F97316',
-    order: 6,
+    order: 7,
     resourceCount: 2
   },
   {
@@ -68,7 +78,7 @@ const categories: StaticCategory[] = [
     description: 'Comprehensive guides, tutorials, and best practices for Claude development.',
     icon: '📚',
     color: '#06B6D4',
-    order: 7,
+    order: 8,
     resourceCount: 0
   },
   {
@@ -78,7 +88,7 @@ const categories: StaticCategory[] = [
     description: 'Project templates and starter kits preconfigured for Claude development.',
     icon: '📦',
     color: '#84CC16',
-    order: 8,
+    order: 9,
     resourceCount: 0
   },
   {
@@ -88,7 +98,7 @@ const categories: StaticCategory[] = [
     description: 'Automation scripts and workflows to boost your development productivity.',
     icon: '⚡',
     color: '#F59E0B',
-    order: 9,
+    order: 10,
     resourceCount: 1
   },
   {
@@ -98,7 +108,7 @@ const categories: StaticCategory[] = [
     description: 'GitHub Actions, CI/CD pipelines, and other workflow automations.',
     icon: '🔄',
     color: '#8B5CF6',
-    order: 10,
+    order: 11,
     resourceCount: 0
   },
   {
@@ -108,8 +118,8 @@ const categories: StaticCategory[] = [
     description: 'Testing frameworks, quality assurance tools, and code review helpers.',
     icon: '🧪',
     color: '#10B981',
-    order: 11,
-    resourceCount: 0
+    order: 12,
+    resourceCount: 1  // Updated: Testing Automation tool
   },
   {
     id: 'deployment-devops',
@@ -118,8 +128,8 @@ const categories: StaticCategory[] = [
     description: 'Deployment scripts, Docker configurations, and DevOps best practices.',
     icon: '📡',
     color: '#3B82F6',
-    order: 12,
-    resourceCount: 0
+    order: 13,
+    resourceCount: 3  // Updated: CI/CD Pipeline Masters, Infrastructure as Code Masters, Database Evolution
   },
   {
     id: 'database-storage',
@@ -128,8 +138,8 @@ const categories: StaticCategory[] = [
     description: 'Database integrations, storage solutions, and data management tools.',
     icon: '🗄️',
     color: '#EF4444',
-    order: 13,
-    resourceCount: 0
+    order: 14,
+    resourceCount: 2  // Updated: Database Performance Engineering, Database Evolution
   },
   {
     id: 'auth-security',
@@ -138,8 +148,8 @@ const categories: StaticCategory[] = [
     description: 'Authentication systems, security tools, and privacy-focused solutions.',
     icon: '🔐',
     color: '#F97316',
-    order: 14,
-    resourceCount: 0
+    order: 15,
+    resourceCount: 2  // Updated: Security-First Development, Security Scanner
   },
   {
     id: 'ui-ux-resources',
@@ -148,7 +158,7 @@ const categories: StaticCategory[] = [
     description: 'Design systems, UI components, and user experience resources.',
     icon: '🎨',
     color: '#EC4899',
-    order: 15,
+    order: 16,
     resourceCount: 0
   },
   {
@@ -158,7 +168,7 @@ const categories: StaticCategory[] = [
     description: 'React Native, Flutter, and other mobile development resources.',
     icon: '📱',
     color: '#06B6D4',
-    order: 16,
+    order: 17,
     resourceCount: 0
   },
   {
@@ -168,7 +178,7 @@ const categories: StaticCategory[] = [
     description: 'Machine learning models, data analysis tools, and AI integrations.',
     icon: '🤖',
     color: '#84CC16',
-    order: 17,
+    order: 18,
     resourceCount: 0
   },
   {
@@ -178,7 +188,7 @@ const categories: StaticCategory[] = [
     description: 'Community-contributed resources, examples, and collaborative projects.',
     icon: '👥',
     color: '#8B5CF6',
-    order: 18,
+    order: 19,
     resourceCount: 0
   }
 ];
