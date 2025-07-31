@@ -1,35 +1,55 @@
 import type { StaticResource, StaticStats, SearchFilters, SearchResults } from './types';
-const { categories } = require('./categories');
+const categoriesModule = require('./categories');
+const categories = categoriesModule?.categories || [];
 
-// Import all claude-configs (17 total)
-const { webDevConfigs } = require('./claude-configs/web-dev');
-const { backendConfigs } = require('./claude-configs/backend');
-const { dataScienceConfigs } = require('./claude-configs/data-science');
-const { advancedArchitectureConfigs } = require('./claude-configs/advanced-architecture');
-const { advancedCachingConfigs } = require('./claude-configs/advanced-caching');
-const { cicdPipelineMastersConfigs } = require('./claude-configs/cicd-pipeline-masters');
+// Import all claude-configs (17 total) with null checks
+const webDevModule = require('./claude-configs/web-dev');
+const webDevConfigs = webDevModule?.webDevConfigs || [];
+const backendModule = require('./claude-configs/backend');
+const backendConfigs = backendModule?.backendConfigs || [];
+const dataScienceModule = require('./claude-configs/data-science');
+const dataScienceConfigs = dataScienceModule?.dataScienceConfigs || [];
+const advancedArchitectureModule = require('./claude-configs/advanced-architecture');
+const advancedArchitectureConfigs = advancedArchitectureModule?.advancedArchitectureConfigs || [];
+const advancedCachingModule = require('./claude-configs/advanced-caching');
+const advancedCachingConfigs = advancedCachingModule?.advancedCachingConfigs || [];
+const cicdPipelineMastersModule = require('./claude-configs/cicd-pipeline-masters');
+const cicdPipelineMastersConfigs = cicdPipelineMastersModule?.cicdPipelineMastersConfigs || [];
 // const { databasePerformanceConfigs } = require('./claude-configs/database-performance');
-const { devcontainersAdvancedConfigs } = require('./claude-configs/devcontainers-advanced');
-const { distributedSystemsDesignConfigs } = require('./claude-configs/distributed-systems-design');
-const { editorAdvancedConfigs } = require('./claude-configs/editor-advanced');
-const { eventDrivenArchitectureConfigs } = require('./claude-configs/event-driven-architecture');
-const { gitWorkflowsAdvancedConfigs } = require('./claude-configs/git-workflows-advanced');
+const devcontainersAdvancedModule = require('./claude-configs/devcontainers-advanced');
+const devcontainersAdvancedConfigs = devcontainersAdvancedModule?.devcontainersAdvancedConfigs || [];
+const distributedSystemsDesignModule = require('./claude-configs/distributed-systems-design');
+const distributedSystemsDesignConfigs = distributedSystemsDesignModule?.distributedSystemsDesignConfigs || [];
+const editorAdvancedModule = require('./claude-configs/editor-advanced');
+const editorAdvancedConfigs = editorAdvancedModule?.editorAdvancedConfigs || [];
+const eventDrivenArchitectureModule = require('./claude-configs/event-driven-architecture');
+const eventDrivenArchitectureConfigs = eventDrivenArchitectureModule?.eventDrivenArchitectureConfigs || [];
+const gitWorkflowsAdvancedModule = require('./claude-configs/git-workflows-advanced');
+const gitWorkflowsAdvancedConfigs = gitWorkflowsAdvancedModule?.gitWorkflowsAdvancedConfigs || [];
 // const { infrastructureAsCodeConfigs } = require('./claude-configs/infrastructure-as-code');
-const { observabilityEngineeringConfigs } = require('./claude-configs/observability-engineering');
-const { performanceOptimizationConfigs } = require('./claude-configs/performance-optimization');
-const { securityDevelopmentConfigs } = require('./claude-configs/security-development');
+const observabilityEngineeringModule = require('./claude-configs/observability-engineering');
+const observabilityEngineeringConfigs = observabilityEngineeringModule?.observabilityEngineeringConfigs || [];
+const performanceOptimizationModule = require('./claude-configs/performance-optimization');
+const performanceOptimizationConfigs = performanceOptimizationModule?.performanceOptimizationConfigs || [];
+const securityDevelopmentModule = require('./claude-configs/security-development');
+const securityDevelopmentConfigs = securityDevelopmentModule?.securityDevelopmentConfigs || [];
 // const { terminalMasteryConfigs } = require('./claude-configs/terminal-mastery');
 
 // Import all prompts (from prompts.ts + individual advanced prompt files)
-const { promptTemplates } = require('./prompts');
-const algorithmOptimizationExpert = require('./prompts/algorithm-optimization-expert');
+const promptsModule = require('./prompts');
+const promptTemplates = promptsModule?.promptTemplates || [];
+const algorithmOptimizationExpertModule = require('./prompts/algorithm-optimization-expert');
+const algorithmOptimizationExpert = algorithmOptimizationExpertModule?.default;
 // const legacyModernizationStrategist = require('./prompts/legacy-modernization-strategist');
-const microservicesDesignMaster = require('./prompts/microservices-design-master');
+const microservicesDesignMasterModule = require('./prompts/microservices-design-master');
+const microservicesDesignMaster = microservicesDesignMasterModule?.default;
 // const securityAuditExpert = require('./prompts/security-audit-expert');
-const technicalDebtAnalyst = require('./prompts/technical-debt-analyst');
+const technicalDebtAnalystModule = require('./prompts/technical-debt-analyst');
+const technicalDebtAnalyst = technicalDebtAnalystModule?.default;
 
 // Import all tools (from tools.ts + individual advanced tool files)
-const { tools } = require('./tools');
+const toolsModule = require('./tools');
+const tools = toolsModule?.tools || [];
 // const apiDocGenerator = require('./tools/api-doc-generator');
 // const codeGenerator = require('./tools/code-generator');
 // const databaseEvolution = require('./tools/database-evolution');
@@ -109,7 +129,7 @@ const allPromptTemplates = [
   microservicesDesignMaster,
   // securityAuditExpert,
   technicalDebtAnalyst
-];
+].filter(Boolean); // Remove any undefined/null values
 
 const promptResources: StaticResource[] = allPromptTemplates.map((prompt: any) => {
   const category = categories.find((c: any) => c.id === 'prompt-templates');
@@ -163,7 +183,7 @@ const allTools = [
   // performanceProfiler,
   // securityScanner,
   // testingAutomation
-];
+].filter(Boolean); // Remove any undefined/null values
 
 const toolResources: StaticResource[] = allTools.map((tool: any) => {
   const categoryId = getCategoryIdFromToolCategory(tool.category);

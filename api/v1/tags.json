@@ -6,7 +6,7 @@
       "slug": "actions",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
       ]
     },
     {
@@ -16,6 +16,15 @@
       "resourceCount": 1,
       "categories": [
         "claude-configs"
+      ]
+    },
+    {
+      "id": "algorithms",
+      "name": "algorithms",
+      "slug": "algorithms",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
       ]
     },
     {
@@ -33,7 +42,7 @@
       "slug": "api",
       "resourceCount": 3,
       "categories": [
-        "api-integrations",
+        "tools-cli",
         "claude-configs"
       ]
     },
@@ -41,9 +50,18 @@
       "id": "api-design",
       "name": "api-design",
       "slug": "api-design",
-      "resourceCount": 1,
+      "resourceCount": 2,
       "categories": [
         "prompt-templates"
+      ]
+    },
+    {
+      "id": "api-gateway",
+      "name": "api-gateway",
+      "slug": "api-gateway",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -59,7 +77,7 @@
       "id": "architecture",
       "name": "architecture",
       "slug": "architecture",
-      "resourceCount": 2,
+      "resourceCount": 5,
       "categories": [
         "prompt-templates"
       ]
@@ -86,11 +104,11 @@
       "id": "automation",
       "name": "automation",
       "slug": "automation",
-      "resourceCount": 4,
+      "resourceCount": 5,
       "categories": [
-        "api-integrations",
         "tools-cli",
-        "prompt-templates"
+        "prompt-templates",
+        "claude-configs"
       ]
     },
     {
@@ -100,6 +118,15 @@
       "resourceCount": 2,
       "categories": [
         "prompt-templates",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "benchmarking",
+      "name": "benchmarking",
+      "slug": "benchmarking",
+      "resourceCount": 1,
+      "categories": [
         "claude-configs"
       ]
     },
@@ -118,7 +145,43 @@
       "slug": "bot",
       "resourceCount": 2,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "branching",
+      "name": "branching",
+      "slug": "branching",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "caching",
+      "name": "caching",
+      "slug": "caching",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "cap-theorem",
+      "name": "cap-theorem",
+      "slug": "cap-theorem",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "cdn",
+      "name": "cdn",
+      "slug": "cdn",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -127,16 +190,26 @@
       "slug": "chat",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
       ]
     },
     {
       "id": "cicd",
       "name": "cicd",
       "slug": "cicd",
+      "resourceCount": 2,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "clean-architecture",
+      "name": "clean-architecture",
+      "slug": "clean-architecture",
       "resourceCount": 1,
       "categories": [
-        "prompt-templates"
+        "claude-configs"
       ]
     },
     {
@@ -154,16 +227,25 @@
       "slug": "code-assistance",
       "resourceCount": 1,
       "categories": [
-        "vscode-extensions"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "code-quality",
+      "name": "code-quality",
+      "slug": "code-quality",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
       ]
     },
     {
       "id": "code-review",
       "name": "code-review",
       "slug": "code-review",
-      "resourceCount": 2,
+      "resourceCount": 3,
       "categories": [
-        "api-integrations",
+        "tools-cli",
         "prompt-templates"
       ]
     },
@@ -173,7 +255,7 @@
       "slug": "collection",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
       ]
     },
     {
@@ -182,7 +264,16 @@
       "slug": "community",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "complexity-analysis",
+      "name": "complexity-analysis",
+      "slug": "complexity-analysis",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
       ]
     },
     {
@@ -198,6 +289,24 @@
       "id": "composition-api",
       "name": "composition-api",
       "slug": "composition-api",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "consensus",
+      "name": "consensus",
+      "slug": "consensus",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "consistency",
+      "name": "consistency",
+      "slug": "consistency",
       "resourceCount": 1,
       "categories": [
         "claude-configs"
@@ -222,6 +331,15 @@
       ]
     },
     {
+      "id": "cqrs",
+      "name": "cqrs",
+      "slug": "cqrs",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
       "id": "data-science",
       "name": "data-science",
       "slug": "data-science",
@@ -231,12 +349,30 @@
       ]
     },
     {
+      "id": "data-structures",
+      "name": "data-structures",
+      "slug": "data-structures",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
       "id": "database",
       "name": "database",
       "slug": "database",
       "resourceCount": 1,
       "categories": [
         "prompt-templates"
+      ]
+    },
+    {
+      "id": "ddd",
+      "name": "ddd",
+      "slug": "ddd",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -252,6 +388,15 @@
       "id": "deep-learning",
       "name": "deep-learning",
       "slug": "deep-learning",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "dependency-injection",
+      "name": "dependency-injection",
+      "slug": "dependency-injection",
       "resourceCount": 1,
       "categories": [
         "claude-configs"
@@ -291,7 +436,26 @@
       "slug": "discord",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "distributed-cache",
+      "name": "distributed-cache",
+      "slug": "distributed-cache",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "distributed-systems",
+      "name": "distributed-systems",
+      "slug": "distributed-systems",
+      "resourceCount": 4,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
       ]
     },
     {
@@ -313,6 +477,61 @@
       ]
     },
     {
+      "id": "domain-driven-design",
+      "name": "domain-driven-design",
+      "slug": "domain-driven-design",
+      "resourceCount": 2,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "editor",
+      "name": "editor",
+      "slug": "editor",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "efficiency",
+      "name": "efficiency",
+      "slug": "efficiency",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "event-driven",
+      "name": "event-driven",
+      "slug": "event-driven",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "event-sourcing",
+      "name": "event-sourcing",
+      "slug": "event-sourcing",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "expert",
+      "name": "expert",
+      "slug": "expert",
+      "resourceCount": 3,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
       "id": "express",
       "name": "express",
       "slug": "express",
@@ -327,13 +546,22 @@
       "slug": "extension",
       "resourceCount": 1,
       "categories": [
-        "vscode-extensions"
+        "tools-cli"
       ]
     },
     {
       "id": "fastapi",
       "name": "fastapi",
       "slug": "fastapi",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "fault-tolerance",
+      "name": "fault-tolerance",
+      "slug": "fault-tolerance",
       "resourceCount": 1,
       "categories": [
         "claude-configs"
@@ -367,12 +595,30 @@
       ]
     },
     {
+      "id": "git",
+      "name": "git",
+      "slug": "git",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
       "id": "github",
       "name": "github",
       "slug": "github",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "gitops",
+      "name": "gitops",
+      "slug": "gitops",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -412,6 +658,15 @@
       ]
     },
     {
+      "id": "hexagonal-architecture",
+      "name": "hexagonal-architecture",
+      "slug": "hexagonal-architecture",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
       "id": "iac",
       "name": "iac",
       "slug": "iac",
@@ -426,7 +681,7 @@
       "slug": "ide",
       "resourceCount": 1,
       "categories": [
-        "vscode-extensions"
+        "tools-cli"
       ]
     },
     {
@@ -454,7 +709,25 @@
       "slug": "integration",
       "resourceCount": 2,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "interview",
+      "name": "interview",
+      "slug": "interview",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "invalidation",
+      "name": "invalidation",
+      "slug": "invalidation",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -486,6 +759,33 @@
       ]
     },
     {
+      "id": "kubernetes",
+      "name": "kubernetes",
+      "slug": "kubernetes",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "lsp",
+      "name": "lsp",
+      "slug": "lsp",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "lua",
+      "name": "lua",
+      "slug": "lua",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
       "id": "machine-learning",
       "name": "machine-learning",
       "slug": "machine-learning",
@@ -504,6 +804,24 @@
       ]
     },
     {
+      "id": "maintainability",
+      "name": "maintainability",
+      "slug": "maintainability",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "maintenance",
+      "name": "maintenance",
+      "slug": "maintenance",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
       "id": "markdown",
       "name": "markdown",
       "slug": "markdown",
@@ -513,12 +831,50 @@
       ]
     },
     {
-      "id": "monitoring",
-      "name": "monitoring",
-      "slug": "monitoring",
+      "id": "memcached",
+      "name": "memcached",
+      "slug": "memcached",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "messaging",
+      "name": "messaging",
+      "slug": "messaging",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "metrics",
+      "name": "metrics",
+      "slug": "metrics",
       "resourceCount": 1,
       "categories": [
         "prompt-templates"
+      ]
+    },
+    {
+      "id": "microservices",
+      "name": "microservices",
+      "slug": "microservices",
+      "resourceCount": 3,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "monitoring",
+      "name": "monitoring",
+      "slug": "monitoring",
+      "resourceCount": 2,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
       ]
     },
     {
@@ -527,7 +883,16 @@
       "slug": "multi-language",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "neovim",
+      "name": "neovim",
+      "slug": "neovim",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -588,9 +953,19 @@
       "id": "optimization",
       "name": "optimization",
       "slug": "optimization",
+      "resourceCount": 4,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "owasp",
+      "name": "owasp",
+      "slug": "owasp",
       "resourceCount": 1,
       "categories": [
-        "prompt-templates"
+        "claude-configs"
       ]
     },
     {
@@ -606,9 +981,10 @@
       "id": "performance",
       "name": "performance",
       "slug": "performance",
-      "resourceCount": 1,
+      "resourceCount": 6,
       "categories": [
-        "prompt-templates"
+        "prompt-templates",
+        "claude-configs"
       ]
     },
     {
@@ -626,16 +1002,27 @@
       "slug": "postman",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
       ]
     },
     {
       "id": "productivity",
       "name": "productivity",
       "slug": "productivity",
+      "resourceCount": 4,
+      "categories": [
+        "tools-cli",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "profiling",
+      "name": "profiling",
+      "slug": "profiling",
       "resourceCount": 3,
       "categories": [
-        "tools-cli"
+        "prompt-templates",
+        "claude-configs"
       ]
     },
     {
@@ -711,12 +1098,39 @@
       ]
     },
     {
+      "id": "redis",
+      "name": "redis",
+      "slug": "redis",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
       "id": "refactoring",
       "name": "refactoring",
       "slug": "refactoring",
-      "resourceCount": 1,
+      "resourceCount": 2,
       "categories": [
         "prompt-templates"
+      ]
+    },
+    {
+      "id": "release-management",
+      "name": "release-management",
+      "slug": "release-management",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "resilience",
+      "name": "resilience",
+      "slug": "resilience",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -738,6 +1152,15 @@
       ]
     },
     {
+      "id": "roi-analysis",
+      "name": "roi-analysis",
+      "slug": "roi-analysis",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
       "id": "ruby",
       "name": "ruby",
       "slug": "ruby",
@@ -752,6 +1175,25 @@
       "slug": "ruby-on-rails",
       "resourceCount": 1,
       "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "saga",
+      "name": "saga",
+      "slug": "saga",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "scalability",
+      "name": "scalability",
+      "slug": "scalability",
+      "resourceCount": 4,
+      "categories": [
+        "prompt-templates",
         "claude-configs"
       ]
     },
@@ -779,16 +1221,45 @@
       "slug": "sdk",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "secure-coding",
+      "name": "secure-coding",
+      "slug": "secure-coding",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
       "id": "security",
       "name": "security",
       "slug": "security",
+      "resourceCount": 3,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "security-testing",
+      "name": "security-testing",
+      "slug": "security-testing",
       "resourceCount": 1,
       "categories": [
-        "prompt-templates"
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "service-mesh",
+      "name": "service-mesh",
+      "slug": "service-mesh",
+      "resourceCount": 2,
+      "categories": [
+        "prompt-templates",
+        "claude-configs"
       ]
     },
     {
@@ -797,7 +1268,16 @@
       "slug": "slack",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "solid-principles",
+      "name": "solid-principles",
+      "slug": "solid-principles",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -864,6 +1344,15 @@
       ]
     },
     {
+      "id": "system-design",
+      "name": "system-design",
+      "slug": "system-design",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
       "id": "tailwind",
       "name": "tailwind",
       "slug": "tailwind",
@@ -878,7 +1367,25 @@
       "slug": "team-collaboration",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "technical-debt",
+      "name": "technical-debt",
+      "slug": "technical-debt",
+      "resourceCount": 1,
+      "categories": [
+        "prompt-templates"
+      ]
+    },
+    {
+      "id": "telescope",
+      "name": "telescope",
+      "slug": "telescope",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -905,7 +1412,16 @@
       "slug": "testing",
       "resourceCount": 1,
       "categories": [
-        "api-integrations"
+        "tools-cli"
+      ]
+    },
+    {
+      "id": "treesitter",
+      "name": "treesitter",
+      "slug": "treesitter",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
       ]
     },
     {
@@ -941,7 +1457,7 @@
       "slug": "vscode",
       "resourceCount": 1,
       "categories": [
-        "vscode-extensions"
+        "tools-cli"
       ]
     },
     {
@@ -961,11 +1477,29 @@
       "categories": [
         "claude-configs"
       ]
+    },
+    {
+      "id": "vulnerability-assessment",
+      "name": "vulnerability-assessment",
+      "slug": "vulnerability-assessment",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
+    },
+    {
+      "id": "workflows",
+      "name": "workflows",
+      "slug": "workflows",
+      "resourceCount": 1,
+      "categories": [
+        "claude-configs"
+      ]
     }
   ],
   "meta": {
-    "total": 106,
-    "generated_at": "2025-07-31T10:20:52.219Z",
+    "total": 164,
+    "generated_at": "2025-07-31T22:24:27.422Z",
     "version": "1.0.0"
   }
 }
