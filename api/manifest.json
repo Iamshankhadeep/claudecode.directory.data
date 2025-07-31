@@ -2,11 +2,10 @@
   "name": "Claude Code Directory Data",
   "description": "Static data repository for Claude Code Directory",
   "version": "1.0.0",
-  "generated_at": "2025-07-31T10:20:52.222Z",
+  "generated_at": "2025-07-31T21:24:38.960Z",
   "api_version": "v1",
   "endpoints": {
     "categories": "/api/v1/categories.json",
-    "tags": "/api/v1/tags.json",
     "resources": {
       "all": "/api/v1/resources/index.json",
       "configurations": "/api/v1/resources/configurations.json",
@@ -20,9 +19,9 @@
     "search": "/api/v1/search/index.json"
   },
   "stats": {
-    "total_resources": 29,
-    "total_categories": 18,
-    "total_contributors": 10,
-    "last_updated": "2025-07-31T10:20:52.194Z"
+    "total_resources": 3,
+    "total_categories": 3,
+    "total_contributors": 2,
+    "last_updated": "2025-07-31T21:24:38.951Z"
   }
 }
