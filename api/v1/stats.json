@@ -1,123 +1,43 @@
 {
   "stats": {
-    "totalResources": 44,
-    "totalCategories": 19,
-    "totalContributors": 11,
-    "totalCopies": 26936,
-    "lastUpdated": "2025-07-31T22:24:27.402Z",
+    "totalResources": 3,
+    "totalCategories": 3,
+    "totalContributors": 2,
+    "totalCopies": 2243,
+    "lastUpdated": "2025-07-31T22:29:05.436Z",
     "breakdown": {
       "by_type": {
-        "configurations": 20,
-        "prompts": 12,
-        "tools": 12
+        "configurations": 1,
+        "prompts": 1,
+        "tools": 1
       },
       "by_difficulty": {
-        "beginner": 6,
-        "intermediate": 16,
-        "advanced": 22
+        "beginner": 1,
+        "intermediate": 1,
+        "advanced": 1
       },
       "by_category": [
         {
           "id": "claude-configs",
           "name": "Claude.md Configurations",
-          "count": 20
+          "count": 1
         },
         {
           "id": "prompt-templates",
           "name": "Prompt Templates",
-          "count": 12
+          "count": 1
         },
         {
           "id": "tools-cli",
           "name": "Tools & CLI",
-          "count": 12
-        },
-        {
-          "id": "expert-resources",
-          "name": "Expert Resources",
-          "count": 0
-        },
-        {
-          "id": "vscode-extensions",
-          "name": "VS Code Extensions",
-          "count": 0
-        },
-        {
-          "id": "api-integrations",
-          "name": "API Integrations",
-          "count": 0
-        },
-        {
-          "id": "claude-code-projects",
-          "name": "Claude Code Projects",
-          "count": 0
-        },
-        {
-          "id": "documentation-guides",
-          "name": "Documentation & Guides",
-          "count": 0
-        },
-        {
-          "id": "templates-starters",
-          "name": "Templates & Starters",
-          "count": 0
-        },
-        {
-          "id": "productivity-scripts",
-          "name": "Productivity Scripts",
-          "count": 0
-        },
-        {
-          "id": "development-workflows",
-          "name": "Development Workflows",
-          "count": 0
-        },
-        {
-          "id": "testing-quality",
-          "name": "Testing & Quality",
-          "count": 0
-        },
-        {
-          "id": "deployment-devops",
-          "name": "Deployment & DevOps",
-          "count": 0
-        },
-        {
-          "id": "database-storage",
-          "name": "Database & Storage",
-          "count": 0
-        },
-        {
-          "id": "auth-security",
-          "name": "Authentication & Security",
-          "count": 0
-        },
-        {
-          "id": "ui-ux-resources",
-          "name": "UI/UX Resources",
-          "count": 0
-        },
-        {
-          "id": "mobile-development",
-          "name": "Mobile Development",
-          "count": 0
-        },
-        {
-          "id": "data-science-ml",
-          "name": "Data Science & ML",
-          "count": 0
-        },
-        {
-          "id": "community-resources",
-          "name": "Community Resources",
-          "count": 0
+          "count": 1
         }
       ],
-      "featured_count": 12
+      "featured_count": 3
     }
   },
   "meta": {
-    "generated_at": "2025-07-31T22:24:27.423Z",
+    "generated_at": "2025-07-31T22:29:05.441Z",
     "version": "1.0.0"
   }
 }
