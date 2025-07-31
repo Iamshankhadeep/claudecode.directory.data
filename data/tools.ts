@@ -1,6 +1,6 @@
-import { Tool } from './types';
+const { Tool } = require('./types');
 
-export const tools: Tool[] = [
+const tools = [
   {
     id: 'claude-cli',
     title: 'Claude CLI Tool',
@@ -254,3 +254,5 @@ export const tools: Tool[] = [
     lastUpdated: '2024-12-01'
   }
 ];
+
+module.exports = { tools };

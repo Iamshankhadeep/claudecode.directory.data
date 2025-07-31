@@ -43,7 +43,7 @@ jobs:
       - name: 🏗️ Build JSON API
         run: |
           echo "🏗️ Building API from data files..."
-          bun run scripts/build-api.js
+          bun run scripts/build-api.ts
           
       - name: 📊 Verify build output
         run: |

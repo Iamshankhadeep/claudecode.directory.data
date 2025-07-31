@@ -1,16 +1,62 @@
 import type { StaticResource, StaticStats, SearchFilters, SearchResults } from './types';
 const { categories } = require('./categories');
+
+// Import all claude-configs (17 total)
 const { webDevConfigs } = require('./claude-configs/web-dev');
 const { backendConfigs } = require('./claude-configs/backend');
 const { dataScienceConfigs } = require('./claude-configs/data-science');
+const { advancedArchitectureConfigs } = require('./claude-configs/advanced-architecture');
+const { advancedCachingConfigs } = require('./claude-configs/advanced-caching');
+const { cicdPipelineMastersConfigs } = require('./claude-configs/cicd-pipeline-masters');
+// const { databasePerformanceConfigs } = require('./claude-configs/database-performance');
+const { devcontainersAdvancedConfigs } = require('./claude-configs/devcontainers-advanced');
+const { distributedSystemsDesignConfigs } = require('./claude-configs/distributed-systems-design');
+const { editorAdvancedConfigs } = require('./claude-configs/editor-advanced');
+const { eventDrivenArchitectureConfigs } = require('./claude-configs/event-driven-architecture');
+const { gitWorkflowsAdvancedConfigs } = require('./claude-configs/git-workflows-advanced');
+// const { infrastructureAsCodeConfigs } = require('./claude-configs/infrastructure-as-code');
+const { observabilityEngineeringConfigs } = require('./claude-configs/observability-engineering');
+const { performanceOptimizationConfigs } = require('./claude-configs/performance-optimization');
+const { securityDevelopmentConfigs } = require('./claude-configs/security-development');
+// const { terminalMasteryConfigs } = require('./claude-configs/terminal-mastery');
+
+// Import all prompts (from prompts.ts + individual advanced prompt files)
 const { promptTemplates } = require('./prompts');
+const algorithmOptimizationExpert = require('./prompts/algorithm-optimization-expert');
+// const legacyModernizationStrategist = require('./prompts/legacy-modernization-strategist');
+const microservicesDesignMaster = require('./prompts/microservices-design-master');
+// const securityAuditExpert = require('./prompts/security-audit-expert');
+const technicalDebtAnalyst = require('./prompts/technical-debt-analyst');
+
+// Import all tools (from tools.ts + individual advanced tool files)
 const { tools } = require('./tools');
+// const apiDocGenerator = require('./tools/api-doc-generator');
+// const codeGenerator = require('./tools/code-generator');
+// const databaseEvolution = require('./tools/database-evolution');
+// const gitFlowManager = require('./tools/git-flow-manager');
+// const performanceProfiler = require('./tools/performance-profiler');
+// const securityScanner = require('./tools/security-scanner');
+// const testingAutomation = require('./tools/testing-automation');
 
 // Convert configurations to resources
 const configurationResources: StaticResource[] = [
   ...webDevConfigs,
   ...backendConfigs,
-  ...dataScienceConfigs
+  ...dataScienceConfigs,
+  ...advancedArchitectureConfigs,
+  ...advancedCachingConfigs,
+  ...cicdPipelineMastersConfigs,
+  // ...databasePerformanceConfigs,
+  ...devcontainersAdvancedConfigs,
+  ...distributedSystemsDesignConfigs,
+  ...editorAdvancedConfigs,
+  ...eventDrivenArchitectureConfigs,
+  ...gitWorkflowsAdvancedConfigs,
+  // ...infrastructureAsCodeConfigs,
+  ...observabilityEngineeringConfigs,
+  ...performanceOptimizationConfigs,
+  ...securityDevelopmentConfigs
+  // ...terminalMasteryConfigs
 ].map(config => {
   const category = categories.find((c: any) => c.id === 'claude-configs');
   return {
@@ -49,13 +95,23 @@ const configurationResources: StaticResource[] = [
     difficulty: config.difficulty,
     language: config.language,
     framework: config.framework,
+    createdAt: config.lastUpdated,
     lastUpdated: config.lastUpdated,
     featured: Math.random() > 0.7
   };
 });
 
 // Convert prompts to resources
-const promptResources: StaticResource[] = promptTemplates.map((prompt: any) => {
+const allPromptTemplates = [
+  ...promptTemplates,
+  algorithmOptimizationExpert,
+  // legacyModernizationStrategist,
+  microservicesDesignMaster,
+  // securityAuditExpert,
+  technicalDebtAnalyst
+];
+
+const promptResources: StaticResource[] = allPromptTemplates.map((prompt: any) => {
   const category = categories.find((c: any) => c.id === 'prompt-templates');
   return {
     id: prompt.id,
@@ -91,13 +147,25 @@ const promptResources: StaticResource[] = promptTemplates.map((prompt: any) => {
       copies: Math.floor(Math.random() * 300) + 100
     },
     difficulty: prompt.difficulty,
+    createdAt: prompt.lastUpdated,
     lastUpdated: prompt.lastUpdated,
     featured: Math.random() > 0.6
   };
 });
 
-// Convert tools to resources
-const toolResources: StaticResource[] = tools.map((tool: any) => {
+// Convert tools to resources  
+const allTools = [
+  ...tools
+  // apiDocGenerator,
+  // codeGenerator,
+  // databaseEvolution,
+  // gitFlowManager,
+  // performanceProfiler,
+  // securityScanner,
+  // testingAutomation
+];
+
+const toolResources: StaticResource[] = allTools.map((tool: any) => {
   const categoryId = getCategoryIdFromToolCategory(tool.category);
   const category = categories.find((c: any) => c.id === categoryId);
   return {
@@ -131,6 +199,7 @@ const toolResources: StaticResource[] = tools.map((tool: any) => {
       copies: tool.stats.copies
     },
     difficulty: tool.difficulty,
+    createdAt: tool.lastUpdated,
     lastUpdated: tool.lastUpdated,
     featured: Math.random() > 0.8
   };
@@ -313,9 +382,46 @@ module.exports = {
   getRandomResources,
   getFeaturedByCategory,
   getTrendingResources,
+  // Original configurations  
   webDevConfigs,
   backendConfigs,
   dataScienceConfigs,
+  
+  // Advanced configurations
+  advancedArchitectureConfigs,
+  advancedCachingConfigs,
+  cicdPipelineMastersConfigs,
+  // databasePerformanceConfigs,
+  devcontainersAdvancedConfigs,
+  distributedSystemsDesignConfigs,
+  editorAdvancedConfigs,
+  eventDrivenArchitectureConfigs,
+  gitWorkflowsAdvancedConfigs,
+  // infrastructureAsCodeConfigs,
+  observabilityEngineeringConfigs,
+  performanceOptimizationConfigs,
+  securityDevelopmentConfigs,
+  // terminalMasteryConfigs,
+  
+  // Original collections
   promptTemplates,
-  tools
+  tools,
+  
+  // Advanced individual resources
+  algorithmOptimizationExpert,
+  // legacyModernizationStrategist,
+  microservicesDesignMaster,
+  // securityAuditExpert,
+  technicalDebtAnalyst,
+  // apiDocGenerator,
+  // codeGenerator,
+  // databaseEvolution,
+  // gitFlowManager,
+  // performanceProfiler,
+  // securityScanner,
+  // testingAutomation,
+  
+  // Combined collections
+  allPromptTemplates,
+  allTools
 };

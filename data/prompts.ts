@@ -1,6 +1,6 @@
-import { PromptTemplate } from './types';
+const { PromptTemplate } = require('./types');
 
-export const promptTemplates: PromptTemplate[] = [
+const promptTemplates = [
   {
     id: 'api-design-architect',
     title: 'API Design & Architecture Prompt',
@@ -1657,3 +1657,5 @@ Provide specific, measurable recommendations with quantified performance improve
     lastUpdated: '2024-12-01'
   }
 ];
+
+module.exports = { promptTemplates };

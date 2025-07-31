@@ -55,7 +55,7 @@ This is an advanced Infrastructure as Code (IaC) configuration designed for buil
 
 ## Project Structure
 
-\`\`\`
+```
 infrastructure-as-code-masters/
 ├── terraform/                      # Terraform configurations
 │   ├── modules/                    # Reusable Terraform modules
@@ -187,12 +187,12 @@ infrastructure-as-code-masters/
     ├── unit/                       # Unit tests
     ├── integration/                # Integration tests
     └── compliance/                 # Compliance tests
-\`\`\`
+```
 
 ## Advanced Terraform Implementation
 
 ### Modular VPC with Advanced Networking
-\`\`\`hcl
+```hcl
 # terraform/modules/networking/vpc/main.tf
 # Advanced VPC module with multi-AZ, private/public subnets, and flow logs
 
@@ -598,10 +598,10 @@ resource "aws_iam_role_policy" "flow_logs" {
     ]
   })
 }
-\`\`\`
+```
 
 ### Advanced EKS Cluster Module
-\`\`\`hcl
+```hcl
 # terraform/modules/compute/eks/main.tf
 # Production-ready EKS cluster with advanced features
 
@@ -1066,12 +1066,12 @@ resource "kubernetes_config_map_v1_data" "aws_auth" {
   
   depends_on = [aws_eks_cluster.main]
 }
-\`\`\`
+```
 
 ## Advanced Pulumi Implementation
 
 ### Multi-Cloud Infrastructure with Pulumi
-\`\`\`typescript
+```typescript
 // pulumi/infrastructure/core/index.ts
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -1128,7 +1128,7 @@ const security = new SecurityComponent("security", {
 
 // Create EKS Cluster
 const eksCluster = new aws.eks.Cluster("eks-cluster", {
-    name: \`\${projectName}-\${environment}\`,
+    name: `${projectName}-${environment}`,
     roleArn: security.eksRole.arn,
     version: config.get("eksVersion") || "1.27",
     vpcConfig: {
@@ -1195,8 +1195,8 @@ const nodeGroups: NodeGroupConfig[] = [
 
 // Create Node Groups
 const eksNodeGroups = nodeGroups.map(ngConfig => {
-    const launchTemplate = new aws.ec2.LaunchTemplate(\`\${ngConfig.name}-lt\`, {
-        namePrefix: \`\${eksCluster.name}-\${ngConfig.name}-\`,
+    const launchTemplate = new aws.ec2.LaunchTemplate(`${ngConfig.name}-lt`, {
+        namePrefix: `${eksCluster.name}-${ngConfig.name}-`,
         blockDeviceMappings: [{
             deviceName: "/dev/xvda",
             ebs: {
@@ -1226,33 +1226,33 @@ const eksNodeGroups = nodeGroups.map(ngConfig => {
                 resourceType: "instance",
                 tags: {
                     ...commonTags,
-                    Name: \`\${eksCluster.name}-\${ngConfig.name}-node\`,
+                    Name: `${eksCluster.name}-${ngConfig.name}-node`,
                 },
             },
             {
                 resourceType: "volume",
                 tags: {
                     ...commonTags,
-                    Name: \`\${eksCluster.name}-\${ngConfig.name}-volume\`,
+                    Name: `${eksCluster.name}-${ngConfig.name}-volume`,
                 },
             },
         ],
         userData: pulumi.all([eksCluster.endpoint, eksCluster.certificateAuthority, eksCluster.name]).apply(
             ([endpoint, ca, clusterName]) => {
-                return Buffer.from(\`#!/bin/bash
-/etc/eks/bootstrap.sh \${clusterName} \\
-    --b64-cluster-ca '\${ca.data}' \\
-    --apiserver-endpoint '\${endpoint}' \\
+                return Buffer.from(`#!/bin/bash
+/etc/eks/bootstrap.sh ${clusterName} \\
+    --b64-cluster-ca '${ca.data}' \\
+    --apiserver-endpoint '${endpoint}' \\
     --dns-cluster-ip '10.100.0.10' \\
-    --kubelet-extra-args '--node-labels=workload=\${ngConfig.labels?.workload || "general"}'
-\`).toString("base64");
+    --kubelet-extra-args '--node-labels=workload=${ngConfig.labels?.workload || "general"}'
+`).toString("base64");
             }
         ),
         tags: commonTags,
     }, { provider: awsProvider });
 
-    const nodeGroupRole = new aws.iam.Role(\`\${ngConfig.name}-role\`, {
-        namePrefix: \`\${eksCluster.name}-\${ngConfig.name}-\`,
+    const nodeGroupRole = new aws.iam.Role(`${ngConfig.name}-role`, {
+        namePrefix: `${eksCluster.name}-${ngConfig.name}-`,
         assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({
             Service: "ec2.amazonaws.com",
         }),
@@ -1268,13 +1268,13 @@ const eksNodeGroups = nodeGroups.map(ngConfig => {
     ];
 
     policies.forEach((policyArn, index) => {
-        new aws.iam.RolePolicyAttachment(\`\${ngConfig.name}-policy-\${index}\`, {
+        new aws.iam.RolePolicyAttachment(`${ngConfig.name}-policy-${index}`, {
             role: nodeGroupRole.name,
             policyArn: policyArn,
         }, { provider: awsProvider });
     });
 
-    return new aws.eks.NodeGroup(\`\${ngConfig.name}-ng\`, {
+    return new aws.eks.NodeGroup(`${ngConfig.name}-ng`, {
         clusterName: eksCluster.name,
         nodeGroupName: ngConfig.name,
         nodeRoleArn: nodeGroupRole.arn,
@@ -1297,7 +1297,7 @@ const eksNodeGroups = nodeGroups.map(ngConfig => {
         taints: ngConfig.taints,
         tags: {
             ...commonTags,
-            Name: \`\${eksCluster.name}-\${ngConfig.name}\`,
+            Name: `${eksCluster.name}-${ngConfig.name}`,
         },
     }, {
         provider: awsProvider,
@@ -1352,7 +1352,7 @@ const addons = [
 ];
 
 const eksAddons = addons.map(addon => {
-    return new aws.eks.Addon(\`\${addon.name}-addon\`, {
+    return new aws.eks.Addon(`${addon.name}-addon`, {
         clusterName: eksCluster.name,
         addonName: addon.name,
         addonVersion: addon.version,
@@ -1387,13 +1387,13 @@ const monitoring = new MonitoringStack("monitoring", {
 if (multiCloud) {
     // Azure Resources
     const azureResourceGroup = new azure.resources.ResourceGroup("azure-rg", {
-        resourceGroupName: \`\${projectName}-\${environment}-rg\`,
+        resourceGroupName: `${projectName}-${environment}-rg`,
         location: config.get("azureLocation") || "eastus",
         tags: commonTags,
     });
 
     const azureVnet = new azure.network.VirtualNetwork("azure-vnet", {
-        virtualNetworkName: \`\${projectName}-\${environment}-vnet\`,
+        virtualNetworkName: `${projectName}-${environment}-vnet`,
         resourceGroupName: azureResourceGroup.name,
         location: azureResourceGroup.location,
         addressSpace: {
@@ -1404,13 +1404,13 @@ if (multiCloud) {
 
     // GCP Resources
     const gcpProject = new gcp.organizations.Project("gcp-project", {
-        projectId: \`\${projectName}-\${environment}\`.substring(0, 30),
-        name: \`\${projectName}-\${environment}\`,
+        projectId: `${projectName}-${environment}`.substring(0, 30),
+        name: `${projectName}-${environment}`,
         labels: commonTags,
     });
 
     const gcpNetwork = new gcp.compute.Network("gcp-network", {
-        name: \`\${projectName}-\${environment}-network\`,
+        name: `${projectName}-${environment}-network`,
         autoCreateSubnetworks: false,
         project: gcpProject.projectId,
     });
@@ -1449,13 +1449,13 @@ class NetworkComponent extends pulumi.ComponentResource {
         const cidrBlocks = this.calculateSubnets(args.vpcCidr, args.availabilityZones);
 
         // Create VPC
-        this.vpc = new aws.ec2.Vpc(\`\${name}-vpc\`, {
+        this.vpc = new aws.ec2.Vpc(`${name}-vpc`, {
             cidrBlock: args.vpcCidr,
             enableDnsHostnames: true,
             enableDnsSupport: true,
             tags: {
                 ...args.tags,
-                Name: \`\${name}-vpc\`,
+                Name: `${name}-vpc`,
             },
         }, { parent: this });
 
@@ -1473,14 +1473,14 @@ class NetworkComponent extends pulumi.ComponentResource {
             const az = azs.then(z => z.names[i]);
 
             // Public subnet
-            const publicSubnet = new aws.ec2.Subnet(\`\${name}-public-\${i}\`, {
+            const publicSubnet = new aws.ec2.Subnet(`${name}-public-${i}`, {
                 vpcId: this.vpc.id,
                 cidrBlock: cidrBlocks.public[i],
                 availabilityZone: az,
                 mapPublicIpOnLaunch: true,
                 tags: {
                     ...args.tags,
-                    Name: \`\${name}-public-\${i}\`,
+                    Name: `${name}-public-${i}`,
                     Type: "public",
                     "kubernetes.io/role/elb": "1",
                 },
@@ -1488,13 +1488,13 @@ class NetworkComponent extends pulumi.ComponentResource {
             this.publicSubnetIds.push(publicSubnet.id);
 
             // Private subnet
-            const privateSubnet = new aws.ec2.Subnet(\`\${name}-private-\${i}\`, {
+            const privateSubnet = new aws.ec2.Subnet(`${name}-private-${i}`, {
                 vpcId: this.vpc.id,
                 cidrBlock: cidrBlocks.private[i],
                 availabilityZone: az,
                 tags: {
                     ...args.tags,
-                    Name: \`\${name}-private-\${i}\`,
+                    Name: `${name}-private-${i}`,
                     Type: "private",
                     "kubernetes.io/role/internal-elb": "1",
                 },
@@ -1502,13 +1502,13 @@ class NetworkComponent extends pulumi.ComponentResource {
             this.privateSubnetIds.push(privateSubnet.id);
 
             // Database subnet
-            const databaseSubnet = new aws.ec2.Subnet(\`\${name}-database-\${i}\`, {
+            const databaseSubnet = new aws.ec2.Subnet(`${name}-database-${i}`, {
                 vpcId: this.vpc.id,
                 cidrBlock: cidrBlocks.database[i],
                 availabilityZone: az,
                 tags: {
                     ...args.tags,
-                    Name: \`\${name}-database-\${i}\`,
+                    Name: `${name}-database-${i}`,
                     Type: "database",
                 },
             }, { parent: this });
@@ -1516,11 +1516,11 @@ class NetworkComponent extends pulumi.ComponentResource {
         }
 
         // Create Internet Gateway
-        const igw = new aws.ec2.InternetGateway(\`\${name}-igw\`, {
+        const igw = new aws.ec2.InternetGateway(`${name}-igw`, {
             vpcId: this.vpc.id,
             tags: {
                 ...args.tags,
-                Name: \`\${name}-igw\`,
+                Name: `${name}-igw`,
             },
         }, { parent: this });
 
@@ -1529,20 +1529,20 @@ class NetworkComponent extends pulumi.ComponentResource {
             const natCount = args.singleNatGateway ? 1 : args.availabilityZones;
             
             for (let i = 0; i < natCount; i++) {
-                const eip = new aws.ec2.Eip(\`\${name}-nat-eip-\${i}\`, {
+                const eip = new aws.ec2.Eip(`${name}-nat-eip-${i}`, {
                     domain: "vpc",
                     tags: {
                         ...args.tags,
-                        Name: \`\${name}-nat-eip-\${i}\`,
+                        Name: `${name}-nat-eip-${i}`,
                     },
                 }, { parent: this });
 
-                const natGateway = new aws.ec2.NatGateway(\`\${name}-nat-\${i}\`, {
+                const natGateway = new aws.ec2.NatGateway(`${name}-nat-${i}`, {
                     allocationId: eip.id,
                     subnetId: this.publicSubnetIds[args.singleNatGateway ? 0 : i],
                     tags: {
                         ...args.tags,
-                        Name: \`\${name}-nat-\${i}\`,
+                        Name: `${name}-nat-${i}`,
                     },
                 }, { parent: this, dependsOn: [igw] });
             }
@@ -1580,9 +1580,9 @@ class NetworkComponent extends pulumi.ComponentResource {
         };
 
         for (let i = 0; i < azCount; i++) {
-            subnets.public.push(\`10.0.\${baseOctet + i}.0/24\`);
-            subnets.private.push(\`10.0.\${baseOctet + 10 + i}.0/24\`);
-            subnets.database.push(\`10.0.\${baseOctet + 20 + i}.0/24\`);
+            subnets.public.push(`10.0.${baseOctet + i}.0/24`);
+            subnets.private.push(`10.0.${baseOctet + 10 + i}.0/24`);
+            subnets.database.push(`10.0.${baseOctet + 20 + i}.0/24`);
         }
 
         return subnets;
@@ -1590,14 +1590,14 @@ class NetworkComponent extends pulumi.ComponentResource {
 
     private createVpcEndpoints(tags: Record<string, string>): void {
         // S3 endpoint
-        new aws.ec2.VpcEndpoint(\`\${this.getName()}-s3-endpoint\`, {
+        new aws.ec2.VpcEndpoint(`${this.getName()}-s3-endpoint`, {
             vpcId: this.vpc.id,
-            serviceName: \`com.amazonaws.\${aws.getRegion().then(r => r.name)}.s3\`,
+            serviceName: `com.amazonaws.${aws.getRegion().then(r => r.name)}.s3`,
             vpcEndpointType: "Gateway",
             routeTableIds: [], // Add route tables here
             tags: {
                 ...tags,
-                Name: \`\${this.getName()}-s3-endpoint\`,
+                Name: `${this.getName()}-s3-endpoint`,
             },
         }, { parent: this });
 
@@ -1612,7 +1612,7 @@ class NetworkComponent extends pulumi.ComponentResource {
             "autoscaling",
         ];
 
-        const endpointSecurityGroup = new aws.ec2.SecurityGroup(\`\${this.getName()}-endpoint-sg\`, {
+        const endpointSecurityGroup = new aws.ec2.SecurityGroup(`${this.getName()}-endpoint-sg`, {
             vpcId: this.vpc.id,
             description: "Security group for VPC endpoints",
             ingress: [{
@@ -1629,35 +1629,35 @@ class NetworkComponent extends pulumi.ComponentResource {
             }],
             tags: {
                 ...tags,
-                Name: \`\${this.getName()}-endpoint-sg\`,
+                Name: `${this.getName()}-endpoint-sg`,
             },
         }, { parent: this });
 
         interfaceEndpoints.forEach(endpoint => {
-            new aws.ec2.VpcEndpoint(\`\${this.getName()}-\${endpoint}-endpoint\`, {
+            new aws.ec2.VpcEndpoint(`${this.getName()}-${endpoint}-endpoint`, {
                 vpcId: this.vpc.id,
-                serviceName: \`com.amazonaws.\${aws.getRegion().then(r => r.name)}.\${endpoint}\`,
+                serviceName: `com.amazonaws.${aws.getRegion().then(r => r.name)}.${endpoint}`,
                 vpcEndpointType: "Interface",
                 privateDnsEnabled: true,
                 subnetIds: this.privateSubnetIds,
                 securityGroupIds: [endpointSecurityGroup.id],
                 tags: {
                     ...tags,
-                    Name: \`\${this.getName()}-\${endpoint}-endpoint\`,
+                    Name: `${this.getName()}-${endpoint}-endpoint`,
                 },
             }, { parent: this });
         });
     }
 
     private createFlowLogs(tags: Record<string, string>): void {
-        const flowLogRole = new aws.iam.Role(\`\${this.getName()}-flow-log-role\`, {
+        const flowLogRole = new aws.iam.Role(`${this.getName()}-flow-log-role`, {
             assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({
                 Service: "vpc-flow-logs.amazonaws.com",
             }),
             tags: tags,
         }, { parent: this });
 
-        const flowLogPolicy = new aws.iam.RolePolicy(\`\${this.getName()}-flow-log-policy\`, {
+        const flowLogPolicy = new aws.iam.RolePolicy(`${this.getName()}-flow-log-policy`, {
             role: flowLogRole.id,
             policy: {
                 Version: "2012-10-17",
@@ -1675,13 +1675,13 @@ class NetworkComponent extends pulumi.ComponentResource {
             },
         }, { parent: this });
 
-        const flowLogGroup = new aws.cloudwatch.LogGroup(\`\${this.getName()}-flow-logs\`, {
-            name: \`/aws/vpc/flowlogs/\${this.getName()}\`,
+        const flowLogGroup = new aws.cloudwatch.LogGroup(`${this.getName()}-flow-logs`, {
+            name: `/aws/vpc/flowlogs/${this.getName()}`,
             retentionInDays: 30,
             tags: tags,
         }, { parent: this });
 
-        new aws.ec2.FlowLog(\`\${this.getName()}-flow-log\`, {
+        new aws.ec2.FlowLog(`${this.getName()}-flow-log`, {
             iamRoleArn: flowLogRole.arn,
             logDestinationType: "cloud-watch-logs",
             logGroupName: flowLogGroup.name,
@@ -1689,7 +1689,7 @@ class NetworkComponent extends pulumi.ComponentResource {
             vpcId: this.vpc.id,
             tags: {
                 ...tags,
-                Name: \`\${this.getName()}-flow-log\`,
+                Name: `${this.getName()}-flow-log`,
             },
         }, { parent: this, dependsOn: [flowLogPolicy] });
     }
@@ -1718,12 +1718,12 @@ export const monitoringEndpoints = {
     grafana: monitoring.grafanaEndpoint,
     alertManager: monitoring.alertManagerEndpoint,
 };
-\`\`\`
+```
 
 ## Policy as Code with OPA
 
 ### Terraform Policy Enforcement
-\`\`\`rego
+```rego
 # terraform/policies/opa/terraform.rego
 package terraform.security
 
@@ -1911,12 +1911,12 @@ is_weak_instance(resource) {
     resource.type == "aws_instance"
     startswith(resource.values.instance_type, "t2.")
 }
-\`\`\`
+```
 
 ## GitOps with ArgoCD
 
 ### ArgoCD Application Configuration
-\`\`\`yaml
+```yaml
 # gitops/argocd/apps/infrastructure.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
@@ -2092,12 +2092,12 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
-\`\`\`
+```
 
 ## CI/CD Pipeline for IaC
 
 ### GitHub Actions Workflow
-\`\`\`yaml
+```yaml
 # .github/workflows/terraform-deploy.yml
 name: Terraform Infrastructure Deployment
 
@@ -2202,12 +2202,12 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const output = \`#### Terraform Validation Results
-          * Format: \${{ env.FORMAT }}
-          * Initialization: \${{ env.INIT }}
-          * Validation: \${{ env.VALIDATE }}
+          const output = `#### Terraform Validation Results
+          * Format: ${{ env.FORMAT }}
+          * Initialization: ${{ env.INIT }}
+          * Validation: ${{ env.VALIDATE }}
           
-          *Pushed by: @${{ github.actor }}, Action: ${{ github.event_name }}*\`;
+          *Pushed by: @${{ github.actor }}, Action: ${{ github.event_name }}*`;
           
           github.rest.issues.createComment({
             issue_number: context.issue.number,
@@ -2278,12 +2278,12 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const output = \`#### Terraform Plan for ${{ matrix.environment }}
-          \\\`\\\`\\\`terraform
+          const output = `#### Terraform Plan for ${{ matrix.environment }}
+          ```terraform
           ${{ env.PLAN }}
-          \\\`\\\`\\\`
+          ```
           
-          *Pushed by: @${{ github.actor }}, Action: ${{ github.event_name }}*\`;
+          *Pushed by: @${{ github.actor }}, Action: ${{ github.event_name }}*`;
           
           github.rest.issues.createComment({
             issue_number: context.issue.number,
@@ -2415,12 +2415,12 @@ jobs:
             required_contexts: [],
             production_environment: ${{ github.ref == 'refs/heads/main' }}
           })
-\`\`\`
+```
 
 ## Drift Detection and Remediation
 
 ### Automated Drift Detection Script
-\`\`\`python
+```python
 #!/usr/bin/env python3
 # automation/drift-detection/terraform-drift.py
 import json
@@ -2712,7 +2712,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-\`\`\`
+```
 
 This comprehensive Infrastructure as Code configuration provides enterprise-grade IaC capabilities with multiple tools, GitOps workflows, policy enforcement, and automated management for building and maintaining complex cloud infrastructure at scale.`,
     author: {

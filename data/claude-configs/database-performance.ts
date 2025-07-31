@@ -795,7 +795,7 @@ export class AdvancedConnectionPool extends EventEmitter {
   // Graceful pool scaling
   async scalePool(newSize: number): Promise<void> {
     // This would require custom implementation as pg doesn't support dynamic scaling
-    console.log(\`Scaling pool to \${newSize} connections (requires restart)\`);
+    console.log(`Scaling pool to ${newSize} connections (requires restart)`);
     this.emit('pool:scale-requested', { currentSize: this.config.max, newSize });
   }
 }
@@ -915,7 +915,7 @@ export class QueryPerformanceAnalyzer {
 
   async analyzeQuery(query: string, params?: any[]): Promise<QueryAnalysis> {
     // Get execution plan with actual statistics
-    const explainQuery = \`EXPLAIN (ANALYZE, BUFFERS, VERBOSE, FORMAT JSON) \${query}\`;
+    const explainQuery = `EXPLAIN (ANALYZE, BUFFERS, VERBOSE, FORMAT JSON) ${query}`;
     const result = await this.pool.query(explainQuery, params);
     
     const plan = result.rows[0]['QUERY PLAN'][0];
@@ -984,8 +984,8 @@ export class QueryPerformanceAnalyzer {
       // Check for sequential scans on large tables
       if (node.nodeType === 'Seq Scan' && node.planRows && node.planRows > 1000) {
         recommendations.push(
-          \`Consider adding an index on \${node.relationName} for better performance. ` +
-          \`Sequential scan is processing \${node.planRows} rows.\`
+          `Consider adding an index on ${node.relationName} for better performance. ` +
+          `Sequential scan is processing ${node.planRows} rows.`
         );
       }
 
@@ -1018,8 +1018,8 @@ export class QueryPerformanceAnalyzer {
         const ratio = node.actualRows / node.planRows;
         if (ratio > 10 || ratio < 0.1) {
           recommendations.push(
-            \`Row estimate is significantly off (estimated: \${node.planRows}, ` +
-            \`actual: \${node.actualRows}). Consider running ANALYZE on \${node.relationName}.\`
+            `Row estimate is significantly off (estimated: ${node.planRows}, ` +
+            `actual: ${node.actualRows}). Consider running ANALYZE on ${node.relationName}.`
           );
         }
       }
@@ -1076,7 +1076,7 @@ export class QueryPerformanceAnalyzer {
     meanTime: number;
     rows: number;
   }>> {
-    const result = await this.pool.query(\`
+    const result = await this.pool.query(`
       SELECT 
         query,
         calls,
@@ -1088,7 +1088,7 @@ export class QueryPerformanceAnalyzer {
         AND query NOT LIKE '%EXPLAIN%'
       ORDER BY mean_time DESC 
       LIMIT $1
-    \`, [limit]);
+    `, [limit]);
 
     return result.rows;
   }
@@ -1102,30 +1102,30 @@ export class QueryPerformanceAnalyzer {
     lastVacuumed: Date | null;
   }> {
     const [statsResult, indexResult, maintenanceResult] = await Promise.all([
-      this.pool.query(\`
+      this.pool.query(`
         SELECT 
           n_tup_ins + n_tup_upd + n_tup_del as row_count,
           schemaname,
           tablename
         FROM pg_stat_user_tables 
         WHERE tablename = $1
-      \`, [tableName]),
+      `, [tableName]),
       
-      this.pool.query(\`
+      this.pool.query(`
         SELECT 
           indexname,
           idx_scan
         FROM pg_stat_user_indexes 
         WHERE tablename = $1
-      \`, [tableName]),
+      `, [tableName]),
       
-      this.pool.query(\`
+      this.pool.query(`
         SELECT 
           last_analyze,
           last_vacuum
         FROM pg_stat_user_tables 
         WHERE tablename = $1
-      \`, [tableName])
+      `, [tableName])
     ]);
 
     const unusedIndexes = indexResult.rows
@@ -1146,39 +1146,39 @@ export class QueryPerformanceAnalyzer {
     const recommendations: string[] = [];
     
     // Analyze query patterns for this table
-    const queryResult = await this.pool.query(\`
+    const queryResult = await this.pool.query(`
       SELECT query, calls
       FROM pg_stat_statements 
-      WHERE query ILIKE '%\${tableName}%'
+      WHERE query ILIKE '%${tableName}%'
         AND query NOT LIKE '%pg_stat_statements%'
       ORDER BY calls DESC
       LIMIT 20
-    \`);
+    `);
 
     // Simple heuristics for index recommendations
     for (const row of queryResult.rows) {
       const query = row.query.toLowerCase();
       
       // Look for WHERE clauses
-      const whereMatch = query.match(/where\\s+([\\w.]+)\\s*=/g);
+      const whereMatch = query.match(/where\s+([\w.]+)\s*=/g);
       if (whereMatch) {
         whereMatch.forEach(match => {
-          const column = match.replace(/where\\s+/, '').replace(/\\s*=.*/, '');
-          recommendations.push(\`Consider index on \${tableName}(\${column}) for equality lookups\`);
+          const column = match.replace(/where\s+/, '').replace(/\s*=.*/, '');
+          recommendations.push(`Consider index on ${tableName}(${column}) for equality lookups`);
         });
       }
 
       // Look for ORDER BY clauses
-      const orderMatch = query.match(/order\\s+by\\s+([\\w.,\\s]+)/g);
+      const orderMatch = query.match(/order\s+by\s+([\w.,\s]+)/g);
       if (orderMatch) {
         orderMatch.forEach(match => {
-          const columns = match.replace(/order\\s+by\\s+/, '').replace(/\\s+(asc|desc)/g, '');
-          recommendations.push(\`Consider index on \${tableName}(\${columns}) for sorting\`);
+          const columns = match.replace(/order\s+by\s+/, '').replace(/\s+(asc|desc)/g, '');
+          recommendations.push(`Consider index on ${tableName}(${columns}) for sorting`);
         });
       }
 
       // Look for JOIN conditions
-      const joinMatch = query.match(/join\\s+\\w+\\s+on\\s+([\\w.]+)\\s*=\\s*([\\w.]+)/g);
+      const joinMatch = query.match(/join\s+\w+\s+on\s+([\w.]+)\s*=\s*([\w.]+)/g);
       if (joinMatch) {
         joinMatch.forEach(match => {
           recommendations.push('Consider indexes on JOIN columns for better join performance');
@@ -1428,7 +1428,7 @@ export class MultiLevelCache {
       const pipeline = this.l2Cache.pipeline();
       
       for (const tag of tags) {
-        const keys = await this.l2Cache.smembers(\`tag:\${tag}\`);
+        const keys = await this.l2Cache.smembers(`tag:${tag}`);
         for (const key of keys) {
           pipeline.del(key);
           
@@ -1437,7 +1437,7 @@ export class MultiLevelCache {
             this.l1Cache.delete(key);
           }
         }
-        pipeline.del(\`tag:\${tag}\`);
+        pipeline.del(`tag:${tag}`);
       }
       
       await pipeline.exec();
@@ -1487,7 +1487,7 @@ export class MultiLevelCache {
 
     const pipeline = this.l2Cache.pipeline();
     for (const tag of tags) {
-      pipeline.sadd(\`tag:\${tag}\`, key);
+      pipeline.sadd(`tag:${tag}`, key);
     }
     await pipeline.exec();
   }
@@ -1568,7 +1568,7 @@ export class CacheAsideRepository<T> {
   ) {}
 
   async findById(id: string): Promise<T | null> {
-    const key = \`\${this.keyPrefix}:id:\${id}\`;
+    const key = `${this.keyPrefix}:id:${id}`;
     
     return this.cache.get<T>(key, {
       fallback: async () => {
@@ -1582,24 +1582,24 @@ export class CacheAsideRepository<T> {
     const result = await this.dataSource.save(entity);
     
     // Invalidate cache for this entity
-    const key = \`\${this.keyPrefix}:id:\${entity.id}\`;
+    const key = `${this.keyPrefix}:id:${entity.id}`;
     await this.cache.delete(key);
     
     // Invalidate related tags
-    await this.cache.invalidateByTags([\`\${this.keyPrefix}:all\`]);
+    await this.cache.invalidateByTags([`${this.keyPrefix}:all`]);
     
     return result;
   }
 
   async findMany(criteria: any): Promise<T[]> {
-    const key = \`\${this.keyPrefix}:query:\${JSON.stringify(criteria)}\`;
+    const key = `${this.keyPrefix}:query:${JSON.stringify(criteria)}`;
     
     return this.cache.get<T[]>(key, {
       fallback: async () => {
         return this.dataSource.findMany(criteria);
       },
       ttl: this.defaultTTL / 2, // Shorter TTL for query results
-      tags: [\`\${this.keyPrefix}:all\`]
+      tags: [`${this.keyPrefix}:all`]
     }) || [];
   }
 }
@@ -1736,14 +1736,14 @@ export class DatabaseMonitor extends EventEmitter {
   }
 
   private async collectConnectionMetrics(): Promise<void> {
-    const result = await this.pool.query(\`
+    const result = await this.pool.query(`
       SELECT 
         setting::int as max_connections,
         (SELECT count(*) FROM pg_stat_activity) as active_connections,
         (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle') as idle_connections
       FROM pg_settings 
       WHERE name = 'max_connections'
-    \`);
+    `);
 
     const row = result.rows[0];
     this.metrics.connections = {
@@ -1757,19 +1757,19 @@ export class DatabaseMonitor extends EventEmitter {
 
   private async collectQueryMetrics(): Promise<void> {
     const [statsResult, slowQueryResult] = await Promise.all([
-      this.pool.query(\`
+      this.pool.query(`
         SELECT 
           sum(calls) as total_calls,
           avg(mean_time) as avg_query_time
         FROM pg_stat_statements 
         WHERE query NOT LIKE '%pg_stat_statements%'
-      \`),
-      this.pool.query(\`
+      `),
+      this.pool.query(`
         SELECT count(*) as slow_query_count
         FROM pg_stat_statements 
         WHERE mean_time > $1
           AND query NOT LIKE '%pg_stat_statements%'
-      \`, [this.alertThresholds.slowQueryThreshold])
+      `, [this.alertThresholds.slowQueryThreshold])
     ]);
 
     const stats = statsResult.rows[0];
@@ -1784,7 +1784,7 @@ export class DatabaseMonitor extends EventEmitter {
   }
 
   private async collectPerformanceMetrics(): Promise<void> {
-    const result = await this.pool.query(\`
+    const result = await this.pool.query(`
       SELECT 
         -- Buffer hit ratio
         round(
@@ -1809,7 +1809,7 @@ export class DatabaseMonitor extends EventEmitter {
       SELECT count(*) as blocked_queries
       FROM pg_stat_activity 
       WHERE wait_event_type = 'Lock';
-    \`);
+    `);
 
     // This is simplified - you'd need multiple queries for complete metrics
     this.metrics.performance = {
@@ -1823,10 +1823,10 @@ export class DatabaseMonitor extends EventEmitter {
 
   private async collectStorageMetrics(): Promise<void> {
     const [dbSizeResult, tableSizeResult] = await Promise.all([
-      this.pool.query(\`
+      this.pool.query(`
         SELECT pg_database_size(current_database()) as db_size
-      \`),
-      this.pool.query(\`
+      `),
+      this.pool.query(`
         SELECT 
           schemaname,
           tablename,
@@ -1835,7 +1835,7 @@ export class DatabaseMonitor extends EventEmitter {
         WHERE schemaname = 'public'
         ORDER BY size DESC
         LIMIT 20
-      \`)
+      `)
     ]);
 
     const tableSize = new Map<string, number>();
@@ -1853,13 +1853,13 @@ export class DatabaseMonitor extends EventEmitter {
 
   private async collectReplicationMetrics(): Promise<void> {
     try {
-      const result = await this.pool.query(\`
+      const result = await this.pool.query(`
         SELECT 
           client_addr,
           state,
           pg_wal_lsn_diff(pg_current_wal_lsn(), flush_lsn) as replication_lag_bytes
         FROM pg_stat_replication
-      \`);
+      `);
 
       if (result.rows.length > 0) {
         const maxLag = Math.max(...result.rows.map(row => 
@@ -1918,7 +1918,7 @@ export class DatabaseMonitor extends EventEmitter {
       this.emit('metrics:collected', metrics);
     }, intervalMs);
     
-    console.log(\`Database monitoring started with \${intervalMs}ms interval\`);
+    console.log(`Database monitoring started with ${intervalMs}ms interval`);
   }
 
   stopMonitoring(): void {
@@ -1942,9 +1942,9 @@ export class DatabaseMonitor extends EventEmitter {
     maxTime: number;
     rows: number;
   }>> {
-    const result = await this.pool.query(\`
+    const result = await this.pool.query(`
       SELECT 
-        regexp_replace(query, '\\\\s+', ' ', 'g') as query,
+        regexp_replace(query, '\\s+', ' ', 'g') as query,
         calls,
         total_time,
         mean_time,
@@ -1957,7 +1957,7 @@ export class DatabaseMonitor extends EventEmitter {
         AND calls > 5
       ORDER BY mean_time DESC 
       LIMIT $1
-    \`, [limit]);
+    `, [limit]);
 
     return result.rows;
   }
@@ -1970,7 +1970,7 @@ export class DatabaseMonitor extends EventEmitter {
     blockingPid: number;
     duration: string;
   }>> {
-    const result = await this.pool.query(\`
+    const result = await this.pool.query(`
       SELECT 
         blocked_locks.pid AS blocked_pid,
         blocked_activity.query AS blocked_query,
@@ -1998,7 +1998,7 @@ export class DatabaseMonitor extends EventEmitter {
         ON blocking_activity.pid = blocking_locks.pid
       WHERE NOT blocked_locks.GRANTED
       ORDER BY duration DESC
-    \`);
+    `);
 
     return result.rows.map(row => ({
       pid: row.blocked_pid,

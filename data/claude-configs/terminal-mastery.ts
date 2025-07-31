@@ -49,7 +49,7 @@ This is an advanced terminal configuration designed for power users who spend mo
 
 ## Project Structure
 
-\`\`\`
+\\`\\`\\`
 terminal-mastery-config/
 ├── zsh/                           # Zsh configuration
 │   ├── .zshrc                     # Main Zsh configuration
@@ -90,12 +90,12 @@ terminal-mastery-config/
     ├── macos-setup.sh             # macOS specific setup
     ├── linux-setup.sh             # Linux specific setup
     └── tools-install.sh           # CLI tools installation
-\`\`\`
+\\`\\`\\`
 
 ## Zsh Configuration
 
 ### Main Zsh Configuration
-\`\`\`bash
+\\`\\`\\`bash
 # ~/.zshrc - Master Zsh Configuration
 
 # Oh My Zsh installation path
@@ -152,8 +152,8 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.config/zsh/functions.zsh ]] && source ~/.config/zsh/functions.zsh
 
 # Powerlevel10k instant prompt
-if [[ -r "\${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh" ]]; then
-  source "\${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh"
+if [[ -r "\\${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-\\${(%):-%n}.zsh" ]]; then
+  source "\\${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-\\${(%):-%n}.zsh"
 fi
 
 # History configuration
@@ -178,7 +178,7 @@ compinit -d ~/.zcompdump
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors "\${(s.:.)LS_COLORS}"
+zstyle ':completion:*' list-colors "\\${(s.:.)LS_COLORS}"
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' complete-options true
 zstyle ':completion:*' use-cache true
@@ -219,10 +219,10 @@ bindkey '^[[B' history-substring-search-down
 
 # Load Powerlevel10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-\`\`\`
+\\`\\`\\`
 
 ### Custom Aliases and Functions
-\`\`\`bash
+\\`\\`\\`bash
 # ~/.config/zsh/aliases.zsh - Power User Aliases
 
 # Enhanced basic commands
@@ -300,7 +300,7 @@ alias klf='kubectl logs -f'
 alias reload='source ~/.zshrc'
 alias zshconfig='vim ~/.zshrc'
 alias tmuxconfig='vim ~/.tmux.conf'
-alias path='echo -e \${PATH//:/\\n}'
+alias path='echo -e \\${PATH//:/\\\\n}'
 alias myip='curl -s https://httpbin.org/ip | jq -r .origin'
 alias ports='netstat -tuln'
 alias sizeof='du -sh'
@@ -327,10 +327,10 @@ alias projects='cd ~/Projects'
 alias downloads='cd ~/Downloads'
 alias desktop='cd ~/Desktop'
 alias documents='cd ~/Documents'
-\`\`\`
+\\`\\`\\`
 
 ### Custom Functions
-\`\`\`bash
+\\`\\`\\`bash
 # ~/.config/zsh/functions.zsh - Productivity Functions
 
 # Smart cd with fuzzy finding
@@ -341,7 +341,7 @@ function cd() {
     fi
     while true; do
         local lsd=\$(find . -maxdepth 1 -type d -name '[^.]*' | sort)
-        local dir="\$(printf '%s\\n' "\${lsd[@]}" |
+        local dir="\$(printf '%s\\\\n' \"\\${lsd[@]}\" |
             fzf --reverse --preview '
                 __cd_nxt="{}"
                 __cd_path="\$(echo \$__cd_nxt | sed "s;//;/;g")"
@@ -349,7 +349,7 @@ function cd() {
                 echo
                 ls -la \$__cd_path
         ')"
-        [[ \${#dir} != 0 ]] || return 0
+        [[ \\${#dir} != 0 ]] || return 0
         builtin cd "\$dir" &> /dev/null
     done
 }
@@ -386,7 +386,7 @@ function fkill() {
     local pid
     pid=\$(ps -ef | sed 1d | fzf -m | awk '{print \$2}')
     if [ "x\$pid" != "x" ]; then
-        echo "\$pid" | xargs kill -"\${1:-9}"
+        echo "\$pid" | xargs kill -\"\\${1:-9}\"
     fi
 }
 
@@ -399,9 +399,9 @@ function gccm() {
     read "message?Enter commit message: "
     
     if [[ -n \$scope ]]; then
-        git commit -m "\${type}(\${scope}): \${message}"
+        git commit -m \"\\${type}(\\${scope}): \\${message}\"
     else
-        git commit -m "\${type}: \${message}"
+        git commit -m \"\\${type}: \\${message}\"
     fi
 }
 
@@ -433,8 +433,8 @@ function dsh() {
 
 # Weather function
 function weather() {
-    local location=\${1:-""}
-    curl -s "https://wttr.in/\${location}?format=3"
+    local location=\\${1:-""}
+    curl -s "https://wttr.in/\\${location}?format=3"
 }
 
 # QR code generator
@@ -460,12 +460,12 @@ function note() {
     echo "\$(date '+%H:%M') - \$*" >> "\$note_file"
     echo "Note added to \$note_file"
 }
-\`\`\`
+\\`\\`\\`
 
 ## Tmux Configuration
 
 ### Main Tmux Configuration
-\`\`\`bash
+\\`\\`\\`bash
 # ~/.tmux.conf - Master Tmux Configuration
 
 # General settings
@@ -475,7 +475,7 @@ set -g mouse on
 set -g history-limit 50000
 set -g display-time 4000
 set -g status-interval 5
-set -g default-command "\${SHELL}"
+set -g default-command \"\\${SHELL}\"
 set -g focus-events on
 set -g aggressive-resize on
 
@@ -573,10 +573,10 @@ set -g @continuum-boot 'on'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom)
 run '~/.tmux/plugins/tpm/tpm'
-\`\`\`
+\\`\\`\\`
 
 ### Tmux Session Manager Script
-\`\`\`bash
+\\`\\`\\`bash
 #!/bin/bash
 # ~/.config/tmux/scripts/session-manager.sh - Advanced Session Management
 
@@ -723,16 +723,16 @@ kill_session() {
 
 # Main function
 main() {
-    case "${1:-}" in
+    case "\${1:-}" in
         "new"|"create")
             if [[ -z "$2" ]]; then
                 echo "Usage: tmux-session new <session-name> [project-path]"
                 exit 1
             fi
-            create_dev_session "$2" "${3:-$(pwd)}"
+            create_dev_session "$2" "\${3:-$(pwd)}"
             ;;
         "save")
-            save_session "${2:-$(tmux display-message -p '#S')}"
+            save_session "\${2:-$(tmux display-message -p '#S')}"
             ;;
         "restore")
             if [[ -z "$2" ]]; then
@@ -767,12 +767,12 @@ main() {
 }
 
 main "$@"
-\`\`\`
+\\`\\`\\`
 
 ## Advanced CLI Tools Integration
 
 ### FZF Git Integration
-\`\`\`bash
+\\`\\`\\`bash
 #!/bin/bash
 # ~/.config/tools/scripts/fzf-git.sh - Enhanced Git with FZF
 
@@ -836,12 +836,12 @@ alias gbr='fzf_git_branch'
 alias gst-fzf='fzf_git_stash'
 alias ga-fzf='fzf_git_add'
 alias gc-fzf='fzf_git_commit'
-\`\`\`
+\\`\\`\\`
 
 ## Installation and Setup
 
 ### Main Installation Script
-\`\`\`bash
+\\`\\`\\`bash
 #!/bin/bash
 # install/install.sh - Terminal Mastery Installation
 
@@ -949,7 +949,7 @@ echo "   3. Configure Powerlevel10k: p10k configure"
 echo "   4. Install Nerd Font for your terminal emulator"
 echo ""
 echo "🎉 Enjoy your supercharged terminal experience!"
-\`\`\`
+\\`\\`\\`
 
 ## Performance Tips and Optimizations
 
