@@ -1,92 +1,673 @@
 {
   "resources": [
     {
-      "id": "nextjs-config",
-      "title": "Next.js Configuration",
-      "slug": "nextjs-configuration",
-      "tagline": "Optimized Claude configuration for Next.js projects",
-      "description": "A comprehensive Claude.md configuration specifically designed for Next.js development with App Router.",
-      "categoryId": "claude-configs",
-      "type": "CONFIGURATION",
-      "content": "# Claude Configuration for Next.js\\n\\nThis configuration optimizes Claude for Next.js development...",
-      "tags": [
-        "nextjs",
-        "react",
-        "frontend",
-        "typescript"
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://claudecode.directory"
-      },
-      "stats": {
-        "votes": 45,
-        "copies": 234
-      },
-      "difficulty": "INTERMEDIATE",
-      "language": "TypeScript",
-      "framework": "Next.js",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "api-design-prompt",
-      "title": "API Design Architect Prompt",
-      "slug": "api-design-architect",
-      "tagline": "Expert-level prompt for designing REST APIs",
-      "description": "Comprehensive prompt for designing REST APIs with proper architecture and documentation.",
-      "categoryId": "prompt-templates",
-      "type": "PROMPT_TEMPLATE",
-      "content": "You are an expert API architect...",
-      "tags": [
-        "api-design",
-        "rest",
-        "architecture",
-        "backend"
-      ],
-      "author": {
-        "name": "Claude Code Community",
-        "url": "https://claudecode.directory"
-      },
-      "stats": {
-        "votes": 67,
-        "copies": 189
-      },
-      "difficulty": "ADVANCED",
-      "lastUpdated": "2024-12-01",
-      "featured": true
-    },
-    {
-      "id": "claude-cli",
-      "title": "Claude CLI Tool",
-      "slug": "claude-cli-tool",
-      "tagline": "Official command-line interface for Claude AI",
-      "description": "Powerful CLI tool that brings Claude AI directly to your terminal.",
+      "id": "claude-api-wrapper",
+      "title": "Claude API SDK",
+      "slug": "claude-api-sdk",
+      "tagline": "Multi-language SDK for Claude API integration",
+      "description": "Comprehensive SDK supporting Python, JavaScript, Go, and Ruby for easy Claude API integration. Includes rate limiting, error handling, and streaming support.",
       "categoryId": "tools-cli",
+      "category": {
+        "id": "tools-cli",
+        "name": "Tools & CLI",
+        "slug": "tools",
+        "description": "Command-line tools, utilities, and scripts to enhance your Claude development workflow, including enterprise-grade automation platforms.",
+        "icon": "🛠️",
+        "color": "#8B5CF6"
+      },
       "type": "EXTERNAL",
-      "url": "https://github.com/anthropics/claude-cli",
+      "url": "https://github.com/anthropics/claude-sdk-multi",
       "tags": [
-        "cli",
-        "terminal",
-        "automation",
-        "productivity"
+        {
+          "tag": {
+            "id": "api",
+            "name": "api",
+            "slug": "api"
+          }
+        },
+        {
+          "tag": {
+            "id": "sdk",
+            "name": "sdk",
+            "slug": "sdk"
+          }
+        },
+        {
+          "tag": {
+            "id": "integration",
+            "name": "integration",
+            "slug": "integration"
+          }
+        },
+        {
+          "tag": {
+            "id": "multi-language",
+            "name": "multi-language",
+            "slug": "multi-language"
+          }
+        }
       ],
       "author": {
         "name": "Anthropic",
         "url": "https://anthropic.com"
       },
       "stats": {
-        "votes": 245,
-        "copies": 1820
+        "votes": 567,
+        "copies": 3421
       },
-      "difficulty": "BEGINNER",
+      "_count": {
+        "votes": 567,
+        "copies": 3421
+      },
+      "difficulty": "INTERMEDIATE",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "database-schema-designer",
+      "title": "Database Schema Design Prompt",
+      "slug": "database-schema-designer",
+      "tagline": "Expert prompt templates prompt template",
+      "description": "Expert-level prompt for designing optimized database schemas with proper relationships, indexing, and normalization.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior database architect with expertise in relational database design, normalization, and performance optimization.\n\n## Context\n**Application:** {{APPLICATION_TYPE}}\n**Database:** {{DATABASE_TYPE}}\n**Expected Data Volume:** {{DATA_VOLUME}}\n**Query Patterns:** {{QUERY_PATTERNS}}\n**Performance Requirements:** {{PERFORMANCE_REQUIREMENTS}}\n\n## Business Requirements\n{{BUSINESS_REQUIREMENTS}}\n\n## Design a comprehensive database schema with the following considerations:\n\n### 1. Entity Identification & Modeling\n- Identify all entities from business requirements\n- Define entity attributes and data types\n- Establish entity relationships (1:1, 1:M, M:M)\n- Apply appropriate normalization (up to 3NF typically)\n\n### 2. Schema Design\n- Create detailed table structures\n- Define primary keys and foreign keys\n- Implement appropriate constraints (NOT NULL, UNIQUE, CHECK)\n- Design lookup tables and reference data\n- Plan for data integrity and referential constraints\n\n### 3. Relationship Design\n- Design junction tables for many-to-many relationships\n- Implement proper cascading rules (CASCADE, SET NULL, RESTRICT)\n- Handle hierarchical data (adjacency list, nested sets, etc.)\n- Design for soft deletes where appropriate\n\n### 4. Indexing Strategy\n- Identify query patterns and access paths\n- Design primary and secondary indexes\n- Plan composite indexes for multi-column queries\n- Consider partial indexes for filtered queries\n- Balance query performance vs. write performance\n\n### 5. Performance Optimization\n- Design for expected query patterns\n- Plan partitioning strategy for large tables\n- Consider denormalization for read-heavy scenarios\n- Design materialized views for complex aggregations\n- Plan for archival and data lifecycle management\n\n### 6. Data Types & Constraints\n- Choose optimal data types for storage efficiency\n- Implement business rule constraints at database level\n- Design for internationalization (UTF-8, collations)\n- Handle temporal data (timestamps, time zones)\n- Plan for JSON/document storage if needed\n\n### 7. Security & Compliance\n- Design role-based access control\n- Plan for data encryption (at rest/in transit)\n- Implement audit trails and change tracking\n- Consider data privacy and GDPR compliance\n- Design for secure backup and recovery\n\n## Output Format:\nProvide a complete database design including:\n\n**Entity Relationship Diagram (textual):**\n```\n[Entity1] --< [Junction] >-- [Entity2]\n[Parent] ||--o{ [Child]\n```\n\n**Schema Definition:**\n```sql\nCREATE TABLE users (\n    id SERIAL PRIMARY KEY,\n    email VARCHAR(255) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);\n```\n\n**Index Strategy:**\n```sql\nCREATE INDEX idx_users_email ON users(email);\nCREATE INDEX idx_orders_user_date ON orders(user_id, created_at);\n```\n\nInclude migration scripts, sample queries, and performance considerations.",
+      "tags": [
+        {
+          "tag": {
+            "id": "database",
+            "name": "database",
+            "slug": "database"
+          }
+        },
+        {
+          "tag": {
+            "id": "schema",
+            "name": "schema",
+            "slug": "schema"
+          }
+        },
+        {
+          "tag": {
+            "id": "sql",
+            "name": "sql",
+            "slug": "sql"
+          }
+        },
+        {
+          "tag": {
+            "id": "normalization",
+            "name": "normalization",
+            "slug": "normalization"
+          }
+        },
+        {
+          "tag": {
+            "id": "optimization",
+            "name": "optimization",
+            "slug": "optimization"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 97,
+        "copies": 291
+      },
+      "_count": {
+        "votes": 86,
+        "copies": 227
+      },
+      "difficulty": "ADVANCED",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "technical-debt-analyst",
+      "title": "Technical Debt Analyst",
+      "slug": "technical-debt-analyst",
+      "tagline": "Expert prompt templates prompt template",
+      "description": "Comprehensive technical debt assessment and remediation planning with metrics, prioritization frameworks, and ROI analysis.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a Senior Engineering Manager and Technical Debt Specialist with expertise in code quality assessment, refactoring strategies, and engineering productivity optimization. Your role is to identify, quantify, and create actionable plans for technical debt remediation.\n\n## Technical Debt Assessment Framework\n\n### 1. Technical Debt Identification and Classification\n\n**Code Quality Analysis:**\n```bash\n# Automated technical debt detection\n# Complexity analysis\nfind src/ -name \"*.js\" -o -name \"*.ts\" | xargs wc -l | sort -n | tail -20\n\n# Cyclomatic complexity\nnpx complexity-report --format json --output complexity.json src/\n\n# Code duplication detection  \nnpx jscpd --min-lines 10 --min-tokens 50 --format json --output duplication.json src/\n\n# Dependency analysis\nnpm audit --audit-level moderate\nnpm outdated --long\ndepcheck --ignores=\"@types/*,jest,eslint\"\n\n# Dead code detection\nnpx unimported\nnpx ts-unused-exports tsconfig.json\n\n# Test coverage analysis\nnpm run test -- --coverage --coverageReporters=json-summary\n```\n\n**Technical Debt Categories:**\n```typescript\ninterface TechnicalDebtItem {\n  id: string;\n  category: DebtCategory;\n  severity: 'Critical' | 'High' | 'Medium' | 'Low';\n  impact: ImpactArea[];\n  effort: number; // story points\n  businessValue: number; // 1-10 scale\n  riskLevel: number; // 1-10 scale\n  location: string;\n  description: string;\n  remedationPlan: string;\n}\n\nenum DebtCategory {\n  CODE_SMELL = 'Code Smell',\n  ARCHITECTURAL = 'Architectural',\n  PERFORMANCE = 'Performance', \n  SECURITY = 'Security',\n  DOCUMENTATION = 'Documentation',\n  TESTING = 'Testing',\n  DEPENDENCY = 'Dependency',\n  DESIGN = 'Design'\n}\n\nenum ImpactArea {\n  MAINTAINABILITY = 'Maintainability',\n  SCALABILITY = 'Scalability',\n  PERFORMANCE = 'Performance',\n  SECURITY = 'Security',\n  DEVELOPER_PRODUCTIVITY = 'Developer Productivity',\n  USER_EXPERIENCE = 'User Experience',\n  RELIABILITY = 'Reliability'\n}\n\nclass TechnicalDebtAssessment {\n  assessCodebase(projectPath: string): TechnicalDebtReport {\n    return {\n      overallScore: this.calculateDebtScore(),\n      categoryBreakdown: this.analyzeByCategory(),\n      hotspots: this.identifyHotspots(),\n      trends: this.analyzeTrends(),\n      recommendations: this.generateRecommendations()\n    };\n  }\n\n  private identifyHotspots(): DebtHotspot[] {\n    // Files with multiple debt indicators\n    return [\n      {\n        file: 'src/legacy/UserManager.js',\n        debtScore: 8.5,\n        issues: [\n          'Cyclomatic complexity: 47',\n          'Lines of code: 1,247',\n          'Code duplication: 15 instances',\n          'Last modified: 6 months ago',\n          'Test coverage: 12%'\n        ],\n        remediation: 'Break into smaller classes, add unit tests, extract common functionality'\n      },\n      {\n        file: 'src/api/OrderController.ts', \n        debtScore: 7.8,\n        issues: [\n          'Mixed concerns: business logic in controller',\n          'Deprecated dependencies: 3',\n          'Security vulnerabilities: 2',\n          'Performance issues: slow database queries'\n        ],\n        remediation: 'Extract business logic, update dependencies, optimize queries'\n      }\n    ];\n  }\n}\n```\n\n### 2. Quantitative Debt Measurement\n\n**SQALE Method Implementation:**\n```typescript\nclass SQALEAnalyzer {\n  calculateTechnicalDebt(metrics: CodeMetrics): SQALEResults {\n    const characteristics = {\n      reliability: this.assessReliability(metrics),\n      security: this.assessSecurity(metrics), \n      maintainability: this.assessMaintainability(metrics),\n      efficiency: this.assessEfficiency(metrics)\n    };\n\n    return {\n      totalDebtHours: Object.values(characteristics).reduce((sum, char) => sum + char.debtHours, 0),\n      debtRatio: this.calculateDebtRatio(characteristics),\n      sqaleRating: this.calculateSQALERating(characteristics),\n      characteristics\n    };\n  }\n\n  private assessMaintainability(metrics: CodeMetrics): CharacteristicAssessment {\n    const rules = [\n      { rule: 'Function length > 50 lines', count: metrics.longFunctions, costPerViolation: 10 },\n      { rule: 'Cyclomatic complexity > 10', count: metrics.complexFunctions, costPerViolation: 20 },\n      { rule: 'Code duplication', count: metrics.duplicatedBlocks, costPerViolation: 15 },\n      { rule: 'Missing documentation', count: metrics.undocumentedFunctions, costPerViolation: 5 }\n    ];\n\n    const debtHours = rules.reduce((total, rule) => \n      total + (rule.count * rule.costPerViolation), 0\n    ) / 60; // Convert minutes to hours\n\n    return {\n      debtHours,\n      violations: rules.filter(rule => rule.count > 0),\n      rating: this.calculateRating(debtHours, metrics.totalLinesOfCode)\n    };\n  }\n\n  private calculateDebtRatio(characteristics: Record<string, CharacteristicAssessment>): number {\n    const totalDebt = Object.values(characteristics).reduce((sum, char) => sum + char.debtHours, 0);\n    const developmentCost = this.estimateDevelopmentCost();\n    return (totalDebt / developmentCost) * 100;\n  }\n}\n\n// Code complexity analysis\nclass ComplexityAnalyzer {\n  analyzeFunction(functionAst: ASTNode): ComplexityMetrics {\n    return {\n      cyclomaticComplexity: this.calculateCyclomaticComplexity(functionAst),\n      cognitiveComplexity: this.calculateCognitiveComplexity(functionAst),\n      nestingLevel: this.calculateMaxNestingLevel(functionAst),\n      parameterCount: functionAst.params.length,\n      lineCount: functionAst.end - functionAst.start\n    };\n  }\n\n  generateComplexityReport(filePath: string): ComplexityReport {\n    const ast = this.parseFile(filePath);\n    const functions = this.extractFunctions(ast);\n    \n    return {\n      filePath,\n      totalFunctions: functions.length,\n      averageComplexity: this.calculateAverageComplexity(functions),\n      highComplexityFunctions: functions\n        .filter(fn => fn.cyclomaticComplexity > 10)\n        .sort((a, b) => b.cyclomaticComplexity - a.cyclomaticComplexity),\n      recommendations: this.generateComplexityRecommendations(functions)\n    };\n  }\n}\n```\n\n### 3. Business Impact and ROI Analysis\n\n**Cost-Benefit Analysis Framework:**\n```typescript\ninterface DebtCostAnalysis {\n  developmentVelocityImpact: number; // percentage slowdown\n  bugRateIncrease: number; // bugs per month\n  maintenanceCostIncrease: number; // developer hours per month\n  opportunityCost: number; // features delayed per quarter\n  customerImpact: number; // support tickets per month\n  securityRisk: number; // potential cost of breach\n}\n\nclass TechnicalDebtROICalculator {\n  calculateROI(debtItem: TechnicalDebtItem, timeline: number): ROIAnalysis {\n    const costs = this.calculateCosts(debtItem, timeline);\n    const benefits = this.calculateBenefits(debtItem, timeline);\n    \n    return {\n      remediationCost: this.estimateRemediationCost(debtItem),\n      benefitsOverTime: benefits,\n      costsOverTime: costs,\n      roi: (benefits.total - costs.total) / costs.total * 100,\n      paybackPeriod: this.calculatePaybackPeriod(debtItem),\n      netPresentValue: this.calculateNPV(benefits, costs, 0.1) // 10% discount rate\n    };\n  }\n\n  private calculateCosts(debtItem: TechnicalDebtItem, timeline: number): CostBreakdown {\n    const baseCosts = {\n      developmentSlowdown: this.calculateDevelopmentSlowdown(debtItem) * timeline,\n      increasedBugRate: this.calculateBugCosts(debtItem) * timeline,\n      maintenanceOverhead: this.calculateMaintenanceCosts(debtItem) * timeline,\n      opportunityCosts: this.calculateOpportunityCosts(debtItem) * timeline\n    };\n\n    return {\n      ...baseCosts,\n      total: Object.values(baseCosts).reduce((sum, cost) => sum + cost, 0)\n    };\n  }\n\n  private calculateBenefits(debtItem: TechnicalDebtItem, timeline: number): BenefitBreakdown {\n    const benefits = {\n      improvedVelocity: this.calculateVelocityImprovement(debtItem) * timeline,\n      reducedBugs: this.calculateBugReduction(debtItem) * timeline,\n      lowerMaintenanceCost: this.calculateMaintenanceReduction(debtItem) * timeline,\n      enabledFeatures: this.calculateFeatureEnablement(debtItem) * timeline,\n      riskReduction: this.calculateRiskReduction(debtItem)\n    };\n\n    return {\n      ...benefits,\n      total: Object.values(benefits).reduce((sum, benefit) => sum + benefit, 0)\n    };\n  }\n\n  generateBusinessCase(debtItems: TechnicalDebtItem[]): BusinessCase {\n    const prioritizedItems = this.prioritizeByROI(debtItems);\n    \n    return {\n      executiveSummary: this.generateExecutiveSummary(prioritizedItems),\n      recommendations: this.generateRecommendations(prioritizedItems),\n      implementationPlan: this.createImplementationPlan(prioritizedItems),\n      riskAssessment: this.assessRisks(prioritizedItems),\n      successMetrics: this.defineSuccessMetrics(prioritizedItems)\n    };\n  }\n}\n\n// Developer productivity impact analysis\nclass ProductivityAnalyzer {\n  measureDebtImpact(beforeMetrics: ProductivityMetrics, afterMetrics: ProductivityMetrics): ImpactAnalysis {\n    return {\n      velocityChange: (afterMetrics.storyPoints - beforeMetrics.storyPoints) / beforeMetrics.storyPoints * 100,\n      bugRateChange: (afterMetrics.bugsPerSprint - beforeMetrics.bugsPerSprint) / beforeMetrics.bugsPerSprint * 100,\n      leadTimeChange: (afterMetrics.leadTime - beforeMetrics.leadTime) / beforeMetrics.leadTime * 100,\n      deploymentFrequencyChange: (afterMetrics.deploymentsPerWeek - beforeMetrics.deploymentsPerWeek) / beforeMetrics.deploymentsPerWeek * 100,\n      developerSatisfaction: afterMetrics.developerSatisfactionScore - beforeMetrics.developerSatisfactionScore\n    };\n  }\n\n  predictImpact(debtLevel: number): ProductivityPrediction {\n    // Based on industry research and empirical data\n    const impactFactors = {\n      low: { velocityReduction: 0.05, bugIncrease: 0.1, satisfactionDecrease: 0.1 },\n      medium: { velocityReduction: 0.15, bugIncrease: 0.25, satisfactionDecrease: 0.2 },\n      high: { velocityReduction: 0.30, bugIncrease: 0.50, satisfactionDecrease: 0.35 },\n      critical: { velocityReduction: 0.50, bugIncrease: 1.0, satisfactionDecrease: 0.50 }\n    };\n\n    const level = this.categorizeDeftLevel(debtLevel);\n    const factors = impactFactors[level];\n\n    return {\n      estimatedVelocityReduction: factors.velocityReduction,\n      estimatedBugIncrease: factors.bugIncrease,\n      estimatedSatisfactionDecrease: factors.satisfactionDecrease,\n      confidence: this.calculateConfidence(debtLevel),\n      recommendations: this.generateProductivityRecommendations(level)\n    };\n  }\n}\n```\n\n### 4. Debt Prioritization Framework\n\n**Multi-Criteria Decision Analysis:**\n```typescript\nclass DebtPrioritizer {\n  prioritizeDebt(debtItems: TechnicalDebtItem[]): PrioritizedDebtList {\n    return debtItems\n      .map(item => ({\n        ...item,\n        priorityScore: this.calculatePriorityScore(item),\n        riskAdjustedROI: this.calculateRiskAdjustedROI(item)\n      }))\n      .sort((a, b) => b.priorityScore - a.priorityScore);\n  }\n\n  private calculatePriorityScore(item: TechnicalDebtItem): number {\n    const weights = {\n      businessImpact: 0.30,\n      technicalRisk: 0.25,\n      effortRequired: 0.20,\n      frequency: 0.15,\n      dependencyImpact: 0.10\n    };\n\n    const scores = {\n      businessImpact: this.scoreBucinessImpact(item),\n      technicalRisk: this.scoreTechnicalRisk(item),\n      effortRequired: this.scoreEffortRequired(item),\n      frequency: this.scoreFrequency(item),\n      dependencyImpact: this.scoreDependencyImpact(item)\n    };\n\n    return Object.entries(weights).reduce(\n      (total, [criterion, weight]) => total + (scores[criterion] * weight),\n      0\n    );\n  }\n\n  private scoreBucinessImpact(item: TechnicalDebtItem): number {\n    // Score based on impact areas\n    const impactScores = {\n      [ImpactArea.USER_EXPERIENCE]: item.impact.includes(ImpactArea.USER_EXPERIENCE) ? 10 : 0,\n      [ImpactArea.SECURITY]: item.impact.includes(ImpactArea.SECURITY) ? 9 : 0,\n      [ImpactArea.PERFORMANCE]: item.impact.includes(ImpactArea.PERFORMANCE) ? 8 : 0,\n      [ImpactArea.RELIABILITY]: item.impact.includes(ImpactArea.RELIABILITY) ? 8 : 0,\n      [ImpactArea.SCALABILITY]: item.impact.includes(ImpactArea.SCALABILITY) ? 7 : 0,\n      [ImpactArea.DEVELOPER_PRODUCTIVITY]: item.impact.includes(ImpactArea.DEVELOPER_PRODUCTIVITY) ? 6 : 0,\n      [ImpactArea.MAINTAINABILITY]: item.impact.includes(ImpactArea.MAINTAINABILITY) ? 5 : 0\n    };\n\n    return Math.max(...Object.values(impactScores));\n  }\n\n  generateSprintPlan(prioritizedDebt: PrioritizedDebtList, teamCapacity: number): SprintPlan[] {\n    const sprints: SprintPlan[] = [];\n    let currentSprint: SprintPlan = { items: [], totalEffort: 0, sprintNumber: 1 };\n    \n    for (const item of prioritizedDebt) {\n      if (currentSprint.totalEffort + item.effort > teamCapacity) {\n        sprints.push(currentSprint);\n        currentSprint = { items: [item], totalEffort: item.effort, sprintNumber: sprints.length + 1 };\n      } else {\n        currentSprint.items.push(item);\n        currentSprint.totalEffort += item.effort;\n      }\n    }\n    \n    if (currentSprint.items.length > 0) {\n      sprints.push(currentSprint);\n    }\n    \n    return sprints;\n  }\n}\n\n// Risk-based prioritization\nclass RiskBasedPrioritizer {\n  assessRisk(debtItem: TechnicalDebtItem): RiskAssessment {\n    return {\n      probabilityOfImpact: this.calculateProbability(debtItem),\n      severityOfImpact: this.calculateSeverity(debtItem),\n      exposureTime: this.calculateExposureTime(debtItem),\n      mitigationComplexity: this.calculateMitigationComplexity(debtItem),\n      overallRiskScore: this.calculateOverallRisk(debtItem)\n    };\n  }\n\n  createRiskMatrix(debtItems: TechnicalDebtItem[]): RiskMatrix {\n    const matrix = {\n      highProbabilityHighImpact: [],\n      highProbabilityLowImpact: [],\n      lowProbabilityHighImpact: [],\n      lowProbabilityLowImpact: []\n    };\n\n    debtItems.forEach(item => {\n      const risk = this.assessRisk(item);\n      const category = this.categorizeRisk(risk);\n      matrix[category].push({ item, risk });\n    });\n\n    return matrix;\n  }\n}\n```\n\n### 5. Remediation Strategy and Planning\n\n**Refactoring Patterns and Strategies:**\n```typescript\nclass RefactoringStrategist {\n  generateRefactoringPlan(debtItem: TechnicalDebtItem): RefactoringPlan {\n    const strategy = this.selectStrategy(debtItem);\n    \n    return {\n      strategy,\n      phases: this.createPhases(debtItem, strategy),\n      riskMitigation: this.createRiskMitigung(debtItem),\n      testingStrategy: this.createTestingStrategy(debtItem),\n      rollbackPlan: this.createRollbackPlan(debtItem)\n    };\n  }\n\n  private selectStrategy(debtItem: TechnicalDebtItem): RefactoringStrategy {\n    const strategies = {\n      [DebtCategory.CODE_SMELL]: 'incremental_improvement',\n      [DebtCategory.ARCHITECTURAL]: 'strangler_fig',\n      [DebtCategory.PERFORMANCE]: 'targeted_optimization',\n      [DebtCategory.SECURITY]: 'immediate_fix',\n      [DebtCategory.TESTING]: 'test_first_refactoring',\n      [DebtCategory.DEPENDENCY]: 'gradual_migration'\n    };\n\n    return strategies[debtItem.category] || 'incremental_improvement';\n  }\n\n  private createPhases(debtItem: TechnicalDebtItem, strategy: RefactoringStrategy): RefactoringPhase[] {\n    switch (strategy) {\n      case 'strangler_fig':\n        return [\n          {\n            name: 'Create Interface',\n            description: 'Extract interface and create facade',\n            effort: Math.ceil(debtItem.effort * 0.2),\n            risks: ['Interface design complexity'],\n            deliverables: ['Interface definition', 'Facade implementation']\n          },\n          {\n            name: 'Implement New Logic', \n            description: 'Build new implementation behind interface',\n            effort: Math.ceil(debtItem.effort * 0.6),\n            risks: ['Feature parity', 'Performance regression'],\n            deliverables: ['New implementation', 'Comprehensive tests']\n          },\n          {\n            name: 'Migrate and Remove',\n            description: 'Switch to new implementation and remove old code',\n            effort: Math.ceil(debtItem.effort * 0.2),\n            risks: ['Data migration', 'Integration issues'],\n            deliverables: ['Migration completed', 'Old code removed']\n          }\n        ];\n        \n      case 'incremental_improvement':\n        return [\n          {\n            name: 'Add Tests',\n            description: 'Create comprehensive test coverage',\n            effort: Math.ceil(debtItem.effort * 0.3),\n            risks: ['Time investment', 'Test maintenance'],\n            deliverables: ['Unit tests', 'Integration tests']\n          },\n          {\n            name: 'Extract Methods',\n            description: 'Break down large functions into smaller ones',\n            effort: Math.ceil(debtItem.effort * 0.4),\n            risks: ['Regression bugs', 'Interface changes'],\n            deliverables: ['Refactored methods', 'Updated documentation']\n          },\n          {\n            name: 'Optimize Structure',\n            description: 'Improve overall code structure and organization',\n            effort: Math.ceil(debtItem.effort * 0.3),\n            risks: ['Architectural inconsistency'],\n            deliverables: ['Restructured code', 'Design documentation']\n          }\n        ];\n        \n      default:\n        return this.createDefaultPhases(debtItem);\n    }\n  }\n}\n\n// Automated refactoring assistance\nclass AutomatedRefactoringAssistant {\n  suggestAutomatedRefactorings(filePath: string): AutomatedRefactoring[] {\n    const ast = this.parseFile(filePath);\n    const suggestions: AutomatedRefactoring[] = [];\n    \n    // Extract method opportunities\n    const longMethods = this.findLongMethods(ast);\n    longMethods.forEach(method => {\n      suggestions.push({\n        type: 'extract_method',\n        location: method.location,\n        confidence: 0.8,\n        description: `Extract ${method.extractableParts.length} logical blocks from ${method.name}`,\n        automationLevel: 'semi-automatic',\n        estimatedEffort: 2,\n        codeActions: this.generateExtractMethodActions(method)\n      });\n    });\n\n    // Variable renaming opportunities  \n    const poorlyNamedVariables = this.findPoorlyNamedVariables(ast);\n    poorlyNamedVariables.forEach(variable => {\n      suggestions.push({\n        type: 'rename_variable',\n        location: variable.location,\n        confidence: 0.9,\n        description: `Rename '${variable.currentName}' to '${variable.suggestedName}'`,\n        automationLevel: 'fully-automatic',\n        estimatedEffort: 0.5,\n        codeActions: this.generateRenameActions(variable)\n      });\n    });\n\n    return suggestions.sort((a, b) => b.confidence - a.confidence);\n  }\n\n  executeAutomatedRefactoring(refactoring: AutomatedRefactoring): RefactoringResult {\n    try {\n      const backupPath = this.createBackup(refactoring.location.filePath);\n      \n      for (const action of refactoring.codeActions) {\n        this.executeCodeAction(action);\n      }\n      \n      const testResults = this.runTests();\n      \n      if (testResults.success) {\n        this.removeBackup(backupPath);\n        return { success: true, message: 'Refactoring completed successfully' };\n      } else {\n        this.restoreBackup(backupPath);\n        return { success: false, message: 'Tests failed, refactoring reverted', errors: testResults.errors };\n      }\n    } catch (error) {\n      return { success: false, message: 'Refactoring failed', errors: [error.message] };\n    }\n  }\n}\n```\n\n### 6. Monitoring and Progress Tracking\n\n**Technical Debt Metrics Dashboard:**\n```typescript\nclass TechnicalDebtDashboard {\n  generateMetrics(): TechnicalDebtMetrics {\n    return {\n      overallDebtScore: this.calculateOverallDebtScore(),\n      debtTrend: this.calculateDebtTrend(),\n      categoryBreakdown: this.getDebtByCategory(),\n      hotspotAnalysis: this.identifyCodeHotspots(),\n      remediationProgress: this.trackRemediationProgress(),\n      roi: this.calculateRemediationROI()\n    };\n  }\n\n  trackRemediationProgress(): RemediationProgress {\n    const completedItems = this.getCompletedDebtItems();\n    const inProgressItems = this.getInProgressDebtItems();\n    const plannedItems = this.getPlannedDebtItems();\n    \n    return {\n      totalItems: completedItems.length + inProgressItems.length + plannedItems.length,\n      completedItems: completedItems.length,\n      inProgressItems: inProgressItems.length,\n      plannedItems: plannedItems.length,\n      completionRate: completedItems.length / (completedItems.length + inProgressItems.length + plannedItems.length) * 100,\n      velocityTrend: this.calculateVelocityTrend(),\n      projectedCompletion: this.projectCompletionDate()\n    };\n  }\n\n  generateWeeklyReport(): WeeklyDebtReport {\n    const thisWeek = this.getThisWeekData();\n    const lastWeek = this.getLastWeekData();\n    \n    return {\n      summary: {\n        newDebtAdded: thisWeek.newDebt - lastWeek.newDebt,\n        debtRemoved: thisWeek.resolvedDebt - lastWeek.resolvedDebt,\n        netDebtChange: (thisWeek.totalDebt - lastWeek.totalDebt),\n        teamVelocity: thisWeek.storyPointsCompleted\n      },\n      achievements: this.getWeeklyAchievements(),\n      challenges: this.getWeeklyChallenges(),\n      nextWeekPlanning: this.generateNextWeekPlan(),\n      recommendations: this.generateWeeklyRecommendations()\n    };\n  }\n}\n\n// Continuous monitoring and alerting\nclass DebtMonitor {\n  setupAlerts(): void {\n    // Alert when debt score exceeds threshold\n    this.scheduleCheck('debt_score_check', '0 9 * * 1', () => {\n      const currentScore = this.calculateCurrentDebtScore();\n      if (currentScore > 8.0) {\n        this.sendAlert({\n          type: 'high_debt_score',\n          message: `Technical debt score is ${currentScore}, exceeding threshold of 8.0`,\n          severity: 'warning',\n          actions: ['Review debt backlog', 'Allocate remediation capacity']\n        });\n      }\n    });\n\n    // Alert for new high-impact debt\n    this.setupCodeAnalysisHook((newDebt: TechnicalDebtItem[]) => {\n      const highImpactDebt = newDebt.filter(debt => \n        debt.severity === 'Critical' && debt.impact.includes(ImpactArea.SECURITY)\n      );\n      \n      if (highImpactDebt.length > 0) {\n        this.sendAlert({\n          type: 'critical_debt_introduced',\n          message: `${highImpactDebt.length} critical security debt items introduced`,\n          severity: 'critical',\n          items: highImpactDebt\n        });\n      }\n    });\n  }\n\n  generateDebtForecast(timeHorizon: number): DebtForecast {\n    const historicalData = this.getHistoricalDebtData();\n    const trendAnalysis = this.analyzeTrends(historicalData);\n    \n    return {\n      projectedDebtLevel: this.projectDebtLevel(trendAnalysis, timeHorizon),\n      confidenceInterval: this.calculateConfidenceInterval(trendAnalysis),\n      scenarioAnalysis: {\n        optimistic: this.calculateOptimisticScenario(trendAnalysis, timeHorizon),\n        realistic: this.calculateRealisticScenario(trendAnalysis, timeHorizon),\n        pessimistic: this.calculatePessimisticScenario(trendAnalysis, timeHorizon)\n      },\n      recommendations: this.generateForecastRecommendations(trendAnalysis)\n    };\n  }\n}\n```\n\n## Implementation Templates\n\n### Debt Assessment Checklist\n- [ ] Run automated code quality analysis\n- [ ] Identify and categorize debt items\n- [ ] Calculate SQALE debt metrics\n- [ ] Assess business impact and ROI  \n- [ ] Prioritize using multi-criteria framework\n- [ ] Create remediation roadmap\n- [ ] Set up monitoring and tracking\n\n### Sprint Planning Integration\n- [ ] Allocate 20% of sprint capacity to debt remediation\n- [ ] Include debt items in sprint backlog\n- [ ] Define clear acceptance criteria for debt items\n- [ ] Track velocity impact of debt work\n- [ ] Review and adjust debt allocation based on results\n\n### Stakeholder Communication\n- [ ] Create executive dashboard with business metrics\n- [ ] Regular debt review meetings with development teams\n- [ ] Quarterly debt assessment reports\n- [ ] Business case presentations for major debt initiatives\n- [ ] Success story sharing and lessons learned\n\n## Success Metrics and KPIs\n\n### Technical Metrics\n- **Code Quality Score**: Improvement in static analysis scores\n- **Cycle Time**: Reduction in feature delivery time\n- **Bug Rate**: Decrease in production bugs per release\n- **Test Coverage**: Increase in automated test coverage\n- **Deployment Frequency**: Increase in deployment frequency\n\n### Business Metrics  \n- **Developer Productivity**: Increase in story points per sprint\n- **Time to Market**: Reduction in feature delivery time\n- **Customer Satisfaction**: Improvement in user experience metrics\n- **Maintenance Cost**: Reduction in bug fix and maintenance effort\n- **Innovation Capacity**: Increase in time spent on new features vs maintenance\n\nPlease provide your codebase details, current quality metrics, team structure, and business priorities. I'll create a comprehensive technical debt assessment with prioritized remediation plan, ROI analysis, and implementation roadmap tailored to your specific context.",
+      "tags": [
+        {
+          "tag": {
+            "id": "technical-debt",
+            "name": "technical-debt",
+            "slug": "technical-debt"
+          }
+        },
+        {
+          "tag": {
+            "id": "code-quality",
+            "name": "code-quality",
+            "slug": "code-quality"
+          }
+        },
+        {
+          "tag": {
+            "id": "refactoring",
+            "name": "refactoring",
+            "slug": "refactoring"
+          }
+        },
+        {
+          "tag": {
+            "id": "metrics",
+            "name": "metrics",
+            "slug": "metrics"
+          }
+        },
+        {
+          "tag": {
+            "id": "roi-analysis",
+            "name": "roi-analysis",
+            "slug": "roi-analysis"
+          }
+        },
+        {
+          "tag": {
+            "id": "maintenance",
+            "name": "maintenance",
+            "slug": "maintenance"
+          }
+        },
+        {
+          "tag": {
+            "id": "expert",
+            "name": "expert",
+            "slug": "expert"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Directory",
+        "url": "https://claudecode.directory"
+      },
+      "stats": {
+        "votes": 93,
+        "copies": 268
+      },
+      "_count": {
+        "votes": 53,
+        "copies": 351
+      },
+      "difficulty": "ADVANCED",
+      "createdAt": "2024-01-31",
+      "lastUpdated": "2024-01-31",
+      "featured": true
+    },
+    {
+      "id": "system-troubleshooter",
+      "title": "System Debugging & Troubleshooting Expert",
+      "slug": "system-troubleshooter",
+      "tagline": "Expert prompt templates prompt template",
+      "description": "Advanced prompt for systematic debugging, performance analysis, and issue resolution across the full stack.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior systems engineer and debugging expert with extensive experience in troubleshooting complex distributed systems, performance issues, and production incidents.\n\n## Issue Context\n**System Type:** {{SYSTEM_TYPE}}\n**Environment:** {{ENVIRONMENT}}\n**Urgency Level:** {{URGENCY_LEVEL}}\n**Impact Scope:** {{IMPACT_SCOPE}}\n**Available Resources:** {{AVAILABLE_RESOURCES}}\n\n## Problem Description\n{{PROBLEM_DESCRIPTION}}\n\n## Symptoms & Observations\n{{SYMPTOMS}}\n\n## Recent Changes\n{{RECENT_CHANGES}}\n\n## Conduct systematic troubleshooting with the following approach:\n\n### 1. Problem Analysis & Hypothesis Formation\n- Analyze the symptoms and error patterns\n- Form initial hypotheses about root causes\n- Prioritize hypotheses by likelihood and impact\n- Identify critical information gaps\n- Define success criteria for resolution\n\n### 2. Information Gathering Strategy\n- Identify key logs, metrics, and monitoring data to examine\n- Plan diagnostic commands and tools to use\n- Determine if additional monitoring is needed\n- Identify stakeholders and subject matter experts\n- Plan for data collection without service disruption\n\n### 3. Systematic Investigation Plan\n- Design step-by-step investigation procedure\n- Plan hypothesis testing methodology\n- Identify potential investigation tools and techniques\n- Plan for safe testing and validation\n- Design rollback procedures if needed\n\n### 4. Root Cause Analysis\n- Apply systematic debugging methodologies\n- Use divide-and-conquer approach for complex systems\n- Analyze timing, dependencies, and system interactions\n- Consider infrastructure, application, and data layers\n- Document findings and evidence\n\n### 5. Solution Development\n- Design multiple solution approaches\n- Assess solution risks and trade-offs\n- Plan implementation steps and validation\n- Design monitoring for solution effectiveness\n- Plan for prevention of recurrence\n\n### 6. Performance Analysis (if applicable)\n- Analyze system performance metrics\n- Identify bottlenecks and resource constraints\n- Review scalability and capacity issues\n- Analyze user experience impact\n- Recommend performance optimizations\n\n### 7. Security Considerations\n- Check for security-related causes\n- Analyze potential security implications\n- Review access logs and authentication issues\n- Check for data breach or compromise indicators\n- Recommend security improvements\n\n### 8. Communication & Documentation\n- Plan stakeholder communication strategy\n- Document investigation findings\n- Create incident timeline and impact assessment\n- Plan for post-incident review\n- Document lessons learned and improvements\n\n## Output Format:\nProvide a comprehensive troubleshooting plan with:\n\n**Immediate Actions** (First 15 minutes):\n1. Critical checks to perform immediately\n2. Data to collect for triage\n3. Immediate mitigation steps if available\n\n**Investigation Plan:**\n\n**Phase 1: Information Gathering**\n```bash\n# Example diagnostic commands\ntail -f /var/log/application.log\ntop -p $(pgrep app_process)\nnetstat -tulpn | grep :8080\n```\n\n**Phase 2: Hypothesis Testing**\n- Hypothesis 1: [Description]\n  - Test: [How to validate]\n  - Expected result: [What indicates this cause]\n- Hypothesis 2: [Description]\n  - Test: [How to validate]\n  - Expected result: [What indicates this cause]\n\n**Phase 3: Root Cause Analysis**\n- Analysis methodology\n- Key areas to investigate\n- Tools and techniques to use\n\n**Diagnostic Checklist:**\n- [ ] Application logs reviewed\n- [ ] System resources checked (CPU, memory, disk)\n- [ ] Network connectivity verified\n- [ ] Database performance analyzed\n- [ ] Recent deployments reviewed\n- [ ] External dependencies checked\n\n**Solution Recommendations:**\n1. **Short-term fixes** (immediate relief)\n2. **Medium-term solutions** (address root cause)\n3. **Long-term improvements** (prevent recurrence)\n\n**Risk Assessment:**\n- Impact of each solution approach\n- Potential side effects or complications\n- Rollback procedures and safety measures\n\n**Monitoring & Validation:**\n- Metrics to monitor solution effectiveness\n- Success criteria and key indicators\n- Timeline for improvement validation\n\n**Prevention Measures:**\n- Process improvements\n- Monitoring enhancements\n- Code or infrastructure changes\n- Training and documentation needs\n\nInclude specific commands, queries, and procedures tailored to the system type and issue.",
+      "tags": [
+        {
+          "tag": {
+            "id": "debugging",
+            "name": "debugging",
+            "slug": "debugging"
+          }
+        },
+        {
+          "tag": {
+            "id": "troubleshooting",
+            "name": "troubleshooting",
+            "slug": "troubleshooting"
+          }
+        },
+        {
+          "tag": {
+            "id": "performance",
+            "name": "performance",
+            "slug": "performance"
+          }
+        },
+        {
+          "tag": {
+            "id": "monitoring",
+            "name": "monitoring",
+            "slug": "monitoring"
+          }
+        },
+        {
+          "tag": {
+            "id": "incident-response",
+            "name": "incident-response",
+            "slug": "incident-response"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 69,
+        "copies": 288
+      },
+      "_count": {
+        "votes": 61,
+        "copies": 102
+      },
+      "difficulty": "ADVANCED",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "performance-optimization-expert",
+      "title": "Performance Optimization Expert",
+      "slug": "performance-optimization-expert",
+      "tagline": "Expert prompt templates prompt template",
+      "description": "Advanced performance analysis and optimization prompt for identifying bottlenecks, improving efficiency, and scaling applications across the full stack.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a principal performance engineer with expertise in full-stack performance optimization, profiling, and scalability engineering at high-scale technology companies.\n\n## Performance Analysis Context\n**System Type:** {{SYSTEM_TYPE}}\n**Technology Stack:** {{TECH_STACK}}\n**Current Scale:** {{CURRENT_SCALE}}\n**Target Scale:** {{TARGET_SCALE}}\n**Performance Goals:** {{PERFORMANCE_GOALS}}\n**Budget Constraints:** {{BUDGET_CONSTRAINTS}}\n\n## Current Performance Metrics\n**Response Time:** {{RESPONSE_TIME}}\n**Throughput:** {{THROUGHPUT}}\n**Error Rate:** {{ERROR_RATE}}\n**Resource Utilization:** {{RESOURCE_UTILIZATION}}\n\n## Performance Issues\n{{PERFORMANCE_ISSUES}}\n\n## System Information\n{{SYSTEM_INFORMATION}}\n\n## Conduct comprehensive performance analysis and optimization with the following systematic approach:\n\n### 1. Performance Baseline & Measurement (15 minutes)\n- Establish current performance baselines across all system layers\n- Define key performance indicators (KPIs) and service level objectives (SLOs)\n- Set up comprehensive monitoring and profiling instrumentation\n- Identify performance bottlenecks using systematic profiling\n- Create performance testing framework and benchmarks\n\n### 2. Frontend Performance Analysis (20 minutes)\n- Analyze Core Web Vitals (LCP, FID, CLS) and user experience metrics\n- Review JavaScript bundle size, code splitting, and lazy loading\n- Evaluate image optimization, compression, and CDN usage\n- Analyze CSS performance, critical path rendering, and layout thrashing\n- Review caching strategies (browser cache, service workers, CDN)\n- Evaluate third-party script impact and loading strategies\n\n### 3. Backend Performance Analysis (25 minutes)\n- Profile CPU usage, memory consumption, and garbage collection\n- Analyze API response times, database query performance\n- Review concurrent request handling and thread pool utilization\n- Evaluate caching layers (application, database, distributed cache)\n- Analyze I/O operations, file system access, and network calls\n- Review serialization/deserialization performance\n\n### 4. Database Performance Optimization (20 minutes)\n- Analyze slow query logs and execution plans\n- Review indexing strategies and query optimization\n- Evaluate database connection pooling and resource management\n- Analyze data model efficiency and normalization/denormalization trade-offs\n- Review partitioning, sharding, and replication strategies\n- Evaluate read/write patterns and caching opportunities\n\n### 5. Infrastructure & Network Performance (10 minutes)\n- Analyze load balancer configuration and request distribution\n- Review CDN performance and edge caching strategies\n- Evaluate network latency, bandwidth utilization, and compression\n- Analyze container and serverless performance characteristics\n- Review auto-scaling policies and resource allocation\n- Evaluate geographic distribution and edge computing opportunities\n\n### 6. Algorithmic & Code-Level Optimization (10 minutes)\n- Analyze algorithm complexity and data structure efficiency\n- Review critical code paths and hot spots\n- Evaluate memory allocation patterns and object lifecycle\n- Analyze concurrency and parallel processing opportunities\n- Review error handling performance impact\n- Evaluate compiler/runtime optimizations\n\n## Output Format:\n\n**Executive Summary:**\n- Current performance assessment (1-10 scale)\n- Primary bottlenecks identified\n- Expected performance improvement potential\n- Implementation priority matrix\n- Resource requirements and timeline\n\n**Performance Analysis Report:**\n\n### 🔴 CRITICAL BOTTLENECKS (Immediate Impact)\n\n**1. [Bottleneck Type] - [Component/Layer]**\n- **Current Impact:** [Response time/throughput impact]\n- **Root Cause:** [Technical explanation]\n- **Evidence:** [Metrics/profiling data]\n- **Business Impact:** [User experience/cost impact]\n\n**Fix Recommendation:**\n```\n// Current implementation\n[problematic code/configuration]\n\n// Optimized solution\n[improved implementation]\n// Expected improvement: [quantified benefit]\n```\n\n### 🟠 MAJOR PERFORMANCE ISSUES\n\n**2. [Performance Issue] - [System Component]**\n- **Performance Impact:** [Specific metrics]\n- **Resource Cost:** [CPU/Memory/Network impact]\n- **Optimization Strategy:** [Approach and techniques]\n- **Implementation Effort:** [Time/complexity estimate]\n\n### 🟡 OPTIMIZATION OPPORTUNITIES\n\n**3. [Optimization Category] - [Technology/Component]**\n- **Potential Gain:** [Performance improvement estimate]\n- **Implementation Approach:** [Strategy and steps]\n- **Trade-offs:** [Complexity vs. benefit analysis]\n\n**Detailed Performance Analysis:**\n\n### Frontend Optimization Plan\n\n**Core Web Vitals Improvement:**\n- **LCP Target:** < 2.5s (Current: {{CURRENT_LCP}})\n  - Image optimization strategy\n  - Critical resource prioritization\n  - Server-side rendering optimization\n\n- **FID Target:** < 100ms (Current: {{CURRENT_FID}})\n  - JavaScript bundle optimization\n  - Main thread blocking reduction\n  - Event handler optimization\n\n- **CLS Target:** < 0.1 (Current: {{CURRENT_CLS}})\n  - Layout shift prevention\n  - Image dimension specification\n  - Dynamic content handling\n\n**Bundle Optimization:**\n```javascript\n// Code splitting strategy\nconst LazyComponent = React.lazy(() => import('./HeavyComponent'));\n\n// Tree shaking optimization\nimport { specificFunction } from 'utility-library';\n\n// Bundle analysis recommendations\n// - Remove unused dependencies: [list]\n// - Optimize heavy libraries: [alternatives]\n// - Implement route-based splitting\n```\n\n### Backend Optimization Plan\n\n**API Performance:**\n- **Response Time Target:** < {{TARGET_RESPONSE_TIME}}ms\n- **Throughput Target:** {{TARGET_RPS}} requests/second\n- **Error Rate Target:** < {{TARGET_ERROR_RATE}}%\n\n**Database Optimization:**\n```sql\n-- Query optimization example\n-- Before: Slow query ({{CURRENT_QUERY_TIME}}ms)\nSELECT * FROM users u \nJOIN orders o ON u.id = o.user_id \nWHERE u.created_at > '2024-01-01';\n\n-- After: Optimized query ({{TARGET_QUERY_TIME}}ms)\nSELECT u.id, u.name, COUNT(o.id) as order_count\nFROM users u \nLEFT JOIN orders o ON u.id = o.user_id \nWHERE u.created_at > '2024-01-01'\nGROUP BY u.id, u.name;\n\n-- Required indexes\nCREATE INDEX idx_users_created_at ON users(created_at);\nCREATE INDEX idx_orders_user_id ON orders(user_id);\n```\n\n**Caching Strategy:**\n```\nLayer 1: CDN Cache (Static assets)\n├── TTL: 365 days for versioned assets\n├── Compression: Gzip + Brotli\n└── Geographic distribution: [regions]\n\nLayer 2: Application Cache (API responses)\n├── Technology: Redis Cluster\n├── TTL: [time-based strategy]\n├── Invalidation: [strategy]\n└── Memory allocation: [size]\n\nLayer 3: Database Cache (Query results)\n├── Query result caching\n├── Connection pooling optimization\n└── Read replica utilization\n```\n\n### Infrastructure Scaling Plan\n\n**Horizontal Scaling:**\n- **Auto-scaling triggers:** [CPU/Memory/Request thresholds]\n- **Instance types:** [Optimized configurations]\n- **Load balancing:** [Algorithm and health checks]\n\n**Vertical Scaling:**\n- **Resource optimization:** [CPU/Memory right-sizing]\n- **Performance monitoring:** [Key metrics to track]\n\n**Geographic Distribution:**\n```\nPrimary Region: [Main data center]\n├── Application servers: [count and configuration]\n├── Database: [primary with read replicas]\n└── Cache: [distributed cache setup]\n\nEdge Locations: [CDN and edge computing]\n├── Static content delivery\n├── API gateway functions\n└── Edge caching strategy\n```\n\n### Performance Monitoring Setup\n\n**Key Metrics Dashboard:**\n```yaml\nFrontend Metrics:\n  - Core Web Vitals (LCP, FID, CLS)\n  - Page load time (p50, p95, p99)\n  - JavaScript error rate\n  - Bundle size tracking\n\nBackend Metrics:\n  - API response time (p50, p95, p99)\n  - Request throughput (RPS)\n  - Error rate by endpoint\n  - CPU/Memory utilization\n\nDatabase Metrics:\n  - Query execution time\n  - Connection pool utilization\n  - Lock wait time\n  - Cache hit ratio\n\nInfrastructure Metrics:\n  - Network latency\n  - CDN cache hit ratio\n  - Auto-scaling events\n  - Resource costs\n```\n\n**Alerting Rules:**\n```yaml\nCritical Alerts:\n  - Response time > 5s for 2 minutes\n  - Error rate > 5% for 1 minute\n  - CPU usage > 80% for 5 minutes\n\nWarning Alerts:\n  - Response time > 2s for 5 minutes\n  - Memory usage > 70% for 10 minutes\n  - Cache hit ratio < 80% for 15 minutes\n```\n\n### Implementation Roadmap\n\n**Phase 1 (Week 1-2): Quick Wins**\n- [ ] Implement database query optimizations\n- [ ] Add missing database indexes\n- [ ] Optimize image compression and CDN\n- [ ] Enable gzip compression\n- **Expected Improvement:** {{PHASE1_IMPROVEMENT}}\n\n**Phase 2 (Week 3-6): Core Optimizations**\n- [ ] Implement application-level caching\n- [ ] Optimize JavaScript bundle\n- [ ] Database connection pool tuning\n- [ ] API response optimization\n- **Expected Improvement:** {{PHASE2_IMPROVEMENT}}\n\n**Phase 3 (Week 7-12): Architecture Changes**\n- [ ] Implement microservices architecture\n- [ ] Add read replicas and sharding\n- [ ] Implement advanced caching layers\n- [ ] Geographic distribution setup\n- **Expected Improvement:** {{PHASE3_IMPROVEMENT}}\n\n### Cost-Benefit Analysis\n\n**Optimization Investment:**\n```\nDevelopment Time: [hours/weeks]\nInfrastructure Costs: [monthly increase/decrease]\nMaintenance Overhead: [ongoing effort]\n\nPerformance Benefits:\n- Response time improvement: [percentage]\n- Throughput increase: [percentage]\n- Cost savings: [monthly amount]\n- User experience improvement: [metrics]\n\nROI Calculation:\n- Implementation cost: $[amount]\n- Monthly savings: $[amount]\n- Payback period: [months]\n```\n\n**Risk Assessment:**\n- **Technical risks:** [Implementation challenges]\n- **Business risks:** [Potential service disruption]\n- **Mitigation strategies:** [Risk reduction approaches]\n\n### Testing & Validation Plan\n\n**Performance Testing Strategy:**\n```bash\n# Load testing setup\nartillery run load-test-config.yml\n\n# Stress testing\nk6 run stress-test.js\n\n# Performance regression testing\nnpm run perf-test:regression\n```\n\n**Success Criteria:**\n- [ ] Response time < {{TARGET_RESPONSE_TIME}}ms (p95)\n- [ ] Throughput > {{TARGET_THROUGHPUT}} RPS\n- [ ] Error rate < {{TARGET_ERROR_RATE}}%\n- [ ] Core Web Vitals in \"Good\" range\n- [ ] Cost reduction of {{TARGET_COST_REDUCTION}}%\n\n**Rollback Plan:**\n- [ ] Feature flags for new optimizations\n- [ ] Database rollback procedures\n- [ ] Infrastructure rollback automation\n- [ ] Performance monitoring during rollout\n\nProvide specific, measurable recommendations with quantified performance improvements and clear implementation steps.",
+      "tags": [
+        {
+          "tag": {
+            "id": "performance",
+            "name": "performance",
+            "slug": "performance"
+          }
+        },
+        {
+          "tag": {
+            "id": "optimization",
+            "name": "optimization",
+            "slug": "optimization"
+          }
+        },
+        {
+          "tag": {
+            "id": "profiling",
+            "name": "profiling",
+            "slug": "profiling"
+          }
+        },
+        {
+          "tag": {
+            "id": "scalability",
+            "name": "scalability",
+            "slug": "scalability"
+          }
+        },
+        {
+          "tag": {
+            "id": "efficiency",
+            "name": "efficiency",
+            "slug": "efficiency"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 61,
+        "copies": 371
+      },
+      "_count": {
+        "votes": 26,
+        "copies": 232
+      },
+      "difficulty": "ADVANCED",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "code-review-expert",
+      "title": "Comprehensive Code Review & Analysis",
+      "slug": "code-review-expert",
+      "tagline": "Expert prompt templates prompt template",
+      "description": "Expert-level prompt for conducting thorough code reviews with focus on quality, security, and best practices.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior software engineer and code review expert with deep knowledge of software engineering best practices, security, and code quality.\n\n## Review Context\n**Language/Framework:** {{LANGUAGE_FRAMEWORK}}\n**Code Type:** {{CODE_TYPE}}\n**Review Scope:** {{REVIEW_SCOPE}}\n**Team Experience:** {{TEAM_EXPERIENCE}}\n**Critical Level:** {{CRITICAL_LEVEL}}\n\n## Code to Review\n```{{LANGUAGE}}\n{{CODE_CONTENT}}\n```\n\n## Conduct a comprehensive code review covering the following areas:\n\n### 1. Code Quality & Readability\n- Assess code clarity and readability\n- Review naming conventions and consistency\n- Evaluate code organization and structure\n- Check for proper commenting and documentation\n- Review function/method size and complexity\n\n### 2. Architecture & Design Patterns\n- Evaluate adherence to SOLID principles\n- Review design pattern usage and appropriateness\n- Assess separation of concerns\n- Check for proper abstraction levels\n- Review dependency management and coupling\n\n### 3. Performance & Efficiency\n- Identify potential performance bottlenecks\n- Review algorithm complexity and efficiency\n- Check for memory leaks and resource management\n- Evaluate database query optimization\n- Assess caching strategies and implementation\n\n### 4. Security Analysis\n- Check for common security vulnerabilities (OWASP Top 10)\n- Review input validation and sanitization\n- Assess authentication and authorization implementation\n- Check for SQL injection and XSS vulnerabilities\n- Review sensitive data handling and encryption\n\n### 5. Error Handling & Resilience\n- Review exception handling patterns\n- Check for proper error propagation\n- Assess logging and monitoring implementation\n- Review timeout and retry mechanisms\n- Check for graceful failure handling\n\n### 6. Testing & Testability\n- Assess testability of the code\n- Review test coverage and quality\n- Check for proper mocking and stubbing\n- Evaluate test organization and structure\n- Review integration and end-to-end test coverage\n\n### 7. Maintainability & Technical Debt\n- Identify code smells and anti-patterns\n- Assess code duplication and DRY principle adherence\n- Review configuration management\n- Check for proper versioning and backward compatibility\n- Evaluate refactoring opportunities\n\n### 8. Language/Framework Specific\n- Review language-specific best practices\n- Check for proper framework usage\n- Assess library and dependency choices\n- Review configuration and setup\n- Check for platform-specific considerations\n\n## Output Format:\nProvide a detailed code review with:\n\n**Overall Assessment:**\n- High-level summary of code quality\n- Key strengths and areas for improvement\n- Risk level assessment\n\n**Detailed Findings:**\n\n**🔴 Critical Issues** (Must fix before merge):\n- Security vulnerabilities\n- Performance blockers\n- Architectural violations\n\n**🟡 Major Issues** (Should fix soon):\n- Code quality issues\n- Maintainability concerns\n- Best practice violations\n\n**🟢 Minor Issues** (Nice to have):\n- Style improvements\n- Optimization opportunities\n- Documentation enhancements\n\n**Specific Recommendations:**\n```{{LANGUAGE}}\n// Example: Instead of this\nfunction badExample() {\n  // problematic code\n}\n\n// Consider this approach\nfunction betterExample() {\n  // improved code\n}\n```\n\n**Action Items:**\n1. Priority fixes with explanations\n2. Refactoring suggestions\n3. Additional testing recommendations\n4. Documentation updates needed\n\n**Learning Opportunities:**\n- Educational notes for team growth\n- Links to relevant resources\n- Pattern recommendations\n\nProvide constructive feedback focused on improvement and learning.",
+      "tags": [
+        {
+          "tag": {
+            "id": "code-review",
+            "name": "code-review",
+            "slug": "code-review"
+          }
+        },
+        {
+          "tag": {
+            "id": "quality",
+            "name": "quality",
+            "slug": "quality"
+          }
+        },
+        {
+          "tag": {
+            "id": "security",
+            "name": "security",
+            "slug": "security"
+          }
+        },
+        {
+          "tag": {
+            "id": "best-practices",
+            "name": "best-practices",
+            "slug": "best-practices"
+          }
+        },
+        {
+          "tag": {
+            "id": "refactoring",
+            "name": "refactoring",
+            "slug": "refactoring"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 54,
+        "copies": 283
+      },
+      "_count": {
+        "votes": 37,
+        "copies": 354
+      },
+      "difficulty": "ADVANCED",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "frontend-architecture-planner",
+      "title": "Frontend Architecture & Component Design",
+      "slug": "frontend-architecture-planner",
+      "tagline": "Expert prompt templates prompt template",
+      "description": "Comprehensive prompt for designing scalable frontend architectures with component systems and state management.",
+      "categoryId": "prompt-templates",
+      "category": {
+        "id": "prompt-templates",
+        "name": "Prompt Templates",
+        "slug": "prompts",
+        "description": "Carefully crafted prompt templates for common development tasks and workflows, featuring expert-level architectural and optimization guidance.",
+        "icon": "💬",
+        "color": "#10B981"
+      },
+      "type": "PROMPT_TEMPLATE",
+      "content": "You are a senior frontend architect specializing in modern web applications, component systems, and scalable frontend architectures.\n\n## Project Context\n**Application Type:** {{APPLICATION_TYPE}}\n**Framework:** {{FRAMEWORK}}\n**Complexity:** {{COMPLEXITY_LEVEL}}\n**Team Size:** {{TEAM_SIZE}}\n**Timeline:** {{TIMELINE}}\n\n## Requirements\n{{REQUIREMENTS}}\n\n## Design a comprehensive frontend architecture with the following considerations:\n\n### 1. Architecture Overview\n- Define overall application structure and layers\n- Choose appropriate architectural patterns (MVC, Component-based, Micro-frontends)\n- Plan for scalability and maintainability\n- Consider development team structure and workflow\n\n### 2. Component System Design\n- Design reusable component hierarchy\n- Create component categorization (Atoms, Molecules, Organisms)\n- Plan for component composition and prop interfaces\n- Design consistent component API patterns\n- Plan for component testing strategies\n\n### 3. State Management Strategy\n- Choose appropriate state management solution\n- Design global state structure\n- Plan for local component state\n- Design data flow patterns (unidirectional/bidirectional)\n- Handle asynchronous state (loading, error states)\n\n### 4. Routing & Navigation\n- Design application routing structure\n- Plan for nested routes and route parameters\n- Implement navigation guards and access control\n- Handle deep linking and browser history\n- Design for SEO and social sharing\n\n### 5. Data Layer & API Integration\n- Design API service layer and data fetching patterns\n- Plan for caching and data synchronization\n- Handle optimistic updates and conflict resolution\n- Design error handling and retry mechanisms\n- Plan for offline capabilities\n\n### 6. Performance Optimization\n- Plan for code splitting and lazy loading\n- Design bundle optimization strategy\n- Implement performance monitoring\n- Plan for image and asset optimization\n- Consider server-side rendering (SSR) needs\n\n### 7. Development Experience\n- Set up development tooling and build process\n- Plan for hot reloading and development server\n- Design component documentation system\n- Set up testing infrastructure (unit, integration, e2e)\n- Plan for code quality tools (linting, formatting)\n\n### 8. Accessibility & UX\n- Design for accessibility standards (WCAG)\n- Plan for responsive design and mobile experience\n- Design loading states and error boundaries\n- Plan for internationalization (i18n)\n- Consider user preferences and theming\n\n## Output Format:\nProvide a detailed frontend architecture including:\n\n**1. Architecture Diagram (textual):**\n```\n┌─ Presentation Layer ─┐\n│ Components & Views   │\n├─ Business Logic ─────┤\n│ Services & Stores    │\n├─ Data Layer ─────────┤\n│ API & Persistence    │\n└──────────────────────┘\n```\n\n**2. Component Structure:**\n```\nsrc/\n├── components/\n│   ├── ui/           # Base components\n│   ├── forms/        # Form components\n│   └── layout/       # Layout components\n├── pages/            # Route components\n├── services/         # API services\n├── stores/           # State management\n└── utils/            # Utilities\n```\n\n**3. State Management Design:**\n- Global state schema\n- State update patterns\n- Side effects handling\n\n**4. Component Examples:**\n- Base component interfaces\n- Composition examples\n- State integration patterns\n\n**5. Implementation Roadmap:**\n- Phase-by-phase development plan\n- Critical path identification\n- Risk mitigation strategies\n\nInclude specific code examples and consider modern best practices.",
+      "tags": [
+        {
+          "tag": {
+            "id": "frontend",
+            "name": "frontend",
+            "slug": "frontend"
+          }
+        },
+        {
+          "tag": {
+            "id": "architecture",
+            "name": "architecture",
+            "slug": "architecture"
+          }
+        },
+        {
+          "tag": {
+            "id": "components",
+            "name": "components",
+            "slug": "components"
+          }
+        },
+        {
+          "tag": {
+            "id": "state-management",
+            "name": "state-management",
+            "slug": "state-management"
+          }
+        },
+        {
+          "tag": {
+            "id": "design-system",
+            "name": "design-system",
+            "slug": "design-system"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 44,
+        "copies": 296
+      },
+      "_count": {
+        "votes": 20,
+        "copies": 174
+      },
+      "difficulty": "INTERMEDIATE",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "neovim-lsp-ultimate",
+      "title": "Neovim LSP Ultimate Setup",
+      "slug": "neovim-lsp-ultimate-configuration",
+      "tagline": "Neovim + LSP configuration for advanced developers",
+      "description": "Comprehensive Neovim configuration with LSP, Treesitter, Telescope, and advanced productivity features for power users and developers seeking the ultimate text editing experience.",
+      "categoryId": "claude-configs",
+      "category": {
+        "id": "claude-configs",
+        "name": "Claude.md Configurations",
+        "slug": "claude-configs",
+        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types, including advanced enterprise-grade configurations.",
+        "icon": "📋",
+        "color": "#F59E0B"
+      },
+      "type": "CONFIGURATION",
+      "content": "# Claude.md - Neovim LSP Ultimate Setup\n\n## Project Overview\n\nThis is an advanced Neovim configuration designed for power users and developers who demand the ultimate text editing experience. It features comprehensive LSP support, advanced Treesitter parsing, fuzzy finding with Telescope, and a highly optimized workflow for maximum productivity.\n\n## Development Philosophy\n\n### Neovim Advantages\n1. **Performance**: Lightning-fast startup and operation\n2. **Extensibility**: Lua-based configuration and plugins\n3. **LSP Integration**: Native Language Server Protocol support\n4. **Asynchronous**: Non-blocking operations for smooth experience\n5. **Customization**: Complete control over every aspect\n6. **Vim Compatibility**: All Vim knowledge transfers\n\n### Advanced Features\n- Multi-language LSP with zero-config setup\n- Intelligent code completion and diagnostics\n- Advanced syntax highlighting with Treesitter\n- Fuzzy finding for files, buffers, and symbols\n- Git integration with signs and blame\n- File explorer with icons and previews\n- Terminal integration and floating windows\n- Session management and workspace persistence\n- Custom keybindings and leader key shortcuts\n\n## Technology Stack\n\n- **Editor**: Neovim 0.9+\n- **Configuration Language**: Lua\n- **Plugin Manager**: lazy.nvim\n- **LSP**: Mason + nvim-lspconfig\n- **Completion**: nvim-cmp with multiple sources\n- **Syntax**: nvim-treesitter\n- **Fuzzy Finding**: telescope.nvim\n- **File Explorer**: nvim-tree.lua\n- **Git Integration**: gitsigns.nvim\n- **Status Line**: lualine.nvim\n\n## Project Structure\n\n```\n~/.config/nvim/\n├── init.lua                    # Main configuration entry point\n├── lua/\n│   ├── core/                   # Core Neovim settings\n│   │   ├── options.lua         # Vim options and settings\n│   │   ├── keymaps.lua         # Key mappings and shortcuts\n│   │   ├── autocmds.lua        # Auto commands and events\n│   │   └── utils.lua           # Utility functions\n│   ├── plugins/                # Plugin configurations\n│   │   ├── init.lua            # Plugin manager setup\n│   │   ├── lsp/                # LSP configurations\n│   │   │   ├── mason.lua       # LSP installer\n│   │   │   ├── lspconfig.lua   # LSP server configs\n│   │   │   ├── handlers.lua    # LSP handlers\n│   │   │   └── servers/        # Individual server configs\n│   │   ├── completion/         # Completion setup\n│   │   │   ├── nvim-cmp.lua    # Main completion engine\n│   │   │   └── snippets.lua    # Snippet configurations\n│   │   ├── ui/                 # UI enhancements\n│   │   │   ├── telescope.lua   # Fuzzy finder\n│   │   │   ├── nvim-tree.lua   # File explorer\n│   │   │   ├── lualine.lua     # Status line\n│   │   │   └── bufferline.lua  # Buffer tabs\n│   │   ├── editor/             # Editor enhancements\n│   │   │   ├── treesitter.lua  # Syntax highlighting\n│   │   │   ├── gitsigns.lua    # Git integration\n│   │   │   ├── comment.lua     # Smart commenting\n│   │   │   └── autopairs.lua   # Auto bracket pairing\n│   │   └── tools/              # Development tools\n│   │       ├── terminal.lua    # Terminal integration\n│   │       ├── debugger.lua    # DAP debugging\n│   │       └── testing.lua     # Test integration\n│   └── themes/                 # Color schemes\n│       ├── catppuccin.lua      # Catppuccin theme\n│       └── tokyonight.lua      # Tokyo Night theme\n└── snippets/                   # Custom snippets\n    ├── typescript.json         # TypeScript snippets\n    ├── python.json             # Python snippets\n    └── go.json                 # Go snippets\n```\n\n## Core Configuration\n\n### Main Init File\n```lua\n-- ~/.config/nvim/init.lua\n-- Bootstrap lazy.nvim plugin manager\nlocal lazypath = vim.fn.stdpath(\"data\") .. \"/lazy/lazy.nvim\"\nif not vim.loop.fs_stat(lazypath) then\n  vim.fn.system({\n    \"git\",\n    \"clone\",\n    \"--filter=blob:none\",\n    \"https://github.com/folke/lazy.nvim.git\",\n    \"--branch=stable\",\n    lazypath,\n  })\nend\nvim.opt.rtp:prepend(lazypath)\n\n-- Load core configuration\nrequire(\"core.options\")\nrequire(\"core.keymaps\")\nrequire(\"core.autocmds\")\n\n-- Setup plugins\nrequire(\"plugins\")\n\n-- Set colorscheme\nvim.cmd.colorscheme(\"catppuccin-mocha\")\n```\n\n### Core Options\n```lua\n-- ~/.config/nvim/lua/core/options.lua\nlocal opt = vim.opt\n\n-- General\nopt.mouse = \"a\"                 -- enable mouse support\nopt.clipboard = \"unnamedplus\"   -- use system clipboard\nopt.swapfile = false           -- disable swap files\nopt.completeopt = \"menu,menuone,noselect\"\n\n-- UI\nopt.number = true              -- show line numbers\nopt.relativenumber = true      -- show relative line numbers\nopt.cursorline = true          -- highlight current line\nopt.termguicolors = true       -- true color support\nopt.background = \"dark\"        -- dark background\nopt.signcolumn = \"yes\"         -- always show sign column\nopt.cmdheight = 1             -- command line height\nopt.scrolloff = 8             -- keep 8 lines above/below cursor\nopt.sidescrolloff = 8         -- keep 8 columns left/right of cursor\n\n-- Splitting\nopt.splitright = true         -- vertical splits to the right\nopt.splitbelow = true         -- horizontal splits below\n\n-- Search\nopt.ignorecase = true         -- ignore case in search\nopt.smartcase = true          -- case sensitive if uppercase present\nopt.hlsearch = false          -- don't highlight search results\nopt.incsearch = true          -- incremental search\n\n-- Indentation\nopt.expandtab = true          -- use spaces instead of tabs\nopt.shiftwidth = 2            -- shift 2 spaces when tab\nopt.tabstop = 2               -- 1 tab == 2 spaces\nopt.softtabstop = 2           -- 2 spaces for editing\nopt.smartindent = true        -- autoindent new lines\n\n-- Performance\nopt.updatetime = 250          -- faster completion (4000ms default)\nopt.timeoutlen = 500         -- time to wait for mapped sequence\nopt.redrawtime = 10000       -- allow more time for loading syntax on large files\nopt.synmaxcol = 180          -- max column for syntax highlight\n\n-- Backup and undo\nopt.backup = false            -- don't create backup files\nopt.writebackup = false       -- don't create backup before overwriting\nopt.undofile = true           -- persistent undo\nopt.undodir = vim.fn.expand(\"~/.config/nvim/undo\")\n\n-- Create undo directory if it doesn't exist\nlocal undo_dir = vim.fn.expand(\"~/.config/nvim/undo\")\nif vim.fn.isdirectory(undo_dir) == 0 then\n  vim.fn.mkdir(undo_dir, \"p\")\nend\n\n-- Folding\nopt.foldmethod = \"expr\"\nopt.foldexpr = \"nvim_treesitter#foldexpr()\"\nopt.foldenable = false        -- don't fold by default\n\n-- Window\nopt.winwidth = 30\nopt.winminwidth = 10\nopt.equalalways = false\n\n-- Wild menu\nopt.wildmenu = true\nopt.wildmode = \"longest:full,full\"\nopt.wildignore:append({ \"*.o\", \"*.obj\", \".git\", \"*.rbc\", \"*.pyc\", \"__pycache__\" })\n\n-- Neovim specific\nif vim.fn.has(\"nvim-0.8\") == 1 then\n  opt.backup = false\n  opt.cmdheight = 0\n  opt.laststatus = 3\nend\n```\n\n### Key Mappings\n```lua\n-- ~/.config/nvim/lua/core/keymaps.lua\nlocal keymap = vim.keymap.set\nlocal opts = { noremap = true, silent = true }\n\n-- Set leader key\nvim.g.mapleader = \" \"\nvim.g.maplocalleader = \" \"\n\n-- General keymaps\nkeymap(\"n\", \"<leader>w\", \":w<CR>\", opts)\nkeymap(\"n\", \"<leader>q\", \":q<CR>\", opts)\nkeymap(\"n\", \"<leader>x\", \":x<CR>\", opts)\n\n-- Better window navigation\nkeymap(\"n\", \"<C-h>\", \"<C-w>h\", opts)\nkeymap(\"n\", \"<C-j>\", \"<C-w>j\", opts)\nkeymap(\"n\", \"<C-k>\", \"<C-w>k\", opts)\nkeymap(\"n\", \"<C-l>\", \"<C-w>l\", opts)\n\n-- Resize windows\nkeymap(\"n\", \"<C-Up>\", \":resize -2<CR>\", opts)\nkeymap(\"n\", \"<C-Down>\", \":resize +2<CR>\", opts)\nkeymap(\"n\", \"<C-Left>\", \":vertical resize -2<CR>\", opts)\nkeymap(\"n\", \"<C-Right>\", \":vertical resize +2<CR>\", opts)\n\n-- Buffer navigation\nkeymap(\"n\", \"<S-l>\", \":bnext<CR>\", opts)\nkeymap(\"n\", \"<S-h>\", \":bprevious<CR>\", opts)\nkeymap(\"n\", \"<leader>bd\", \":bdelete<CR>\", opts)\n\n-- Better indenting\nkeymap(\"v\", \"<\", \"<gv\", opts)\nkeymap(\"v\", \">\", \">gv\", opts)\n\n-- Move text up and down\nkeymap(\"v\", \"<A-j>\", \":m .+1<CR>==\", opts)\nkeymap(\"v\", \"<A-k>\", \":m .-2<CR>==\", opts)\nkeymap(\"v\", \"p\", '\"_dP', opts)\n\n-- Visual Block mode\nkeymap(\"x\", \"J\", \":move '>+1<CR>gv-gv\", opts)\nkeymap(\"x\", \"K\", \":move '<-2<CR>gv-gv\", opts)\nkeymap(\"x\", \"<A-j>\", \":move '>+1<CR>gv-gv\", opts)\nkeymap(\"x\", \"<A-k>\", \":move '<-2<CR>gv-gv\", opts)\n\n-- Stay in the center\nkeymap(\"n\", \"<C-d>\", \"<C-d>zz\", opts)\nkeymap(\"n\", \"<C-u>\", \"<C-u>zz\", opts)\nkeymap(\"n\", \"n\", \"nzzzv\", opts)\nkeymap(\"n\", \"N\", \"Nzzzv\", opts)\n\n-- Clear search highlighting\nkeymap(\"n\", \"<leader>h\", \":nohlsearch<CR>\", opts)\n\n-- Quick fix list\nkeymap(\"n\", \"<C-k>\", \"<cmd>cnext<CR>zz\", opts)\nkeymap(\"n\", \"<C-j>\", \"<cmd>cprev<CR>zz\", opts)\nkeymap(\"n\", \"<leader>k\", \"<cmd>lnext<CR>zz\", opts)\nkeymap(\"n\", \"<leader>j\", \"<cmd>lprev<CR>zz\", opts)\n\n-- Telescope\nkeymap(\"n\", \"<leader>ff\", \"<cmd>Telescope find_files<cr>\", opts)\nkeymap(\"n\", \"<leader>fg\", \"<cmd>Telescope live_grep<cr>\", opts)\nkeymap(\"n\", \"<leader>fb\", \"<cmd>Telescope buffers<cr>\", opts)\nkeymap(\"n\", \"<leader>fh\", \"<cmd>Telescope help_tags<cr>\", opts)\nkeymap(\"n\", \"<leader>fs\", \"<cmd>Telescope lsp_document_symbols<cr>\", opts)\nkeymap(\"n\", \"<leader>fr\", \"<cmd>Telescope lsp_references<cr>\", opts)\n\n-- LSP\nkeymap(\"n\", \"gD\", vim.lsp.buf.declaration, opts)\nkeymap(\"n\", \"gd\", vim.lsp.buf.definition, opts)\nkeymap(\"n\", \"K\", vim.lsp.buf.hover, opts)\nkeymap(\"n\", \"gi\", vim.lsp.buf.implementation, opts)\nkeymap(\"n\", \"<C-k>\", vim.lsp.buf.signature_help, opts)\nkeymap(\"n\", \"<leader>rn\", vim.lsp.buf.rename, opts)\nkeymap(\"n\", \"<leader>ca\", vim.lsp.buf.code_action, opts)\nkeymap(\"n\", \"gr\", vim.lsp.buf.references, opts)\nkeymap(\"n\", \"<leader>f\", function()\n  vim.lsp.buf.format({ async = true })\nend, opts)\n\n-- Diagnostics\nkeymap(\"n\", \"<leader>e\", vim.diagnostic.open_float, opts)\nkeymap(\"n\", \"[d\", vim.diagnostic.goto_prev, opts)\nkeymap(\"n\", \"]d\", vim.diagnostic.goto_next, opts)\nkeymap(\"n\", \"<leader>dl\", vim.diagnostic.setloclist, opts)\n\n-- NvimTree\nkeymap(\"n\", \"<leader>e\", \":NvimTreeToggle<CR>\", opts)\n\n-- Terminal\nkeymap(\"n\", \"<leader>t\", \":ToggleTerm<CR>\", opts)\nkeymap(\"t\", \"<esc>\", [[<C-\\><C-n>]], opts)\n\n-- Git\nkeymap(\"n\", \"<leader>gg\", \":LazyGit<CR>\", opts)\nkeymap(\"n\", \"<leader>gb\", \":Gitsigns blame_line<CR>\", opts)\nkeymap(\"n\", \"<leader>gp\", \":Gitsigns preview_hunk<CR>\", opts)\nkeymap(\"n\", \"<leader>gr\", \":Gitsigns reset_hunk<CR>\", opts)\nkeymap(\"n\", \"<leader>gs\", \":Gitsigns stage_hunk<CR>\", opts)\n\n-- Sessions\nkeymap(\"n\", \"<leader>ss\", \":SessionSave<CR>\", opts)\nkeymap(\"n\", \"<leader>sr\", \":SessionRestore<CR>\", opts)\n```\n\n## Plugin Configuration\n\n### Plugin Manager Setup\n```lua\n-- ~/.config/nvim/lua/plugins/init.lua\nrequire(\"lazy\").setup({\n  -- LSP Configuration\n  { import = \"plugins.lsp\" },\n  \n  -- Completion\n  { import = \"plugins.completion\" },\n  \n  -- UI Enhancements\n  { import = \"plugins.ui\" },\n  \n  -- Editor Features\n  { import = \"plugins.editor\" },\n  \n  -- Development Tools\n  { import = \"plugins.tools\" },\n  \n  -- Themes\n  { import = \"themes\" },\n}, {\n  checker = {\n    enabled = true,\n    notify = false,\n  },\n  change_detection = {\n    notify = false,\n  },\n})\n```\n\n### LSP Configuration\n```lua\n-- ~/.config/nvim/lua/plugins/lsp/mason.lua\nreturn {\n  {\n    \"williamboman/mason.nvim\",\n    cmd = \"Mason\",\n    keys = { { \"<leader>cm\", \"<cmd>Mason<cr>\", desc = \"Mason\" } },\n    build = \":MasonUpdate\",\n    opts = {\n      ensure_installed = {\n        \"stylua\",\n        \"shellcheck\",\n        \"shfmt\",\n        \"flake8\",\n        \"black\",\n        \"isort\",\n        \"prettier\",\n        \"eslint_d\",\n        \"typescript-language-server\",\n        \"pyright\",\n        \"lua-language-server\",\n        \"gopls\",\n        \"rust-analyzer\",\n        \"json-lsp\",\n        \"yaml-language-server\",\n        \"dockerfile-language-server\",\n        \"bash-language-server\",\n        \"html-lsp\",\n        \"css-lsp\",\n        \"tailwindcss-language-server\",\n      },\n    },\n    config = function(_, opts)\n      require(\"mason\").setup(opts)\n      local mr = require(\"mason-registry\")\n      mr:on(\"package:install:success\", function()\n        vim.defer_fn(function()\n          require(\"lazy.core.handler.event\").trigger({\n            event = \"FileType\",\n            buf = vim.api.nvim_get_current_buf(),\n          })\n        end, 100)\n      end)\n      local function ensure_installed()\n        for _, tool in ipairs(opts.ensure_installed) do\n          local p = mr.get_package(tool)\n          if not p:is_installed() then\n            p:install()\n          end\n        end\n      end\n      if mr.refresh then\n        mr.refresh(ensure_installed)\n      else\n        ensure_installed()\n      end\n    end,\n  },\n  \n  {\n    \"williamboman/mason-lspconfig.nvim\",\n    dependencies = { \"mason.nvim\" },\n    opts = {\n      automatic_installation = true,\n    },\n  },\n}\n```\n\n### Advanced LSP Handlers\n```lua\n-- ~/.config/nvim/lua/plugins/lsp/handlers.lua\nlocal M = {}\n\nM.setup = function()\n  local signs = {\n    { name = \"DiagnosticSignError\", text = \"\" },\n    { name = \"DiagnosticSignWarn\", text = \"\" },\n    { name = \"DiagnosticSignHint\", text = \"\" },\n    { name = \"DiagnosticSignInfo\", text = \"\" },\n  }\n\n  for _, sign in ipairs(signs) do\n    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = \"\" })\n  end\n\n  vim.diagnostic.config({\n    virtual_text = {\n      prefix = \"●\",\n      source = \"if_many\",\n    },\n    signs = true,\n    update_in_insert = false,\n    underline = true,\n    severity_sort = true,\n    float = {\n      focusable = true,\n      style = \"minimal\",\n      border = \"rounded\",\n      source = \"always\",\n      header = \"\",\n      prefix = \"\",\n    },\n  })\n\n  vim.lsp.handlers[\"textDocument/hover\"] = vim.lsp.with(vim.lsp.handlers.hover, {\n    border = \"rounded\",\n    width = 60,\n  })\n\n  vim.lsp.handlers[\"textDocument/signatureHelp\"] = vim.lsp.with(vim.lsp.handlers.signature_help, {\n    border = \"rounded\",\n    width = 60,\n  })\nend\n\nlocal function lsp_keymaps(bufnr)\n  local opts = { noremap = true, silent = true }\n  local keymap = vim.api.nvim_buf_set_keymap\n  keymap(bufnr, \"n\", \"gD\", \"<cmd>lua vim.lsp.buf.declaration()<CR>\", opts)\n  keymap(bufnr, \"n\", \"gd\", \"<cmd>lua vim.lsp.buf.definition()<CR>\", opts)\n  keymap(bufnr, \"n\", \"K\", \"<cmd>lua vim.lsp.buf.hover()<CR>\", opts)\n  keymap(bufnr, \"n\", \"gI\", \"<cmd>lua vim.lsp.buf.implementation()<CR>\", opts)\n  keymap(bufnr, \"n\", \"gr\", \"<cmd>lua vim.lsp.buf.references()<CR>\", opts)\n  keymap(bufnr, \"n\", \"gl\", \"<cmd>lua vim.diagnostic.open_float()<CR>\", opts)\n  keymap(bufnr, \"n\", \"<leader>lf\", \"<cmd>lua vim.lsp.buf.format{ async = true }<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>li\", \"<cmd>LspInfo<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>lI\", \"<cmd>LspInstallInfo<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>la\", \"<cmd>lua vim.lsp.buf.code_action()<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>lj\", \"<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>lk\", \"<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>lr\", \"<cmd>lua vim.lsp.buf.rename()<cr>\", opts)\n  keymap(bufnr, \"n\", \"<leader>ls\", \"<cmd>lua vim.lsp.buf.signature_help()<CR>\", opts)\n  keymap(bufnr, \"n\", \"<leader>lq\", \"<cmd>lua vim.diagnostic.setloclist()<CR>\", opts)\nend\n\nM.on_attach = function(client, bufnr)\n  lsp_keymaps(bufnr)\n  \n  if client.supports_method(\"textDocument/documentHighlight\") then\n    vim.api.nvim_create_augroup(\"lsp_document_highlight\", {})\n    vim.api.nvim_create_autocmd({ \"CursorHold\", \"CursorHoldI\" }, {\n      group = \"lsp_document_highlight\",\n      buffer = bufnr,\n      callback = vim.lsp.buf.document_highlight,\n    })\n    vim.api.nvim_create_autocmd(\"CursorMoved\", {\n      group = \"lsp_document_highlight\",\n      buffer = bufnr,\n      callback = vim.lsp.buf.clear_references,\n    })\n  end\n\n  if client.supports_method(\"textDocument/inlayHint\") then\n    vim.lsp.inlay_hint.enable(bufnr, true)\n  end\nend\n\nlocal capabilities = vim.lsp.protocol.make_client_capabilities()\ncapabilities.textDocument.completion.completionItem.snippetSupport = true\ncapabilities.textDocument.completion.completionItem.resolveSupport = {\n  properties = {\n    \"documentation\",\n    \"detail\",\n    \"additionalTextEdits\",\n  },\n}\ncapabilities.textDocument.foldingRange = {\n  dynamicRegistration = false,\n  lineFoldingOnly = true,\n}\n\nlocal status_ok, cmp_nvim_lsp = pcall(require, \"cmp_nvim_lsp\")\nif status_ok then\n  capabilities = cmp_nvim_lsp.default_capabilities(capabilities)\nend\n\nM.capabilities = capabilities\n\nreturn M\n```\n\n### Telescope Configuration\n```lua\n-- ~/.config/nvim/lua/plugins/ui/telescope.lua\nreturn {\n  \"nvim-telescope/telescope.nvim\",\n  tag = \"0.1.4\",\n  dependencies = {\n    \"nvim-lua/plenary.nvim\",\n    { \"nvim-telescope/telescope-fzf-native.nvim\", build = \"make\" },\n    \"nvim-telescope/telescope-ui-select.nvim\",\n    \"nvim-tree/nvim-web-devicons\",\n  },\n  keys = {\n    { \"<leader>ff\", \"<cmd>Telescope find_files<cr>\", desc = \"Find Files\" },\n    { \"<leader>fg\", \"<cmd>Telescope live_grep<cr>\", desc = \"Live Grep\" },\n    { \"<leader>fb\", \"<cmd>Telescope buffers<cr>\", desc = \"Buffers\" },\n    { \"<leader>fh\", \"<cmd>Telescope help_tags<cr>\", desc = \"Help Tags\" },\n    { \"<leader>fs\", \"<cmd>Telescope lsp_document_symbols<cr>\", desc = \"Document Symbols\" },\n    { \"<leader>fr\", \"<cmd>Telescope lsp_references<cr>\", desc = \"References\" },\n    { \"<leader>fd\", \"<cmd>Telescope diagnostics<cr>\", desc = \"Diagnostics\" },\n    { \"<leader>fc\", \"<cmd>Telescope commands<cr>\", desc = \"Commands\" },\n    { \"<leader>fk\", \"<cmd>Telescope keymaps<cr>\", desc = \"Keymaps\" },\n  },\n  config = function()\n    local telescope = require(\"telescope\")\n    local actions = require(\"telescope.actions\")\n\n    telescope.setup({\n      defaults = {\n        prompt_prefix = \" \",\n        selection_caret = \" \",\n        path_display = { \"truncate\" },\n        file_ignore_patterns = { \".git/\", \"node_modules\" },\n        \n        mappings = {\n          i = {\n            [\"<C-n>\"] = actions.cycle_history_next,\n            [\"<C-p>\"] = actions.cycle_history_prev,\n            [\"<C-j>\"] = actions.move_selection_next,\n            [\"<C-k>\"] = actions.move_selection_previous,\n            [\"<CR>\"] = actions.select_default,\n            [\"<C-x>\"] = actions.select_horizontal,\n            [\"<C-v>\"] = actions.select_vertical,\n            [\"<C-t>\"] = actions.select_tab,\n            [\"<C-u>\"] = actions.preview_scrolling_up,\n            [\"<C-d>\"] = actions.preview_scrolling_down,\n            [\"<PageUp>\"] = actions.results_scrolling_up,\n            [\"<PageDown>\"] = actions.results_scrolling_down,\n            [\"<Tab>\"] = actions.toggle_selection + actions.move_selection_worse,\n            [\"<S-Tab>\"] = actions.toggle_selection + actions.move_selection_better,\n            [\"<C-q>\"] = actions.send_to_qflist + actions.open_qflist,\n            [\"<M-q>\"] = actions.send_selected_to_qflist + actions.open_qflist,\n            [\"<C-l>\"] = actions.complete_tag,\n            [\"<C-_>\"] = actions.which_key,\n          },\n          n = {\n            [\"<esc>\"] = actions.close,\n            [\"<CR>\"] = actions.select_default,\n            [\"<C-x>\"] = actions.select_horizontal,\n            [\"<C-v>\"] = actions.select_vertical,\n            [\"<C-t>\"] = actions.select_tab,\n            [\"<Tab>\"] = actions.toggle_selection + actions.move_selection_worse,\n            [\"<S-Tab>\"] = actions.toggle_selection + actions.move_selection_better,\n            [\"<C-q>\"] = actions.send_to_qflist + actions.open_qflist,\n            [\"<M-q>\"] = actions.send_selected_to_qflist + actions.open_qflist,\n            [\"j\"] = actions.move_selection_next,\n            [\"k\"] = actions.move_selection_previous,\n            [\"H\"] = actions.move_to_top,\n            [\"M\"] = actions.move_to_middle,\n            [\"L\"] = actions.move_to_bottom,\n            [\"<Down>\"] = actions.move_selection_next,\n            [\"<Up>\"] = actions.move_selection_previous,\n            [\"gg\"] = actions.move_to_top,\n            [\"G\"] = actions.move_to_bottom,\n            [\"<C-u>\"] = actions.preview_scrolling_up,\n            [\"<C-d>\"] = actions.preview_scrolling_down,\n            [\"<PageUp>\"] = actions.results_scrolling_up,\n            [\"<PageDown>\"] = actions.results_scrolling_down,\n            [\"?\"] = actions.which_key,\n          },\n        },\n      },\n      \n      pickers = {\n        find_files = {\n          theme = \"dropdown\",\n          previewer = false,\n          hidden = true,\n        },\n        live_grep = {\n          theme = \"dropdown\",\n        },\n        buffers = {\n          theme = \"dropdown\",\n          previewer = false,\n          initial_mode = \"normal\",\n        },\n      },\n      \n      extensions = {\n        fzf = {\n          fuzzy = true,\n          override_generic_sorter = true,\n          override_file_sorter = true,\n          case_mode = \"smart_case\",\n        },\n        [\"ui-select\"] = {\n          require(\"telescope.themes\").get_dropdown({}),\n        },\n      },\n    })\n\n    telescope.load_extension(\"fzf\")\n    telescope.load_extension(\"ui-select\")\n  end,\n}\n```\n\n## Advanced Features\n\n### Treesitter Configuration\n- **Syntax Highlighting**: Advanced syntax highlighting for 40+ languages\n- **Code Folding**: Smart folding based on syntax structure\n- **Text Objects**: Custom text objects for functions, classes, etc.\n- **Incremental Selection**: Smart selection expansion\n- **Context**: Show current function/class in status line\n\n### Completion System\n- **Sources**: LSP, buffer, path, snippets, emoji\n- **Intelligent Ranking**: Context-aware completion ranking\n- **Snippet Support**: LuaSnip integration with custom snippets\n- **Auto-imports**: Automatic import statements\n- **Documentation**: Inline documentation in completion menu\n\n### Git Integration\n- **Signs**: Line-by-line git status indicators\n- **Blame**: Inline git blame information\n- **Hunks**: Stage, unstage, and preview hunks\n- **Branches**: Branch switching and management\n- **LazyGit**: Full-featured git interface\n\n### Terminal Integration\n- **Floating Terminal**: Toggle floating terminal\n- **Multiple Terminals**: Named terminal instances\n- **Persistent Terminals**: Terminals survive session restarts\n- **Send to Terminal**: Send code selections to terminal\n\n## Performance Optimizations\n\n### Startup Time\n- **Lazy Loading**: Plugins load only when needed\n- **Compiled Loader**: Faster module loading\n- **Minimal Core**: Only essential plugins at startup\n- **Cached Modules**: Module caching for repeated loads\n\n### Runtime Performance\n- **Treesitter**: Efficient syntax highlighting\n- **LSP Optimizations**: Debounced diagnostics and formatting\n- **Buffer Management**: Automatic buffer cleanup\n- **Memory Usage**: Optimized memory consumption\n\n### File Handling\n- **Large Files**: Special handling for files > 1MB\n- **Binary Files**: Automatic detection and handling\n- **Encoding**: Proper UTF-8 and multi-byte support\n- **Line Endings**: Cross-platform line ending handling\n\n## Customization Guide\n\n### Adding Language Servers\n1. Add server to Mason ensure_installed list\n2. Create server configuration in servers/ directory\n3. Add server-specific keybindings if needed\n4. Configure completion sources\n5. Add snippets for the language\n\n### Custom Keybindings\n- Use `<leader>` prefix for custom commands\n- Group related commands with consistent prefixes\n- Provide which-key descriptions\n- Test for conflicts with existing bindings\n\n### Theme Customization\n- Override highlight groups in theme files\n- Create custom color schemes\n- Configure transparent backgrounds\n- Adjust contrast and saturation\n\nThis ultimate Neovim setup provides a powerful, efficient, and highly customizable development environment that rivals any modern IDE while maintaining the speed and flexibility that Vim users love.",
+      "tags": [
+        {
+          "tag": {
+            "id": "neovim",
+            "name": "neovim",
+            "slug": "neovim"
+          }
+        },
+        {
+          "tag": {
+            "id": "lsp",
+            "name": "lsp",
+            "slug": "lsp"
+          }
+        },
+        {
+          "tag": {
+            "id": "treesitter",
+            "name": "treesitter",
+            "slug": "treesitter"
+          }
+        },
+        {
+          "tag": {
+            "id": "telescope",
+            "name": "telescope",
+            "slug": "telescope"
+          }
+        },
+        {
+          "tag": {
+            "id": "lua",
+            "name": "lua",
+            "slug": "lua"
+          }
+        },
+        {
+          "tag": {
+            "id": "editor",
+            "name": "editor",
+            "slug": "editor"
+          }
+        },
+        {
+          "tag": {
+            "id": "productivity",
+            "name": "productivity",
+            "slug": "productivity"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 34,
+        "copies": 128
+      },
+      "_count": {
+        "votes": 10,
+        "copies": 141
+      },
+      "difficulty": "ADVANCED",
+      "language": "Lua",
+      "framework": "Neovim + LSP",
+      "createdAt": "2024-12-01",
+      "lastUpdated": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "go-gin-api",
+      "title": "Go + Gin Framework + GORM",
+      "slug": "go-gin-framework-gorm",
+      "tagline": "Gin configuration for intermediate developers",
+      "description": "Efficient Go REST API with Gin framework, GORM ORM, and Go best practices for high-performance backends.",
+      "categoryId": "claude-configs",
+      "category": {
+        "id": "claude-configs",
+        "name": "Claude.md Configurations",
+        "slug": "claude-configs",
+        "description": "Ready-to-use Claude.md configuration files for different tech stacks and project types, including advanced enterprise-grade configurations.",
+        "icon": "📋",
+        "color": "#F59E0B"
+      },
+      "type": "CONFIGURATION",
+      "content": "# Claude.md - Go + Gin Framework + GORM API\n\n## Project Overview\n\nThis is a high-performance REST API built with Go, Gin framework, and GORM ORM, following Go best practices for scalable backend development.\n\n## Technology Stack\n\n- **Language**: Go 1.21+\n- **Framework**: Gin Web Framework\n- **ORM**: GORM\n- **Database**: PostgreSQL\n- **Authentication**: JWT\n- **Validation**: go-playground/validator\n- **Testing**: Go built-in testing + testify\n- **Documentation**: Swagger with gin-swagger\n\n## Project Structure\n\n```\n├── cmd/\n│   └── server/\n│       └── main.go      # Application entry point\n├── internal/\n│   ├── config/          # Configuration\n│   ├── controllers/     # HTTP handlers\n│   ├── middleware/      # HTTP middleware\n│   ├── models/          # Database models\n│   ├── repositories/    # Data access layer\n│   ├── services/        # Business logic\n│   └── utils/           # Utility functions\n├── pkg/\n│   ├── database/        # Database connection\n│   ├── logger/          # Logging utilities\n│   └── validator/       # Custom validators\n└── docs/               # Swagger documentation\n```\n\n## Development Guidelines\n\n### Code Style\n- Follow Go conventions and gofmt\n- Use meaningful package names\n- Implement proper error handling\n- Use interfaces for abstraction\n- Follow the single responsibility principle\n\n### API Design\n- Use RESTful endpoints\n- Implement proper HTTP status codes\n- Use middleware for cross-cutting concerns\n- Implement request validation\n- Use structured logging\n\n### Performance\n- Use connection pooling\n- Implement proper caching\n- Use goroutines for concurrent operations\n- Optimize database queries\n- Use profiling for optimization\n\n## Key Commands\n\n- `go run cmd/server/main.go` - Start development server\n- `go build -o bin/server cmd/server/main.go` - Build binary\n- `go test ./...` - Run tests\n- `go mod tidy` - Clean up dependencies\n- `swag init` - Generate Swagger docs\n\n## Environment Variables\n\nCreate a `.env` file:\n```\nPORT=8080\nDB_HOST=localhost\nDB_PORT=5432\nDB_USER=user\nDB_PASSWORD=password\nDB_NAME=dbname\nJWT_SECRET=your-jwt-secret\nGIN_MODE=debug\nLOG_LEVEL=info\n```\n\n## Common Patterns\n\n### Main Application Setup\n```go\n// cmd/server/main.go\npackage main\n\nimport (\n    \"log\"\n    \"os\"\n\n    \"github.com/joho/godotenv\"\n    \"your-app/internal/config\"\n    \"your-app/internal/controllers\"\n    \"your-app/internal/middleware\"\n    \"your-app/pkg/database\"\n    \"your-app/pkg/logger\"\n    \n    \"github.com/gin-gonic/gin\"\n    swaggerFiles \"github.com/swaggo/files\"\n    ginSwagger \"github.com/swaggo/gin-swagger\"\n)\n\nfunc main() {\n    // Load environment variables\n    if err := godotenv.Load(); err != nil {\n        log.Println(\"No .env file found\")\n    }\n\n    // Initialize config\n    cfg := config.Load()\n\n    // Initialize logger\n    logger.Init(cfg.LogLevel)\n\n    // Initialize database\n    db, err := database.Connect(cfg.DatabaseURL)\n    if err != nil {\n        log.Fatal(\"Failed to connect to database:\", err)\n    }\n\n    // Auto-migrate models\n    database.Migrate(db)\n\n    // Initialize Gin router\n    if cfg.Environment == \"production\" {\n        gin.SetMode(gin.ReleaseMode)\n    }\n\n    router := gin.New()\n    router.Use(gin.Logger())\n    router.Use(gin.Recovery())\n    router.Use(middleware.CORS())\n\n    // Initialize controllers\n    userController := controllers.NewUserController(db)\n    authController := controllers.NewAuthController(db)\n\n    // Routes\n    v1 := router.Group(\"/api/v1\")\n    {\n        auth := v1.Group(\"/auth\")\n        {\n            auth.POST(\"/login\", authController.Login)\n            auth.POST(\"/register\", authController.Register)\n        }\n\n        users := v1.Group(\"/users\")\n        users.Use(middleware.AuthRequired())\n        {\n            users.GET(\"\", userController.GetUsers)\n            users.GET(\"/:id\", userController.GetUser)\n            users.PUT(\"/:id\", userController.UpdateUser)\n            users.DELETE(\"/:id\", userController.DeleteUser)\n        }\n    }\n\n    // Swagger documentation\n    router.GET(\"/swagger/*any\", ginSwagger.WrapHandler(swaggerFiles.Handler))\n\n    // Health check\n    router.GET(\"/health\", func(c *gin.Context) {\n        c.JSON(200, gin.H{\"status\": \"healthy\"})\n    })\n\n    // Start server\n    port := os.Getenv(\"PORT\")\n    if port == \"\" {\n        port = \"8080\"\n    }\n\n    log.Printf(\"Server starting on port %s\", port)\n    if err := router.Run(\":\" + port); err != nil {\n        log.Fatal(\"Failed to start server:\", err)\n    }\n}\n```\n\n### Database Models\n```go\n// internal/models/user.go\npackage models\n\nimport (\n    \"time\"\n    \"gorm.io/gorm\"\n)\n\ntype User struct {\n    ID        uint           `json:\"id\" gorm:\"primaryKey\"`\n    Name      string         `json:\"name\" gorm:\"not null\" validate:\"required,min=1,max=100\"`\n    Email     string         `json:\"email\" gorm:\"uniqueIndex;not null\" validate:\"required,email\"`\n    Password  string         `json:\"-\" gorm:\"not null\" validate:\"required,min=8\"`\n    IsActive  bool           `json:\"is_active\" gorm:\"default:true\"`\n    CreatedAt time.Time      `json:\"created_at\"`\n    UpdatedAt time.Time      `json:\"updated_at\"`\n    DeletedAt gorm.DeletedAt `json:\"-\" gorm:\"index\"`\n}\n\ntype CreateUserRequest struct {\n    Name     string `json:\"name\" validate:\"required,min=1,max=100\"`\n    Email    string `json:\"email\" validate:\"required,email\"`\n    Password string `json:\"password\" validate:\"required,min=8\"`\n}\n\ntype UpdateUserRequest struct {\n    Name     *string `json:\"name,omitempty\" validate:\"omitempty,min=1,max=100\"`\n    Email    *string `json:\"email,omitempty\" validate:\"omitempty,email\"`\n    IsActive *bool   `json:\"is_active,omitempty\"`\n}\n\ntype UserResponse struct {\n    ID        uint      `json:\"id\"`\n    Name      string    `json:\"name\"`\n    Email     string    `json:\"email\"`\n    IsActive  bool      `json:\"is_active\"`\n    CreatedAt time.Time `json:\"created_at\"`\n    UpdatedAt time.Time `json:\"updated_at\"`\n}\n\nfunc (u *User) ToResponse() UserResponse {\n    return UserResponse{\n        ID:        u.ID,\n        Name:      u.Name,\n        Email:     u.Email,\n        IsActive:  u.IsActive,\n        CreatedAt: u.CreatedAt,\n        UpdatedAt: u.UpdatedAt,\n    }\n}\n```\n\n### Repository Pattern\n```go\n// internal/repositories/user_repository.go\npackage repositories\n\nimport (\n    \"your-app/internal/models\"\n    \"gorm.io/gorm\"\n)\n\ntype UserRepository interface {\n    Create(user *models.User) error\n    GetByID(id uint) (*models.User, error)\n    GetByEmail(email string) (*models.User, error)\n    GetAll(offset, limit int) ([]models.User, error)\n    Update(user *models.User) error\n    Delete(id uint) error\n    Count() (int64, error)\n}\n\ntype userRepository struct {\n    db *gorm.DB\n}\n\nfunc NewUserRepository(db *gorm.DB) UserRepository {\n    return &userRepository{db: db}\n}\n\nfunc (r *userRepository) Create(user *models.User) error {\n    return r.db.Create(user).Error\n}\n\nfunc (r *userRepository) GetByID(id uint) (*models.User, error) {\n    var user models.User\n    err := r.db.First(&user, id).Error\n    if err != nil {\n        return nil, err\n    }\n    return &user, nil\n}\n\nfunc (r *userRepository) GetByEmail(email string) (*models.User, error) {\n    var user models.User\n    err := r.db.Where(\"email = ?\", email).First(&user).Error\n    if err != nil {\n        return nil, err\n    }\n    return &user, nil\n}\n\nfunc (r *userRepository) GetAll(offset, limit int) ([]models.User, error) {\n    var users []models.User\n    err := r.db.Offset(offset).Limit(limit).Find(&users).Error\n    return users, err\n}\n\nfunc (r *userRepository) Update(user *models.User) error {\n    return r.db.Save(user).Error\n}\n\nfunc (r *userRepository) Delete(id uint) error {\n    return r.db.Delete(&models.User{}, id).Error\n}\n\nfunc (r *userRepository) Count() (int64, error) {\n    var count int64\n    err := r.db.Model(&models.User{}).Count(&count).Error\n    return count, err\n}\n```\n\n### Service Layer\n```go\n// internal/services/user_service.go\npackage services\n\nimport (\n    \"errors\"\n    \"your-app/internal/models\"\n    \"your-app/internal/repositories\"\n    \"your-app/pkg/utils\"\n    \n    \"golang.org/x/crypto/bcrypt\"\n    \"gorm.io/gorm\"\n)\n\ntype UserService interface {\n    CreateUser(req *models.CreateUserRequest) (*models.User, error)\n    GetUser(id uint) (*models.User, error)\n    GetUsers(page, limit int) ([]models.User, int64, error)\n    UpdateUser(id uint, req *models.UpdateUserRequest) (*models.User, error)\n    DeleteUser(id uint) error\n    AuthenticateUser(email, password string) (*models.User, error)\n}\n\ntype userService struct {\n    userRepo repositories.UserRepository\n}\n\nfunc NewUserService(userRepo repositories.UserRepository) UserService {\n    return &userService{\n        userRepo: userRepo,\n    }\n}\n\nfunc (s *userService) CreateUser(req *models.CreateUserRequest) (*models.User, error) {\n    // Check if user already exists\n    existingUser, err := s.userRepo.GetByEmail(req.Email)\n    if err == nil && existingUser != nil {\n        return nil, errors.New(\"user with this email already exists\")\n    }\n\n    // Hash password\n    hashedPassword, err := bcrypt.GenerateFromPassword([]byte(req.Password), bcrypt.DefaultCost)\n    if err != nil {\n        return nil, err\n    }\n\n    user := &models.User{\n        Name:     req.Name,\n        Email:    req.Email,\n        Password: string(hashedPassword),\n        IsActive: true,\n    }\n\n    err = s.userRepo.Create(user)\n    if err != nil {\n        return nil, err\n    }\n\n    return user, nil\n}\n\nfunc (s *userService) GetUser(id uint) (*models.User, error) {\n    return s.userRepo.GetByID(id)\n}\n\nfunc (s *userService) GetUsers(page, limit int) ([]models.User, int64, error) {\n    offset := (page - 1) * limit\n    users, err := s.userRepo.GetAll(offset, limit)\n    if err != nil {\n        return nil, 0, err\n    }\n\n    total, err := s.userRepo.Count()\n    if err != nil {\n        return nil, 0, err\n    }\n\n    return users, total, nil\n}\n\nfunc (s *userService) AuthenticateUser(email, password string) (*models.User, error) {\n    user, err := s.userRepo.GetByEmail(email)\n    if err != nil {\n        if errors.Is(err, gorm.ErrRecordNotFound) {\n            return nil, errors.New(\"invalid credentials\")\n        }\n        return nil, err\n    }\n\n    err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password))\n    if err != nil {\n        return nil, errors.New(\"invalid credentials\")\n    }\n\n    if !user.IsActive {\n        return nil, errors.New(\"account is deactivated\")\n    }\n\n    return user, nil\n}\n```\n\n### HTTP Controllers\n```go\n// internal/controllers/user_controller.go\npackage controllers\n\nimport (\n    \"net/http\"\n    \"strconv\"\n\n    \"your-app/internal/models\"\n    \"your-app/internal/services\"\n    \"your-app/pkg/utils\"\n\n    \"github.com/gin-gonic/gin\"\n    \"github.com/go-playground/validator/v10\"\n)\n\ntype UserController struct {\n    userService services.UserService\n    validator   *validator.Validate\n}\n\nfunc NewUserController(userService services.UserService) *UserController {\n    return &UserController{\n        userService: userService,\n        validator:   validator.New(),\n    }\n}\n\n// GetUsers godoc\n// @Summary Get users\n// @Description Get list of users with pagination\n// @Tags users\n// @Accept json\n// @Produce json\n// @Param page query int false \"Page number\" default(1)\n// @Param limit query int false \"Items per page\" default(10)\n// @Success 200 {object} utils.PaginatedResponse\n// @Failure 400 {object} utils.ErrorResponse\n// @Router /users [get]\nfunc (c *UserController) GetUsers(ctx *gin.Context) {\n    page, _ := strconv.Atoi(ctx.DefaultQuery(\"page\", \"1\"))\n    limit, _ := strconv.Atoi(ctx.DefaultQuery(\"limit\", \"10\"))\n\n    if page < 1 {\n        page = 1\n    }\n    if limit < 1 || limit > 100 {\n        limit = 10\n    }\n\n    users, total, err := c.userService.GetUsers(page, limit)\n    if err != nil {\n        utils.ErrorResponse(ctx, http.StatusInternalServerError, \"Failed to get users\", err)\n        return\n    }\n\n    var userResponses []models.UserResponse\n    for _, user := range users {\n        userResponses = append(userResponses, user.ToResponse())\n    }\n\n    utils.PaginatedResponse(ctx, userResponses, page, limit, total)\n}\n\n// CreateUser godoc\n// @Summary Create user\n// @Description Create a new user\n// @Tags users\n// @Accept json\n// @Produce json\n// @Param user body models.CreateUserRequest true \"User data\"\n// @Success 201 {object} models.UserResponse\n// @Failure 400 {object} utils.ErrorResponse\n// @Router /users [post]\nfunc (c *UserController) CreateUser(ctx *gin.Context) {\n    var req models.CreateUserRequest\n    if err := ctx.ShouldBindJSON(&req); err != nil {\n        utils.ValidationErrorResponse(ctx, err)\n        return\n    }\n\n    if err := c.validator.Struct(&req); err != nil {\n        utils.ValidationErrorResponse(ctx, err)\n        return\n    }\n\n    user, err := c.userService.CreateUser(&req)\n    if err != nil {\n        utils.ErrorResponse(ctx, http.StatusBadRequest, \"Failed to create user\", err)\n        return\n    }\n\n    ctx.JSON(http.StatusCreated, user.ToResponse())\n}\n```\n\n### Authentication Middleware\n```go\n// internal/middleware/auth.go\npackage middleware\n\nimport (\n    \"net/http\"\n    \"strings\"\n\n    \"your-app/pkg/utils\"\n\n    \"github.com/gin-gonic/gin\"\n    \"github.com/golang-jwt/jwt/v4\"\n)\n\nfunc AuthRequired() gin.HandlerFunc {\n    return func(c *gin.Context) {\n        tokenString := c.GetHeader(\"Authorization\")\n        if tokenString == \"\" {\n            utils.ErrorResponse(c, http.StatusUnauthorized, \"Authorization header required\", nil)\n            c.Abort()\n            return\n        }\n\n        // Remove \"Bearer \" prefix\n        tokenString = strings.TrimPrefix(tokenString, \"Bearer \")\n\n        token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {\n            return []byte(utils.GetEnv(\"JWT_SECRET\", \"secret\")), nil\n        })\n\n        if err != nil || !token.Valid {\n            utils.ErrorResponse(c, http.StatusUnauthorized, \"Invalid token\", err)\n            c.Abort()\n            return\n        }\n\n        if claims, ok := token.Claims.(jwt.MapClaims); ok {\n            c.Set(\"user_id\", claims[\"user_id\"])\n            c.Set(\"email\", claims[\"email\"])\n        }\n\n        c.Next()\n    }\n}\n```\n\n## Testing\n\n- Use Go's built-in testing package\n- Write unit tests for services and repositories\n- Use testify for assertions\n- Mock dependencies with interfaces\n- Write integration tests for controllers\n\n## Database\n\n- Use GORM for ORM operations\n- Implement database migrations\n- Use connection pooling\n- Implement proper indexing\n- Handle transactions properly\n\n## Deployment\n\n- Build static binary with Go\n- Use Docker for containerization\n- Deploy with proper environment configuration\n- Set up health checks and monitoring\n- Use graceful shutdown",
+      "tags": [
+        {
+          "tag": {
+            "id": "go",
+            "name": "go",
+            "slug": "go"
+          }
+        },
+        {
+          "tag": {
+            "id": "gin",
+            "name": "gin",
+            "slug": "gin"
+          }
+        },
+        {
+          "tag": {
+            "id": "gorm",
+            "name": "gorm",
+            "slug": "gorm"
+          }
+        },
+        {
+          "tag": {
+            "id": "rest-api",
+            "name": "rest-api",
+            "slug": "rest-api"
+          }
+        },
+        {
+          "tag": {
+            "id": "golang",
+            "name": "golang",
+            "slug": "golang"
+          }
+        }
+      ],
+      "author": {
+        "name": "Claude Code Community",
+        "url": "https://github.com/claudecode-community"
+      },
+      "stats": {
+        "votes": 26,
+        "copies": 94
+      },
+      "_count": {
+        "votes": 32,
+        "copies": 122
+      },
+      "difficulty": "INTERMEDIATE",
+      "language": "Go",
+      "framework": "Gin",
+      "createdAt": "2024-12-01",
       "lastUpdated": "2024-12-01",
       "featured": true
     }
   ],
   "meta": {
-    "total": 3,
+    "total": 9,
     "limit": 12,
-    "generated_at": "2025-07-31T22:29:05.440Z"
+    "generated_at": "2025-07-31T22:29:29.887Z"
   }
 }
